@@ -1,0 +1,24 @@
+@font-face {
+  font-family: "MyFont";
+  font-weight: 700;
+  font-style: normal;
+  src: url("./fonts/RobotoMono-Bold.ttf");
+}
+body {
+  background-image: url(/assets/images/Computer\ BG.jpg);
+  min-height: 200vh;
+  margin: 0;
+  background-size: cover;
+  background-position: center center;
+}
+
+nav {
+  background: rgb(10, 11, 29);
+  font-size: 1.2em;
+  font-family: MyFont;
+}
+
+.container {
+  transition: 1.5s;
+  padding-top: 0.05em;
+}/*# sourceMappingURL=story.css.map */
