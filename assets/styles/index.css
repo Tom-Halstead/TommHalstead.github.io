@@ -2,7 +2,7 @@
   font-family: "MyFont";
   font-weight: 700;
   font-style: normal;
-  src: url("./fonts/RobotoMono-Bold.ttf");
+  src: url("/assets/fonts/RobotoMono-Bold.ttf");
 }
 * {
   margin: 0;
