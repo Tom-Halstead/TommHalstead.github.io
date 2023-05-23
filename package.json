@@ -4,12 +4,20 @@
   "description": "This is my self taught, created from scratch portfolio with HTML, CSS and Javascript. I will continuously be updating as I see fit and needed. Thank you for checking out my portfolio!",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "parcel src/index.html",
+    "build": "parcel build src/index.html --dist-dir ./dist"
   },
   "repository": {
     "type": "git",
     "url": "git remote -v"
   },
   "author": "Thomas Halstead",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.8.3",
+    "parcel": "^2.8.3"
+  },
+  "dependencies": {
+    "bootstrap": "^5.2.3"
+  }
 }
