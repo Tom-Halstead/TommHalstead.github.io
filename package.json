@@ -1,0 +1,15 @@
+{
+  "name": "dev-port",
+  "version": "1.0.0",
+  "description": "This is my self taught, created from scratch portfolio with HTML, CSS and Javascript. I will continuously be updating as I see fit and needed. Thank you for checking out my portfolio!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git remote -v"
+  },
+  "author": "Thomas Halstead",
+  "license": "ISC"
+}
