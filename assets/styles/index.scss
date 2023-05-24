@@ -15,7 +15,7 @@ $base-color: rgb(10, 11, 29);
 }
 
 body {
-  background-image: url("/assets/images/moon.jpg");
+  background-image: url("/assets/images/crescentmoon.jpg");
   max-height: 100vh;
   width: 100%;
   background-size: cover;
@@ -52,6 +52,7 @@ header nav {
 }
 
 header .logo {
+  display: inline-block;
   position: fixed;
   justify-content: space-between;
   padding: 0em 1em 0em 0.5em;
