@@ -18,6 +18,7 @@
     "parcel": "^2.8.3"
   },
   "dependencies": {
+    "htmlincludejs": "^1.0.0",
     "particles.js": "^2.0.0"
   }
 }
