@@ -10,6 +10,13 @@ $base-white: #ffffff;
   src: url("/assets/fonts/RobotoMono-Bold.ttf");
 }
 
+@font-face {
+  font-family: "MyFont2";
+  font-style: normal;
+  font-weight: normal;
+  src: url("/assets/fonts/Stellar-light.woff");
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -20,20 +27,14 @@ $base-white: #ffffff;
 
 body {
   background-image: url("/assets/images/crescentmoon.jpg");
-  // max-height: 100vh;
-  height: 100%;
-  // width: 100%;
+  max-height: 100vw;
+  max-width: 100vw;
+  min-height: 100vh;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   // overflow: hidden;
 }
-
-// header {
-//   top: 0;
-//   height: 4.3em;
-//   width: 100%;
-// }
 
 header nav {
   background-image: linear-gradient($base-gray, $base-black);
@@ -98,22 +99,33 @@ header ul li a {
   background-repeat: no-repeat;
 }
 
+h1.name {
+  font-family: MyFont2;
+  font-size: 3em;
+  height: 3em;
+  user-select: none;
+  position: absolute;
+  z-index: 100;
+  color: #a8a1a1;
+  top: 5em;
+  left: 1.5em;
+}
+
+h1 span.front-end {
+  font-family: MyFont2;
+  position: relative;
+  top: 1.5em;
+  right: 3em;
+}
+
 footer {
   color: $base-white;
   opacity: 85%;
   height: 4.8em;
-  z-index: 100;
+  z-index: 50;
   background-image: linear-gradient($base-black, $base-gray);
-  position: bottom;
   overflow-y: hidden;
-}
-
-.first {
-  color: $base-white;
-}
-
-.last {
-  color: $base-white;
+  bottom: 0;
 }
 
 #lab_social_icon_footer #social-fb:hover {
@@ -163,6 +175,9 @@ footer {
 }
 
 div.text-center {
+  z-index: 50;
+
+  user-select: none;
   overflow-y: hidden;
 }
 span.seperator {

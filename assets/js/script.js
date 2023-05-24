@@ -1,10 +1,7 @@
 "use strict";
 
-const nav = document.querySelector(".nav");
-const header = document.querySelector("header");
+const logo = document.querySelector(".logo");
 
-const stickyNav = () =>
-  window.scrollY > window.innerHeight
-    ? nav.classList.add("sticky")
-    : nav.classList.remove("sticky");
-window.addEventListener(`scroll`, stickyNav);
+logo.addEventListener(`mouseover`, function (e) {
+  console.log("Hover");
+});
