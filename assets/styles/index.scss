@@ -114,6 +114,8 @@ h1.name {
 }
 
 h1 span.front-end {
+  justify-content: space-between;
+  flex-wrap: wrap;
   font-family: MyFont2;
   position: relative;
   top: 1.5em;
@@ -121,6 +123,9 @@ h1 span.front-end {
 }
 
 footer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
   color: $base-white;
   opacity: 85%;
   height: 4.8em;
@@ -147,6 +152,7 @@ footer {
 }
 
 #lab_social_icon_footer {
+  width: 100%;
   top: 0.7em;
   position: relative;
   padding: 1em 1em 1em 1em;
@@ -157,6 +163,7 @@ footer {
   color: $base-text;
   padding: 1em;
   opacity: 85%;
+  position: relative;
 }
 
 #lab_social_icon_footer .social:hover {
@@ -184,6 +191,7 @@ div.text-center {
   user-select: none;
   overflow-y: hidden;
   opacity: 85%;
+  position: relative;
 }
 span.seperator {
   user-select: none;
@@ -202,7 +210,7 @@ span.copy {
 }
 
 p.copyright {
-  margin: auto;
+  user-select: none;
   width: fit-content;
   font-family: MyFont;
   color: #7d7d7d;
@@ -210,4 +218,5 @@ p.copyright {
   bottom: 2.3em;
   font-size: 1em;
   opacity: 85%;
+  margin: auto;
 }
