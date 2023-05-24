@@ -55,8 +55,8 @@ a.logo {
 nav ul {
   display: flex;
   justify-content: space-evenly;
-  list-style: none;
   flex-wrap: wrap;
+  list-style: none;
 }
 
 .nav-link {
@@ -95,6 +95,8 @@ header ul li a:hover {
 }
 
 h1.name {
+  pointer-events: none;
+  opacity: 60%;
   font-family: MyFont2;
   font-size: 3em;
   height: 3em;
@@ -145,15 +147,18 @@ footer {
   top: 0.7em;
   position: relative;
   padding: 1em 1em 1em 1em;
+  opacity: 85%;
 }
 
 #lab_social_icon_footer a {
   color: #989595;
   padding: 1em;
+  opacity: 85%;
 }
 
 #lab_social_icon_footer .social:hover {
   transform: scale(1.1);
+  opacity: 85%;
 }
 
 #lab_social_icon_footer .social {
@@ -163,14 +168,15 @@ footer {
   -o-transform: scale(0.8);
   transition-duration: 0.5s;
   transform: scale(0.8);
+  opacity: 85%;
 }
 
 div.text-center {
-  z-index: 50;
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
   overflow-y: hidden;
+  opacity: 85%;
 }
 
 span.seperator {
@@ -180,6 +186,7 @@ span.seperator {
   color: gray;
   font-size: 2.2em;
   position: absolute;
+  opacity: 85%;
 }
 
 span.copy {
@@ -187,6 +194,7 @@ span.copy {
   font-size: 1em;
   position: relative;
   bottom: 0.06em;
+  opacity: 85%;
 }
 
 p.copyright {
@@ -198,4 +206,5 @@ p.copyright {
   position: relative;
   bottom: 2.3em;
   font-size: 1em;
+  opacity: 85%;
 }/*# sourceMappingURL=index.css.map */
