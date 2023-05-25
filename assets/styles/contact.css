@@ -40,8 +40,8 @@ header nav {
 
 a.logo {
   -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
+  -moz-user-select: none;
+  user-select: none;
   width: 3em;
   position: absolute;
   color: #ffffff;
@@ -61,8 +61,8 @@ nav ul {
 
 .nav-link {
   -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
+  -moz-user-select: none;
+  user-select: none;
   justify-content: space-between;
   font-size: 1.5em;
   text-decoration: none;
@@ -101,8 +101,8 @@ h1.name {
   font-size: 3em;
   height: 3em;
   -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
+  -moz-user-select: none;
+  user-select: none;
   position: absolute;
   z-index: 100;
   color: #a8a1a1;
@@ -180,8 +180,8 @@ footer {
 
 div.text-center {
   -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
+  -moz-user-select: none;
+  user-select: none;
   overflow-y: hidden;
   opacity: 85%;
   position: relative;
@@ -189,8 +189,8 @@ div.text-center {
 
 span.seperator {
   -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
+  -moz-user-select: none;
+  user-select: none;
   color: gray;
   font-size: 2.2em;
   position: absolute;
@@ -207,8 +207,8 @@ span.copy {
 
 p.copyright {
   -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
+  -moz-user-select: none;
+  user-select: none;
   width: -moz-fit-content;
   width: fit-content;
   font-family: MyFont;
@@ -218,4 +218,4 @@ p.copyright {
   font-size: 1em;
   opacity: 85%;
   margin: auto;
-}/*# sourceMappingURL=contact.css.map */
+}
