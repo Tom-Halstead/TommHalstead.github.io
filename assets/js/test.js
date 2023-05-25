@@ -8,13 +8,13 @@ const headerHTML = `
         <a href="index.html" class="nav-btn">Home</a>
       </li>
       <li class="nav-link">
-        <a href="/docs/story.html" class="nav-btn">My story</a>
+        <a href="story.html" class="nav-btn">My story</a>
       </li>
       <li class="nav-link">
-        <a href="/docs/work.html" class="nav-btn">Work</a>
+        <a href="work.html" class="nav-btn">Work</a>
       </li>
       <li class="nav-link include">
-        <a href="/docs/contact.html" class="nav-btn include">Contact</a>
+        <a href="contact.html" class="nav-btn include">Contact</a>
       </li>
     </ul>
   </nav>`;
