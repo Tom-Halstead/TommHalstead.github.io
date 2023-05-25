@@ -8,7 +8,7 @@ const headerHTML = `
         <a href="index.html" class="nav-btn">Home</a>
       </li>
       <li class="nav-link">
-        <a href="story.html" class="nav-btn">My story</a>
+        <a href="story.html" class="nav-btn">Story</a>
       </li>
       <li class="nav-link">
         <a href="work.html" class="nav-btn">Work</a>
