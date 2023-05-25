@@ -2,7 +2,7 @@
   font-family: "MyFont";
   font-weight: 700;
   font-style: normal;
-  src: url("/assets/fonts/RobotoMono-Bold.ttf");
+  src: url("RobotoMono-Bold.ttf");
 }
 * {
   margin: 0;
@@ -11,7 +11,7 @@
 }
 
 body {
-  background-image: url("/assets/images/crescentmoon.jpg");
+  background-image: url("crescentmoon.jpg");
   max-height: 100vh;
   width: 100%;
   background-size: cover;

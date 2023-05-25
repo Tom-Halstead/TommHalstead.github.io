@@ -4,8 +4,8 @@
   "description": "This is my self taught, created from scratch portfolio with HTML, CSS and Javascript. I will continuously be updating as I see fit and needed. Thank you for checking out my portfolio!",
   "main": "index.js",
   "scripts": {
-    "start": "parcel index.html",
-    "build": "parcel build index.html --dist-dir ./dist"
+    "start": "parcel docs/index.html",
+    "build": "parcel build docs/index.html --dist-dir ./dist"
   },
   "repository": {
     "type": "git",
