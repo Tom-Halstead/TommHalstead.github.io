@@ -1,5 +1,6 @@
 const header = document.querySelector(".head");
 const footer = document.querySelector(".foot");
+console.log(header);
 const headerHTML = `
   <nav class="nav">
     <a href="#" class="logo">Logo</a>
