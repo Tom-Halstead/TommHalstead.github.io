@@ -1,12 +1,25 @@
 "use strict";
 
 const logo = document.querySelector(".logo");
-// const headTest = document.querySelector(".headtest");
-// const navTest = (document.querySelector(".navtest").innerHTML = ``);
+const myName = document.querySelector(".name");
+const bodyClick = document.body.addEventListener(
+  `click`,
+  () => (myName.style.color = `${randomColor()}`)
+);
 
-// console.log(navTest);
-// console.log(headTest);
+const randomColor = () => {
+  return (
+    `#` +
+    Math.floor(Math.random() * 16777215)
+      .toString(16)
+      .padStart(6, "0")
+      .toUpperCase()
+  );
+};
 
-logo.addEventListener(`mouseover`, function (e) {
-  console.log("Hover");
-});
+console.log(randomColor());
+console.log(logo.style);
+logo.addEventListener(
+  `mouseover`,
+  () => (logo.style.color = `${randomColor()}`)
+);
