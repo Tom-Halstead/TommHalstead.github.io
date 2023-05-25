@@ -2,10 +2,6 @@
 
 const logo = document.querySelector(".logo");
 const myName = document.querySelector(".name");
-const bodyClick = document.body.addEventListener(
-  `click`,
-  () => (myName.style.color = `${randomColor()}`)
-);
 
 const randomColor = () => {
   return (
@@ -17,9 +13,12 @@ const randomColor = () => {
   );
 };
 
-console.log(randomColor());
-console.log(logo.style);
 logo.addEventListener(
   `mouseover`,
   () => (logo.style.color = `${randomColor()}`)
+);
+
+const bodyClick = document.body.addEventListener(
+  `click`,
+  () => (myName.style.color = `${randomColor()}`)
 );
