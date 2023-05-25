@@ -1,0 +1,196 @@
+@font-face {
+  font-family: "MyFont";
+  font-weight: 700;
+  font-style: normal;
+  src: url("RobotoMono-Bold.ttf");
+}
+@font-face {
+  font-family: "MyFont2";
+  font-style: normal;
+  font-weight: normal;
+  src: url("Stellar-light.woff");
+}
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", "sans-serif";
+  overflow-x: hidden;
+}
+
+body {
+  background-image: url("./crescentmoon.jpg");
+  max-height: 100vw;
+  max-width: 100vw;
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+header nav {
+  background-image: linear-gradient(rgb(42, 41, 41), rgb(0, 0, 0));
+  opacity: 85%;
+  top: 0;
+  height: 4.3em;
+  position: absolute;
+  width: 100%;
+  transition: 0.6s;
+  padding: 1em 1em 1em 1em;
+}
+
+a.logo {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  width: 3em;
+  position: absolute;
+  color: #ffffff;
+  font-size: 2em;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 0.06em;
+  transition: 0.6s;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+.nav-link {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  justify-content: space-between;
+  font-size: 1.5em;
+  text-decoration: none;
+}
+
+header ul li a {
+  font-family: MyFont;
+  font-size: 0.8em;
+  text-decoration: none;
+  color: #989595;
+  letter-spacing: 1px;
+  font-weight: 500;
+  transition: 0.25s ease;
+}
+
+header ul li a {
+  color: #989595;
+}
+header ul li a:hover {
+  color: #ffffff;
+  box-shadow: 0 1px 0 0 #989595;
+}
+
+#particles-js {
+  width: 100%;
+  position: relative;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  color: #ffffff;
+  opacity: 85%;
+  height: 4.8em;
+  z-index: 50;
+  background-image: linear-gradient(rgb(0, 0, 0), rgb(42, 41, 41));
+  overflow-y: hidden;
+  bottom: 0;
+}
+
+#lab_social_icon_footer #social-fb:hover {
+  color: #3b5998;
+}
+
+#lab_social_icon_footer #social-tw:hover {
+  color: #4099ff;
+}
+
+#lab_social_icon_footer #social-gh:hover {
+  color: #333;
+}
+
+#lab_social_icon_footer #social-li:hover {
+  color: #0077b5;
+}
+
+#lab_social_icon_footer {
+  width: 100%;
+  top: 0.7em;
+  position: relative;
+  padding: 1em 1em 1em 1em;
+  opacity: 85%;
+}
+
+#lab_social_icon_footer a {
+  color: #989595;
+  padding: 1em;
+  opacity: 85%;
+  position: relative;
+}
+
+#lab_social_icon_footer .social:hover {
+  transform: scale(1.1);
+  opacity: 85%;
+}
+
+#lab_social_icon_footer .social {
+  overflow-y: hidden;
+  -webkit-transform: scale(0.8);
+  -moz-transform: scale(0.8);
+  -o-transform: scale(0.8);
+  transition-duration: 0.5s;
+  transform: scale(0.8);
+  opacity: 85%;
+}
+
+div.text-center {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  overflow-y: hidden;
+  opacity: 85%;
+  position: relative;
+}
+
+span.seperator {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  color: gray;
+  font-size: 2.2em;
+  position: absolute;
+  opacity: 85%;
+}
+
+span.copy {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 1em;
+  position: relative;
+  bottom: 0.06em;
+  opacity: 85%;
+}
+
+p.copyright {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-family: MyFont;
+  color: #7d7d7d;
+  position: relative;
+  bottom: 2.3em;
+  font-size: 1em;
+  opacity: 85%;
+  margin: auto;
+}
