@@ -238,8 +238,8 @@ div.toggle {
   position: absolute;
   top: 0;
   left: 0;
-  width: 3.5em;
-  height: 1.98em;
+  width: 3.2em;
+  height: 1.7em;
   background: #f600ff;
   border-radius: 1em 1em 1em 1em;
   overflow: hidden;
@@ -260,8 +260,8 @@ div.toggle.active {
   position: absolute;
   top: -0.02em;
   left: 1.4em;
-  width: 2.1em;
-  height: 2em;
+  width: 1.8em;
+  height: 1.8em;
   background: rgb(144, 139, 139);
   border-radius: 1em;
   cursor: pointer;
@@ -273,10 +273,11 @@ div.text {
   -moz-user-select: none;
   user-select: none;
   color: #33ff00;
-  left: 3.9em;
-  top: 0.3em;
+  left: 4em;
+  top: 0.25em;
   position: absolute;
   font-family: MyFont;
+  font-size: 0.85em;
 }
 
 .invert {
