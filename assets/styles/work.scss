@@ -197,3 +197,9 @@ p.copyright {
   opacity: 85%;
   margin: auto;
 }
+
+.nav-btn[aria-current="page"] {
+  color: #ffffff;
+  box-shadow: 0 1px 0 0 #ffffff;
+  font-size: 0.9em;
+}
