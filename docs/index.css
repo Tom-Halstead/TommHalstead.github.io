@@ -174,18 +174,18 @@ footer {
 }
 
 div.text-center {
+  -moz-user-select: none;
   -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
+  user-select: none;
   overflow-y: hidden;
   opacity: 85%;
   position: relative;
 }
 
 span.seperator {
+  -moz-user-select: none;
   -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
+  user-select: none;
   color: gray;
   font-size: 2.2em;
   position: absolute;
@@ -201,9 +201,9 @@ span.copy {
 }
 
 p.copyright {
+  -moz-user-select: none;
   -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
+  user-select: none;
   width: -moz-fit-content;
   width: fit-content;
   font-family: MyFont;
@@ -239,14 +239,16 @@ div.toggle {
   top: 0;
   left: 0;
   width: 3.5em;
-  height: 2em;
-  background: rgb(162, 160, 160);
+  height: 1.98em;
+  background: #333;
   border-radius: 1em 1em 1em 1em;
   overflow: hidden;
+  opacity: 65%;
 }
 
 div.toggle.active {
-  background: #ff0800;
+  opacity: 65%;
+  background: #f600ff;
 }
 
 .togcontainer .toggle.active .toggle-button {
@@ -254,32 +256,32 @@ div.toggle.active {
 }
 
 .toggle-button {
+  opacity: 65%;
   position: absolute;
-  top: 0.045em;
-  left: 1.65em;
+  top: -0.02em;
+  left: 1.4em;
   width: 2.1em;
   height: 2em;
   background: white;
   border-radius: 1em;
   cursor: pointer;
   transition: 0.3s;
+  border: 1px solid #333;
 }
 
 div.text {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
   color: #33ff00;
   left: 3.9em;
   top: 0.3em;
   position: absolute;
   font-family: MyFont;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
-}
-div.text div.text:selection {
-  background: rgba(0, 0, 0, 0);
 }
 
 .invert {
+  -moz-filter: invert(1);
   filter: invert(1);
 }
 
@@ -291,4 +293,10 @@ header nav.activate {
 footer.activater {
   background-image: linear-gradient(#ffffff, #09ff00);
   opacity: 65%;
+}
+
+.link.black {
+  background: black;
+  background-color: black;
+  color: black;
 }/*# sourceMappingURL=index.css.map */

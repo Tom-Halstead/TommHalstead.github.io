@@ -24,7 +24,7 @@ particlesJS(
         },
       },
       color: {
-        value: "#969696",
+        value: "#F600FF",
       },
       shape: {
         type: "circle",

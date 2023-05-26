@@ -26,9 +26,7 @@ const navHighlights = function () {
       link.setAttribute("aria-current", "page");
     }
   });
-  console.log(`test`);
 };
-// window.addEventListener("load", navHighlights);
 
 const insertHeaderAndFooter = function () {
   if (window.location.pathname !== "/index.html") {
@@ -78,7 +76,6 @@ const insertHeaderAndFooter = function () {
     document.body.append(head);
     document.body.append(foot);
   }
-  console.log(`test`);
 };
 
 window.addEventListener("load", () => {
@@ -93,7 +90,6 @@ const invertColors = function () {
   const nav = document.querySelector(".nav");
   const footer = document.querySelector("footer");
   const socials = document.querySelectorAll(".link");
-  console.log(socials);
 
   toggle.classList.toggle("active");
   document.body.classList.toggle("invert");
