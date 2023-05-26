@@ -21,13 +21,13 @@ body {
   background-image: url("./crescentmoon.jpg");
   max-height: 100vw;
   max-width: 100vw;
-  min-height: 100vh;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  overflow: hidden;
 }
 
-header nav {
+.nav {
   background-image: linear-gradient(rgb(42, 41, 41), rgb(0, 0, 0));
   opacity: 85%;
   top: 0;
@@ -69,15 +69,11 @@ nav ul {
 }
 
 header ul li a {
-  font-family: MyFont;
-  font-size: 0.8em;
-  text-decoration: none;
   letter-spacing: 0.02em;
   font-weight: 500;
+  font-family: MyFont;
+  text-decoration: none;
   transition: 0.25s ease;
-}
-
-header ul li a {
   font-size: 0.8em;
   letter-spacing: 0.02em;
   font-weight: 700;
@@ -125,10 +121,8 @@ footer {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  color: #ffffff;
   opacity: 85%;
   height: 4.8em;
-  z-index: 50;
   background-image: linear-gradient(rgb(0, 0, 0), rgb(42, 41, 41));
   overflow-y: hidden;
 }
@@ -277,12 +271,24 @@ div.text {
   top: 0.3em;
   position: absolute;
   font-family: MyFont;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+div.text div.text:selection {
+  background: rgba(0, 0, 0, 0);
 }
 
 .invert {
   filter: invert(1);
 }
 
-.active {
-  background-color: #cc00ff;
+header nav.activate {
+  background-image: linear-gradient(#09ff00, #ffffff);
+  opacity: 65%;
+}
+
+footer.activater {
+  background-image: linear-gradient(#ffffff, #09ff00);
+  opacity: 65%;
 }/*# sourceMappingURL=index.css.map */

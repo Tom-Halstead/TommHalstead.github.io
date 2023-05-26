@@ -87,19 +87,27 @@ window.addEventListener("load", () => {
 });
 
 const toggle = document.querySelector(".toggle");
+
 const invertColors = function () {
   const text = document.querySelector(".text");
   const nav = document.querySelector(".nav");
+  const footer = document.querySelector("footer");
+  const socials = document.querySelectorAll(".link");
+  console.log(socials);
+
   toggle.classList.toggle("active");
   document.body.classList.toggle("invert");
-  console.log(nav);
+  nav.classList.toggle("activate");
+  footer.classList.toggle("activater");
+
   if (toggle.classList.contains("active")) {
     text.innerHTML = "ON";
-    nav.classList.add("active");
   } else {
     text.innerHTML = "OFF";
     document.body.classList.remove("invert");
-    nav.classList.remove("active");
+    nav.classList.remove("activate");
+    footer.classList.remove("activater");
+    toggle.classList.remove("active");
   }
 };
 

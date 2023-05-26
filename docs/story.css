@@ -19,9 +19,8 @@
 
 body {
   background-image: url("./crescentmoon.jpg");
-  max-height: 100vw;
   max-width: 100vw;
-  min-height: 100vh;
+  height: 200vw;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
