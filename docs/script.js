@@ -28,7 +28,7 @@ const navHighlights = function () {
   });
   console.log(`test`);
 };
-window.addEventListener("load", navHighlights);
+// window.addEventListener("load", navHighlights);
 
 const insertHeaderAndFooter = function () {
   if (window.location.pathname !== "/index.html") {
@@ -81,4 +81,7 @@ const insertHeaderAndFooter = function () {
   console.log(`test`);
 };
 
-window.addEventListener("load", insertHeaderAndFooter);
+window.addEventListener("load", () => {
+  insertHeaderAndFooter();
+  navHighlights();
+});

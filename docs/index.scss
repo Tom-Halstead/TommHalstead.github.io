@@ -110,7 +110,7 @@ h1.name {
   z-index: 100;
   color: #a8a1a1;
   top: 5em;
-  left: 1.5em;
+  left: 3.5em;
 }
 
 h1 span.front-end {
@@ -119,7 +119,7 @@ h1 span.front-end {
   font-family: MyFont2;
   position: relative;
   top: 1.5em;
-  right: 3em;
+  right: 2em;
 }
 
 footer {
@@ -223,6 +223,6 @@ p.copyright {
 
 .nav-btn[aria-current="page"] {
   color: #ffffff;
-  box-shadow: 0 1px 0 0 #989595;
+  box-shadow: 0 1px 0 0 #ffffff;
   font-size: 0.9em;
 }
