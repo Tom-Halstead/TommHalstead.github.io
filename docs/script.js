@@ -85,3 +85,24 @@ window.addEventListener("load", () => {
   insertHeaderAndFooter();
   navHighlights();
 });
+
+const toggle = document.querySelector(".toggle");
+const invertColors = function () {
+  const text = document.querySelector(".text");
+  const nav = document.querySelector(".nav");
+  toggle.classList.toggle("active");
+  document.body.classList.toggle("invert");
+  console.log(nav);
+  if (toggle.classList.contains("active")) {
+    text.innerHTML = "ON";
+    nav.classList.add("active");
+  } else {
+    text.innerHTML = "OFF";
+    document.body.classList.remove("invert");
+    nav.classList.remove("active");
+  }
+};
+
+if (window.location.pathname === "/index.html") {
+  toggle.addEventListener(`click`, invertColors);
+}

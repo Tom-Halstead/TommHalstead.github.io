@@ -72,13 +72,15 @@ header ul li a {
   font-family: MyFont;
   font-size: 0.8em;
   text-decoration: none;
-  color: #989595;
-  letter-spacing: 1px;
+  letter-spacing: 0.02em;
   font-weight: 500;
   transition: 0.25s ease;
 }
 
 header ul li a {
+  font-size: 0.8em;
+  letter-spacing: 0.02em;
+  font-weight: 700;
   color: #989595;
 }
 header ul li a:hover {
@@ -98,7 +100,7 @@ h1.name {
   pointer-events: none;
   opacity: 60%;
   font-family: MyFont2;
-  font-size: 3em;
+  font-size: 3.3em;
   height: 3em;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -129,7 +131,6 @@ footer {
   z-index: 50;
   background-image: linear-gradient(rgb(0, 0, 0), rgb(42, 41, 41));
   overflow-y: hidden;
-  bottom: 0;
 }
 
 #lab_social_icon_footer #social-fb:hover {
@@ -224,4 +225,64 @@ p.copyright {
   color: #ffffff;
   box-shadow: 0 1px 0 0 #ffffff;
   font-size: 0.9em;
+}
+
+.togcontainer {
+  position: absolute;
+  top: 10em;
+  right: -2em;
+  transform: translate(-50%, -50%);
+  width: 7em;
+  height: 5em;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+div.toggle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3.5em;
+  height: 2em;
+  background: rgb(162, 160, 160);
+  border-radius: 1em 1em 1em 1em;
+  overflow: hidden;
+}
+
+div.toggle.active {
+  background: #ff0800;
+}
+
+.togcontainer .toggle.active .toggle-button {
+  left: 0em;
+}
+
+.toggle-button {
+  position: absolute;
+  top: 0.045em;
+  left: 1.65em;
+  width: 2.1em;
+  height: 2em;
+  background: white;
+  border-radius: 1em;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+div.text {
+  color: #33ff00;
+  left: 3.9em;
+  top: 0.3em;
+  position: absolute;
+  font-family: MyFont;
+}
+
+.invert {
+  filter: invert(1);
+}
+
+.active {
+  background-color: #cc00ff;
 }/*# sourceMappingURL=index.css.map */
