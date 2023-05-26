@@ -22,40 +22,47 @@ $base-white: #ffffff;
   padding: 0;
   font-family: "Poppins", "sans-serif";
   overflow-x: hidden;
-  // overflow-y: hidden;
 }
 
 body {
   background-image: url("/assets/images/crescentmoon.jpg");
-  max-height: 100vw;
-  max-width: 100vw;
   min-height: 100vh;
+  min-width: 100vw;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  // overflow: hidden;
 }
 
-header nav {
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+nav {
   background-image: linear-gradient($base-gray, $base-black);
   opacity: 85%;
-  top: 0;
-  height: 4.3em;
-  position: absolute;
-  width: 100%;
+  position: relative;
+  -moz-transition: 0.6s;
+  -webkit-transition: 0.6s;
   transition: 0.6s;
   padding: 1em 1em 1em 1em;
+  height: 4.4em;
 }
 
-a.logo {
+.logo {
+  -moz-user-select: none;
+  -webkit-user-select: none;
   user-select: none;
-  width: 3em;
+  width: fit-content;
   position: absolute;
   color: $base-white;
   font-size: 2em;
   text-transform: uppercase;
   text-decoration: none;
   letter-spacing: 0.06em;
+  -moz-transition: 0.6s;
+  -webkit-transition: 0.6s;
   transition: 0.6s;
 }
 
@@ -64,9 +71,12 @@ nav ul {
   justify-content: space-evenly;
   flex-wrap: wrap;
   list-style: none;
+  height: fit-content;
 }
 
 .nav-link {
+  -moz-user-select: none;
+  -webkit-user-select: none;
   user-select: none;
   justify-content: space-between;
   font-size: 1.5em;
@@ -80,11 +90,9 @@ header ul li a {
   color: $base-text;
   letter-spacing: 1px;
   font-weight: 500;
+  -moz-transition: 0.25s ease;
+  -webkit-transition: 0.25s ease;
   transition: 0.25s ease;
-}
-
-header ul li a {
-  color: $base-text;
   &:hover {
     color: $base-white;
     box-shadow: 0 1px 0 0 $base-text;
@@ -100,16 +108,16 @@ header ul li a {
 }
 
 footer {
+  margin-top: auto;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   color: $base-white;
   opacity: 85%;
   height: 4.8em;
-  z-index: 50;
+  // height: max-content;
   background-image: linear-gradient($base-black, $base-gray);
   overflow-y: hidden;
-  bottom: 0;
 }
 
 #lab_social_icon_footer #social-fb:hover {
@@ -165,16 +173,20 @@ footer {
 }
 
 div.text-center {
+  -webkit-user-select: none;
+  -moz-user-select: none;
   user-select: none;
   overflow-y: hidden;
   opacity: 85%;
-  position: relative;
 }
 span.seperator {
+  -webkit-user-select: none;
+  -moz-user-select: none;
   user-select: none;
   color: gray;
   font-size: 2.2em;
   position: absolute;
+  top: 0.5em;
   opacity: 85%;
 }
 
@@ -187,8 +199,9 @@ span.copy {
 }
 
 p.copyright {
+  -webkit-user-select: none;
+  -moz-user-select: none;
   user-select: none;
-  width: fit-content;
   font-family: MyFont;
   color: #7d7d7d;
   position: relative;
@@ -202,4 +215,17 @@ p.copyright {
   color: #ffffff;
   box-shadow: 0 1px 0 0 #ffffff;
   font-size: 0.9em;
+}
+
+div a.social-link {
+  // position: relative;
+  top: 0.2em;
+  width: fit-content;
+  height: fit-content;
+}
+
+@media only screen and (max-width: 768px) {
+  .logo {
+    display: none;
+  }
 }
