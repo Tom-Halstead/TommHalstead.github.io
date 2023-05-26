@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "parcel docs/index.html",
-    "build": "parcel build docs/index.html --dist-dir ./dist",
-    "checkout": "git checkout main"
+    "build": "parcel build docs/index.html --dist-dir ./dist"
   },
   "repository": {
     "type": "git",
