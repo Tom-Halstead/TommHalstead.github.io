@@ -13,11 +13,6 @@ const randomColor = () => {
   );
 };
 
-logo.addEventListener(
-  `mouseover`,
-  () => (logo.style.color = `${randomColor()}`)
-);
-
 const bodyClick = document.body.addEventListener(
   `click`,
   () => (myName.style.color = `${randomColor()}`)
