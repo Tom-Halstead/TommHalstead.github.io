@@ -240,14 +240,14 @@ div.toggle {
   left: 0;
   width: 3.5em;
   height: 1.98em;
-  background: #333;
+  background: #f600ff;
   border-radius: 1em 1em 1em 1em;
   overflow: hidden;
   opacity: 65%;
 }
 
 div.toggle.active {
-  opacity: 65%;
+  opacity: 90%;
   background: #f600ff;
 }
 
@@ -256,17 +256,16 @@ div.toggle.active {
 }
 
 .toggle-button {
-  opacity: 65%;
+  opacity: 90%;
   position: absolute;
   top: -0.02em;
   left: 1.4em;
   width: 2.1em;
   height: 2em;
-  background: white;
+  background: rgb(144, 139, 139);
   border-radius: 1em;
   cursor: pointer;
   transition: 0.3s;
-  border: 1px solid #333;
 }
 
 div.text {
