@@ -43,4 +43,5 @@ const footerHTML = `
 window.onload = function () {
   header.insertAdjacentHTML("afterbegin", headerHTML);
   footer.insertAdjacentHTML("afterbegin", footerHTML);
+  // nav.insertAdjacentHTML();
 };

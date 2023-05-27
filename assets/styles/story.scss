@@ -22,10 +22,11 @@ $base-white: #ffffff;
   padding: 0;
   font-family: "Poppins", "sans-serif";
   overflow-x: hidden;
+  // overflow-y: hidden;
 }
 
 body {
-  background-image: url("/assets/images/crescentmoon.jpg");
+  // background-image: url("/assets/images/crescentmoon.jpg");
   min-height: 100vh;
   min-width: 100vw;
   background-size: cover;
@@ -34,28 +35,47 @@ body {
 }
 
 .container {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+  // min-height: 100vh;
+  // display: flex;
+  // flex-direction: column;
+  // text-align: center;
+  // justify-content: space-around;
+}
+
+header {
+  // display: flex;
+  // flex-direction: column;
+  // text-align: center;
+  // justify-content: space-around;
 }
 
 nav {
+  // flex-direction: row;
+  // text-align: center;
+  justify-content: space-between;
+  height: max-content;
+  display: flex;
   background-image: linear-gradient($base-gray, $base-black);
   opacity: 85%;
-  position: relative;
+  // position: relative;
   -moz-transition: 0.6s;
   -webkit-transition: 0.6s;
   transition: 0.6s;
   padding: 1em 1em 1em 1em;
-  height: 4.4em;
+  // height: 4.4em;
+}
+
+ul li {
+  min-width: fit-content;
 }
 
 .logo {
+  // position: absolute;
   -moz-user-select: none;
   -webkit-user-select: none;
   user-select: none;
-  width: fit-content;
-  position: absolute;
+  // width: fit-content;
+  // position: absolute;
   color: $base-white;
   font-size: 2em;
   text-transform: uppercase;
@@ -66,21 +86,48 @@ nav {
   transition: 0.6s;
 }
 
+.fa-solid {
+  // color: black;
+}
+
+.bars {
+  color: black;
+
+  // align-self: center;
+  // font-size: ;
+}
+
 nav ul {
   display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-  list-style: none;
-  height: fit-content;
+
+  // justify-content: space-between;
+  gap: 7rem;
+  // width: fit-content;
+  // justify-content: space-evenly;
+  // flex-wrap: wrap;
+  // list-style: none;
+  // height: fit-content;
+}
+
+nav .bars {
+  display: none;
+  color: $base-white;
+  font-size: 1.5rem;
+  cursor: pointer;
 }
 
 .nav-link {
+  // justify-content: space-evenly;
+  // width: fit-content;
   -moz-user-select: none;
   -webkit-user-select: none;
   user-select: none;
-  justify-content: space-between;
   font-size: 1.5em;
   text-decoration: none;
+}
+
+li .nav-link {
+  // width: 3rem;
 }
 
 header ul li a {
@@ -225,7 +272,12 @@ div a.social-link {
 }
 
 @media only screen and (max-width: 768px) {
-  .logo {
-    display: none;
+  nav .bars {
+    display: contents;
   }
+  // .logo {
+  //   display: none;
+  // }
+}
+@media only screen and (max-width: 480px) {
 }
