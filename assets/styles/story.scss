@@ -22,34 +22,37 @@ $base-white: #ffffff;
   padding: 0;
   font-family: "Poppins", "sans-serif";
   overflow-x: hidden;
-  overflow-y: hidden;
+  // overflow-y: hidden;
 }
 
 body {
-  // background-image: url("/assets/images/crescentmoon.jpg");
+  background-image: url("/assets/images/crescentmoon.jpg");
   // min-height: 100vh;
   // min-width: 100vw;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-}
-
-.container {
-  display: flex;
-  flex-direction: column;
-  width: 100vw;
   height: 100vh;
+  overflow: hidden;
 }
 
-// header {
+// .container {
 //   display: flex;
-//   flex-direction: column;
-//   text-align: center;
-//   justify-content: space-around;
+//   // flex-direction: column;
+//   // width: 100vw;
+//   height: 100vh;
 // }
 
+header {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  // text-align: center;
+  justify-content: space-around;
+}
+
 nav {
-  // flex-basis: 100%;
+  width: 100vw;
   justify-content: space-between;
   display: flex;
   background-image: linear-gradient($base-gray, $base-black);
@@ -61,16 +64,10 @@ nav {
   height: 2.3em;
 }
 
-ul li {
-  min-width: fit-content;
-}
-
 .logo {
   -moz-user-select: none;
   -webkit-user-select: none;
   user-select: none;
-  // width: fit-content;
-  // position: absolute;
   color: $base-white;
   font-size: 2em;
   text-transform: uppercase;
@@ -79,11 +76,10 @@ ul li {
   -moz-transition: 0.6s;
   -webkit-transition: 0.6s;
   transition: 0.6s;
-  // width: fit-content;
 }
 nav ul {
   display: flex;
-  justify-content: baseline;
+  align-items: flex-start;
   gap: 7rem;
 }
 
@@ -121,7 +117,7 @@ header ul li a {
   }
 }
 .hello {
-  background-color: white;
+  background-color: black;
   position: absolute;
   top: 5em;
   right: 5em;
@@ -167,8 +163,8 @@ a.nav-menu {
 }
 
 #particles-js {
-  background-image: url("/assets/images/crescentmoon.jpg");
-  z-index: 1;
+  // background-image: url("/assets/images/crescentmoon.jpg");
+  z-index: 0;
   // height: fit-content;
   // width: 100vw;
   background-size: cover;
@@ -193,17 +189,21 @@ a.nav-menu {
 }
 
 footer {
-  width: 100%;
+  bottom: 0;
+  position: fixed;
+  // margin-top: auto;
   display: flex;
   // flex-direction: column;
   flex-wrap: wrap;
-  align-items: center;
+  // align-items: center;
   padding: 0.5em 0.5em 0.5em 0.5em;
+  // margin: 1em;
   color: $base-white;
-  height: 3.8em;
-  height: fit-content;
-  width: 100vw;
+  // height: 4em;
+  // height: fit-content;
   background-image: linear-gradient($base-black, $base-gray);
+  overflow-y: hidden;
+  width: 100vw;
 }
 
 #lab_social_icon_footer a {
@@ -220,7 +220,7 @@ div.text-center.center-block {
   opacity: 85%;
   // width: max-content;
   // display: flex;
-  // align-self: flex-start;
+  align-self: flex-start;
   // height: fit-content;
 }
 
@@ -250,9 +250,10 @@ span.seperator {
   -moz-user-select: none;
   user-select: none;
   color: gray;
-  font-size: 2.2em;
+  font-size: 1.7em;
   position: absolute;
   opacity: 85%;
+  bottom: 0.44em;
 }
 
 span.copy {
@@ -283,7 +284,7 @@ p.copyright {
 
 div a.social-link {
   position: relative;
-  top: 0.25em;
+  top: 0.7em;
   width: fit-content;
   height: fit-content;
 }

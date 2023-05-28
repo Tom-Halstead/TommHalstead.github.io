@@ -1540,12 +1540,6 @@ window.particlesJS = function (tag_id, params) {
 
   /* set size canvas */
 
-  const HeadAndFootHeight =
-    document.querySelector("footer").offsetHeight +
-    document.querySelector("nav").offsetHeight;
-
-  console.log(HeadAndFootHeight);
-
   canvas_el.style.width = "100vw";
   canvas_el.style.height = `100vh`;
 
