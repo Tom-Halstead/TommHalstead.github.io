@@ -89,8 +89,9 @@ const invertColors = function () {
   const onButton = document.querySelector(".onoff");
   const nav = document.querySelector(".nav");
   const footer = document.querySelector("footer");
-  const socials = document.querySelectorAll(".link");
+  const socials = document.querySelector("#lab_social_icon_footer");
 
+  console.log(socials);
   toggle.classList.toggle("active");
   document.body.classList.toggle("invert");
   nav.classList.toggle("activate");

@@ -354,8 +354,8 @@ div.toggle.active {
 }
 
 .invert {
-  -moz-filter: invert(1);
-  filter: invert(1);
+  -moz-filter: invert(100%);
+  filter: invert(100%);
 }
 
 header nav.activate {
@@ -451,6 +451,10 @@ footer.activater {
   }
 }
 @media only screen and (max-width: 576px) {
+  div.text-center.center-block {
+    position: relative;
+    margin: auto;
+  }
   div.text {
     font-size: 0.8em;
     top: 16em;
