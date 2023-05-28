@@ -187,14 +187,18 @@ span.dev {
   right: -0.2em;
 }
 
-// #particles-js {
-//   overflow-x: hidden;
-//   overflow: hidden;
-//   z-index: 0;
-//   // background-size: cover;
-//   // background-position: center center;
-//   // background-repeat: no-repeat;
-// }
+span.devel {
+  font-family: MyFont2;
+  position: relative;
+  left: 0.15em;
+  top: 1.21em;
+}
+
+#particles-js {
+  overflow-x: hidden;
+  overflow: hidden;
+  z-index: 0;
+}
 
 #lab_social_icon_footer #social-fb:hover {
   color: #3b5998;
@@ -474,17 +478,37 @@ footer.activater {
   }
 }
 @media only screen and (max-width: 576px) {
+  div.text {
+    align-items: center;
+    align-content: center;
+    width: 80vw;
+    font-size: 0.8em;
+    top: 16em;
+    left: 9em;
+  }
+  h1.name {
+    position: relative;
+    top: 0.5em;
+    left: 5rem;
+  }
+
+  span.dev {
+    right: 3.7em;
+    position: relative;
+  }
+
+  span.devel {
+    position: relative;
+    left: -8.5em;
+    top: 2.4em;
+  }
+
   footer#lab_social_icon_footer {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
   }
 
-  div.text {
-    font-size: 0.8em;
-    top: 16em;
-    left: 2.5em;
-  }
   #bars.fa-solid {
     color: $base-white;
     position: absolute;
