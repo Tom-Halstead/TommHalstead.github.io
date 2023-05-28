@@ -14,7 +14,6 @@
   margin: 0;
   padding: 0;
   font-family: "Poppins", "sans-serif";
-  overflow-x: hidden;
 }
 
 body {
@@ -25,7 +24,6 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   height: 100vh;
-  overflow: hidden;
 }
 
 header {
@@ -34,6 +32,7 @@ header {
 }
 
 nav {
+  overflow-x: hidden;
   width: 100vw;
   justify-content: space-between;
   display: flex;
@@ -178,6 +177,8 @@ span.dev {
 }
 
 #particles-js {
+  overflow-x: hidden;
+  overflow: hidden;
   z-index: 0;
   background-size: cover;
   background-position: center center;
@@ -201,6 +202,7 @@ span.dev {
 }
 
 footer {
+  overflow-x: hidden;
   margin-top: auto;
   bottom: 0;
   position: fixed;
@@ -443,7 +445,7 @@ footer.activater {
   }
   p.copyright {
     font-size: 0.5em;
-    top: 4.5em;
+    top: 3em;
     right: 3em;
   }
   span.seperator {
@@ -451,9 +453,10 @@ footer.activater {
   }
 }
 @media only screen and (max-width: 576px) {
-  div.text-center.center-block {
-    position: relative;
-    margin: auto;
+  footer#lab_social_icon_footer {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
   }
   div.text {
     font-size: 0.8em;
@@ -483,7 +486,9 @@ footer.activater {
     display: none;
   }
   p.copyright {
-    visibility: hidden;
+    top: 9em;
+    font-size: 0.6sem;
+    position: sticky;
   }
   span.seperator {
     font-size: 1.4em;
