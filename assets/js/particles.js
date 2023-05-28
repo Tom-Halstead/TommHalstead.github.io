@@ -769,7 +769,7 @@ var pJS = function (tag_id, params) {
   pJS.fn.modes.pushParticles = function (nb, pos) {
     pJS.tmp.pushing = true;
 
-    var limitNumOfParticles = Math.floor(pJS.canvas.el.width / 13);
+    var limitNumOfParticles = Math.floor(pJS.canvas.el.width / 15);
 
     if (pJS.particles.array.length < limitNumOfParticles) {
       for (var i = 0; i < nb; i++) {
