@@ -56,7 +56,7 @@ const insertHeaderAndFooter = function () {
     foot.innerHTML = `
 <section id="lab_social_icon_footer">
   <div class="container">
-    <div class="text-center center-block">
+    <div class="onButton-center center-block">
       <a href="https://www.facebook.com/tommy.halstead">
         <i id="social-fb" class="fa fa-facebook-square fa-3x social"></i>
       </a><span class="seperator">|</span>
@@ -86,7 +86,7 @@ window.addEventListener("load", () => {
 const toggle = document.querySelector(".toggle");
 
 const invertColors = function () {
-  const text = document.querySelector(".text");
+  const onButton = document.querySelector(".onoff");
   const nav = document.querySelector(".nav");
   const footer = document.querySelector("footer");
   const socials = document.querySelectorAll(".link");
@@ -97,9 +97,9 @@ const invertColors = function () {
   footer.classList.toggle("activater");
 
   if (toggle.classList.contains("active")) {
-    text.innerHTML = "ON";
+    onButton.innerHTML = "ON";
   } else {
-    text.innerHTML = "OFF";
+    onButton.innerHTML = "OFF";
     document.body.classList.remove("invert");
     nav.classList.remove("activate");
     footer.classList.remove("activater");
@@ -110,3 +110,24 @@ const invertColors = function () {
 if (window.location.pathname === "/index.html") {
   toggle.addEventListener(`click`, invertColors);
 }
+
+const toggleBtn = document.querySelector(".toggle-btn");
+const dropDownMenu = document.querySelector(".dropdown-menu");
+const bars = document.querySelector("#bars");
+const mediaQuery = window.matchMedia("(min-width: 576px)");
+
+const openDropdown = function () {
+  dropDownMenu.classList.toggle("open");
+  const dropOpen = dropDownMenu.classList.contains("open");
+  bars.classList = dropOpen ? "fa-solid fa-xmark" : "fa-solid fa-bars fa-beat";
+
+  mediaQuery.onchange = function () {
+    if (dropOpen) {
+      dropDownMenu.classList.remove("open");
+      bars.classList = dropOpen
+        ? "fa-solid fa-bars fa-beat"
+        : "fa-solid fa-xmark";
+    }
+  };
+};
+toggleBtn.addEventListener(`click`, openDropdown);
