@@ -39,8 +39,6 @@ header {
 }
 
 nav {
-  // margin: auto;
-
   width: 100vw;
   justify-content: space-between;
   display: flex;
@@ -54,8 +52,6 @@ nav {
 }
 
 .logo {
-  // margin-left: 0.1em;
-
   -moz-user-select: none;
   -webkit-user-select: none;
   user-select: none;
@@ -70,15 +66,14 @@ nav {
 }
 nav ul {
   display: flex;
-  gap: 7rem;
-  // margin: auto;
+  gap: 12rem;
 }
 
 .nav-link {
+  font-size: 1.4em;
   -moz-user-select: none;
   -webkit-user-select: none;
   user-select: none;
-  font-size: 1.5em;
   text-decoration: none;
 }
 
@@ -93,6 +88,8 @@ nav > div > i {
 }
 
 header ul li a {
+  width: fit-content;
+
   font-family: MyFont;
   font-size: 0.8em;
   text-decoration: none;
@@ -121,6 +118,7 @@ header ul li a {
 }
 
 .toggle-btn {
+  visibility: hidden;
   width: 0.5em;
   margin-right: 4.2em;
 }
@@ -151,6 +149,38 @@ a.nav-menu {
   &:hover {
     color: $base-white;
   }
+}
+
+a.nav-btn {
+  padding: 0.5em;
+}
+
+div.text {
+  pointer-events: none;
+  overflow-y: hidden;
+  width: 100vw;
+  height: 30vh;
+  font-size: 2em;
+  position: absolute;
+  top: 10em;
+  left: 2.5em;
+}
+
+h1.name {
+  overflow-y: hidden;
+  height: 4em;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  font-family: MyFont2;
+  color: #696868;
+}
+
+span.dev {
+  font-family: MyFont2;
+  position: relative;
+  top: 1.2em;
+  right: -0.2em;
 }
 
 #particles-js {
@@ -203,7 +233,7 @@ div.text-center.center-block {
   opacity: 85%;
   width: fit-content;
   position: absolute;
-  bottom: 0.55em;
+  top: 0.4em;
 }
 
 #lab_social_icon_footer .social:hover {
@@ -266,6 +296,19 @@ div a.social-link {
 }
 
 @media only screen and (max-width: 1050px) {
+  div.text {
+    font-size: 1.6em;
+    top: 13em;
+    left: 2.5em;
+  }
+  nav ul {
+    gap: 6rem;
+  }
+
+  .nav-link {
+    font-size: 1.5em;
+  }
+
   p.copyright {
     font-size: 0.8em;
     position: absolute;
@@ -290,6 +333,23 @@ div a.social-link {
 }
 
 @media only screen and (max-width: 768px) {
+  div.text {
+    font-size: 1.3em;
+    top: 16em;
+    left: 2.5em;
+  }
+  nav ul {
+    margin-left: 3em;
+    gap: 4em;
+  }
+  .nav-link {
+    font-size: 0.9em;
+  }
+
+  a.logo {
+    font-size: 1.4em;
+  }
+
   #social-fb {
     font-size: 2em;
   }
@@ -302,21 +362,6 @@ div a.social-link {
   #social-li {
     font-size: 2em;
   }
-  #bars.fa-solid {
-    color: $base-white;
-    position: absolute;
-    right: 0.3em;
-    font-size: 1.8rem;
-    cursor: pointer;
-    visibility: visible;
-  }
-  .nav-link {
-    left: 4em;
-    position: relative;
-    font-size: 1em;
-    display: none;
-    bottom: 0.2em;
-  }
 
   p.copyright {
     font-size: 0.5em;
@@ -328,6 +373,28 @@ div a.social-link {
   }
 }
 @media only screen and (max-width: 576px) {
+  div.text {
+    font-size: 0.8em;
+    top: 28em;
+    left: 2.5em;
+  }
+  #bars.fa-solid {
+    color: $base-white;
+    position: absolute;
+    right: 0.8em;
+    font-size: 1.8rem;
+    cursor: pointer;
+    visibility: visible;
+  }
+  .nav-link {
+    display: none;
+  }
+  .toggle-btn {
+    visibility: hidden;
+    // display: none;
+    width: 0.5em;
+    margin-right: 4.2em;
+  }
   .dropdown-menu {
     left: 1.2rem;
     width: unset;

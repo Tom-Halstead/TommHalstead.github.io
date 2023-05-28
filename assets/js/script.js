@@ -81,7 +81,7 @@ if (window.location.pathname === "/index.html") {
 const toggleBtn = document.querySelector(".toggle-btn");
 const dropDownMenu = document.querySelector(".dropdown-menu");
 const bars = document.querySelector("#bars");
-const mediaQuery = window.matchMedia("(min-width: 786px)");
+const mediaQuery = window.matchMedia("(min-width: 576px)");
 
 const openDropdown = function () {
   dropDownMenu.classList.toggle("open");
