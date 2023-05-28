@@ -36,11 +36,11 @@ body {
 header {
   width: 100vw;
   display: flex;
-  flex-direction: column;
-  justify-content: space-around;
 }
 
 nav {
+  // margin: auto;
+
   width: 100vw;
   justify-content: space-between;
   display: flex;
@@ -54,6 +54,8 @@ nav {
 }
 
 .logo {
+  // margin-left: 0.1em;
+
   -moz-user-select: none;
   -webkit-user-select: none;
   user-select: none;
@@ -68,8 +70,8 @@ nav {
 }
 nav ul {
   display: flex;
-  align-items: flex-start;
   gap: 7rem;
+  // margin: auto;
 }
 
 .nav-link {
@@ -88,7 +90,6 @@ nav > div > i {
   color: $base-white;
   font-size: 1.8rem;
   cursor: pointer;
-  visibility: hidden;
 }
 
 header ul li a {
@@ -119,6 +120,11 @@ header ul li a {
   backdrop-filter: blur(5px);
 }
 
+.toggle-btn {
+  width: 0.5em;
+  margin-right: 4.2em;
+}
+
 .dropdown-menu li {
   display: flex;
   align-items: center;
@@ -130,6 +136,10 @@ header ul li a {
   height: 21rem;
   display: block;
   backdrop-filter: blur(5px);
+  border: 2px solid #716e6e;
+  &:hover {
+    color: $base-white;
+  }
 }
 
 a.nav-menu {
@@ -222,7 +232,7 @@ span.seperator {
   -moz-user-select: none;
   user-select: none;
   color: gray;
-  font-size: 1.9em;
+  font-size: 2.1em;
   opacity: 85%;
 }
 
@@ -241,7 +251,6 @@ p.copyright {
   font-size: 1rem;
   opacity: 85%;
   margin: auto;
-  flex-basis: 0.33.33333%;
 }
 
 .nav-btn[aria-current="page"] {
@@ -256,7 +265,43 @@ div a.social-link {
   height: fit-content;
 }
 
+@media only screen and (max-width: 1050px) {
+  p.copyright {
+    font-size: 0.8em;
+    position: absolute;
+    right: 5.5em;
+    top: 2.4em;
+  }
+  #social-fb {
+    font-size: 2.5em;
+  }
+  #social-tw {
+    font-size: 2.5em;
+  }
+  #social-gh {
+    font-size: 2.5em;
+  }
+  #social-li {
+    font-size: 2.5em;
+  }
+  span.seperator {
+    font-size: 1.8em;
+  }
+}
+
 @media only screen and (max-width: 768px) {
+  #social-fb {
+    font-size: 2em;
+  }
+  #social-tw {
+    font-size: 2em;
+  }
+  #social-gh {
+    font-size: 2em;
+  }
+  #social-li {
+    font-size: 2em;
+  }
   #bars.fa-solid {
     color: $base-white;
     position: absolute;
@@ -266,13 +311,20 @@ div a.social-link {
     visibility: visible;
   }
   .nav-link {
+    left: 4em;
+    position: relative;
+    font-size: 1em;
     display: none;
-    position: float;
     bottom: 0.2em;
   }
 
   p.copyright {
-    visibility: hidden;
+    font-size: 0.5em;
+    top: 4.5em;
+    right: 3em;
+  }
+  span.seperator {
+    font-size: 1.4em;
   }
 }
 @media only screen and (max-width: 576px) {
@@ -282,12 +334,11 @@ div a.social-link {
     align-items: center;
     display: none;
   }
-}
 
-@media only screen and (max-width: 1050px) {
   p.copyright {
-    position: absolute;
-    right: 0.5em;
-    top: 1.7em;
+    visibility: hidden;
+  }
+  span.seperator {
+    font-size: 1.4em;
   }
 }
