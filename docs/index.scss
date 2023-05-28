@@ -21,6 +21,7 @@ $base-white: #ffffff;
   margin: 0;
   padding: 0;
   font-family: "Poppins", "sans-serif";
+  overflow: hidden;
 }
 
 body {
@@ -31,8 +32,7 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   height: 100vh;
-  // overflow: hidden;
-  // overflow-x: hidden;
+  overflow: hidden;
 }
 
 header {
@@ -43,8 +43,6 @@ header {
 }
 
 nav {
-  overflow-x: hidden;
-
   width: 100vw;
   justify-content: space-between;
   display: flex;
@@ -165,7 +163,6 @@ a.nav-btn {
 div.text {
   pointer-events: none;
   overflow-y: hidden;
-  width: 100vw;
   height: 30vh;
   font-size: 2em;
   position: absolute;
@@ -190,14 +187,14 @@ span.dev {
   right: -0.2em;
 }
 
-#particles-js {
-  overflow-x: hidden;
-  overflow: hidden;
-  z-index: 0;
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-}
+// #particles-js {
+//   overflow-x: hidden;
+//   overflow: hidden;
+//   z-index: 0;
+//   // background-size: cover;
+//   // background-position: center center;
+//   // background-repeat: no-repeat;
+// }
 
 #lab_social_icon_footer #social-fb:hover {
   color: #3b5998;
@@ -216,8 +213,6 @@ span.dev {
 }
 
 footer {
-  overflow-x: hidden;
-
   margin-top: auto;
   bottom: 0;
   position: fixed;
