@@ -1534,12 +1534,20 @@ window.particlesJS = function (tag_id, params) {
   }
 
   /* create canvas element */
+
   var canvas_el = document.createElement("canvas");
   canvas_el.className = pJS_canvas_class;
 
   /* set size canvas */
+
+  const HeadAndFootHeight =
+    document.querySelector("footer").offsetHeight +
+    document.querySelector("nav").offsetHeight;
+
+  console.log(HeadAndFootHeight);
+
   canvas_el.style.width = "100vw";
-  canvas_el.style.height = "100vh";
+  canvas_el.style.height = `100vh`;
 
   /* append canvas */
   var canvas = document.getElementById(tag_id).appendChild(canvas_el);

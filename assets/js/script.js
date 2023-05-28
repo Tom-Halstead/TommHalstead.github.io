@@ -56,7 +56,7 @@ const invertColors = function () {
   const text = document.querySelector(".text");
   const nav = document.querySelector(".nav");
   const footer = document.querySelector("footer");
-  const socials = document.querySelectorAll(".link");
+  const socials = document.querySelectorAll(".social-link");
 
   toggle.classList.toggle("active");
   document.body.classList.toggle("invert");
@@ -77,3 +77,25 @@ const invertColors = function () {
 if (window.location.pathname === "/index.html") {
   toggle.addEventListener(`click`, invertColors);
 }
+
+const toggleBtn = document.querySelector(".toggle-btn");
+const dropDownMenu = document.querySelector(".dropdown-menu");
+const bars = document.querySelector("#bars");
+const mediaQuery = window.matchMedia("(min-width: 786px)");
+
+const openDropdown = function () {
+  dropDownMenu.classList.toggle("open");
+  const dropOpen = dropDownMenu.classList.contains("open");
+  bars.classList = dropOpen ? "fa-solid fa-xmark" : "fa-solid fa-bars fa-beat";
+
+  mediaQuery.onchange = function () {
+    if (dropOpen) {
+      dropDownMenu.classList.remove("open");
+      bars.classList = dropOpen
+        ? "fa-solid fa-bars fa-beat"
+        : "fa-solid fa-xmark";
+    }
+  };
+};
+
+toggleBtn.addEventListener(`click`, openDropdown);
