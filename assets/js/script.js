@@ -98,5 +98,3 @@ const openDropdown = function () {
   };
 };
 toggleBtn.addEventListener(`click`, openDropdown);
-
-const insertDropDown = function () {};
