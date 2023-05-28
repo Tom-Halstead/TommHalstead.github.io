@@ -273,7 +273,6 @@ p.copyright {
   width: max-content;
   margin: auto;
   align-self: center;
-
   text-align: center;
 }
 
@@ -283,10 +282,10 @@ p.copyright {
 }
 
 div a.social-link {
-  // position: relative;
-  // top: 0.2em;
-  // width: fit-content;
-  // height: fit-content;
+  position: relative;
+  top: 0.25em;
+  width: fit-content;
+  height: fit-content;
 }
 
 @media only screen and (max-width: 768px) {

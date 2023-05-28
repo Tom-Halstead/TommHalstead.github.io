@@ -248,6 +248,15 @@ p.copyright {
   font-size: 0.9em;
 }
 
+div a.social-link {
+  position: relative;
+  top: 0.25em;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
 @media only screen and (max-width: 768px) {
   #bars.fa-solid {
     color: #ffffff;
