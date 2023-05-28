@@ -15,6 +15,7 @@
   padding: 0;
   font-family: "Poppins", "sans-serif";
   overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 body {
@@ -27,6 +28,7 @@ body {
   display: flex;
   flex-direction: column;
   width: 100vw;
+  height: 100vh;
 }
 
 nav {
@@ -92,6 +94,14 @@ header ul li a {
 }
 header ul li a:hover {
   color: #ffffff;
+}
+
+.hello {
+  background-color: white;
+  position: absolute;
+  top: 5em;
+  right: 5em;
+  color: white;
 }
 
 .dropdown-menu {
@@ -161,36 +171,34 @@ a.nav-menu:hover {
 footer {
   width: 100%;
   display: flex;
-  flex-direction: column;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-around;
-  padding: 1em 1em 1em 1em;
+  padding: 0.5em 0.5em 0.5em 0.5em;
   color: #ffffff;
-  height: 2.8em;
+  height: 3.8em;
+  height: -moz-fit-content;
+  height: fit-content;
   width: 100vw;
   background-image: linear-gradient(rgb(0, 0, 0), rgb(42, 41, 41));
 }
 
 #lab_social_icon_footer a {
+  font-size: 0.9em;
   color: #989595;
-  padding: 1rem;
+  padding: 1em;
   opacity: 85%;
 }
 
-div.text-center {
+div.text-center.center-block {
   -webkit-user-select: none;
   -moz-user-select: none;
   user-select: none;
   overflow-y: hidden;
   opacity: 85%;
-  width: -moz-max-content;
-  width: max-content;
-  align-self: flex-start;
 }
 
 #lab_social_icon_footer .social:hover {
-  transform: scale(1.1);
+  transform: scale(0.9);
   opacity: 85%;
 }
 
@@ -221,19 +229,18 @@ span.copy {
 }
 
 p.copyright {
-  display: inline-block;
   -webkit-user-select: none;
   -moz-user-select: none;
   user-select: none;
   font-family: MyFont;
   color: #7d7d7d;
-  align-self: center;
   font-size: 1rem;
-  text-align: center;
   opacity: 85%;
   width: -moz-max-content;
   width: max-content;
   margin: auto;
+  align-self: center;
+  text-align: center;
 }
 
 .nav-btn[aria-current=page] {
