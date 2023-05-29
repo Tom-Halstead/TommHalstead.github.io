@@ -189,16 +189,17 @@ const invertColors = function () {
   const onButton = document.querySelector(".onoff");
   const nav = document.querySelector(".nav");
   const footer = document.querySelector("footer");
-  const socials = document.querySelector("#lab_social_icon_footer");
   const navBtns = document.querySelectorAll(".nav-btn");
-  const copyright = document.querySelector("p");
-  const centerBlock = document.querySelector(".center-block");
+  const copyright = document.querySelector(".copyright");
+  const socialIcons = document.querySelectorAll(".fa");
 
-  navBtns.forEach((link) => link.classList.toggle("inverted"));
+  console.log(copyright);
 
-  centerBlock.classList.toggle("inverted");
-
-  copyright.classList.toggle("inverted");
+  navBtns.forEach((link, index) => {
+    socialIcons[index].classList.toggle("inverted");
+    link.classList.toggle("inverted");
+  });
+  copyright.classList.toggle("test");
   toggle.classList.toggle("active");
   document.body.classList.toggle("invert");
   nav.classList.toggle("activate");

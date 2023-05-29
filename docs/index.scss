@@ -162,7 +162,6 @@ a.nav-btn {
 
 div.text {
   overflow-x: hidden;
-
   letter-spacing: 0.11em;
   pointer-events: none;
   overflow-y: hidden;
@@ -181,22 +180,6 @@ h1.name {
   user-select: none;
   font-family: MyFont2;
   color: #696868;
-}
-
-span.dev {
-  overflow-x: hidden;
-
-  font-family: MyFont2;
-  position: relative;
-  top: 1.2em;
-  // right: 0em;
-}
-
-span.devel {
-  font-family: MyFont2;
-  position: relative;
-  left: -0.02em;
-  top: 1.22em;
 }
 
 #particles-js {
@@ -290,7 +273,7 @@ span.copy {
   opacity: 85%;
 }
 
-p.copyright {
+.copyright {
   -webkit-user-select: none;
   -moz-user-select: none;
   user-select: none;
@@ -392,9 +375,12 @@ header nav.activate {
 }
 
 .inverted {
-  color: white;
+  color: #f600ff;
 }
 
+.test {
+  color: #f600ff;
+}
 footer.activater {
   background-image: linear-gradient($base-white, #09ff00);
   opacity: 80%;
@@ -414,7 +400,7 @@ footer.activater {
     font-size: 1.5em;
   }
 
-  p.copyright {
+  .copyright {
     font-size: 0.8em;
     position: absolute;
     right: 5.5em;
@@ -474,7 +460,7 @@ footer.activater {
     font-size: 2em;
   }
 
-  p.copyright {
+  .copyright {
     font-size: 0.5em;
     top: 3em;
     right: 3em;
@@ -538,7 +524,7 @@ footer.activater {
     flex-wrap: wrap;
   }
 
-  p.copyright {
+  .copyright {
     top: 9em;
     font-size: 0.6sem;
     position: sticky;

@@ -171,20 +171,6 @@ h1.name {
   color: #696868;
 }
 
-span.dev {
-  overflow-x: hidden;
-  font-family: MyFont2;
-  position: relative;
-  top: 1.2em;
-}
-
-span.devel {
-  font-family: MyFont2;
-  position: relative;
-  left: -0.02em;
-  top: 1.22em;
-}
-
 #particles-js {
   overflow-x: hidden;
   overflow: hidden;
@@ -272,7 +258,7 @@ span.copy {
   opacity: 85%;
 }
 
-p.copyright {
+.copyright {
   -webkit-user-select: none;
   -moz-user-select: none;
   user-select: none;
@@ -373,7 +359,11 @@ header nav.activate {
 }
 
 .inverted {
-  color: white;
+  color: #f600ff;
+}
+
+.test {
+  color: #f600ff;
 }
 
 footer.activater {
@@ -393,7 +383,7 @@ footer.activater {
   .nav-link {
     font-size: 1.5em;
   }
-  p.copyright {
+  .copyright {
     font-size: 0.8em;
     position: absolute;
     right: 5.5em;
@@ -449,7 +439,7 @@ footer.activater {
   #social-li {
     font-size: 2em;
   }
-  p.copyright {
+  .copyright {
     font-size: 0.5em;
     top: 3em;
     right: 3em;
@@ -507,7 +497,7 @@ footer.activater {
     justify-content: center;
     flex-wrap: wrap;
   }
-  p.copyright {
+  .copyright {
     top: 9em;
     font-size: 0.6sem;
     position: sticky;
