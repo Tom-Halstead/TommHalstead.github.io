@@ -78,6 +78,106 @@ const navHighlights = function () {
 //   }
 // };
 
+// <div class="container">
+//   <div class="togcontainer">
+//     <div class="toggle">
+//       <div class="toggle-button"></div>
+//     </div>
+//     <div class="onoff">OFF</div>
+//   </div>
+//   <div id="particles-js">
+//     <header class="head">
+//       <nav class="nav">
+//         <a href="#" class="logo">
+//           Logo
+//         </a>
+//         <ul>
+//           <li class="nav-link">
+//             <a href="index.html" class="nav-btn">
+//               Home
+//             </a>
+//           </li>
+//           <li class="nav-link">
+//             <a href="story.html" class="nav-btn">
+//               Story
+//             </a>
+//           </li>
+//           <li class="nav-link">
+//             <a href="work.html" class="nav-btn">
+//               Work
+//             </a>
+//           </li>
+//           <li class="nav-link">
+//             <a href="contact.html" class="nav-btn">
+//               Contact
+//             </a>
+//           </li>
+//         </ul>
+//         <div class="toggle-btn">
+//           <i id="bars" class="fa-solid fa-bars fa-beat"></i>
+//         </div>
+//       </nav>
+//       <div class="text">
+//         <h1 class="name">I'm Tom, an aspiring developer.</h1>
+//       </div>
+
+//       <div class="dropdown-menu">
+//         <li class="nav-drop">
+//           <a href="index.html" class="nav-menu">
+//             Home
+//           </a>
+//         </li>
+//         <li class="nav-drop">
+//           <a href="story.html" class="nav-menu">
+//             Story
+//           </a>
+//         </li>
+//         <li class="nav-drop">
+//           <a href="work.html" class="nav-menu">
+//             Work
+//           </a>
+//         </li>
+//         <li class="nav-drop">
+//           <a href="contact.html" class="nav-menu">
+//             Contact
+//           </a>
+//         </li>
+//       </div>
+//     </header>
+
+//     <footer id="lab_social_icon_footer">
+//       <div class="text-center center-block">
+//         <a
+//           class="social-link"
+//           href="https://www.facebook.com/tommy.halstead"
+//         >
+//           <i id="social-fb" class="fa fa-facebook-square fa-3x social"></i>
+//         </a>
+//         <span class="seperator">|</span>
+//         <a class="social-link" href="https://twitter.com/bootsnipp">
+//           <i id="social-tw" class="fa fa-twitter-square fa-3x social"></i>
+//         </a>
+//         <span class="seperator">|</span>
+
+//         <a class="social-link" href="https://github.com/TommHalstead">
+//           <i id="social-gh" class="fa fa-github-square fa-3x social"></i>
+//         </a>
+//         <span class="seperator">|</span>
+//         <a
+//           class="social-link"
+//           href="https://www.linkedin.com/in/thomas-halstead-073129180/"
+//         >
+//           <i id="social-li" class="fa fa-linkedin-square fa-3x social"></i>
+//         </a>
+//       </div>
+//       <p class="copyright">
+//         <span class="copy">&copy;</span> 2023 All rights reserved | Designed
+//         By: Thomas Halstead
+//       </p>
+//     </footer>
+//   </div>
+// </div>;
+
 window.addEventListener("load", () => {
   // insertHeaderAndFooter();
   navHighlights();
@@ -90,8 +190,15 @@ const invertColors = function () {
   const nav = document.querySelector(".nav");
   const footer = document.querySelector("footer");
   const socials = document.querySelector("#lab_social_icon_footer");
+  const navBtns = document.querySelectorAll(".nav-btn");
+  const copyright = document.querySelector("p");
+  const centerBlock = document.querySelector(".center-block");
 
-  console.log(socials);
+  navBtns.forEach((link) => link.classList.toggle("inverted"));
+
+  centerBlock.classList.toggle("inverted");
+
+  copyright.classList.toggle("inverted");
   toggle.classList.toggle("active");
   document.body.classList.toggle("invert");
   nav.classList.toggle("activate");
@@ -105,6 +212,7 @@ const invertColors = function () {
     nav.classList.remove("activate");
     footer.classList.remove("activater");
     toggle.classList.remove("active");
+    copyright.classList.remove("inverted");
   }
 };
 
