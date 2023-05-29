@@ -161,6 +161,9 @@ a.nav-btn {
 }
 
 div.text {
+  overflow-x: hidden;
+
+  letter-spacing: 0.11em;
   pointer-events: none;
   overflow-y: hidden;
   height: 30vh;
@@ -171,7 +174,7 @@ div.text {
 }
 
 h1.name {
-  overflow-y: hidden;
+  overflow-x: hidden;
   height: 4em;
   -moz-user-select: none;
   -webkit-user-select: none;
@@ -181,17 +184,19 @@ h1.name {
 }
 
 span.dev {
+  overflow-x: hidden;
+
   font-family: MyFont2;
   position: relative;
   top: 1.2em;
-  right: -0.2em;
+  // right: 0em;
 }
 
 span.devel {
   font-family: MyFont2;
   position: relative;
-  left: 0.15em;
-  top: 1.21em;
+  left: -0.02em;
+  top: 1.22em;
 }
 
 #particles-js {
@@ -273,7 +278,9 @@ span.seperator {
   -moz-user-select: none;
   user-select: none;
   color: gray;
-  font-size: 2.1em;
+  font-size: 2em;
+  bottom: 0.18em;
+  position: relative;
   opacity: 85%;
 }
 
@@ -389,12 +396,6 @@ footer.activater {
   opacity: 65%;
 }
 
-.link.black {
-  background: black;
-  background-color: black;
-  color: black;
-}
-
 @media only screen and (max-width: 1050px) {
   div.text {
     font-size: 1.4em;
@@ -428,6 +429,7 @@ footer.activater {
     font-size: 2.5em;
   }
   span.seperator {
+    bottom: 0.03em;
     font-size: 1.8em;
   }
 }
@@ -479,12 +481,10 @@ footer.activater {
 }
 @media only screen and (max-width: 576px) {
   div.text {
-    align-items: center;
-    align-content: center;
     width: 80vw;
-    font-size: 0.8em;
-    top: 16em;
-    left: 9em;
+    font-size: 1em;
+    top: 12em;
+    left: 0.18em;
   }
   h1.name {
     font-size: 2.5em;
@@ -494,20 +494,14 @@ footer.activater {
   }
 
   span.dev {
-    right: 3.7em;
+    right: 1em;
     position: relative;
   }
 
   span.devel {
     position: relative;
-    left: -8.5em;
-    top: 2.4em;
-  }
-
-  footer#lab_social_icon_footer {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    left: -8.55em;
+    top: 2.5em;
   }
 
   #bars.fa-solid {
@@ -534,13 +528,20 @@ footer.activater {
     display: none;
   }
 
+  footer#lab_social_icon_footer {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
   p.copyright {
     top: 9em;
     font-size: 0.6sem;
     position: sticky;
   }
   span.seperator {
-    font-size: 1.4em;
+    bottom: -0.05em;
+    font-size: 1.3em;
   }
 
   .togcontainer {
