@@ -79,9 +79,9 @@ const navHighlights = function () {
 // };
 
 const insertHTML = function () {
-  if (window.location.pathname && window.location.pathname !== "/index.html") {
+  if (!window.location.pathname && window.location.pathname !== "/index.html") {
     const particlesDiv = document.querySelector("#particles-js");
-
+    console.log(window.location.pathname);
     const markup = `
     <header class="head">
       <nav class="nav">
