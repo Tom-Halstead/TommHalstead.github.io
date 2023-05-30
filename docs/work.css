@@ -45,6 +45,9 @@ nav {
 }
 
 .logo {
+  position: relative;
+  left: 0.1em;
+  bottom: 0.3em;
   -moz-user-select: none;
   -webkit-user-select: none;
   user-select: none;

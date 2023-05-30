@@ -233,4 +233,4 @@ window.addEventListener("load", () => {
   insertHTML();
   navHighlights();
 });
-// toggleBtn.addEventListener(`click`, openDropdown);
+toggleBtn.addEventListener(`click`, openDropdown);
