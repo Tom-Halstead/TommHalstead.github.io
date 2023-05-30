@@ -207,16 +207,21 @@ const invertColors = function () {
   }
 };
 
-if (window.location.pathname === "/index.html") {
+if (
+  window.location.pathname === "/index.html" ||
+  window.location.pathname === "/"
+) {
   toggle.addEventListener(`click`, invertColors);
 }
 
 const toggleBtn = document.querySelector(".toggle-btn");
 const dropDownMenu = document.querySelector(".dropdown-menu");
-const bars = document.querySelector("#bars");
+// const bars = document.querySelector("#bars");
 const mediaQuery = window.matchMedia("(min-width: 576px)");
 
 const openDropdown = function () {
+  const bars = document.querySelector("#bars");
+
   dropDownMenu.classList.toggle("open");
   const dropOpen = dropDownMenu.classList.contains("open");
   bars.classList = dropOpen ? "fa-solid fa-xmark" : "fa-solid fa-bars fa-beat";
@@ -235,4 +240,7 @@ window.addEventListener("load", () => {
   insertHTML();
   navHighlights();
 });
-toggleBtn.addEventListener(`click`, openDropdown);
+
+(function () {
+  toggleBtn.addEventListener(`click`, openDropdown);
+})();
