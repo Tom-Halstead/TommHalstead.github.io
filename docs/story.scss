@@ -1,109 +1,166 @@
+$bold-weight: 700;
+$base-black: rgb(0, 0, 0);
+$base-gray: rgb(42, 41, 41);
+$base-text: #989595;
+$base-white: #ffffff;
 @font-face {
   font-family: "MyFont";
-  font-weight: 700;
+  font-weight: $bold-weight;
   font-style: normal;
   src: url("RobotoMono-Bold.ttf");
 }
+
 @font-face {
   font-family: "MyFont2";
   font-style: normal;
   font-weight: normal;
   src: url("Stellar-light.woff");
 }
+
 * {
   margin: 0;
   padding: 0;
   font-family: "Poppins", "sans-serif";
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 body {
-  background-image: url("./crescentmoon.jpg");
-  max-height: 100vh;
-  max-width: 100vw;
+  margin: 0;
+  padding: 0;
+  background-image: url("crescentmoon.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  height: 100vh;
+  overflow: hidden;
 }
 
-header nav {
-  background-image: linear-gradient(rgb(42, 41, 41), rgb(0, 0, 0));
+header {
+  width: 100vw;
+  display: flex;
+}
+
+nav {
+  width: 100vw;
+  justify-content: space-between;
+  display: flex;
+  background-image: linear-gradient($base-gray, $base-black);
   opacity: 85%;
-  top: 0;
-  height: 4.3em;
-  position: absolute;
-  width: 100%;
+  -moz-transition: 0.6s;
+  -webkit-transition: 0.6s;
   transition: 0.6s;
   padding: 1em 1em 1em 1em;
+  height: 2.3em;
 }
 
-a.logo {
-  -webkit-user-select: none;
+.logo {
   -moz-user-select: none;
+  -webkit-user-select: none;
   user-select: none;
-  width: 3em;
-  position: absolute;
-  color: #ffffff;
+  color: $base-white;
   font-size: 2em;
   text-transform: uppercase;
   text-decoration: none;
   letter-spacing: 0.06em;
+  -moz-transition: 0.6s;
+  -webkit-transition: 0.6s;
   transition: 0.6s;
 }
-
 nav ul {
   display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-  list-style: none;
+  gap: 12rem;
 }
 
 .nav-link {
-  -webkit-user-select: none;
+  font-size: 1.4em;
   -moz-user-select: none;
+  -webkit-user-select: none;
   user-select: none;
-  justify-content: space-between;
-  font-size: 1.5em;
   text-decoration: none;
+  overflow-y: hidden;
+}
+
+nav > div > i {
+  visibility: hidden;
+}
+
+#bars.fa-solid {
+  color: $base-white;
+  font-size: 1.8rem;
+  cursor: pointer;
 }
 
 header ul li a {
+  width: fit-content;
   font-family: MyFont;
   font-size: 0.8em;
   text-decoration: none;
-  color: #989595;
+  color: $base-text;
   letter-spacing: 1px;
   font-weight: 500;
+  -moz-transition: 0.25s ease;
+  -webkit-transition: 0.25s ease;
   transition: 0.25s ease;
+  &:hover {
+    color: $base-white;
+  }
+}
+.dropdown-menu {
+  display: none;
+  border-radius: 1em 1em 1em 1em;
+  opacity: 90%;
+  background: rgb(255, 255, 255, 0.1);
+  position: absolute;
+  top: 5rem;
+  right: 1rem;
+  width: 15rem;
+  overflow: hidden;
+  transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  backdrop-filter: blur(20px);
 }
 
-header ul li a {
-  color: #989595;
+.toggle-btn {
+  visibility: hidden;
+  width: 0.5em;
+  margin-right: 4.2em;
 }
-header ul li a:hover {
-  color: #ffffff;
-  box-shadow: 0 1px 0 0 #989595;
+
+.dropdown-menu li {
+  display: flex;
+  align-items: center;
+  padding: 1.5em;
+  justify-content: center;
+}
+
+.dropdown-menu.open {
+  height: 21rem;
+  display: block;
+  backdrop-filter: blur(30px);
+  border: 2px solid #716e6e;
+  &:hover {
+    color: $base-white;
+  }
+}
+
+a.nav-menu {
+  font-family: MyFont;
+  color: $base-text;
+  list-style: none;
+  font-size: 1.7rem;
+  text-decoration: none;
+  &:hover {
+    color: $base-white;
+  }
+}
+
+a.nav-btn {
+  padding: 0.5em;
 }
 
 #particles-js {
-  width: 100%;
-  position: relative;
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-}
-
-footer {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  color: #ffffff;
-  opacity: 85%;
-  height: 4.8em;
-  z-index: 50;
-  background-image: linear-gradient(rgb(0, 0, 0), rgb(42, 41, 41));
-  overflow-y: hidden;
-  bottom: 0;
+  overflow-x: hidden;
+  overflow: hidden;
+  z-index: 0;
 }
 
 #lab_social_icon_footer #social-fb:hover {
@@ -122,23 +179,42 @@ footer {
   color: #0077b5;
 }
 
-#lab_social_icon_footer {
-  width: 100%;
-  top: 0.7em;
-  position: relative;
-  padding: 1em 1em 1em 1em;
-  opacity: 85%;
+footer {
+  margin-top: auto;
+  bottom: 0;
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5em 0.5em 0.5em 0.5em;
+  color: $base-white;
+  height: 3.3em;
+  background-image: linear-gradient($base-black, $base-gray);
+  overflow-y: hidden;
+  width: 100vw;
 }
 
 #lab_social_icon_footer a {
-  color: #989595;
+  font-size: 0.9em;
+  color: $base-text;
   padding: 1em;
   opacity: 85%;
-  position: relative;
+}
+div.text-center.center-block {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  overflow-y: hidden;
+  opacity: 85%;
+  width: fit-content;
+  position: absolute;
+  top: 0.4em;
 }
 
 #lab_social_icon_footer .social:hover {
-  transform: scale(1.1);
+  -webkit-transform: scale(0.9);
+  -moz-transform: scale(0.9);
+  -o-transform: scale(0.9);
+  transform: scale(0.9);
   opacity: 85%;
 }
 
@@ -147,18 +223,12 @@ footer {
   -webkit-transform: scale(0.8);
   -moz-transform: scale(0.8);
   -o-transform: scale(0.8);
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
   transition-duration: 0.5s;
   transform: scale(0.8);
   opacity: 85%;
-}
-
-div.text-center {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  user-select: none;
-  overflow-y: hidden;
-  opacity: 85%;
-  position: relative;
 }
 
 span.seperator {
@@ -166,36 +236,139 @@ span.seperator {
   -moz-user-select: none;
   user-select: none;
   color: gray;
-  font-size: 2.2em;
-  position: absolute;
-  opacity: 85%;
-}
-
-span.copy {
-  font-family: Georgia, "Times New Roman", Times, serif;
-  font-size: 1em;
+  font-size: 2em;
+  bottom: 0.18em;
   position: relative;
-  bottom: 0.06em;
   opacity: 85%;
 }
 
-p.copyright {
+.copyright {
   -webkit-user-select: none;
   -moz-user-select: none;
   user-select: none;
-  width: -moz-fit-content;
-  width: fit-content;
   font-family: MyFont;
   color: #7d7d7d;
-  position: relative;
-  bottom: 2.3em;
-  font-size: 1em;
+  font-size: 1rem;
   opacity: 85%;
   margin: auto;
 }
 
 .nav-btn[aria-current="page"] {
   color: #ffffff;
-  box-shadow: 0 1px 0 0 #989595;
   font-size: 0.9em;
+}
+
+div a.social-link {
+  position: relative;
+  top: 0.7em;
+  width: fit-content;
+  height: fit-content;
+}
+
+@media only screen and (max-width: 1050px) {
+  nav ul {
+    gap: 6rem;
+  }
+
+  .nav-link {
+    font-size: 1.5em;
+  }
+
+  .copyright {
+    font-size: 0.8em;
+    position: absolute;
+    right: 5.5em;
+    top: 2.4em;
+  }
+  #social-fb {
+    font-size: 2.5em;
+  }
+  #social-tw {
+    font-size: 2.5em;
+  }
+  #social-gh {
+    font-size: 2.5em;
+  }
+  #social-li {
+    font-size: 2.5em;
+  }
+  span.seperator {
+    bottom: 0.03em;
+    font-size: 1.8em;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .togcontainer {
+    position: absolute;
+    right: -5em;
+    top: 8em;
+  }
+  div.text {
+    font-size: 1.1em;
+    top: 12em;
+    left: 2.5em;
+  }
+  nav ul {
+    margin-left: 3em;
+    gap: 4em;
+  }
+  .nav-link {
+    font-size: 0.9em;
+  }
+
+  a.logo {
+    font-size: 1.4em;
+  }
+
+  #social-fb {
+    font-size: 2em;
+  }
+  #social-tw {
+    font-size: 2em;
+  }
+  #social-gh {
+    font-size: 2em;
+  }
+  #social-li {
+    font-size: 2em;
+  }
+
+  .copyright {
+    font-size: 0.5em;
+    top: 3em;
+    right: 3em;
+  }
+  span.seperator {
+    font-size: 1.4em;
+  }
+}
+@media only screen and (max-width: 576px) {
+  #bars.fa-solid {
+    color: $base-white;
+    position: absolute;
+    right: 0.8em;
+    font-size: 1.8rem;
+    cursor: pointer;
+    visibility: visible;
+  }
+  .nav-link {
+    display: none;
+
+    footer#lab_social_icon_footer {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .copyright {
+      top: 9em;
+      font-size: 0.6sem;
+      position: sticky;
+    }
+    span.seperator {
+      bottom: -0.05em;
+      font-size: 1.3em;
+    }
+  }
 }

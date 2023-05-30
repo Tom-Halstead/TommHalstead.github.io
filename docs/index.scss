@@ -36,8 +36,6 @@ body {
 }
 
 header {
-  // overflow-x: hidden;
-
   width: 100vw;
   display: flex;
 }
@@ -94,7 +92,6 @@ nav > div > i {
 
 header ul li a {
   width: fit-content;
-
   font-family: MyFont;
   font-size: 0.8em;
   text-decoration: none;
@@ -267,12 +264,6 @@ span.seperator {
   opacity: 85%;
 }
 
-span.copy {
-  font-family: Georgia, "Times New Roman", Times, serif;
-  font-size: 1em;
-  opacity: 85%;
-}
-
 .copyright {
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -355,7 +346,7 @@ div.toggle.active {
   left: 1.5em;
   width: 1.5em;
   height: 1.5em;
-  background: rgb(144, 139, 139);
+  background: rgb(91, 85, 85);
   border-radius: 1em;
   cursor: pointer;
   -moz-transition: 0.3s;
