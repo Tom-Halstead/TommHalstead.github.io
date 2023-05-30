@@ -79,7 +79,10 @@ const navHighlights = function () {
 // };
 
 const insertHTML = function () {
-  if (window.location.pathname !== "/index.html") {
+  if (
+    window.location.pathname !== "/index.html" &&
+    window.location.pathname !== ""
+  ) {
     const particlesDiv = document.querySelector("#particles-js");
 
     const markup = `
