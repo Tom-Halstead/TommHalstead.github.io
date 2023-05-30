@@ -458,15 +458,6 @@ footer.activater {
     top: 0.5em;
     left: 5rem;
   }
-  span.dev {
-    right: 1em;
-    position: relative;
-  }
-  span.devel {
-    position: relative;
-    left: -8.55em;
-    top: 2.5em;
-  }
   #bars.fa-solid {
     color: #ffffff;
     position: absolute;
@@ -496,7 +487,7 @@ footer.activater {
   }
   .copyright {
     top: 9em;
-    font-size: 0.6sem;
+    font-size: 0.6em;
     position: sticky;
   }
   span.seperator {

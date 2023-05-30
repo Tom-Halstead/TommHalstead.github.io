@@ -477,17 +477,6 @@ footer.activater {
     left: 5rem;
   }
 
-  span.dev {
-    right: 1em;
-    position: relative;
-  }
-
-  span.devel {
-    position: relative;
-    left: -8.55em;
-    top: 2.5em;
-  }
-
   #bars.fa-solid {
     color: $base-white;
     position: absolute;
@@ -501,7 +490,6 @@ footer.activater {
   }
   .toggle-btn {
     visibility: hidden;
-    // display: none;
     width: 0.5em;
     margin-right: 4.2em;
   }
@@ -520,7 +508,7 @@ footer.activater {
 
   .copyright {
     top: 9em;
-    font-size: 0.6sem;
+    font-size: 0.6em;
     position: sticky;
   }
   span.seperator {
