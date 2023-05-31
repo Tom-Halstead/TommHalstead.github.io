@@ -1,34 +1,27 @@
 "use strict";
+const toggle = document.querySelector(".toggle");
 
-(function () {
-  if (
-    window.location.pathname === "/index.html" ||
-    window.location.pathname === "/"
-  ) {
-    const randomColor = () => {
-      return (
-        `#` +
-        Math.floor(Math.random() * 16777215)
-          .toString(16)
-          .padStart(6, "0")
-          .toUpperCase()
-      );
-    };
-    const myName = document.querySelector(".name");
-    document
-      .querySelector(".particles-js-canvas-el")
-      .addEventListener(`click`, () => {
-        myName.style.color = `${randomColor()}`;
-      });
-  }
-})();
+const changeColors = function () {
+  const randomColor = () => {
+    return (
+      `#` +
+      Math.floor(Math.random() * 16777215)
+        .toString(16)
+        .padStart(6, "0")
+        .toUpperCase()
+    );
+  };
+  const myName = document.querySelector(".name");
+  document
+    .querySelector(".particles-js-canvas-el")
+    .addEventListener(`click`, () => {
+      myName.style.color = `${randomColor()}`;
+    });
+};
 
 const navHighlights = function () {
   document.querySelectorAll(".nav-btn").forEach((link) => {
-    if (
-      link.pathname === window.location.pathname
-      // window.location.pathname === "/"
-    ) {
+    if (link.pathname === window.location.pathname) {
       link.setAttribute("aria-current", "page");
     }
   });
@@ -133,8 +126,6 @@ const insertHTML = function () {
   }
 };
 
-const toggle = document.querySelector(".toggle");
-
 const invertColors = function () {
   if (
     window.location.pathname === "/index.html" ||
@@ -150,6 +141,7 @@ const invertColors = function () {
       socialIcons[index].classList.toggle("inverted");
       link.classList.toggle("inverted");
     });
+
     copyright.classList.toggle("test");
     toggle.classList.toggle("active");
     document.body.classList.toggle("invert");
@@ -169,21 +161,15 @@ const invertColors = function () {
   }
 };
 
-// const mediaQuery = window.matchMedia("(min-width: 576px)");
-// const
 const openDropDown = function () {
   document.querySelector(".dropdown-menu").classList.toggle("open");
   const dropDown = document.querySelector(".dropdown-menu");
   const dropOpen = dropDown.classList.contains("open");
   const bars = document.querySelector("#bars");
+  const mediaQuery = window.matchMedia("(min-width: 576px)");
+
   bars.classList = dropOpen ? "fa-solid fa-xmark" : "fa-solid fa-bars fa-beat";
 
-  if (
-    window.location.pathname !== "/index.html" &&
-    window.location.pathname !== "/"
-  ) {
-  }
-  const mediaQuery = window.matchMedia("(min-width: 576px)");
   mediaQuery.onchange = function () {
     if (dropOpen) {
       dropDown.classList.remove("open");
@@ -198,19 +184,11 @@ window.onload = function () {
   insertHTML();
   navHighlights();
   document.querySelector(".toggle-btn").addEventListener("click", openDropDown);
+  if (
+    window.location.pathname === "/index.html" ||
+    window.location.pathname === "/"
+  ) {
+    toggle.addEventListener(`click`, invertColors);
+    changeColors();
+  }
 };
-
-if (
-  window.location.pathname === "/index.html" ||
-  window.location.pathname === "/"
-) {
-  toggle.addEventListener(`click`, invertColors);
-}
-
-// toggleBtn.addEventListener(`click`, openDropDown);
-
-const addDropMenuAndBars = function () {
-  const toggleDiv = document.createElement("div");
-  // nav.append(toggleDiv);
-};
-// addDropMenuAndBars();
