@@ -169,7 +169,8 @@ const invertColors = function () {
   }
 };
 
-const mediaQuery = window.matchMedia("(min-width: 576px)");
+// const mediaQuery = window.matchMedia("(min-width: 576px)");
+// const
 const openDropDown = function () {
   document.querySelector(".dropdown-menu").classList.toggle("open");
   const dropDown = document.querySelector(".dropdown-menu");
@@ -182,7 +183,7 @@ const openDropDown = function () {
     window.location.pathname !== "/"
   ) {
   }
-
+  const mediaQuery = window.matchMedia("(min-width: 576px)");
   mediaQuery.onchange = function () {
     if (dropOpen) {
       dropDown.classList.remove("open");

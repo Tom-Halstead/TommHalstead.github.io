@@ -342,23 +342,23 @@ div a.social-link {
   .nav-link {
     display: none;
   }
-  .nav-link footer#lab_social_icon_footer {
+  footer#lab_social_icon_footer {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
   }
-  .nav-link .dropOpen {
+  .dropdown-menu {
     left: 1.2rem;
     width: unset;
     align-items: center;
     display: none;
   }
-  .nav-link .copyright {
+  .copyright {
     top: 9em;
     font-size: 0.6em;
     position: sticky;
   }
-  .nav-link span.seperator {
+  span.seperator {
     bottom: -0.05em;
     font-size: 1.3em;
   }
