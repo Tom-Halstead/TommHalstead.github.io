@@ -36,9 +36,18 @@ body {
 }
 
 header {
-  width: 100vw;
-  display: flex;
+  position: relative;
+  // position: fixed;
+  top: 0;
+  // width: 100vw;
+  // display: flex;
+  height: 4.3em;
 }
+
+// header {
+// width: 100vw;
+// display: flex;
+// }
 
 nav {
   width: 100vw;

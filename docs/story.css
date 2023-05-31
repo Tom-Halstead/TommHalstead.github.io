@@ -31,10 +31,9 @@ body {
 }
 
 header {
-  position: fixed;
+  position: relative;
   top: 0;
-  width: 100vw;
-  display: flex;
+  height: 4.3em;
 }
 
 nav {
@@ -100,6 +99,10 @@ header ul li a {
 }
 header ul li a:hover {
   color: #ffffff;
+}
+
+p {
+  color: white;
 }
 
 .dropdown-menu {

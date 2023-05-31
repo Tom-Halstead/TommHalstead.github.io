@@ -42,10 +42,12 @@ body {
 }
 
 header {
-  position: fixed;
+  position: relative;
+  // position: fixed;
   top: 0;
-  width: 100vw;
-  display: flex;
+  // width: 100vw;
+  // display: flex;
+  height: 4.3em;
 }
 
 nav {
@@ -116,6 +118,11 @@ header ul li a {
     color: $base-white;
   }
 }
+
+p {
+  color: white;
+}
+
 .dropdown-menu {
   display: none;
   border-radius: 1em 1em 1em 1em;

@@ -29,8 +29,9 @@ body {
 }
 
 header {
-  width: 100vw;
-  display: flex;
+  position: relative;
+  top: 0;
+  height: 4.3em;
 }
 
 nav {
