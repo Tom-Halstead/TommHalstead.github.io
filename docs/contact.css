@@ -347,6 +347,12 @@ div a.social-link {
     justify-content: center;
     flex-wrap: wrap;
   }
+  .nav-link .dropdown-menu {
+    left: 1.2rem;
+    width: unset;
+    align-items: center;
+    display: none;
+  }
   .nav-link .copyright {
     top: 9em;
     font-size: 0.6em;

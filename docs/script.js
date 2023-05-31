@@ -25,7 +25,10 @@
 
 const navHighlights = function () {
   document.querySelectorAll(".nav-btn").forEach((link) => {
-    if (link.pathname === window.location.pathname) {
+    if (
+      link.pathname === window.location.pathname
+      // window.location.pathname === "/"
+    ) {
       link.setAttribute("aria-current", "page");
     }
   });
@@ -131,7 +134,6 @@ const insertHTML = function () {
 };
 
 const toggle = document.querySelector(".toggle");
-// const nav = document.querySelector(".nav");
 
 const invertColors = function () {
   if (
@@ -167,26 +169,23 @@ const invertColors = function () {
   }
 };
 
-if (
-  window.location.pathname === "/index.html" ||
-  window.location.pathname === "/"
-) {
-  toggle.addEventListener(`click`, invertColors);
-}
-
-const toggleBtn = document.querySelector(".toggle-btn");
-const dropDownMenu = document.querySelector(".dropdown-menu");
-const bars = document.querySelector("#bars");
 const mediaQuery = window.matchMedia("(min-width: 576px)");
-
-const openDropdown = function () {
-  dropDownMenu.classList.toggle("open");
-  const dropOpen = dropDownMenu.classList.contains("open");
+const openDropDown = function () {
+  document.querySelector(".dropdown-menu").classList.toggle("open");
+  const dropDown = document.querySelector(".dropdown-menu");
+  const dropOpen = dropDown.classList.contains("open");
+  const bars = document.querySelector("#bars");
   bars.classList = dropOpen ? "fa-solid fa-xmark" : "fa-solid fa-bars fa-beat";
+
+  if (
+    window.location.pathname !== "/index.html" &&
+    window.location.pathname !== "/"
+  ) {
+  }
 
   mediaQuery.onchange = function () {
     if (dropOpen) {
-      dropDownMenu.classList.remove("open");
+      dropDown.classList.remove("open");
       bars.classList = dropOpen
         ? "fa-solid fa-bars fa-beat"
         : "fa-solid fa-xmark";
@@ -194,9 +193,23 @@ const openDropdown = function () {
   };
 };
 
-window.addEventListener("load", () => {
+window.onload = function () {
   insertHTML();
   navHighlights();
-});
+  document.querySelector(".toggle-btn").addEventListener("click", openDropDown);
+};
 
-toggleBtn.addEventListener(`click`, openDropdown);
+if (
+  window.location.pathname === "/index.html" ||
+  window.location.pathname === "/"
+) {
+  toggle.addEventListener(`click`, invertColors);
+}
+
+// toggleBtn.addEventListener(`click`, openDropDown);
+
+const addDropMenuAndBars = function () {
+  const toggleDiv = document.createElement("div");
+  // nav.append(toggleDiv);
+};
+// addDropMenuAndBars();
