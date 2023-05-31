@@ -121,7 +121,7 @@ const insertHTML = function () {
   </div>
 </div >`;
     document
-      .querySelector("#particles-js")
+      .querySelector(".container")
       .insertAdjacentHTML("afterbegin", markup);
   }
 };

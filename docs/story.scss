@@ -21,21 +21,29 @@ $base-white: #ffffff;
   margin: 0;
   padding: 0;
   font-family: "Poppins", "sans-serif";
-  overflow: hidden;
+  // overflow: hidden;
 }
 
 body {
   margin: 0;
   padding: 0;
   background-image: url("crescentmoon.jpg");
-  background-size: cover;
-  background-position: center;
+  // background-size: cover;
+  // background-position: center center;
   background-repeat: no-repeat;
-  height: 100vh;
-  overflow: hidden;
+  // height: 400vh;
+  overflow-x: hidden;
+}
+
+.container {
+  height: 300vh;
+  display: flex;
+  flex-direction: column;
 }
 
 header {
+  position: fixed;
+  top: 0;
   width: 100vw;
   display: flex;
 }
@@ -160,12 +168,6 @@ a.nav-btn {
   padding: 0.5em;
 }
 
-#particles-js {
-  overflow-x: hidden;
-  overflow: hidden;
-  z-index: 0;
-}
-
 #lab_social_icon_footer #social-fb:hover {
   color: #3b5998;
 }
@@ -184,15 +186,13 @@ a.nav-btn {
 
 footer {
   margin-top: auto;
-  bottom: 0;
-  position: fixed;
   display: flex;
   justify-content: space-between;
   padding: 0.5em 0.5em 0.5em 0.5em;
   color: $base-white;
   height: 3.3em;
   background-image: linear-gradient($base-black, $base-gray);
-  overflow-y: hidden;
+  overflow: hidden;
   width: 100vw;
 }
 
@@ -210,7 +210,6 @@ div.text-center.center-block {
   opacity: 85%;
   width: fit-content;
   position: absolute;
-  top: 0.4em;
 }
 
 #lab_social_icon_footer .social:hover {
@@ -253,6 +252,7 @@ span.seperator {
   color: #7d7d7d;
   font-size: 1rem;
   opacity: 85%;
+  align-self: center;
   margin: auto;
 }
 
@@ -278,10 +278,10 @@ div a.social-link {
   }
 
   .copyright {
-    font-size: 0.8em;
-    position: absolute;
-    right: 5.5em;
-    top: 2.4em;
+    font-size: 0.7em;
+    position: relative;
+    left: 15em;
+    // top: 2.4em;
   }
   #social-fb {
     font-size: 2.5em;
@@ -338,9 +338,9 @@ div a.social-link {
   }
 
   .copyright {
-    font-size: 0.5em;
-    top: 3em;
-    right: 3em;
+    font-size: 0.3em;
+    bottom: 0.2em;
+    left: 25em;
   }
   span.seperator {
     font-size: 1.4em;
@@ -371,9 +371,11 @@ div a.social-link {
   }
 
   .copyright {
-    top: 9em;
+    left: 0.55em;
+    top: 2em;
     font-size: 0.6em;
-    position: sticky;
+    position: relative;
+    // position: sticky;
   }
   span.seperator {
     bottom: -0.05em;
