@@ -20,18 +20,14 @@
 body {
   margin: 0;
   padding: 0;
-  background-image: url("crescentmoon.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
   height: 100vh;
-  overflow: hidden;
 }
 
 header {
   position: relative;
   top: 0;
   height: 4.3em;
+  background-image: linear-gradient(rgb(42, 41, 41), rgb(0, 0, 0));
 }
 
 nav {
@@ -48,7 +44,7 @@ nav {
 .logo {
   position: relative;
   left: 0.1em;
-  bottom: 0.3em;
+  bottom: 0.08em;
   -moz-user-select: none;
   -webkit-user-select: none;
   user-select: none;
@@ -151,12 +147,6 @@ a.nav-menu:hover {
 
 a.nav-btn {
   padding: 0.5em;
-}
-
-#particles-js {
-  overflow-x: hidden;
-  overflow: hidden;
-  z-index: 0;
 }
 
 #lab_social_icon_footer #social-fb:hover {
@@ -290,16 +280,6 @@ div a.social-link {
   }
 }
 @media only screen and (max-width: 768px) {
-  .togcontainer {
-    position: absolute;
-    right: -5em;
-    top: 8em;
-  }
-  div.text {
-    font-size: 1.1em;
-    top: 12em;
-    left: 2.5em;
-  }
   nav ul {
     margin-left: 3em;
     gap: 4em;

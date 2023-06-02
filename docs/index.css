@@ -20,7 +20,7 @@
 body {
   margin: 0;
   padding: 0;
-  background-image: url("crescentmoon.jpg");
+  background-image: url("806443.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -47,7 +47,7 @@ nav {
 .logo {
   position: relative;
   left: 0.1em;
-  bottom: 0.3em;
+  bottom: 0.08em;
   -moz-user-select: none;
   -webkit-user-select: none;
   user-select: none;
@@ -171,7 +171,7 @@ h1.name {
   -webkit-user-select: none;
   user-select: none;
   font-family: MyFont2;
-  color: #696868;
+  color: #968f8f;
 }
 
 #particles-js {
@@ -356,10 +356,6 @@ header nav.activate {
 }
 
 .inverted {
-  color: #f600ff;
-}
-
-.test {
   color: #f600ff;
 }
 

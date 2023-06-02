@@ -1,23 +1,23 @@
 "use strict";
 const toggle = document.querySelector(".toggle");
 
-const changeColors = function () {
-  const randomColor = () => {
-    return (
-      `#` +
-      Math.floor(Math.random() * 16777215)
-        .toString(16)
-        .padStart(6, "0")
-        .toUpperCase()
-    );
-  };
-  const myName = document.querySelector(".name");
-  document
-    .querySelector(".particles-js-canvas-el")
-    .addEventListener(`click`, () => {
-      myName.style.color = `${randomColor()}`;
-    });
-};
+// const changeColors = function () {
+//   const randomColor = () => {
+//     return (
+//       `#` +
+//       Math.floor(Math.random() * 16777215)
+//         .toString(16)
+//         .padStart(6, "0")
+//         .toUpperCase()
+//     );
+//   };
+//   const myName = document.querySelector(".name");
+//   document
+//     .querySelector(".particles-js-canvas-el")
+//     .addEventListener(`click`, () => {
+//       myName.style.color = `${randomColor()}`;
+//     });
+// };
 
 const navHighlights = function () {
   document.querySelectorAll(".nav-btn").forEach((link) => {
