@@ -3,6 +3,7 @@ $base-black: rgb(0, 0, 0);
 $base-gray: rgb(42, 41, 41);
 $base-text: #989595;
 $base-white: #ffffff;
+
 @font-face {
   font-family: "MyFont";
   font-weight: $bold-weight;
@@ -33,10 +34,19 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   height: 100vh;
-  overflow: hidden;
+  // overflow: hidden;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  // height: 100vh;
 }
 
 header {
+  position: absolute;
+  top: 0;
   width: 100vw;
   display: flex;
 }
@@ -123,11 +133,11 @@ header ul li a {
   backdrop-filter: blur(20px);
 }
 
-.toggle-btn {
-  visibility: hidden;
-  width: 0.5em;
-  margin-right: 4.2em;
-}
+// .toggle-btn {
+//   visibility: hidden;
+//   width: 0.5em;
+//   margin-right: 4.2em;
+// }
 
 .dropdown-menu li {
   display: flex;
@@ -162,20 +172,49 @@ a.nav-btn {
 }
 
 div.text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
   overflow-x: hidden;
   letter-spacing: 0.11em;
   pointer-events: none;
   overflow-y: hidden;
-  height: 30vh;
-  font-size: 2em;
+  height: auto;
   position: absolute;
-  top: 10em;
+  top: 15em;
   left: 2.5em;
+  // gap: 0.5em;
 }
 
-h1.name {
+h1 {
+  height: 1.2em;
+  font-size: 5.5em;
   overflow-x: hidden;
-  height: 4em;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  font-family: MyFont2;
+  color: #968f8f;
+}
+h2 {
+  overflow-x: hidden;
+  height: 1.3em;
+  // width: 15em;
+  font-size: 3em;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  font-family: MyFont2;
+  color: #968f8f;
+}
+h3 {
+  margin-top: 0.5em;
+  overflow-x: hidden;
+  height: 3.7em;
+  // width: 15em;
+  font-size: 2.5em;
   -moz-user-select: none;
   -webkit-user-select: none;
   user-select: none;
@@ -183,11 +222,19 @@ h1.name {
   color: #968f8f;
 }
 
-#particles-js {
-  overflow-x: hidden;
-  overflow: hidden;
-  z-index: 0;
+.highlight {
+  font-family: MyFont2;
+  color: #968f8f;
+  text-shadow: 0 0 10px #717171, 0 0 10px #717171, 0 0 0px #717171,
+    0 0 10px #717171, 0 0 10px #717171, 0 0 0px #717171, 0 0 00px #717171,
+    0 0 0px #717171;
 }
+
+// #particles-js {
+//   overflow-x: hidden;
+//   overflow: hidden;
+//   z-index: 0;
+// }
 
 #lab_social_icon_footer #social-fb:hover {
   color: #3b5998;
@@ -291,99 +338,99 @@ div a.social-link {
   height: fit-content;
 }
 
-.togcontainer {
-  position: absolute;
-  top: 10em;
-  right: -2em;
-  -o-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  width: 7em;
-  height: 5em;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+// .togcontainer {
+//   position: absolute;
+//   top: 10em;
+//   right: -2em;
+//   -o-transform: translate(-50%, -50%);
+//   -ms-transform: translate(-50%, -50%);
+//   -moz-transform: translate(-50%, -50%);
+//   -webkit-transform: translate(-50%, -50%);
+//   transform: translate(-50%, -50%);
+//   width: 7em;
+//   height: 5em;
+//   overflow: hidden;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+// }
 
-div.toggle {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 3em;
-  height: 1.5em;
-  background: #f600ff;
-  border-radius: 1em 1em 1em 1em;
-  overflow: hidden;
-  opacity: 65%;
-}
-div.onoff {
-  div.onoff::selection {
-    background: rgba(0, 0, 0, 0);
-  }
-  font-size: 0.8em;
-  color: #33ff00;
-  left: 4.4em;
-  top: 0.35em;
-  position: absolute;
-  font-family: MyFont;
-  user-select: none;
-}
+// div.toggle {
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   width: 3em;
+//   height: 1.5em;
+//   background: #f600ff;
+//   border-radius: 1em 1em 1em 1em;
+//   overflow: hidden;
+//   opacity: 65%;
+// }
+// div.onoff {
+//   div.onoff::selection {
+//     background: rgba(0, 0, 0, 0);
+//   }
+//   font-size: 0.8em;
+//   color: #33ff00;
+//   left: 4.4em;
+//   top: 0.35em;
+//   position: absolute;
+//   font-family: MyFont;
+//   user-select: none;
+// }
 
-div.toggle.active {
-  opacity: 90%;
+// div.toggle.active {
+//   opacity: 90%;
 
-  background: #f600ff;
-}
+//   background: #f600ff;
+// }
 
-.togcontainer .toggle.active .toggle-button {
-  left: 0em;
-}
+// .togcontainer .toggle.active .toggle-button {
+//   left: 0em;
+// }
 
-.toggle-button {
-  opacity: 90%;
+// .toggle-button {
+//   opacity: 90%;
 
-  position: absolute;
-  bottom: 0.03;
-  left: 1.5em;
-  width: 1.5em;
-  height: 1.5em;
-  background: rgb(91, 85, 85);
-  border-radius: 1em;
-  cursor: pointer;
-  -moz-transition: 0.3s;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-}
+//   position: absolute;
+//   bottom: 0.03;
+//   left: 1.5em;
+//   width: 1.5em;
+//   height: 1.5em;
+//   background: rgb(91, 85, 85);
+//   border-radius: 1em;
+//   cursor: pointer;
+//   -moz-transition: 0.3s;
+//   -webkit-transition: 0.3s;
+//   transition: 0.3s;
+// }
 
-.invert {
-  -webkit-filter: invert(100%);
-  -moz-filter: invert(100%);
-  filter: invert(100%);
-}
+// .invert {
+//   -webkit-filter: invert(100%);
+//   -moz-filter: invert(100%);
+//   filter: invert(100%);
+// }
 
-header nav.activate {
-  background-image: linear-gradient(#09ff00, $base-white);
-  opacity: 80%;
-}
+// header nav.activate {
+//   background-image: linear-gradient(#09ff00, $base-white);
+//   opacity: 80%;
+// }
 
-.inverted {
-  color: #f600ff;
-}
+// .inverted {
+//   color: #f600ff;
+// }
 
-footer.activater {
-  background-image: linear-gradient($base-white, #09ff00);
-  opacity: 80%;
-}
+// footer.activater {
+//   background-image: linear-gradient($base-white, #09ff00);
+//   opacity: 80%;
+// }
 
 @media only screen and (max-width: 1050px) {
-  div.text {
-    font-size: 1.4em;
-    top: 10em;
-    left: 2.5em;
-  }
+  // div.text {
+  //   font-size: 1.4em;
+  //   top: 10em;
+  //   left: 2.5em;
+  // }
   nav ul {
     gap: 6rem;
   }
@@ -417,16 +464,16 @@ footer.activater {
 }
 
 @media only screen and (max-width: 768px) {
-  .togcontainer {
-    position: absolute;
-    right: -5em;
-    top: 8em;
-  }
-  div.text {
-    font-size: 1.1em;
-    top: 12em;
-    left: 2.5em;
-  }
+  // .togcontainer {
+  //   position: absolute;
+  //   right: -5em;
+  //   top: 8em;
+  // }
+  // div.text {
+  //   font-size: 1.1em;
+  //   top: 12em;
+  //   left: 2.5em;
+  // }
   nav ul {
     margin-left: 3em;
     gap: 4em;
@@ -462,18 +509,18 @@ footer.activater {
   }
 }
 @media only screen and (max-width: 576px) {
-  div.text {
-    width: 80vw;
-    font-size: 1em;
-    top: 12em;
-    left: 0.18em;
-  }
-  h1.name {
-    font-size: 2.5em;
-    position: relative;
-    top: 0.5em;
-    left: 5rem;
-  }
+  // div.text {
+  //   width: 80vw;
+  //   font-size: 1em;
+  //   top: 12em;
+  //   left: 0.18em;
+  // }
+  // h1.name {
+  //   font-size: 2.5em;
+  //   position: relative;
+  //   top: 0.5em;
+  //   left: 5rem;
+  // }
 
   #bars.fa-solid {
     color: $base-white;
@@ -486,11 +533,11 @@ footer.activater {
   .nav-link {
     display: none;
   }
-  .toggle-btn {
-    visibility: hidden;
-    width: 0.5em;
-    margin-right: 4.2em;
-  }
+  // .toggle-btn {
+  //   visibility: hidden;
+  //   width: 0.5em;
+  //   margin-right: 4.2em;
+  // }
   .dropdown-menu {
     left: 1.2rem;
     width: unset;
@@ -514,37 +561,37 @@ footer.activater {
     font-size: 1.3em;
   }
 
-  .togcontainer {
-    position: absolute;
-    top: 9em;
-    left: 5em;
-  }
+  // .togcontainer {
+  //   position: absolute;
+  //   top: 9em;
+  //   left: 5em;
+  // }
 
-  div.toggle {
-    width: 2.5em;
-    height: 1.3em;
-    background: #f600ff;
-    border-radius: 1em 1em 1em 1em;
-    overflow: hidden;
-    opacity: 65%;
-  }
-  div.onoff {
-    div.onoff::selection {
-      background: rgba(0, 0, 0, 0);
-    }
-    font-size: 0.6em;
-    color: #33ff00;
-    left: 4.6em;
-    top: 0.28em;
-    position: absolute;
-    font-family: MyFont;
-    user-select: none;
-  }
-  .toggle-button {
-    position: absolute;
-    bottom: 0.03;
-    left: 1.3em;
-    width: 1.3em;
-    height: 1.3em;
-  }
+  // div.toggle {
+  //   width: 2.5em;
+  //   height: 1.3em;
+  //   background: #f600ff;
+  //   border-radius: 1em 1em 1em 1em;
+  //   overflow: hidden;
+  //   opacity: 65%;
+  // }
+  // div.onoff {
+  //   div.onoff::selection {
+  //     background: rgba(0, 0, 0, 0);
+  //   }
+  //   font-size: 0.6em;
+  //   color: #33ff00;
+  //   left: 4.6em;
+  //   top: 0.28em;
+  //   position: absolute;
+  //   font-family: MyFont;
+  //   user-select: none;
+  // }
+  // .toggle-button {
+  //   position: absolute;
+  //   bottom: 0.03;
+  //   left: 1.3em;
+  //   width: 1.3em;
+  //   height: 1.3em;
+  // }
 }

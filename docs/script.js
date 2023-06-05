@@ -1,4 +1,7 @@
 "use strict";
+
+// import "animate.css";
+
 const toggle = document.querySelector(".toggle");
 
 // const changeColors = function () {
@@ -289,7 +292,7 @@ window.onload = function () {
     window.location.pathname === "/index.html" ||
     window.location.pathname === "/"
   ) {
-    toggle.addEventListener(`click`, invertColors);
-    changeColors();
+    // toggle.addEventListener(`click`, invertColors);
+    // changeColors();
   }
 };
