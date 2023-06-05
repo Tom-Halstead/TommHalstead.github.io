@@ -177,10 +177,11 @@ h1 {
   -webkit-user-select: none;
   user-select: none;
   font-family: MyFont2;
-  color: #968f8f;
+  color: #aea8a8;
 }
 
 h2 {
+  margin-top: 0.2em;
   overflow-x: hidden;
   height: 1.3em;
   font-size: 3em;
@@ -188,7 +189,7 @@ h2 {
   -webkit-user-select: none;
   user-select: none;
   font-family: MyFont2;
-  color: #968f8f;
+  color: #aea8a8;
 }
 
 h3 {
@@ -200,12 +201,12 @@ h3 {
   -webkit-user-select: none;
   user-select: none;
   font-family: MyFont2;
-  color: #968f8f;
+  color: #aea8a8;
 }
 
 .highlight {
   font-family: MyFont2;
-  color: #968f8f;
+  color: #bc8787;
   text-shadow: 0 0 10px #717171, 0 0 10px #717171, 0 0 0px #717171, 0 0 10px #717171, 0 0 10px #717171, 0 0 0px #717171, 0 0 0px #717171, 0 0 0px #717171;
 }
 

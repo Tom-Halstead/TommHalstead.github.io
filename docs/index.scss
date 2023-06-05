@@ -196,9 +196,11 @@ h1 {
   -webkit-user-select: none;
   user-select: none;
   font-family: MyFont2;
-  color: #968f8f;
+  // color: #968f8f;
+  color: #aea8a8;
 }
 h2 {
+  margin-top: 0.2em;
   overflow-x: hidden;
   height: 1.3em;
   // width: 15em;
@@ -207,7 +209,8 @@ h2 {
   -webkit-user-select: none;
   user-select: none;
   font-family: MyFont2;
-  color: #968f8f;
+  // color: #968f8f;
+  color: #aea8a8;
 }
 h3 {
   margin-top: 0.5em;
@@ -219,12 +222,15 @@ h3 {
   -webkit-user-select: none;
   user-select: none;
   font-family: MyFont2;
-  color: #968f8f;
+  color: #aea8a8;
+  // color: #968f8f;
 }
 
 .highlight {
   font-family: MyFont2;
-  color: #968f8f;
+  color: #bc8787;
+  // color: #aea8a8;
+
   text-shadow: 0 0 10px #717171, 0 0 10px #717171, 0 0 0px #717171,
     0 0 10px #717171, 0 0 10px #717171, 0 0 0px #717171, 0 0 00px #717171,
     0 0 0px #717171;

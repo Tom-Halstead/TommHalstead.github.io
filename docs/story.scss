@@ -54,8 +54,9 @@ body::-webkit-scrollbar-thumb {
 
 .container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  // flex-direction: column;
+  justify-content: center;
+  // align-items: center;
   background-image: url("806443.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -68,7 +69,8 @@ body::-webkit-scrollbar-thumb {
 div.max-width {
   padding: 2em;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  // justify-content: center;
   width: 900px;
   height: 100vh;
 }
@@ -84,9 +86,22 @@ img {
   // bottom: 5em;
 }
 h3 {
+  align-self: center;
   font-family: MavenPro;
-  color: #968f8f;
+  color: #aea8a8;
   font-size: 3.5em;
+}
+p#content {
+  line-height: 1.3em;
+  margin-top: 2em;
+  align-self: center;
+  font-size: 1.6em;
+  font-family: MavenPro;
+  color: #aea8a8;
+  border: 2px solid black;
+  padding: 1.5em;
+  border-radius: 20%;
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
 .containertwo {
@@ -98,43 +113,12 @@ h3 {
   background-repeat: no-repeat;
   background-position: center center;
   height: 100vh;
-  filter: blur(1.5px);
+  // filter: blur(1.5px);
   background-image: url("/docs/mountains.jpg");
   background-attachment: fixed;
   // background-image: url("/docs/foggyfog.jpg");
   gap: 2em;
-  filter: grayscale(100%);
-}
-
-.about {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  height: 100px;
-  width: 100px;
-  border: #ffffff solid 3px;
-}
-
-.about1 {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  // align-items: center;
-
-  height: 100px;
-  width: 100px;
-  border: #ffffff solid 3px;
-}
-
-.about2 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  height: 100px;
-  width: 100px;
-  border: #ffffff solid 3px;
+  // filter: grayscale(100%);
 }
 
 header {
@@ -215,13 +199,6 @@ header ul li a {
   &:hover {
     color: $base-white;
   }
-}
-
-p {
-  // display: flex;
-  // justify-content: center;
-  // align-items: center;
-  color: white;
 }
 
 .dropdown-menu {
