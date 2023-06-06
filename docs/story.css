@@ -46,7 +46,6 @@ body::-webkit-scrollbar-thumb {
 
 .container {
   display: flex;
-  justify-content: center;
   background-image: url("806443.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -58,7 +57,7 @@ div.max-width {
   padding: 2em;
   display: flex;
   flex-direction: column;
-  width: 900px;
+  width: 675px;
   height: 100vh;
 }
 
@@ -71,23 +70,57 @@ img {
 }
 
 h3 {
+  letter-spacing: 0.02em;
   align-self: center;
-  font-family: MavenPro;
-  color: #aea8a8;
-  font-size: 3.5em;
+  font-size: 4.5em;
+  font-family: MyFont;
+  color: #bc8787;
+  text-shadow: 0 0 10px #717171, 0 0 10px #717171, 0 0 0px #717171, 0 0 10px #717171, 0 0 10px #717171, 0 0 0px #717171, 0 0 0px #717171, 0 0 0px #717171;
+  -webkit-text-decoration: solid;
+          text-decoration: solid;
+  text-decoration: underline;
 }
 
-p#content {
-  line-height: 1.3em;
-  margin-top: 2em;
+p#p1 {
+  text-indent: 10%;
+  letter-spacing: 0.02em;
+  line-height: 1em;
+  margin-top: 0.5em;
   align-self: center;
   font-size: 1.6em;
   font-family: MavenPro;
   color: #aea8a8;
-  border: 2px solid black;
-  padding: 1.5em;
-  border-radius: 20%;
-  background-color: rgba(0, 0, 0, 0.6);
+  padding: 0.5em;
+  border-radius: 15%;
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
+p#p2 {
+  text-indent: 10%;
+  letter-spacing: 0.02em;
+  line-height: 1em;
+  margin-top: 0.5em;
+  align-self: center;
+  font-size: 1.6em;
+  font-family: MavenPro;
+  color: #aea8a8;
+  padding: 0.5em;
+  border-radius: 15%;
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
+p#p3 {
+  text-indent: 10%;
+  letter-spacing: 0.02em;
+  line-height: 1em;
+  margin-top: 0.5em;
+  align-self: center;
+  font-size: 1.6em;
+  font-family: MavenPro;
+  color: #aea8a8;
+  padding: 0.5em;
+  border-radius: 15%;
+  background-color: rgba(0, 0, 0, 0.25);
 }
 
 .containertwo {
