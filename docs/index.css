@@ -37,10 +37,13 @@ body {
 }
 
 #particles-js {
-  z-index: 0;
+  overflow: hidden;
 }
 
 header {
+  position: absolute;
+  top: 0;
+  width: 100%;
   display: flex;
 }
 
@@ -173,15 +176,10 @@ div.text {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: auto;
-  justify-content: center;
   letter-spacing: 0.11em;
   pointer-events: none;
-  height: auto;
   position: absolute;
   top: 13em;
-  left: 23em;
-  gap: 0.5em;
 }
 
 h1 {
@@ -326,6 +324,15 @@ div a.social-link {
 }
 
 @media only screen and (max-width: 1050px) {
+  h1 {
+    font-size: 4em;
+  }
+  h2 {
+    font-size: 2.5em;
+  }
+  h3 {
+    font-size: 2em;
+  }
   nav ul {
     gap: 6rem;
   }
@@ -356,6 +363,15 @@ div a.social-link {
   }
 }
 @media only screen and (max-width: 768px) {
+  h1 {
+    font-size: 3.5em;
+  }
+  h2 {
+    font-size: 2em;
+  }
+  h3 {
+    font-size: 1.5em;
+  }
   nav ul {
     margin-left: 3em;
     gap: 4em;
@@ -388,6 +404,18 @@ div a.social-link {
   }
 }
 @media only screen and (max-width: 576px) {
+  div.text {
+    top: 20em;
+  }
+  h1 {
+    font-size: 3em;
+  }
+  h2 {
+    font-size: 1.5em;
+  }
+  h3 {
+    font-size: 1em;
+  }
   #bars.fa-solid {
     color: #ffffff;
     position: absolute;
