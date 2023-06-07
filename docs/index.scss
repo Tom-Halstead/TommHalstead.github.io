@@ -22,7 +22,7 @@ $base-white: #ffffff;
   margin: 0;
   padding: 0;
   font-family: "Poppins", "sans-serif";
-  overflow: hidden;
+  // overflow: hidden;
 }
 
 body {
@@ -40,8 +40,22 @@ body {
 .container {
   display: flex;
   flex-direction: column;
+  justify-content: space-evenly;
   align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+#particles-js {
   // height: 100vh;
+  // width: 100vw;
+
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: space-evenly;
+  // align-items: center;
+  // overflow: hidden;
+  z-index: 0;
 }
 
 header {
@@ -140,11 +154,11 @@ header ul li a {
   z-index: 100;
 }
 
-// .toggle-btn {
-//   visibility: hidden;
-//   width: 0.5em;
-//   margin-right: 4.2em;
-// }
+.toggle-btn {
+  visibility: hidden;
+  width: 0.5em;
+  margin-right: 4.2em;
+}
 
 .dropdown-menu li {
   display: flex;
@@ -180,19 +194,20 @@ a.nav-btn {
 
 div.text {
   display: flex;
+  // flex-wrap: wrap;
   flex-direction: column;
   align-items: center;
+  margin: auto;
   justify-content: center;
-  width: 100%;
-  overflow-x: hidden;
+  // width: 100vw;
+  // overflow: hidden;
   letter-spacing: 0.11em;
   pointer-events: none;
-  overflow-y: hidden;
   height: auto;
   position: absolute;
-  top: 15em;
-  left: 2.5em;
-  // gap: 0.5em;
+  top: 13em;
+  left: 23em;
+  gap: 0.5em;
 }
 
 h1 {
@@ -203,7 +218,6 @@ h1 {
   -webkit-user-select: none;
   user-select: none;
   font-family: MyFont2;
-  // color: #968f8f;
   color: #aea8a8;
 }
 h2 {
@@ -216,7 +230,6 @@ h2 {
   -webkit-user-select: none;
   user-select: none;
   font-family: MyFont2;
-  // color: #968f8f;
   color: #aea8a8;
 }
 h3 {
@@ -239,12 +252,6 @@ h3 {
   text-shadow: 0 0 10px #717171, 0 0 10px #717171, 0 0 0px #717171,
     0 0 10px #717171, 0 0 10px #717171, 0 0 0px #717171, 0 0 00px #717171,
     0 0 0px #717171;
-}
-
-#particles-js {
-  overflow-x: hidden;
-  overflow: hidden;
-  z-index: 0;
 }
 
 #lab_social_icon_footer #social-fb:hover {
@@ -270,11 +277,13 @@ footer {
   display: flex;
   justify-content: space-between;
   padding: 0.5em 0.5em 0.5em 0.5em;
-  color: $base-white;
+  // color: $base-white;
   height: 3.3em;
   background-image: linear-gradient($base-black, $base-gray);
   overflow-y: hidden;
-  width: 100%;
+  overflow-x: hidden;
+
+  width: 100vw;
 }
 
 #lab_social_icon_footer a {
