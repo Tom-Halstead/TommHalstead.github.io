@@ -38,131 +38,185 @@ body {
   padding: 0;
   overflow-x: hidden;
   scroll-behavior: smooth;
+  background-image: url("806443.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
 }
 
 body::-webkit-scrollbar {
   width: 0.7em;
 }
 body::-webkit-scrollbar-track {
-  background-color: rgb(201, 178, 178);
+  background-color: rgb(0, 0, 0);
 }
 body::-webkit-scrollbar-thumb {
-  background-color: #5e5d5d;
+  background-color: #d5b1b1;
   border-radius: 10px;
   border: 1px solid rgb(0, 0, 0);
 }
 
 .container {
   display: flex;
-  // flex-direction: column;
-  // justify-content: center;
-  // align-items: center;
-  background-image: url("806443.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-attachment: fixed;
-  // height: 100vh;
-  // max-width: 100%;
+  justify-content: space-evenly;
+  // background-image: url("806443.jpg");
+  // background-size: cover;
+  // background-repeat: no-repeat;
+  // background-position: center center;
+  // background-attachment: fixed;
+  // gap: 8em;
 }
 
 div.max-width {
-  padding: 2em;
+  // height: fit-content;
   display: flex;
   flex-direction: column;
-  // justify-content: center;
   width: 675px;
-  height: 100vh;
+  height: 600px;
+  // height: 100vh;
+  // padding: 1em;
+  border-radius: 15%;
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
+::selection {
+  background: #423c3c;
 }
 
 img {
-  padding: 1.5em;
-  height: 30em;
-  width: 18em;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  // padding: 1.5em;
+  height: 38em;
+  width: 32em;
   border-radius: 25%;
-  align-self: flex-start;
-  // position: relative;
-  // right: 0.2em;
-  // bottom: 5em;
+  background-color: rgba(0, 0, 0, 0.25);
 }
 h3 {
-  letter-spacing: 0.02em;
+  // letter-spacing: 0.03em;
   align-self: center;
-  font-size: 4.5em;
+  // font-size: 4.5em;
+  // font-family: MyFont;
+  // color: #bc8787;
+  // text-shadow: 0 0 10px #717171, 0 0 10px #717171, 0 0 0px #717171,
+  //   0 0 10px #717171, 0 0 10px #717171, 0 0 0px #717171, 0 0 00px #717171,
+  //   0 0 0px #717171;
+  // text-decoration: 5px solid underline;
+  // text-decoration-color: #bc8787;
+  border-bottom: 5px solid #bc8787;
+  // border-width: 100px;
+  font-weight: 500;
+  animation: pulsate 3s ease-out;
+  animation-iteration-count: infinite;
+  -webkit-animation: pulsate 3s ease-out;
+  -webkit-animation-iteration-count: infinite;
+  opacity: 0.5;
+}
+@keyframes pulsate {
+  0% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+@-webkit-keyframes pulsate {
+  0% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+h3 > span {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  letter-spacing: 0.015em;
+  font-size: 4em;
   font-family: MyFont;
   color: #bc8787;
-  text-shadow: 0 0 10px #717171, 0 0 10px #717171, 0 0 0px #717171,
-    0 0 10px #717171, 0 0 10px #717171, 0 0 0px #717171, 0 0 00px #717171,
-    0 0 0px #717171;
-  text-decoration: solid;
-  text-decoration: underline;
+  text-shadow: 0 0 15px #ffffff, 0 0 15px #ffffff, 0 0 10px #ffffff,
+    0 0 5px #ffffff, 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 10px #ffffff,
+    0 0 10px #ffffff;
+
+  &:hover {
+    filter: blur(5px);
+    animation: alternate;
+    -moz-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+    // color: #aea8a8;
+  }
 }
-// h3 > span {
-//   letter-spacing: 0.05em;
-//   font-size: 4.5em;
-//   font-family: MavenPro;
-//   color: #aea8a8;
-// }
 p#p1 {
-  text-indent: 10%;
+  text-indent: 7%;
   letter-spacing: 0.02em;
   line-height: 1em;
   margin-top: 0.5em;
   align-self: center;
-  font-size: 1.6em;
+  font-size: 1.4em;
   font-family: MavenPro;
   color: #aea8a8;
   // border: 2px solid black;
   padding: 0.5em;
-  border-radius: 15%;
-  background-color: rgba(0, 0, 0, 0.25);
+  // border-radius: 15%;
+  // background-color: rgba(0, 0, 0, 0.25);
 }
 
 p#p2 {
-  text-indent: 10%;
+  text-indent: 7%;
   letter-spacing: 0.02em;
   line-height: 1em;
   margin-top: 0.5em;
   align-self: center;
-  font-size: 1.6em;
+  font-size: 1.4em;
   font-family: MavenPro;
   color: #aea8a8;
   // border: 2px solid black;
   padding: 0.5em;
-  border-radius: 15%;
-  background-color: rgba(0, 0, 0, 0.25);
+  // border-radius: 15%;
+  // background-color: rgba(0, 0, 0, 0.25);
 }
 p#p3 {
-  text-indent: 10%;
+  text-indent: 7%;
   letter-spacing: 0.02em;
   line-height: 1em;
   margin-top: 0.5em;
   align-self: center;
-  font-size: 1.6em;
+  font-size: 1.4em;
   font-family: MavenPro;
   color: #aea8a8;
   // border: 2px solid black;
   padding: 0.5em;
-  border-radius: 15%;
-  background-color: rgba(0, 0, 0, 0.25);
+  // border-radius: 15%;
+  // background-color: rgba(0, 0, 0, 0.25);
 }
 
-.containertwo {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  height: 100vh;
-  // filter: blur(1.5px);
-  background-image: url("/docs/mountains.jpg");
-  background-attachment: fixed;
-  // background-image: url("/docs/foggyfog.jpg");
-  gap: 2em;
-  // filter: grayscale(100%);
-}
+// .containertwo {
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+//   align-items: center;
+//   background-size: cover;
+//   background-repeat: no-repeat;
+//   background-position: center center;
+//   height: 100vh;
+//   // filter: blur(1.5px);
+//   background-image: url("/docs/mountains.jpg");
+//   background-attachment: fixed;
+//   // background-image: url("/docs/foggyfog.jpg");
+//   gap: 2em;
+//   // filter: grayscale(100%);
+// }
 
 header {
   position: relative;
@@ -313,7 +367,9 @@ a.nav-btn {
 }
 
 footer {
-  margin-top: auto;
+  position: fixed;
+  bottom: 0;
+  // margin-top: auto;
   display: flex;
   justify-content: space-between;
   padding: 0.5em 0.5em 0.5em 0.5em;
@@ -323,7 +379,7 @@ footer {
   background-image: -moz-linear-gradient($base-black, $base-gray);
   background-image: linear-gradient($base-black, $base-gray);
   overflow: hidden;
-  width: 100vw;
+  width: 100%;
 }
 
 #lab_social_icon_footer a {
