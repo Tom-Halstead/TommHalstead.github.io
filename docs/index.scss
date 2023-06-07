@@ -34,7 +34,7 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   height: 100vh;
-  // overflow: hidden;
+  overflow: hidden;
 }
 
 .container {
@@ -45,8 +45,9 @@ body {
 }
 
 header {
-  position: absolute;
-  top: 0;
+  margin-bottom: auto;
+  // position: absolute;
+  // top: 0;
   width: 100vw;
   display: flex;
 }
