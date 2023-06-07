@@ -72,6 +72,9 @@ div.max-width {
 }
 
 img {
+  margin-top: 2em;
+  align-items: center;
+  align-self: flex-start;
   -moz-user-select: none;
   -webkit-user-select: none;
   user-select: none;
