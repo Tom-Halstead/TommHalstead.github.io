@@ -74,13 +74,11 @@ div.max-width {
 
 img {
   margin-top: 2em;
-  align-items: center;
-  align-self: flex-start;
   -moz-user-select: none;
   -webkit-user-select: none;
   user-select: none;
-  height: 38em;
-  width: 32em;
+  height: 30em;
+  width: 24em;
   border-radius: 25%;
   background-color: rgba(0, 0, 0, 0.25);
 }
@@ -107,6 +105,11 @@ h3 {
     opacity: 0.5;
   }
 }
+h3.story {
+  padding-left: 5em;
+  padding-right: 5em;
+}
+
 h3 > span {
   -moz-user-select: none;
   -webkit-user-select: none;
@@ -129,7 +132,7 @@ p#p1 {
   line-height: 1em;
   margin-top: 0.5em;
   align-self: center;
-  font-size: 1.4em;
+  font-size: 1.3em;
   font-family: MavenPro;
   color: #aea8a8;
   padding: 0.5em;
@@ -141,7 +144,7 @@ p#p2 {
   line-height: 1em;
   margin-top: 0.5em;
   align-self: center;
-  font-size: 1.4em;
+  font-size: 1.3em;
   font-family: MavenPro;
   color: #aea8a8;
   padding: 0.5em;
@@ -153,7 +156,7 @@ p#p3 {
   line-height: 1em;
   margin-top: 0.5em;
   align-self: center;
-  font-size: 1.4em;
+  font-size: 1.3em;
   font-family: MavenPro;
   color: #aea8a8;
   padding: 0.5em;
@@ -386,6 +389,31 @@ div a.social-link {
 }
 
 @media only screen and (max-width: 1050px) {
+  div.max-width {
+    margin-top: 3em;
+    width: 550px;
+  }
+  img {
+    margin-top: 7em;
+    height: 21em;
+    width: 15em;
+  }
+  h3 {
+    overflow: hidden;
+    font-size: 1.1em;
+  }
+  p#p1 {
+    overflow: hidden;
+    font-size: 1.1em;
+  }
+  p#p2 {
+    overflow: hidden;
+    font-size: 1.1em;
+  }
+  p#p3 {
+    overflow: hidden;
+    font-size: 1.1em;
+  }
   nav ul {
     gap: 6rem;
   }
