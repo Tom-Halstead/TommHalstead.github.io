@@ -41,21 +41,20 @@ body {
 // }
 
 header {
-  position: relative;
+  // position: relative;
   // position: fixed;
   top: 0;
   // width: 100vw;
   // display: flex;
   height: 4.3em;
-  background-image: -o-linear-gradient($base-gray, $base-black);
-  background-image: -moz-linear-gradient($base-gray, $base-black);
-  background-image: linear-gradient($base-gray, $base-black);
 }
 
 nav {
   width: 100vw;
   justify-content: space-between;
   display: flex;
+  background-image: -o-linear-gradient($base-gray, $base-black);
+  background-image: -moz-linear-gradient($base-gray, $base-black);
   background-image: linear-gradient($base-gray, $base-black);
   opacity: 85%;
   -moz-transition: 0.6s;
@@ -95,6 +94,10 @@ nav ul {
   overflow-y: hidden;
 }
 
+.nav-drop {
+  border-bottom: 1px ridge rgb(67, 63, 63);
+}
+
 nav > div > i {
   visibility: hidden;
 }
@@ -132,6 +135,8 @@ header ul li a {
   overflow: hidden;
   transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   backdrop-filter: blur(20px);
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 100;
 }
 
 .toggle-btn {

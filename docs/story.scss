@@ -217,12 +217,12 @@ header {
   // width: 100vw;
   // display: flex;
   height: 4.3em;
-  background-image: -o-linear-gradient($base-gray, $base-black);
-  background-image: -moz-linear-gradient($base-gray, $base-black);
-  background-image: linear-gradient($base-gray, $base-black);
 }
 
 nav {
+  background-image: -o-linear-gradient($base-gray, $base-black);
+  background-image: -moz-linear-gradient($base-gray, $base-black);
+  background-image: linear-gradient($base-gray, $base-black);
   width: 100vw;
   justify-content: space-between;
   display: flex;
@@ -264,6 +264,10 @@ nav ul {
   overflow-y: hidden;
 }
 
+.nav-drop {
+  border-bottom: 1px ridge rgb(67, 63, 63);
+}
+
 nav > div > i {
   visibility: hidden;
 }
@@ -294,14 +298,15 @@ header ul li a {
   display: none;
   border-radius: 1em 1em 1em 1em;
   opacity: 90%;
-  background: rgb(255, 255, 255, 0.1);
   position: absolute;
   top: 5rem;
   right: 1rem;
   width: 15rem;
   overflow: hidden;
   transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  backdrop-filter: blur(20px);
+  // backdrop-filter: blur(100px);
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 100;
 }
 
 .toggle-btn {

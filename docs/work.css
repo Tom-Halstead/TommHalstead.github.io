@@ -26,8 +26,6 @@ body {
 }
 
 header {
-  position: relative;
-  top: 0;
   height: 4.3em;
 }
 
@@ -71,6 +69,10 @@ nav ul {
   overflow-y: hidden;
 }
 
+.nav-drop {
+  border-bottom: 1px ridge rgb(67, 63, 63);
+}
+
 nav > div > i {
   visibility: hidden;
 }
@@ -109,6 +111,8 @@ header ul li a:hover {
   transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   -webkit-backdrop-filter: blur(20px);
           backdrop-filter: blur(20px);
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 100;
 }
 
 .toggle-btn {

@@ -45,15 +45,16 @@ body {
 }
 
 header {
-  margin-bottom: auto;
+  // margin-bottom: auto;
   // position: absolute;
   // top: 0;
-  width: 100vw;
+  // width: 100%;
   display: flex;
+  // background-image: linear-gradient($base-gray, $base-black);
 }
 
 nav {
-  width: 100vw;
+  width: 100%;
   justify-content: space-between;
   display: flex;
   background-image: linear-gradient($base-gray, $base-black);
@@ -94,6 +95,9 @@ nav ul {
   text-decoration: none;
   overflow-y: hidden;
 }
+.nav-drop {
+  border-bottom: 1px ridge rgb(67, 63, 63);
+}
 
 nav > div > i {
   visibility: hidden;
@@ -132,6 +136,8 @@ header ul li a {
   overflow: hidden;
   transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   backdrop-filter: blur(20px);
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 100;
 }
 
 // .toggle-btn {
@@ -235,11 +241,11 @@ h3 {
     0 0 0px #717171;
 }
 
-// #particles-js {
-//   overflow-x: hidden;
-//   overflow: hidden;
-//   z-index: 0;
-// }
+#particles-js {
+  overflow-x: hidden;
+  overflow: hidden;
+  z-index: 0;
+}
 
 #lab_social_icon_footer #social-fb:hover {
   color: #3b5998;
@@ -268,7 +274,7 @@ footer {
   height: 3.3em;
   background-image: linear-gradient($base-black, $base-gray);
   overflow-y: hidden;
-  width: 100vw;
+  width: 100%;
 }
 
 #lab_social_icon_footer a {
