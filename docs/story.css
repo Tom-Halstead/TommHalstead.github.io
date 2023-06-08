@@ -21,7 +21,6 @@
   margin: 0;
   padding: 0;
   font-family: "Poppins", "sans-serif";
-  overflow-x: hidden;
 }
 
 body {
@@ -53,6 +52,7 @@ body::-webkit-scrollbar-thumb {
 .container {
   display: flex;
   justify-content: space-evenly;
+  height: 100vh;
 }
 
 div.max-width {
@@ -72,15 +72,57 @@ div.max-width {
   background: #423c3c;
 }
 
-img {
-  margin-top: 2em;
+section {
+  height: 600px;
+  width: 675px;
+}
+
+img#collage {
+  border-radius: 30%;
+  height: 15em;
+  position: relative;
+  left: 32em;
+  top: 9em;
+  user-select: none;
   -moz-user-select: none;
   -webkit-user-select: none;
   user-select: none;
-  height: 30em;
-  width: 24em;
-  border-radius: 25%;
-  background-color: rgba(0, 0, 0, 0.25);
+  transform: rotate(40deg);
+}
+img#collage:hover {
+  transform: scale(1.1) rotate(40deg);
+  z-index: 100;
+}
+
+img#collage1 {
+  border-radius: 30%;
+  height: 15em;
+  position: relative;
+  top: 5.5em;
+  left: 8em;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+img#collage1:hover {
+  transform: scale(1.2);
+  z-index: 100;
+}
+
+img#collage2 {
+  border-radius: 30%;
+  height: 15em;
+  position: relative;
+  top: 9.2em;
+  right: 14em;
+  transform: rotate(320deg);
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+img#collage2:hover {
+  transform: scale(1.1) rotate(320deg);
+  z-index: 100;
 }
 
 h3 {
@@ -393,11 +435,6 @@ div a.social-link {
     margin-top: 3em;
     width: 550px;
   }
-  img {
-    margin-top: 7em;
-    height: 21em;
-    width: 15em;
-  }
   h3 {
     overflow: hidden;
     font-size: 1.1em;
@@ -443,6 +480,30 @@ div a.social-link {
   }
 }
 @media only screen and (max-width: 768px) {
+  div.max-width {
+    margin-top: 7em;
+    width: 450px;
+  }
+  h3 {
+    overflow: hidden;
+    font-size: 0.8em;
+  }
+  p#p1 {
+    overflow: hidden;
+    font-size: 1em;
+  }
+  p#p2 {
+    overflow: hidden;
+    font-size: 1em;
+  }
+  p#p3 {
+    overflow: hidden;
+    font-size: 1em;
+  }
+  div.container {
+    display: flex;
+    flex-direction: row;
+  }
   nav ul {
     margin-left: 3em;
     gap: 4em;

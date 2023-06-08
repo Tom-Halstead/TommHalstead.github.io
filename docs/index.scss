@@ -22,7 +22,7 @@ $base-white: #ffffff;
   margin: 0;
   padding: 0;
   font-family: "Poppins", "sans-serif";
-  // overflow: hidden;
+  overflow-x: hidden;
 }
 
 body {
@@ -34,7 +34,7 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   height: 100vh;
-  overflow: hidden;
+  // overflow: hidden;
 }
 
 .container {
@@ -47,15 +47,9 @@ body {
 }
 
 #particles-js {
-  // height: 100vh;
-  // width: 100vw;
-
-  // display: flex;
-  // flex-direction: column;
-  // justify-content: space-evenly;
-  // align-items: center;
+  position: absolute;
   overflow: hidden;
-  // z-index: 0;
+  z-index: 0;
 }
 
 header {
@@ -546,7 +540,7 @@ div a.social-link {
 }
 @media only screen and (max-width: 576px) {
   div.text {
-    top: 20em;
+    top: 13em;
   }
   h1 {
     font-size: 3em;
@@ -555,7 +549,7 @@ div a.social-link {
     font-size: 1.5em;
   }
   h3 {
-    font-size: 1em;
+    font-size: 0.92em;
   }
   // div.text {
   //   width: 80vw;
