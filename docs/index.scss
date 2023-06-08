@@ -22,19 +22,21 @@ $base-white: #ffffff;
   margin: 0;
   padding: 0;
   font-family: "Poppins", "sans-serif";
-  overflow-x: hidden;
+  // overflow-x: hidden;
+}
+html {
+  overflow: hidden;
 }
 
 body {
   margin: 0;
   padding: 0;
   background-image: url("806443.jpg");
-  // background-color: black;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  background-attachment: fixed;
   height: 100vh;
-  // overflow: hidden;
 }
 
 .container {
@@ -188,18 +190,13 @@ a.nav-btn {
 
 div.text {
   display: flex;
-  // flex-wrap: wrap;
   flex-direction: column;
   align-items: center;
-  // width: 100vw;
-  // overflow: hidden;
+  overflow: hidden;
   letter-spacing: 0.11em;
   pointer-events: none;
-  // height: auto;
   position: absolute;
   top: 13em;
-  // left: 23em;
-  // gap: 0.5em;
 }
 
 h1 {
