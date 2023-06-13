@@ -565,6 +565,8 @@ div a.social-link {
   }
   div.max-width {
     align-self: center;
+    padding-left: 1em;
+    padding-right: 1em;
   }
   #bars.fa-solid {
     color: #ffffff;

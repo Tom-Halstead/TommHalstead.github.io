@@ -630,6 +630,10 @@ div a.social-link {
   }
   div.max-width {
     align-self: center;
+    // margin-left: 1em;
+    // margin-right: 1em;
+    padding-left: 1em;
+    padding-right: 1em;
   }
   #bars.fa-solid {
     color: $base-white;
