@@ -12,12 +12,6 @@
   src: url("RobotoMono-Bold.ttf");
 }
 @font-face {
-  font-family: "MyFont2";
-  font-style: normal;
-  font-weight: normal;
-  src: url("Stellar-light.woff");
-}
-@font-face {
   font-family: "StoryFont";
   font-style: normal;
   font-weight: normal;
@@ -66,15 +60,15 @@ div.max-width {
   flex-direction: column;
   width: 700px;
   border-radius: 15%;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.35);
 }
 
 ::-moz-selection {
-  background: #423c3c;
+  background: #7c7474;
 }
 
 ::selection {
-  background: #423c3c;
+  background: #7c7474;
 }
 
 section.hexagon-gallery {
@@ -346,13 +340,14 @@ a.nav-btn {
 }
 
 footer {
+  bottom: 0;
   display: flex;
   justify-content: space-between;
-  padding: 0.5em 0.5em 0.5em 0.5em;
+  padding: 0.3em;
   color: #ffffff;
   height: 3.3em;
   background-image: linear-gradient(rgb(0, 0, 0), rgb(42, 41, 41));
-  overflow: hidden;
+  width: 100%;
 }
 
 #lab_social_icon_footer a {
@@ -531,6 +526,16 @@ div a.social-link {
   }
 }
 @media only screen and (max-width: 576px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+  section.hexagon-gallery {
+    align-self: center;
+  }
+  div.max-width {
+    align-self: center;
+  }
   #bars.fa-solid {
     color: #ffffff;
     position: absolute;

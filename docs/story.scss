@@ -20,13 +20,6 @@ $base-white: #ffffff;
 }
 
 @font-face {
-  font-family: "MyFont2";
-  font-style: normal;
-  font-weight: normal;
-  src: url("Stellar-light.woff");
-}
-
-@font-face {
   font-family: "StoryFont";
   font-style: normal;
   font-weight: normal;
@@ -66,58 +59,25 @@ body::-webkit-scrollbar-thumb {
 
 .container {
   display: flex;
+  // flex-direction: column;
   justify-content: space-around;
-  // gap: 1em;
   height: 100%;
 }
 
-// .container {
-//   display: flex;
-//   justify-content: space-evenly;
-//   gap: 1em;
-// }
-
-// div.max-width {
-//   // height: fit-content;
-//   display: flex;
-//   flex-direction: column;
-//   width: 675px;
-//   height: 600px;
-//   // height: 100vh;
-//   // padding: 1em;
-//   border-radius: 15%;
-//   background-color: rgba(0, 0, 0, 0.3);
-// }
 div.max-width {
-  // height: fit-content;
-  // position: absolute;
-  // left: 3em;
   display: flex;
   flex-direction: column;
   width: 700px;
-  // height: 600px;
-  // height: 100vh;
-  // padding: 1em;
   border-radius: 15%;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.35);
 }
 
 ::selection {
-  background: #423c3c;
+  background: #7c7474;
 }
 
-// img {
-//   margin-top: 2em;
-//   -moz-user-select: none;
-//   -webkit-user-select: none;
-//   user-select: none;
-//   height: 30em;
-//   width: 24em;
-//   border-radius: 25%;
-//   background-color: rgba(0, 0, 0, 0.25);
-// }
-
 section.hexagon-gallery {
+  // align-self: center;
   -moz-user-select: none;
   -webkit-user-drag: none;
   user-select: none;
@@ -434,18 +394,17 @@ a.nav-btn {
 }
 
 footer {
-  // position: fixed;
-  // bottom: 0;
+  bottom: 0;
   display: flex;
   justify-content: space-between;
-  padding: 0.5em 0.5em 0.5em 0.5em;
+  padding: 0.3em;
   color: $base-white;
   height: 3.3em;
   background-image: -o-linear-gradient($base-black, $base-gray);
   background-image: -moz-linear-gradient($base-black, $base-gray);
   background-image: linear-gradient($base-black, $base-gray);
-  overflow: hidden;
-  // width: 100%;
+  // overflow: hidden;
+  width: 100%;
 }
 
 #lab_social_icon_footer a {
@@ -525,11 +484,7 @@ div a.social-link {
     margin-top: 3em;
     width: 550px;
   }
-  // img {
-  //   margin-top: 7em;
-  //   height: 21em;
-  //   width: 15em;
-  // }
+
   h3 {
     overflow: hidden;
     font-size: 1.1em;
@@ -650,6 +605,17 @@ div a.social-link {
   }
 }
 @media only screen and (max-width: 576px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  section.hexagon-gallery {
+    align-self: center;
+  }
+  div.max-width {
+    align-self: center;
+  }
   #bars.fa-solid {
     color: $base-white;
     position: absolute;
