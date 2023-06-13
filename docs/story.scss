@@ -107,6 +107,11 @@ section.hexagon-gallery {
   -webkit-filter: drop-shadow(20px 20px 40px);
   filter: drop-shadow(20px 20px 40px);
 }
+img {
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  user-select: none;
+}
 
 .hexagon-gallery .hexagon .hex {
   -moz-user-select: none;
@@ -242,14 +247,14 @@ p#p3 {
   // background-color: rgba(0, 0, 0, 0.25);
 }
 
-// header {
-//   // position: relative;
-//   // position: fixed;
-//   top: 0;
-//   // width: 100vw;
-//   // display: flex;
-//   height: 4.3em;
-// }
+header {
+  // position: relative;
+  // position: fixed;
+  top: 0;
+  // width: 100vw;
+  // display: flex;
+  height: 4.3em;
+}
 
 nav {
   background-image: -o-linear-gradient($base-gray, $base-black);

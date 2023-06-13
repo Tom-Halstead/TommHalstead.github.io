@@ -97,6 +97,13 @@ section.hexagon-gallery {
   filter: drop-shadow(20px 20px 40px);
 }
 
+img {
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+          user-select: none;
+}
+
 .hexagon-gallery .hexagon .hex {
   -moz-user-select: none;
   -webkit-user-drag: none;
@@ -199,6 +206,11 @@ p#p3 {
   font-family: MavenPro;
   color: #aea8a8;
   padding: 0.5em;
+}
+
+header {
+  top: 0;
+  height: 4.3em;
 }
 
 nav {
