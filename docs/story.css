@@ -17,6 +17,12 @@
   font-weight: normal;
   src: url("Stellar-light.woff");
 }
+@font-face {
+  font-family: "StoryFont";
+  font-style: normal;
+  font-weight: normal;
+  src: url("ChakraPetch-Medium.ttf");
+}
 * {
   margin: 0;
   padding: 0;
@@ -24,6 +30,7 @@
 }
 
 body {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
@@ -70,17 +77,62 @@ div.max-width {
   background: #423c3c;
 }
 
-section.nonagon {
+section.nonagon-gallery {
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+          user-select: none;
+  position: relative;
+  place-items: center;
   margin: 1em;
-  background-color: #79cefc;
-  display: flex;
+  display: grid;
   height: 600px;
   width: 675px;
 }
 
+.nonagon-gallery .nonagon {
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+          user-select: none;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8em;
+  filter: drop-shadow(20px 20px 40px);
+}
+
+.nonagon-gallery .nonagon .non {
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+          user-select: none;
+  width: 13.34em;
+  height: 15.2em;
+  display: flex;
+  margin: 0.1em;
+  background: rgba(93, 88, 88, 0.6);
+  -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+          clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+.nonagon-gallery .nonagon .non:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  z-index: 101;
+}
+
+.nonagon-gallery .nonagon:nth-child(1) {
+  top: 0;
+}
+
+.nonagon-gallery .nonagon:nth-child(3) {
+  bottom: 0;
+}
+
 h3 {
   align-self: center;
-  border-bottom: 5px solid #bc8787;
+  border-bottom: 5px solid #aea8a8;
   font-weight: 500;
   animation: pulsate 3s ease-out;
   animation-iteration-count: infinite;
@@ -101,8 +153,8 @@ h3 {
   }
 }
 h3.story {
-  padding-left: 5em;
-  padding-right: 5em;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
 }
 
 h3 > span {
@@ -111,9 +163,8 @@ h3 > span {
   user-select: none;
   letter-spacing: 0.015em;
   font-size: 4em;
-  font-family: MyFont;
-  color: #bc8787;
-  text-shadow: 0 0 15px #ffffff, 0 0 15px #ffffff, 0 0 10px #ffffff, 0 0 5px #ffffff, 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 10px #ffffff, 0 0 10px #ffffff;
+  font-family: StoryFont;
+  color: #aea8a8;
 }
 h3 > span:hover {
   filter: blur(5px);
@@ -295,7 +346,6 @@ a.nav-btn {
 }
 
 footer {
-  margin-top: auto;
   display: flex;
   justify-content: space-between;
   padding: 0.5em 0.5em 0.5em 0.5em;

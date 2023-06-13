@@ -134,8 +134,6 @@ window.onload = function () {
   document.querySelector(".toggle-btn").addEventListener("click", openDropDown);
 };
 
-// const docWidth = document.documentElement.offsetWidth;
-// const docHeight = document.documentElement.offsetHeight;
-
-// console.log(docHeight, docWidth);
-// docWidth.forEach((el) => console.log(el));
+document
+  .querySelectorAll(`.non`)
+  .forEach((el) => el.addEventListener(`click`, () => console.log("clicked")));
