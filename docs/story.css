@@ -80,8 +80,8 @@ section.hexagon-gallery {
   place-items: center;
   margin: 1em;
   display: grid;
-  height: 600px;
-  width: 675px;
+  height: 550px;
+  width: 625px;
 }
 
 .hexagon-gallery .hexagon {
@@ -93,7 +93,7 @@ section.hexagon-gallery {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 0.8em;
+  gap: 1em;
   filter: drop-shadow(20px 20px 40px);
 }
 
@@ -102,10 +102,9 @@ section.hexagon-gallery {
   -webkit-user-drag: none;
   -webkit-user-select: none;
           user-select: none;
-  width: 13.34em;
-  height: 15.2em;
+  width: 12.34em;
+  height: 14em;
   display: flex;
-  margin: 0.1em;
   background: rgba(93, 88, 88, 0.6);
   -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
           clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);

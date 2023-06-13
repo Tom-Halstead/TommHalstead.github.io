@@ -87,8 +87,10 @@ section.hexagon-gallery {
   margin: 1em;
   // background: rgba(255, 255, 255, 0.4);
   display: grid;
-  height: 600px;
-  width: 675px;
+  // height: 600px;
+  // width: 675px;
+  height: 550px;
+  width: 625px;
   // height: 5em;
   // width: 5.5em;
 }
@@ -101,7 +103,7 @@ section.hexagon-gallery {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 0.8em;
+  gap: 1em;
   -webkit-filter: drop-shadow(20px 20px 40px);
   filter: drop-shadow(20px 20px 40px);
 }
@@ -110,12 +112,11 @@ section.hexagon-gallery {
   -moz-user-select: none;
   -webkit-user-drag: none;
   user-select: none;
-  width: 13.34em;
-  height: 15.2em;
+  width: 12.34em;
+  height: 14em;
   // width: 14em;
   // height: 14.5em;
   display: flex;
-  margin: 0.1em;
   background: rgba(93, 88, 88, 0.6);
   clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
 
