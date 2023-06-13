@@ -71,6 +71,9 @@ div.max-width {
   width: 700px;
   border-radius: 15%;
   background-color: rgba(0, 0, 0, 0.35);
+  padding-bottom: 5em;
+  margin-right: 2em;
+  margin-left: 1em;
 }
 
 ::selection {
@@ -85,14 +88,9 @@ section.hexagon-gallery {
   position: relative;
   place-items: center;
   margin: 1em;
-  // background: rgba(255, 255, 255, 0.4);
   display: grid;
-  // height: 600px;
-  // width: 675px;
   height: 550px;
   width: 625px;
-  // height: 5em;
-  // width: 5.5em;
 }
 
 .hexagon-gallery .hexagon {
@@ -106,6 +104,7 @@ section.hexagon-gallery {
   gap: 1em;
   -webkit-filter: drop-shadow(20px 20px 40px);
   filter: drop-shadow(20px 20px 40px);
+  padding-bottom: 1.5em;
 }
 img {
   -moz-user-select: none;
@@ -118,7 +117,7 @@ img {
   -webkit-user-drag: none;
   user-select: none;
   width: 12.34em;
-  height: 14em;
+  height: 13.5em;
   // width: 14em;
   // height: 14.5em;
   display: flex;
@@ -248,19 +247,20 @@ p#p3 {
 }
 
 header {
-  // position: relative;
+  position: relative;
   // position: fixed;
   top: 0;
-  // width: 100vw;
+  width: 100%;
   // display: flex;
   height: 4.3em;
+  // overflow-x: hidden;
 }
 
 nav {
   background-image: -o-linear-gradient($base-gray, $base-black);
   background-image: -moz-linear-gradient($base-gray, $base-black);
   background-image: linear-gradient($base-gray, $base-black);
-  // width: 100vw;
+  width: 100%;
   justify-content: space-between;
   display: flex;
   opacity: 85%;
@@ -489,8 +489,19 @@ div a.social-link {
 }
 
 @media only screen and (max-width: 1050px) {
+  section.hexagon-gallery {
+    align-self: center;
+    height: 425px;
+    width: 475px;
+  }
+  .hexagon-gallery .hexagon .hex {
+    justify-content: center;
+    width: 9.34em;
+    height: 10.4em;
+    margin: -0.17em;
+  }
   div.max-width {
-    margin-top: 3em;
+    align-self: center;
     width: 550px;
   }
 
@@ -539,6 +550,7 @@ div a.social-link {
   #social-li {
     font-size: 2.5em;
   }
+
   span.seperator {
     bottom: 0.03em;
     font-size: 1.8em;
@@ -546,15 +558,21 @@ div a.social-link {
 }
 
 @media only screen and (max-width: 768px) {
+  section.hexagon-gallery {
+    align-self: center;
+    height: 375px;
+    width: 400px;
+  }
+  .hexagon-gallery .hexagon .hex {
+    justify-content: center;
+
+    width: 8em;
+    height: 9.1em;
+  }
   div.max-width {
-    margin-top: 7em;
     width: 450px;
   }
-  // img {
-  //   margin-top: 10em;
-  //   height: 19em;
-  //   width: 13em;
-  // }
+
   h3 {
     overflow: hidden;
     font-size: 0.8em;
@@ -572,11 +590,6 @@ div a.social-link {
   p#p3 {
     overflow: hidden;
     font-size: 1em;
-  }
-
-  div.container {
-    display: flex;
-    flex-direction: row;
   }
 
   nav ul {
@@ -618,9 +631,15 @@ div a.social-link {
     display: flex;
     flex-direction: column;
   }
-
+  .hexagon-gallery .hexagon .hex {
+    width: 8em;
+    height: 9.1em;
+    align-self: center;
+    justify-content: center;
+  }
   section.hexagon-gallery {
     align-self: center;
+    margin-bottom: 5em;
   }
   div.max-width {
     align-self: center;

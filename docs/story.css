@@ -61,6 +61,9 @@ div.max-width {
   width: 700px;
   border-radius: 15%;
   background-color: rgba(0, 0, 0, 0.35);
+  padding-bottom: 5em;
+  margin-right: 2em;
+  margin-left: 1em;
 }
 
 ::-moz-selection {
@@ -95,6 +98,7 @@ section.hexagon-gallery {
   align-items: center;
   gap: 1em;
   filter: drop-shadow(20px 20px 40px);
+  padding-bottom: 1.5em;
 }
 
 img {
@@ -110,7 +114,7 @@ img {
   -webkit-user-select: none;
           user-select: none;
   width: 12.34em;
-  height: 14em;
+  height: 13.5em;
   display: flex;
   background: rgba(93, 88, 88, 0.6);
   -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
@@ -209,12 +213,15 @@ p#p3 {
 }
 
 header {
+  position: relative;
   top: 0;
+  width: 100%;
   height: 4.3em;
 }
 
 nav {
   background-image: linear-gradient(rgb(42, 41, 41), rgb(0, 0, 0));
+  width: 100%;
   justify-content: space-between;
   display: flex;
   opacity: 85%;
@@ -433,8 +440,19 @@ div a.social-link {
 }
 
 @media only screen and (max-width: 1050px) {
+  section.hexagon-gallery {
+    align-self: center;
+    height: 425px;
+    width: 475px;
+  }
+  .hexagon-gallery .hexagon .hex {
+    justify-content: center;
+    width: 9.34em;
+    height: 10.4em;
+    margin: -0.17em;
+  }
   div.max-width {
-    margin-top: 3em;
+    align-self: center;
     width: 550px;
   }
   h3 {
@@ -482,8 +500,17 @@ div a.social-link {
   }
 }
 @media only screen and (max-width: 768px) {
+  section.hexagon-gallery {
+    align-self: center;
+    height: 375px;
+    width: 400px;
+  }
+  .hexagon-gallery .hexagon .hex {
+    justify-content: center;
+    width: 8em;
+    height: 9.1em;
+  }
   div.max-width {
-    margin-top: 7em;
     width: 450px;
   }
   h3 {
@@ -501,10 +528,6 @@ div a.social-link {
   p#p3 {
     overflow: hidden;
     font-size: 1em;
-  }
-  div.container {
-    display: flex;
-    flex-direction: row;
   }
   nav ul {
     margin-left: 3em;
@@ -542,8 +565,15 @@ div a.social-link {
     display: flex;
     flex-direction: column;
   }
+  .hexagon-gallery .hexagon .hex {
+    width: 8em;
+    height: 9.1em;
+    align-self: center;
+    justify-content: center;
+  }
   section.hexagon-gallery {
     align-self: center;
+    margin-bottom: 5em;
   }
   div.max-width {
     align-self: center;
