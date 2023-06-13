@@ -26,7 +26,6 @@
 body {
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
   scroll-behavior: smooth;
   background-image: url("806443.jpg");
   background-size: cover;
@@ -51,15 +50,14 @@ body::-webkit-scrollbar-thumb {
 
 .container {
   display: flex;
-  justify-content: space-evenly;
-  height: 100vh;
+  justify-content: space-around;
+  height: 100%;
 }
 
 div.max-width {
   display: flex;
   flex-direction: column;
-  width: 675px;
-  height: 600px;
+  width: 700px;
   border-radius: 15%;
   background-color: rgba(0, 0, 0, 0.3);
 }
@@ -72,57 +70,12 @@ div.max-width {
   background: #423c3c;
 }
 
-section {
+section.nonagon {
+  margin: 1em;
+  background-color: #79cefc;
+  display: flex;
   height: 600px;
   width: 675px;
-}
-
-img#collage {
-  border-radius: 30%;
-  height: 15em;
-  position: relative;
-  left: 32em;
-  top: 9em;
-  user-select: none;
-  -moz-user-select: none;
-  -webkit-user-select: none;
-  user-select: none;
-  transform: rotate(40deg);
-}
-img#collage:hover {
-  transform: scale(1.1) rotate(40deg);
-  z-index: 100;
-}
-
-img#collage1 {
-  border-radius: 30%;
-  height: 15em;
-  position: relative;
-  top: 5.5em;
-  left: 8em;
-  -moz-user-select: none;
-  -webkit-user-select: none;
-  user-select: none;
-}
-img#collage1:hover {
-  transform: scale(1.2);
-  z-index: 100;
-}
-
-img#collage2 {
-  border-radius: 30%;
-  height: 15em;
-  position: relative;
-  top: 9.2em;
-  right: 14em;
-  transform: rotate(320deg);
-  -moz-user-select: none;
-  -webkit-user-select: none;
-  user-select: none;
-}
-img#collage2:hover {
-  transform: scale(1.1) rotate(320deg);
-  z-index: 100;
 }
 
 h3 {
@@ -204,14 +157,8 @@ p#p3 {
   padding: 0.5em;
 }
 
-header {
-  top: 0;
-  height: 4.3em;
-}
-
 nav {
   background-image: linear-gradient(rgb(42, 41, 41), rgb(0, 0, 0));
-  width: 100vw;
   justify-content: space-between;
   display: flex;
   opacity: 85%;
@@ -348,8 +295,7 @@ a.nav-btn {
 }
 
 footer {
-  position: fixed;
-  bottom: 0;
+  margin-top: auto;
   display: flex;
   justify-content: space-between;
   padding: 0.5em 0.5em 0.5em 0.5em;
@@ -357,7 +303,6 @@ footer {
   height: 3.3em;
   background-image: linear-gradient(rgb(0, 0, 0), rgb(42, 41, 41));
   overflow: hidden;
-  width: 100%;
 }
 
 #lab_social_icon_footer a {
