@@ -117,7 +117,7 @@ div.max-width {
 //   background-color: rgba(0, 0, 0, 0.25);
 // }
 
-section.nonagon-gallery {
+section.hexagon-gallery {
   -moz-user-select: none;
   -webkit-user-drag: none;
   user-select: none;
@@ -132,7 +132,7 @@ section.nonagon-gallery {
   // width: 5.5em;
 }
 
-.nonagon-gallery .nonagon {
+.hexagon-gallery .hexagon {
   -moz-user-select: none;
   -webkit-user-drag: none;
   user-select: none;
@@ -145,7 +145,7 @@ section.nonagon-gallery {
   filter: drop-shadow(20px 20px 40px);
 }
 
-.nonagon-gallery .nonagon .non {
+.hexagon-gallery .hexagon .hex {
   -moz-user-select: none;
   -webkit-user-drag: none;
   user-select: none;
@@ -168,10 +168,10 @@ section.nonagon-gallery {
   }
 }
 
-.nonagon-gallery .nonagon:nth-child(1) {
+.hexagon-gallery .hexagon:nth-child(1) {
   top: 0;
 }
-.nonagon-gallery .nonagon:nth-child(3) {
+.hexagon-gallery .hexagon:nth-child(3) {
   bottom: 0;
 }
 
