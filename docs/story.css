@@ -562,11 +562,17 @@ div a.social-link {
   section.hexagon-gallery {
     align-self: center;
     margin-bottom: 5em;
+    padding-left: 1em;
+    padding-right: 1em;
+    margin-left: 1em;
+    margin-right: 1em;
   }
   div.max-width {
     align-self: center;
     padding-left: 1em;
     padding-right: 1em;
+    margin-left: 1em;
+    margin-right: 1em;
   }
   #bars.fa-solid {
     color: #ffffff;
