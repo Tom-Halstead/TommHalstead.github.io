@@ -340,6 +340,7 @@ a.nav-btn {
 }
 
 footer {
+  position: fixed;
   bottom: 0;
   display: flex;
   justify-content: space-between;
