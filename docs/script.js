@@ -138,6 +138,11 @@ window.onload = function () {
 //   .querySelectorAll(`.hex`)
 //   .forEach((el) => el.addEventListener(`click`, () => console.log("clicked")));
 
-document.querySelector(`section`).addEventListener(`click`, function (e) {
-  console.log(e.target);
+const gallery = document.querySelector(`section`);
+
+gallery.addEventListener(`click`, function (e) {
+  console.log(e.target.closest(".hex"));
+  const hex = e.target.closest(".hex");
+  hex.classList.toggle("slide");
+  if (!hex) return;
 });

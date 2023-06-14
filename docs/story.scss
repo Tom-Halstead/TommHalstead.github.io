@@ -106,13 +106,21 @@ section.hexagon-gallery {
   filter: drop-shadow(20px 20px 40px);
   padding-bottom: 1.5em;
 }
-img {
+img.collage {
   -moz-user-select: none;
   -webkit-user-drag: none;
   user-select: none;
+  -webkit-filter: grayscale(1);
+  filter: grayscale(1);
+
+  &:hover {
+    -webkit-filter: grayscale(0);
+    filter: grayscale(0);
+  }
 }
 
 .hexagon-gallery .hexagon .hex {
+  justify-content: center;
   -moz-user-select: none;
   -webkit-user-drag: none;
   user-select: none;
@@ -491,6 +499,16 @@ div a.social-link {
   div.max-width {
     align-self: center;
     width: 550px;
+  }
+
+  .slide {
+    position: absolute;
+    margin: auto;
+    // float: left;
+    -webkit-transform: scale(3);
+    -moz-transform: scale(3);
+    -o-transform: scale(3);
+    transform: scale(3);
   }
 
   h3 {

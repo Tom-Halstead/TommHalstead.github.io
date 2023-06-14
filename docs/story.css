@@ -101,14 +101,19 @@ section.hexagon-gallery {
   padding-bottom: 1.5em;
 }
 
-img {
+img.collage {
   -moz-user-select: none;
   -webkit-user-drag: none;
   -webkit-user-select: none;
           user-select: none;
+  filter: grayscale(1);
+}
+img.collage:hover {
+  filter: grayscale(0);
 }
 
 .hexagon-gallery .hexagon .hex {
+  justify-content: center;
   -moz-user-select: none;
   -webkit-user-drag: none;
   -webkit-user-select: none;
@@ -442,6 +447,11 @@ div a.social-link {
   div.max-width {
     align-self: center;
     width: 550px;
+  }
+  .slide {
+    position: absolute;
+    margin: auto;
+    transform: scale(3);
   }
   h3 {
     overflow: hidden;
