@@ -359,6 +359,7 @@ footer {
   color: #ffffff;
   height: 3.3em;
   background-image: linear-gradient(rgb(0, 0, 0), rgb(42, 41, 41));
+  overflow: hidden;
   width: 100%;
 }
 
