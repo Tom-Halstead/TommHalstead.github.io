@@ -157,7 +157,7 @@ img {
 
 h3 {
   align-self: center;
-  border-bottom: 5px solid #aea8a8;
+  border-bottom: 5px solid #e48f7c;
   font-weight: 500;
   animation: pulsate 3s ease-out;
   animation-iteration-count: infinite;
@@ -240,12 +240,7 @@ h3 > span {
   letter-spacing: 0.015em;
   font-size: 4em;
   font-family: StoryFont;
-  // font-family: MyFont;
-  // color: #bc8787;
-  color: #aea8a8;
-  // text-shadow: 0 0 15px #ffffff, 0 0 15px #ffffff, 0 0 10px #ffffff,
-  //   0 0 5px #ffffff, 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 10px #ffffff,
-  //   0 0 10px #ffffff;
+  color: #e48f7c;
 
   &:hover {
     filter: blur(5px);
@@ -253,7 +248,6 @@ h3 > span {
     -moz-transform: rotate(90deg);
     -webkit-transform: rotate(90deg);
     transform: rotate(90deg);
-    // color: #aea8a8;
   }
 }
 p#p1 {
@@ -546,18 +540,6 @@ div a.social-link {
     align-self: center;
     width: 550px;
   }
-
-  // .slide {
-  //   // position: fixed;
-  //   margin: auto;
-  //   // float: left;
-  //   opacity: 100;
-  //   -webkit-transform: scale(3);
-  //   -moz-transform: scale(3);
-  //   -o-transform: scale(3);
-  //   transform: scale(3);
-  //   z-index: 101;
-  // }
 
   h3 {
     overflow: hidden;

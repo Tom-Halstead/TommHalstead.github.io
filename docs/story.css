@@ -148,7 +148,7 @@ img {
 
 h3 {
   align-self: center;
-  border-bottom: 5px solid #aea8a8;
+  border-bottom: 5px solid #e48f7c;
   font-weight: 500;
   animation: pulsate 3s ease-out;
   animation-iteration-count: infinite;
@@ -221,7 +221,7 @@ h3 > span {
   letter-spacing: 0.015em;
   font-size: 4em;
   font-family: StoryFont;
-  color: #aea8a8;
+  color: #e48f7c;
 }
 h3 > span:hover {
   filter: blur(5px);
