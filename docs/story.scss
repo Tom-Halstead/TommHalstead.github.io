@@ -439,7 +439,8 @@ a.nav-btn {
 footer {
   position: fixed;
   bottom: 0;
-  // margin-top: auto;
+  left: 0;
+  margin-top: auto;
   display: flex;
   justify-content: space-between;
   padding: 0.3em;
@@ -449,7 +450,7 @@ footer {
   background-image: -moz-linear-gradient($base-black, $base-gray);
   background-image: linear-gradient($base-black, $base-gray);
   overflow: hidden;
-  width: 100%;
+  width: 100vw;
 }
 
 #lab_social_icon_footer a {
