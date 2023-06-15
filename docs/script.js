@@ -139,10 +139,23 @@ window.onload = function () {
 //   .forEach((el) => el.addEventListener(`click`, () => console.log("clicked")));
 
 const gallery = document.querySelector(`section`);
+const modal = document.getElementById("modalBox");
+const exitButton = document.querySelector(".close");
 
-gallery.addEventListener(`click`, function (e) {
-  console.log(e.target.closest(".hex"));
-  const hex = e.target.closest(".hex");
-  hex.classList.toggle("slide");
-  if (!hex) return;
-});
+const modalWindow = function (e) {
+  const img = e.target.closest("img");
+  const modalImage = document.getElementById("modal-image");
+  if (e.target === img) {
+    modal.style.visibility = "visible";
+    modalImage.src = img.src;
+  }
+};
+
+const closeModal = function (e) {
+  if (e.target === modal || e.target === exitButton) {
+    modal.style.visibility = "hidden";
+  }
+};
+
+gallery.addEventListener(`click`, modalWindow);
+document.addEventListener(`click`, closeModal);

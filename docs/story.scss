@@ -119,6 +119,12 @@ img.collage {
   }
 }
 
+img {
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  user-select: none;
+}
+
 .hexagon-gallery .hexagon .hex {
   justify-content: center;
   -moz-user-select: none;
@@ -185,6 +191,46 @@ h3 {
 h3.story {
   padding-left: 1.5em;
   padding-right: 1.5em;
+}
+
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100vh; /* Full height */
+  overflow: hidden; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.8); /* Black w/ opacity */
+}
+
+.modal-content {
+  margin: auto;
+  text-align: center;
+}
+
+#modal-image {
+  display: inline-block;
+  height: 70vh;
+  width: 35vw;
+  border-radius: 15%;
+}
+span.close {
+  cursor: pointer;
+  -webkit-user-drag: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  color: white;
+  position: fixed;
+  font-size: 3em;
+  top: 0.5em;
+  right: 1em;
 }
 
 h3 > span {
@@ -342,11 +388,11 @@ header ul li a {
   z-index: 100;
 }
 
-.toggle-btn {
-  // visibility: hidden;
-  // width: 0.5em;
-  // margin-right: 4.2em;
-}
+// .toggle-btn {
+//   // visibility: hidden;
+//   // width: 0.5em;
+//   // margin-right: 4.2em;
+// }
 
 .dropdown-menu li {
   display: flex;
@@ -501,15 +547,17 @@ div a.social-link {
     width: 550px;
   }
 
-  .slide {
-    position: absolute;
-    margin: auto;
-    // float: left;
-    -webkit-transform: scale(3);
-    -moz-transform: scale(3);
-    -o-transform: scale(3);
-    transform: scale(3);
-  }
+  // .slide {
+  //   // position: fixed;
+  //   margin: auto;
+  //   // float: left;
+  //   opacity: 100;
+  //   -webkit-transform: scale(3);
+  //   -moz-transform: scale(3);
+  //   -o-transform: scale(3);
+  //   transform: scale(3);
+  //   z-index: 101;
+  // }
 
   h3 {
     overflow: hidden;

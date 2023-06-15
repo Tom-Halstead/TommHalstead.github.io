@@ -112,6 +112,13 @@ img.collage:hover {
   filter: grayscale(0);
 }
 
+img {
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+          user-select: none;
+}
+
 .hexagon-gallery .hexagon .hex {
   justify-content: center;
   -moz-user-select: none;
@@ -164,6 +171,47 @@ h3 {
 h3.story {
   padding-left: 1.5em;
   padding-right: 1.5em;
+}
+
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100vh; /* Full height */
+  overflow: hidden; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.8); /* Black w/ opacity */
+}
+
+.modal-content {
+  margin: auto;
+  text-align: center;
+}
+
+#modal-image {
+  display: inline-block;
+  height: 70vh;
+  width: 35vw;
+  border-radius: 15%;
+}
+
+span.close {
+  cursor: pointer;
+  -webkit-user-drag: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  color: white;
+  position: fixed;
+  font-size: 3em;
+  top: 0.5em;
+  right: 1em;
 }
 
 h3 > span {
@@ -448,11 +496,6 @@ div a.social-link {
   div.max-width {
     align-self: center;
     width: 550px;
-  }
-  .slide {
-    position: absolute;
-    margin: auto;
-    transform: scale(3);
   }
   h3 {
     overflow: hidden;
