@@ -20,9 +20,11 @@
 body {
   margin: 0;
   padding: 0;
+  background-image: url("806443.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 header {
@@ -170,6 +172,26 @@ a.nav-btn {
   color: #0077b5;
 }
 
+.container {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+#forkify-img {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  border-radius: 20%;
+  border: 2px solid rgb(122, 118, 118);
+}
+#forkify-img:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
 footer {
   margin-top: auto;
   bottom: 0;
@@ -180,7 +202,6 @@ footer {
   color: #ffffff;
   height: 3.3em;
   background-image: linear-gradient(rgb(0, 0, 0), rgb(42, 41, 41));
-  overflow-y: hidden;
   width: 100vw;
 }
 
@@ -203,11 +224,6 @@ div.text-center.center-block {
   top: 0.4em;
 }
 
-#lab_social_icon_footer .social:hover {
-  transform: scale(0.9);
-  opacity: 85%;
-}
-
 #lab_social_icon_footer .social {
   overflow-y: hidden;
   -webkit-transform: scale(0.8);
@@ -215,6 +231,10 @@ div.text-center.center-block {
   -o-transform: scale(0.8);
   transition-duration: 0.5s;
   transform: scale(0.8);
+  opacity: 85%;
+}
+#lab_social_icon_footer .social:hover {
+  transform: scale(0.9);
   opacity: 85%;
 }
 

@@ -349,6 +349,12 @@ header ul li a:hover {
   z-index: 100;
 }
 
+.toggle-btn {
+  visibility: hidden;
+  width: 0.5em;
+  margin-right: 4.2em;
+}
+
 .dropdown-menu li {
   display: flex;
   align-items: center;

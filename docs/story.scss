@@ -30,7 +30,6 @@ $base-white: #ffffff;
   margin: 0;
   padding: 0;
   font-family: "Poppins", "sans-serif";
-  // overflow: hidden;
 }
 
 body {
@@ -382,11 +381,11 @@ header ul li a {
   z-index: 100;
 }
 
-// .toggle-btn {
-//   // visibility: hidden;
-//   // width: 0.5em;
-//   // margin-right: 4.2em;
-// }
+.toggle-btn {
+  visibility: hidden;
+  width: 0.5em;
+  margin-right: 4.2em;
+}
 
 .dropdown-menu li {
   display: flex;
