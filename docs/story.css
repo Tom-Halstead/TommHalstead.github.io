@@ -35,20 +35,6 @@ body {
   background-attachment: fixed;
 }
 
-body::-webkit-scrollbar {
-  width: 0.7em;
-}
-
-body::-webkit-scrollbar-track {
-  background-color: rgb(0, 0, 0);
-}
-
-body::-webkit-scrollbar-thumb {
-  background-color: #d5b1b1;
-  border-radius: 10px;
-  border: 1px solid rgb(0, 0, 0);
-}
-
 .container {
   display: flex;
   justify-content: space-around;
@@ -61,7 +47,7 @@ div.max-width {
   width: 700px;
   border-radius: 15%;
   background-color: rgba(0, 0, 0, 0.35);
-  padding-bottom: 5em;
+  margin-bottom: 3em;
   margin-right: 2em;
   margin-left: 1em;
 }
@@ -270,6 +256,7 @@ header {
   width: 100%;
   display: flex;
   height: 4.3em;
+  margin-bottom: 1em;
 }
 
 nav {
@@ -630,6 +617,7 @@ div a.social-link {
     padding-right: 1em;
     margin-left: 1em;
     margin-right: 1em;
+    width: 25em;
   }
   #modal-image {
     height: 20em;
