@@ -259,19 +259,18 @@ h3 {
   color: #0077b5;
 }
 
-footer {
-  margin-top: auto;
-  bottom: 0;
+footer#lab_social_icon_footer {
   position: fixed;
+  bottom: 0;
+  left: 0;
+  margin-top: auto;
   display: flex;
   justify-content: space-between;
-  padding: 0.5em 0.5em 0.5em 0.5em;
-  // color: $base-white;
+  padding: 0.3em;
+  color: #ffffff;
   height: 3.3em;
-  background-image: linear-gradient($base-black, $base-gray);
-  overflow-y: hidden;
-  overflow-x: hidden;
-
+  background-image: linear-gradient(rgb(0, 0, 0), rgb(42, 41, 41));
+  overflow: hidden;
   width: 100vw;
 }
 
@@ -281,35 +280,13 @@ footer {
   padding: 1em;
   opacity: 85%;
 }
+
 div.text-center.center-block {
+  position: relative;
+  bottom: 0.4em;
   -webkit-user-select: none;
   -moz-user-select: none;
   user-select: none;
-  overflow-y: hidden;
-  opacity: 85%;
-  width: fit-content;
-  position: absolute;
-  top: 0.4em;
-}
-
-#lab_social_icon_footer .social:hover {
-  -webkit-transform: scale(0.9);
-  -moz-transform: scale(0.9);
-  -o-transform: scale(0.9);
-  transform: scale(0.9);
-  opacity: 85%;
-}
-
-#lab_social_icon_footer .social {
-  overflow-y: hidden;
-  -webkit-transform: scale(0.8);
-  -moz-transform: scale(0.8);
-  -o-transform: scale(0.8);
-  -webkit-transition-duration: 0.5s;
-  -moz-transition-duration: 0.5s;
-  -o-transition-duration: 0.5s;
-  transition-duration: 0.5s;
-  transform: scale(0.8);
   opacity: 85%;
 }
 
@@ -318,8 +295,8 @@ span.seperator {
   -moz-user-select: none;
   user-select: none;
   color: gray;
-  font-size: 2em;
-  bottom: 0.18em;
+  font-size: 2.2em;
+  bottom: 0.17em;
   position: relative;
   opacity: 85%;
 }
@@ -333,106 +310,35 @@ span.seperator {
   font-size: 1rem;
   opacity: 85%;
   margin: auto;
+  position: relative;
+  right: 10em;
+}
+
+div a.social-link {
+  display: inline-block;
+  -webkit-transform: scale(0.8);
+  -moz-transform: scale(0.8);
+  -o-transform: scale(0.8);
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  transform: scale(0.8);
+  opacity: 85%;
+
+  &:hover {
+    -webkit-transform: scale(0.9);
+    -moz-transform: scale(0.9);
+    -o-transform: scale(0.9);
+    transform: scale(0.9);
+    opacity: 85%;
+  }
 }
 
 .nav-btn[aria-current="page"] {
   color: #ffffff;
   font-size: 0.9em;
 }
-
-div a.social-link {
-  position: relative;
-  top: 0.7em;
-  width: fit-content;
-  height: fit-content;
-}
-
-// .togcontainer {
-//   position: absolute;
-//   top: 10em;
-//   right: -2em;
-//   -o-transform: translate(-50%, -50%);
-//   -ms-transform: translate(-50%, -50%);
-//   -moz-transform: translate(-50%, -50%);
-//   -webkit-transform: translate(-50%, -50%);
-//   transform: translate(-50%, -50%);
-//   width: 7em;
-//   height: 5em;
-//   overflow: hidden;
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-// }
-
-// div.toggle {
-//   position: absolute;
-//   top: 0;
-//   left: 0;
-//   width: 3em;
-//   height: 1.5em;
-//   background: #f600ff;
-//   border-radius: 1em 1em 1em 1em;
-//   overflow: hidden;
-//   opacity: 65%;
-// }
-// div.onoff {
-//   div.onoff::selection {
-//     background: rgba(0, 0, 0, 0);
-//   }
-//   font-size: 0.8em;
-//   color: #33ff00;
-//   left: 4.4em;
-//   top: 0.35em;
-//   position: absolute;
-//   font-family: MyFont;
-//   user-select: none;
-// }
-
-// div.toggle.active {
-//   opacity: 90%;
-
-//   background: #f600ff;
-// }
-
-// .togcontainer .toggle.active .toggle-button {
-//   left: 0em;
-// }
-
-// .toggle-button {
-//   opacity: 90%;
-
-//   position: absolute;
-//   bottom: 0.03;
-//   left: 1.5em;
-//   width: 1.5em;
-//   height: 1.5em;
-//   background: rgb(91, 85, 85);
-//   border-radius: 1em;
-//   cursor: pointer;
-//   -moz-transition: 0.3s;
-//   -webkit-transition: 0.3s;
-//   transition: 0.3s;
-// }
-
-// .invert {
-//   -webkit-filter: invert(100%);
-//   -moz-filter: invert(100%);
-//   filter: invert(100%);
-// }
-
-// header nav.activate {
-//   background-image: linear-gradient(#09ff00, $base-white);
-//   opacity: 80%;
-// }
-
-// .inverted {
-//   color: #f600ff;
-// }
-
-// footer.activater {
-//   background-image: linear-gradient($base-white, #09ff00);
-//   opacity: 80%;
-// }
 
 @media only screen and (max-width: 1050px) {
   h1 {
@@ -444,11 +350,7 @@ div a.social-link {
   h3 {
     font-size: 2em;
   }
-  // div.text {
-  //   font-size: 1.4em;
-  //   top: 10em;
-  //   left: 2.5em;
-  // }
+
   nav ul {
     gap: 6rem;
   }
@@ -491,16 +393,7 @@ div a.social-link {
   h3 {
     font-size: 1.5em;
   }
-  // .togcontainer {
-  //   position: absolute;
-  //   right: -5em;
-  //   top: 8em;
-  // }
-  // div.text {
-  //   font-size: 1.1em;
-  //   top: 12em;
-  //   left: 2.5em;
-  // }
+
   nav ul {
     margin-left: 3em;
     gap: 4em;
@@ -548,18 +441,6 @@ div a.social-link {
   h3 {
     font-size: 0.92em;
   }
-  // div.text {
-  //   width: 80vw;
-  //   font-size: 1em;
-  //   top: 12em;
-  //   left: 0.18em;
-  // }
-  // h1.name {
-  //   font-size: 2.5em;
-  //   position: relative;
-  //   top: 0.5em;
-  //   left: 5rem;
-  // }
 
   #bars.fa-solid {
     color: $base-white;
@@ -572,11 +453,7 @@ div a.social-link {
   .nav-link {
     display: none;
   }
-  // .toggle-btn {
-  //   visibility: hidden;
-  //   width: 0.5em;
-  //   margin-right: 4.2em;
-  // }
+
   .dropdown-menu {
     left: 1.2rem;
     width: unset;
@@ -599,38 +476,4 @@ div a.social-link {
     bottom: -0.05em;
     font-size: 1.3em;
   }
-
-  // .togcontainer {
-  //   position: absolute;
-  //   top: 9em;
-  //   left: 5em;
-  // }
-
-  // div.toggle {
-  //   width: 2.5em;
-  //   height: 1.3em;
-  //   background: #f600ff;
-  //   border-radius: 1em 1em 1em 1em;
-  //   overflow: hidden;
-  //   opacity: 65%;
-  // }
-  // div.onoff {
-  //   div.onoff::selection {
-  //     background: rgba(0, 0, 0, 0);
-  //   }
-  //   font-size: 0.6em;
-  //   color: #33ff00;
-  //   left: 4.6em;
-  //   top: 0.28em;
-  //   position: absolute;
-  //   font-family: MyFont;
-  //   user-select: none;
-  // }
-  // .toggle-button {
-  //   position: absolute;
-  //   bottom: 0.03;
-  //   left: 1.3em;
-  //   width: 1.3em;
-  //   height: 1.3em;
-  // }
 }
