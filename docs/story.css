@@ -30,15 +30,17 @@ body {
   scroll-behavior: smooth;
   background-image: url("806443.jpg");
   background-size: cover;
-  background-repeat: no-repeat;
   background-position: center center;
   background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow-x: hidden;
 }
 
 .container {
   display: flex;
   justify-content: space-around;
-  height: 100%;
 }
 
 div.max-width {
@@ -391,7 +393,7 @@ a.nav-btn {
   color: #0077b5;
 }
 
-footer {
+footer#lab_social_icon_footer {
   position: fixed;
   bottom: 0;
   left: 0;
@@ -414,28 +416,11 @@ footer {
 }
 
 div.text-center.center-block {
+  position: relative;
+  bottom: 0.4em;
   -webkit-user-select: none;
   -moz-user-select: none;
   user-select: none;
-  overflow-y: hidden;
-  opacity: 85%;
-  width: -moz-fit-content;
-  width: fit-content;
-  position: absolute;
-}
-
-#lab_social_icon_footer .social:hover {
-  transform: scale(0.9);
-  opacity: 85%;
-}
-
-#lab_social_icon_footer .social {
-  overflow-y: hidden;
-  -webkit-transform: scale(0.8);
-  -moz-transform: scale(0.8);
-  -o-transform: scale(0.8);
-  transition-duration: 0.5s;
-  transform: scale(0.8);
   opacity: 85%;
 }
 
@@ -444,8 +429,8 @@ span.seperator {
   -moz-user-select: none;
   user-select: none;
   color: gray;
-  font-size: 2em;
-  bottom: 0.18em;
+  font-size: 2.2em;
+  bottom: 0.17em;
   position: relative;
   opacity: 85%;
 }
@@ -458,8 +443,9 @@ span.seperator {
   color: #7d7d7d;
   font-size: 1rem;
   opacity: 85%;
-  align-self: center;
   margin: auto;
+  position: relative;
+  right: 10em;
 }
 
 .nav-btn[aria-current=page] {
@@ -468,12 +454,17 @@ span.seperator {
 }
 
 div a.social-link {
-  position: relative;
-  top: 0.7em;
-  width: -moz-fit-content;
-  width: fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
+  display: inline-block;
+  -webkit-transform: scale(0.8);
+  -moz-transform: scale(0.8);
+  -o-transform: scale(0.8);
+  transition-duration: 0.5s;
+  transform: scale(0.8);
+  opacity: 85%;
+}
+div a.social-link:hover {
+  transform: scale(0.9);
+  opacity: 85%;
 }
 
 @media only screen and (max-width: 1050px) {
@@ -516,7 +507,6 @@ div a.social-link {
   }
   .copyright {
     font-size: 0.7em;
-    position: relative;
     left: 15em;
   }
   #social-fb {
@@ -532,8 +522,8 @@ div a.social-link {
     font-size: 2.5em;
   }
   span.seperator {
-    bottom: 0.03em;
-    font-size: 1.8em;
+    bottom: 0.25em;
+    font-size: 1.7em;
   }
 }
 @media only screen and (max-width: 768px) {
@@ -658,13 +648,12 @@ div a.social-link {
     display: none;
   }
   .copyright {
-    left: 0.55em;
-    top: 2em;
+    left: 10em;
     font-size: 0.6em;
-    position: relative;
+    position: sticky;
   }
   span.seperator {
-    bottom: -0.05em;
-    font-size: 1.3em;
+    bottom: 0.2em;
+    font-size: 1.4em;
   }
 }/*# sourceMappingURL=story.css.map */

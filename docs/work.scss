@@ -227,19 +227,19 @@ a.nav-btn {
   color: white;
 }
 
-footer {
+footer#lab_social_icon_footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
   margin-top: auto;
-  // bottom: 0;
-  // position: relative;
   display: flex;
-  // justify-content: space-between;
-  padding: 0.5em 0.5em 0.5em 0.5em;
-  color: $base-white;
+  justify-content: space-between;
+  padding: 0.3em;
+  color: #ffffff;
   height: 3.3em;
-  background-image: linear-gradient($base-black, $base-gray);
-  // overflow-y: hidden;
-  // width: 100vw;
-  width: unset;
+  background-image: linear-gradient(rgb(0, 0, 0), rgb(42, 41, 41));
+  overflow: hidden;
+  width: 100vw;
 }
 
 #lab_social_icon_footer a {
@@ -249,18 +249,45 @@ footer {
   opacity: 85%;
 }
 div.text-center.center-block {
+  position: relative;
+  bottom: 0.4em;
   -webkit-user-select: none;
   -moz-user-select: none;
   user-select: none;
-  overflow-y: hidden;
   opacity: 85%;
-  width: fit-content;
-  // position: absolute;
-  top: 0.4em;
 }
 
-#lab_social_icon_footer .social {
-  overflow-y: hidden;
+span.seperator {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  color: gray;
+  font-size: 2.2em;
+  bottom: 0.17em;
+  position: relative;
+  opacity: 85%;
+}
+
+.copyright {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  font-family: MyFont;
+  color: #7d7d7d;
+  font-size: 1rem;
+  opacity: 85%;
+  margin: auto;
+  position: relative;
+  right: 10em;
+}
+
+.nav-btn[aria-current="page"] {
+  color: #ffffff;
+  font-size: 0.9em;
+}
+
+div a.social-link {
+  display: inline-block;
   -webkit-transform: scale(0.8);
   -moz-transform: scale(0.8);
   -o-transform: scale(0.8);
@@ -278,40 +305,6 @@ div.text-center.center-block {
     transform: scale(0.9);
     opacity: 85%;
   }
-}
-
-span.seperator {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  user-select: none;
-  color: gray;
-  font-size: 2em;
-  bottom: 0.18em;
-  position: relative;
-  opacity: 85%;
-}
-
-.copyright {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  user-select: none;
-  font-family: MyFont;
-  color: #7d7d7d;
-  font-size: 1rem;
-  opacity: 85%;
-  margin: auto;
-}
-
-.nav-btn[aria-current="page"] {
-  color: #ffffff;
-  font-size: 0.9em;
-}
-
-div a.social-link {
-  position: relative;
-  top: 0.7em;
-  width: fit-content;
-  height: fit-content;
 }
 
 @media only screen and (max-width: 1050px) {
@@ -407,7 +400,7 @@ div a.social-link {
   }
 
   .copyright {
-    top: 9em;
+    left: 10em;
     font-size: 0.6em;
     position: sticky;
   }

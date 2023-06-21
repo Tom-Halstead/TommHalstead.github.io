@@ -216,14 +216,19 @@ a.nav-btn {
   color: white;
 }
 
-footer {
+footer#lab_social_icon_footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
   margin-top: auto;
   display: flex;
-  padding: 0.5em 0.5em 0.5em 0.5em;
+  justify-content: space-between;
+  padding: 0.3em;
   color: #ffffff;
   height: 3.3em;
   background-image: linear-gradient(rgb(0, 0, 0), rgb(42, 41, 41));
-  width: unset;
+  overflow: hidden;
+  width: 100vw;
 }
 
 #lab_social_icon_footer a {
@@ -234,27 +239,11 @@ footer {
 }
 
 div.text-center.center-block {
+  position: relative;
+  bottom: 0.4em;
   -webkit-user-select: none;
   -moz-user-select: none;
   user-select: none;
-  overflow-y: hidden;
-  opacity: 85%;
-  width: -moz-fit-content;
-  width: fit-content;
-  top: 0.4em;
-}
-
-#lab_social_icon_footer .social {
-  overflow-y: hidden;
-  -webkit-transform: scale(0.8);
-  -moz-transform: scale(0.8);
-  -o-transform: scale(0.8);
-  transition-duration: 0.5s;
-  transform: scale(0.8);
-  opacity: 85%;
-}
-#lab_social_icon_footer .social:hover {
-  transform: scale(0.9);
   opacity: 85%;
 }
 
@@ -263,8 +252,8 @@ span.seperator {
   -moz-user-select: none;
   user-select: none;
   color: gray;
-  font-size: 2em;
-  bottom: 0.18em;
+  font-size: 2.2em;
+  bottom: 0.17em;
   position: relative;
   opacity: 85%;
 }
@@ -278,6 +267,8 @@ span.seperator {
   font-size: 1rem;
   opacity: 85%;
   margin: auto;
+  position: relative;
+  right: 10em;
 }
 
 .nav-btn[aria-current=page] {
@@ -286,12 +277,17 @@ span.seperator {
 }
 
 div a.social-link {
-  position: relative;
-  top: 0.7em;
-  width: -moz-fit-content;
-  width: fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
+  display: inline-block;
+  -webkit-transform: scale(0.8);
+  -moz-transform: scale(0.8);
+  -o-transform: scale(0.8);
+  transition-duration: 0.5s;
+  transform: scale(0.8);
+  opacity: 85%;
+}
+div a.social-link:hover {
+  transform: scale(0.9);
+  opacity: 85%;
 }
 
 @media only screen and (max-width: 1050px) {
@@ -380,7 +376,7 @@ div a.social-link {
     display: none;
   }
   .copyright {
-    top: 9em;
+    left: 10em;
     font-size: 0.6em;
     position: sticky;
   }
