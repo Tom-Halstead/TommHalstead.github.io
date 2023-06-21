@@ -44,7 +44,7 @@ body {
   display: flex;
   flex-direction: column;
   height: 100vh;
-  overflow-x: hidden;
+  // overflow-x: hidden;
 }
 
 .container {
@@ -706,9 +706,13 @@ div a.social-link {
   }
 
   .copyright {
-    left: 10em;
+    // left: 10.6em;
+    left: 0;
     font-size: 0.6em;
     position: sticky;
+    // position: relative;
+    // margin: auto;
+    // text-align: center;
   }
   span.seperator {
     bottom: 0.2em;

@@ -199,17 +199,18 @@ a.nav-btn {
   color: #0077b5;
 }
 
-footer {
-  margin-top: auto;
-  bottom: 0;
+footer#lab_social_icon_footer {
   position: fixed;
+  bottom: 0;
+  left: 0;
+  margin-top: auto;
   display: flex;
   justify-content: space-between;
-  padding: 0.5em 0.5em 0.5em 0.5em;
-  color: $base-white;
+  padding: 0.3em;
+  color: #ffffff;
   height: 3.3em;
-  background-image: linear-gradient($base-black, $base-gray);
-  overflow-y: hidden;
+  background-image: linear-gradient(rgb(0, 0, 0), rgb(42, 41, 41));
+  overflow: hidden;
   width: 100vw;
 }
 
@@ -220,34 +221,11 @@ footer {
   opacity: 85%;
 }
 div.text-center.center-block {
+  position: relative;
+  bottom: 0.4em;
   -webkit-user-select: none;
   -moz-user-select: none;
   user-select: none;
-  overflow-y: hidden;
-  opacity: 85%;
-  width: fit-content;
-  position: absolute;
-  top: 0.4em;
-}
-
-#lab_social_icon_footer .social:hover {
-  -webkit-transform: scale(0.9);
-  -moz-transform: scale(0.9);
-  -o-transform: scale(0.9);
-  transform: scale(0.9);
-  opacity: 85%;
-}
-
-#lab_social_icon_footer .social {
-  overflow-y: hidden;
-  -webkit-transform: scale(0.8);
-  -moz-transform: scale(0.8);
-  -o-transform: scale(0.8);
-  -webkit-transition-duration: 0.5s;
-  -moz-transition-duration: 0.5s;
-  -o-transition-duration: 0.5s;
-  transition-duration: 0.5s;
-  transform: scale(0.8);
   opacity: 85%;
 }
 
@@ -256,8 +234,8 @@ span.seperator {
   -moz-user-select: none;
   user-select: none;
   color: gray;
-  font-size: 2em;
-  bottom: 0.18em;
+  font-size: 4em;
+  bottom: 0.17em;
   position: relative;
   opacity: 85%;
 }
@@ -271,6 +249,8 @@ span.seperator {
   font-size: 1rem;
   opacity: 85%;
   margin: auto;
+  position: relative;
+  right: 10em;
 }
 
 .nav-btn[aria-current="page"] {
@@ -279,10 +259,24 @@ span.seperator {
 }
 
 div a.social-link {
-  position: relative;
-  top: 0.7em;
-  width: fit-content;
-  height: fit-content;
+  display: inline-block;
+  -webkit-transform: scale(0.8);
+  -moz-transform: scale(0.8);
+  -o-transform: scale(0.8);
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  transform: scale(0.8);
+  opacity: 85%;
+
+  &:hover {
+    -webkit-transform: scale(0.9);
+    -moz-transform: scale(0.9);
+    -o-transform: scale(0.9);
+    transform: scale(0.9);
+    opacity: 85%;
+  }
 }
 
 @media only screen and (max-width: 1050px) {
@@ -313,8 +307,10 @@ div a.social-link {
     font-size: 2.5em;
   }
   span.seperator {
-    bottom: 0.03em;
-    font-size: 1.8em;
+    // bottom: 0.03em;
+    // font-size: 1.8em;
+    bottom: 0.25em;
+    font-size: 1.7em;
   }
 }
 
@@ -384,7 +380,7 @@ div a.social-link {
     position: sticky;
   }
   span.seperator {
-    bottom: -0.05em;
+    bottom: 0.2em;
     font-size: 1.3em;
   }
 }

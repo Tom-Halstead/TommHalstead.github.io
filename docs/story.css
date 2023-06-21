@@ -35,7 +35,6 @@ body {
   display: flex;
   flex-direction: column;
   height: 100vh;
-  overflow-x: hidden;
 }
 
 .container {
@@ -648,7 +647,7 @@ div a.social-link:hover {
     display: none;
   }
   .copyright {
-    left: 10em;
+    left: 0;
     font-size: 0.6em;
     position: sticky;
   }
