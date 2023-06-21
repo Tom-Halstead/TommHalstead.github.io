@@ -600,7 +600,6 @@ div a.social-link {
   }
   .hexagon-gallery .hexagon .hex {
     justify-content: center;
-
     width: 8em;
     height: 9.1em;
   }
@@ -667,20 +666,22 @@ div a.social-link {
     flex-direction: column;
   }
   .hexagon-gallery .hexagon .hex {
-    width: 8em;
-    height: 9.1em;
+    width: 7em;
+    height: 8.8em;
     align-self: center;
     justify-content: center;
   }
   section.hexagon-gallery {
     align-self: center;
     margin-bottom: 5em;
+    width: fit-content;
     padding-left: 1em;
     padding-right: 1em;
     margin-left: 1em;
     margin-right: 1em;
   }
   div.max-width {
+    width: fit-content;
     align-self: center;
     padding-left: 1em;
     padding-right: 1em;
