@@ -215,8 +215,10 @@ h3.story {
 
 #modal-image {
   display: inline-block;
-  height: 70vh;
+  height: 65vh;
   width: 35vw;
+  // height: 65%;
+  // width: 35%;
   border-radius: 15%;
 }
 span.close {
@@ -667,7 +669,7 @@ div a.social-link {
   }
   .hexagon-gallery .hexagon .hex {
     width: 7em;
-    height: 8.8em;
+    height: 8.6em;
     align-self: center;
     justify-content: center;
   }
@@ -680,6 +682,16 @@ div a.social-link {
     margin-left: 1em;
     margin-right: 1em;
   }
+
+  #modal-image {
+    height: 20em;
+    width: 20em;
+  }
+
+  #problem {
+    width: 129px;
+  }
+
   div.max-width {
     width: fit-content;
     align-self: center;
