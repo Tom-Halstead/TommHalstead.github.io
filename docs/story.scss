@@ -49,6 +49,7 @@ body {
 
 .container {
   display: flex;
+  // flex-direction: column;
   justify-content: space-around;
   // height: 100vh;
 }
@@ -368,7 +369,6 @@ header ul li a {
   width: 15rem;
   overflow: hidden;
   transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  // backdrop-filter: blur(100px);
   background: rgba(0, 0, 0, 0.7);
   z-index: 100;
 }
@@ -430,16 +430,14 @@ a.nav-btn {
 footer#lab_social_icon_footer {
   position: fixed;
   bottom: 0;
-  left: 0;
-  margin-top: auto;
   display: flex;
   justify-content: space-between;
-  padding: 0.3em;
+  padding-top: 0.4em;
   color: #ffffff;
   height: 3.3em;
   background-image: linear-gradient(rgb(0, 0, 0), rgb(42, 41, 41));
   overflow: hidden;
-  width: 100vw;
+  width: 100%;
 }
 
 #lab_social_icon_footer a {
@@ -449,8 +447,9 @@ footer#lab_social_icon_footer {
   opacity: 85%;
 }
 div.text-center.center-block {
-  position: relative;
-  bottom: 0.4em;
+  // position: relative;
+  // bottom: 0.4em;
+  align-self: center;
   -webkit-user-select: none;
   -moz-user-select: none;
   user-select: none;
@@ -641,6 +640,16 @@ div a.social-link {
   span.seperator {
     font-size: 1.4em;
   }
+
+  div.text-center.center-block {
+    height: 2.7em;
+  }
+
+  footer#lab_social_icon_footer {
+    height: fit-content;
+    justify-content: center;
+    flex-direction: column;
+  }
 }
 @media only screen and (max-width: 576px) {
   .container {
@@ -655,13 +664,13 @@ div a.social-link {
   }
   section.hexagon-gallery {
     align-self: center;
-    margin-bottom: 5em;
+    margin-bottom: 6em;
     width: fit-content;
     padding-left: 1em;
     padding-right: 1em;
     margin-left: 1em;
     margin-right: 1em;
-    width: 25em;
+    // width: 25em;
   }
 
   #modal-image {

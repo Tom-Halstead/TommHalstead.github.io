@@ -395,16 +395,14 @@ a.nav-btn {
 footer#lab_social_icon_footer {
   position: fixed;
   bottom: 0;
-  left: 0;
-  margin-top: auto;
   display: flex;
   justify-content: space-between;
-  padding: 0.3em;
+  padding-top: 0.4em;
   color: #ffffff;
   height: 3.3em;
   background-image: linear-gradient(rgb(0, 0, 0), rgb(42, 41, 41));
   overflow: hidden;
-  width: 100vw;
+  width: 100%;
 }
 
 #lab_social_icon_footer a {
@@ -415,8 +413,7 @@ footer#lab_social_icon_footer {
 }
 
 div.text-center.center-block {
-  position: relative;
-  bottom: 0.4em;
+  align-self: center;
   -webkit-user-select: none;
   -moz-user-select: none;
   user-select: none;
@@ -585,6 +582,15 @@ div a.social-link:hover {
   span.seperator {
     font-size: 1.4em;
   }
+  div.text-center.center-block {
+    height: 2.7em;
+  }
+  footer#lab_social_icon_footer {
+    height: -moz-fit-content;
+    height: fit-content;
+    justify-content: center;
+    flex-direction: column;
+  }
 }
 @media only screen and (max-width: 576px) {
   .container {
@@ -599,14 +605,13 @@ div a.social-link:hover {
   }
   section.hexagon-gallery {
     align-self: center;
-    margin-bottom: 5em;
+    margin-bottom: 6em;
     width: -moz-fit-content;
     width: fit-content;
     padding-left: 1em;
     padding-right: 1em;
     margin-left: 1em;
     margin-right: 1em;
-    width: 25em;
   }
   #modal-image {
     height: 20em;
