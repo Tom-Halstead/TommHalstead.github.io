@@ -401,7 +401,7 @@ div a.social-link:hover {
 }
 @media only screen and (max-width: 576px) {
   div.text {
-    top: 13em;
+    top: 16em;
   }
   h1 {
     font-size: 3em;
