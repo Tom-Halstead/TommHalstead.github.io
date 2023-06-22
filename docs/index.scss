@@ -22,7 +22,6 @@ $base-white: #ffffff;
   margin: 0;
   padding: 0;
   font-family: "Poppins", "sans-serif";
-  // overflow-x: hidden;
 }
 html {
   overflow: hidden;
@@ -417,8 +416,15 @@ div a.social-link {
   #social-li {
     font-size: 2em;
   }
+
+  div.text-center.center-block {
+    height: 3em;
+  }
+
   footer#lab_social_icon_footer {
     height: fit-content;
+    // height: auto;
+    // height: 3em;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -431,6 +437,7 @@ div a.social-link {
   span.seperator {
     bottom: 0.22em;
     font-size: 1.4em;
+    padding-bottom: 0.3em;
   }
 }
 @media only screen and (max-width: 576px) {
