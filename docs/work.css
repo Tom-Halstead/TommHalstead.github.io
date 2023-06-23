@@ -25,7 +25,6 @@ body {
   background-attachment: fixed;
   display: flex;
   flex-direction: column;
-  height: 100vh;
 }
 
 header {
@@ -228,12 +227,12 @@ a.nav-btn {
   color: #aea8a8;
   letter-spacing: 0.05em;
   font-family: MyFont2;
-  margin-bottom: 4em;
 }
 
 footer#lab_social_icon_footer {
-  position: absolute;
+  position: relative;
   bottom: 0;
+  z-index: 100;
   display: flex;
   justify-content: space-between;
   padding-top: 0.4em;
