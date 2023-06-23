@@ -191,10 +191,11 @@ a.nav-btn {
 
 .container {
   position: relative;
-  // width: 100%;
-  // height: 100vh;
-  height: max-content;
+  width: 100%;
+  height: 100vh;
+  // height: max-content;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-evenly;
 }
@@ -218,28 +219,41 @@ a.nav-btn {
 
 .heading-wrap {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 #projects {
   letter-spacing: 0.05em;
   font-family: MyFont2;
-  color: white;
+  color: #aea8a8;
+}
+
+.tools {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stack {
+  color: #aea8a8;
+  letter-spacing: 0.05em;
+  font-family: MyFont2;
 }
 
 footer#lab_social_icon_footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  margin-top: auto;
+  // position: fixed;
+  // position: absolute;
+  // bottom: 0;
+  // left: 0;
+  // margin-top: auto;
   display: flex;
   justify-content: space-between;
-  padding: 0.3em;
-  color: #ffffff;
-  height: 3.3em;
+  padding-top: 0.4em;
+  // height: 3.3em;
   background-image: linear-gradient(rgb(0, 0, 0), rgb(42, 41, 41));
   overflow: hidden;
-  width: 100vw;
+  width: 100%;
 }
 
 #lab_social_icon_footer a {
@@ -249,8 +263,7 @@ footer#lab_social_icon_footer {
   opacity: 85%;
 }
 div.text-center.center-block {
-  position: relative;
-  bottom: 0.4em;
+  align-self: center;
   -webkit-user-select: none;
   -moz-user-select: none;
   user-select: none;
@@ -317,10 +330,8 @@ div a.social-link {
   }
 
   .copyright {
-    font-size: 0.8em;
-    position: absolute;
+    font-size: 0.7em;
     right: 5.5em;
-    top: 2.4em;
   }
   #social-fb {
     font-size: 2.5em;
@@ -367,12 +378,24 @@ div a.social-link {
   }
 
   .copyright {
-    font-size: 0.5em;
-    top: 3em;
-    right: 3em;
+    font-size: 0.3em;
+    bottom: 0.2em;
+    left: 25em;
   }
+
   span.seperator {
     font-size: 1.4em;
+  }
+
+  div.text-center.center-block {
+    height: 2.7em;
+  }
+
+  footer#lab_social_icon_footer {
+    height: fit-content;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
   }
 }
 @media only screen and (max-width: 576px) {
@@ -387,11 +410,11 @@ div a.social-link {
   .nav-link {
     display: none;
   }
-  footer#lab_social_icon_footer {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
+  // footer#lab_social_icon_footer {
+  //   display: flex;
+  //   justify-content: center;
+  //   flex-wrap: wrap;
+  // }
   .dropdown-menu {
     left: 1.2rem;
     width: unset;
@@ -400,7 +423,7 @@ div a.social-link {
   }
 
   .copyright {
-    left: 10em;
+    left: 0;
     font-size: 0.6em;
     position: sticky;
   }

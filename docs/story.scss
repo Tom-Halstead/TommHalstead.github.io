@@ -433,7 +433,6 @@ footer#lab_social_icon_footer {
   display: flex;
   justify-content: space-between;
   padding-top: 0.4em;
-  color: #ffffff;
   height: 3.3em;
   background-image: linear-gradient(rgb(0, 0, 0), rgb(42, 41, 41));
   overflow: hidden;
@@ -447,8 +446,6 @@ footer#lab_social_icon_footer {
   opacity: 85%;
 }
 div.text-center.center-block {
-  // position: relative;
-  // bottom: 0.4em;
   align-self: center;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -649,6 +646,7 @@ div a.social-link {
     height: fit-content;
     justify-content: center;
     flex-direction: column;
+    flex-wrap: wrap;
   }
 }
 @media only screen and (max-width: 576px) {
@@ -670,7 +668,6 @@ div a.social-link {
     padding-right: 1em;
     margin-left: 1em;
     margin-right: 1em;
-    // width: 25em;
   }
 
   #modal-image {
@@ -701,12 +698,6 @@ div a.social-link {
   .nav-link {
     display: none;
   }
-  footer#lab_social_icon_footer {
-    display: flex;
-    justify-content: center;
-    // flex-direction: column;
-    flex-wrap: wrap;
-  }
   .dropdown-menu {
     left: 1.2rem;
     width: unset;
@@ -715,13 +706,9 @@ div a.social-link {
   }
 
   .copyright {
-    // left: 10.6em;
     left: 0;
     font-size: 0.6em;
     position: sticky;
-    // position: relative;
-    // margin: auto;
-    // text-align: center;
   }
   span.seperator {
     bottom: 0.2em;

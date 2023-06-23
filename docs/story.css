@@ -398,7 +398,6 @@ footer#lab_social_icon_footer {
   display: flex;
   justify-content: space-between;
   padding-top: 0.4em;
-  color: #ffffff;
   height: 3.3em;
   background-image: linear-gradient(rgb(0, 0, 0), rgb(42, 41, 41));
   overflow: hidden;
@@ -590,6 +589,7 @@ div a.social-link:hover {
     height: fit-content;
     justify-content: center;
     flex-direction: column;
+    flex-wrap: wrap;
   }
 }
 @media only screen and (max-width: 576px) {
@@ -639,11 +639,6 @@ div a.social-link:hover {
   }
   .nav-link {
     display: none;
-  }
-  footer#lab_social_icon_footer {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
   }
   .dropdown-menu {
     left: 1.2rem;
