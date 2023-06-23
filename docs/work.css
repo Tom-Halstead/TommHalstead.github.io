@@ -228,12 +228,17 @@ a.nav-btn {
   color: #aea8a8;
   letter-spacing: 0.05em;
   font-family: MyFont2;
+  margin-bottom: 4em;
 }
 
 footer#lab_social_icon_footer {
+  position: absolute;
+  bottom: 0;
   display: flex;
   justify-content: space-between;
   padding-top: 0.4em;
+  padding-bottom: 0.4em;
+  height: 3.3em;
   background-image: linear-gradient(rgb(0, 0, 0), rgb(42, 41, 41));
   overflow: hidden;
   width: 100%;
