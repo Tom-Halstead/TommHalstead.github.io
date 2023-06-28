@@ -25,6 +25,7 @@ body {
   background-attachment: fixed;
   display: flex;
   flex-direction: column;
+  height: 100vh;
 }
 
 header {
@@ -180,24 +181,25 @@ a.nav-btn {
 .container {
   position: relative;
   width: 100%;
-  height: 100vh;
+  min-height: -moz-fit-content;
+  min-height: fit-content;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-evenly;
 }
 
-#forkify-img {
+.forkify-img {
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
 }
-#forkify-img:hover {
+.forkify-img:hover {
   cursor: pointer;
   transform: scale(1.1);
 }
 
-#forkify {
+.forkify {
   border: 2px solid rgb(122, 118, 118);
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -205,48 +207,84 @@ a.nav-btn {
   border-radius: 20%;
 }
 
-.heading-wrap {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 #projects {
+  text-align: center;
   letter-spacing: 0.05em;
+  margin-bottom: 2em;
   font-family: MyFont2;
   color: #aea8a8;
 }
 
-.tools {
+.box {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+
+.box-h3 {
+  font-family: MyFont;
+  font-size: 1em;
+  color: #aea8a8;
+  text-align: center;
+}
+
+.stackTitle {
+  text-align: center;
+  color: #aea8a8;
+  letter-spacing: 0.05em;
+  font-family: MyFont2;
+  margin: 2em;
+}
+
+img.stack {
+  filter: invert(1);
+  height: 45px;
+  width: 45px;
+}
+
+section {
+  justify-content: center;
+  display: flex;
+}
+
+section > ul {
+  display: flex;
+  gap: 4em;
+  margin-bottom: 4em;
+}
+
+section > ul > li {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-.stack {
-  color: #aea8a8;
-  letter-spacing: 0.05em;
-  font-family: MyFont2;
+  justify-content: center;
+  gap: 1.5em;
+  min-height: -moz-fit-content;
+  min-height: fit-content;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+  font-family: MyFont;
+  color: white;
+  list-style: none;
 }
 
 footer#lab_social_icon_footer {
   position: relative;
-  bottom: 0;
+  margin-top: auto;
   z-index: 100;
   display: flex;
   justify-content: space-between;
   padding-top: 0.4em;
-  padding-bottom: 0.4em;
   height: 3.3em;
   background-image: linear-gradient(rgb(0, 0, 0), rgb(42, 41, 41));
-  overflow: hidden;
   width: 100%;
 }
 
 #lab_social_icon_footer a {
   font-size: 0.9em;
   color: #989595;
-  padding: 1em;
+  padding-left: 1em;
+  padding-right: 1em;
   opacity: 85%;
 }
 
