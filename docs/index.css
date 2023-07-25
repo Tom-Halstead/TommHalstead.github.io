@@ -201,6 +201,8 @@ h2 {
   margin-top: 0.2em;
   overflow-x: hidden;
   height: 1.3em;
+  min-height: -moz-fit-content;
+  min-height: fit-content;
   font-size: 3em;
   -moz-user-select: none;
   -webkit-user-select: none;
@@ -213,6 +215,8 @@ h3 {
   margin-top: 1em;
   overflow-x: hidden;
   height: 3.7em;
+  min-height: -moz-fit-content;
+  min-height: fit-content;
   font-size: 2.5em;
   -moz-user-select: none;
   -webkit-user-select: none;
@@ -225,6 +229,8 @@ h3 {
   font-family: MyFont2;
   color: #bc8787;
   text-shadow: 0 0 10px #717171, 0 0 10px #717171, 0 0 0px #717171, 0 0 10px #717171, 0 0 10px #717171, 0 0 0px #717171, 0 0 0px #717171, 0 0 0px #717171;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 
 #lab_social_icon_footer #social-fb:hover {

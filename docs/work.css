@@ -177,7 +177,7 @@ a.nav-btn {
   color: #0077b5;
 }
 
-.container {
+.project-section {
   position: relative;
   width: 70%;
   margin: 0 auto;
@@ -185,6 +185,7 @@ a.nav-btn {
   min-height: fit-content;
   display: flex;
   flex-wrap: wrap;
+  gap: 3em;
   align-items: center;
   justify-content: space-evenly;
   border-radius: 20%;
@@ -212,7 +213,7 @@ a.nav-btn {
 .box {
   display: flex;
   flex-direction: column;
-  gap: 2em;
+  gap: 3em;
   margin-top: 2em;
 }
 
@@ -221,9 +222,17 @@ a.nav-btn {
   font-size: 1em;
   color: #aea8a8;
   text-align: center;
+  -moz-user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
 }
 
 .title {
+  -moz-user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
   letter-spacing: 0.05em;
   text-align: center;
   margin: 2em;
@@ -251,9 +260,18 @@ img.stack:hover {
   transform: scale(1.15);
 }
 
-section {
+section.codeStack {
   justify-content: center;
   display: flex;
+}
+
+section.credentials {
+  display: flex;
+  justify-content: space-between;
+}
+
+.creds {
+  margin: 3em;
 }
 
 section > ul {
@@ -275,6 +293,10 @@ section > ul > li {
   font-family: MyFont;
   color: white;
   list-style: none;
+  -moz-user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
 }
 
 footer#lab_social_icon_footer {
