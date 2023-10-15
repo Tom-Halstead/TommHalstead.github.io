@@ -228,19 +228,6 @@ a.nav-btn {
   user-select: none;
 }
 
-.title {
-  -moz-user-select: none;
-  -moz-user-select: none;
-  -webkit-user-select: none;
-  user-select: none;
-  letter-spacing: 0.05em;
-  text-align: center;
-  margin: 2em;
-  color: #e48f7c;
-  font-size: 2em;
-  font-family: MyFont2;
-}
-
 .tools {
   border-radius: 20%;
   background-color: rgba(0, 0, 0, 0.36);
@@ -267,11 +254,32 @@ section.codeStack {
 
 section.credentials {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .creds {
   margin: 3em;
+}
+
+a.credlink {
+  color: white;
+  text-decoration: none;
+  display: inline-block;
+  line-height: 2.5em;
+  overflow: hidden;
+}
+
+.title {
+  -moz-user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  letter-spacing: 0.05em;
+  text-align: center;
+  margin: 2em;
+  color: #aea8a8;
+  font-size: 2em;
+  font-family: MyFont2;
 }
 
 section > ul {
