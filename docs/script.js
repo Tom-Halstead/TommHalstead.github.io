@@ -2,7 +2,7 @@
 
 const navHighlights = function () {
   document.querySelectorAll(".nav-btn").forEach((link) => {
-    if (link.pathname === window.location.pathname) {
+    if (link.pathname === window.location.pathname || link.pathname === "/") {
       link.setAttribute("aria-current", "page");
     }
   });

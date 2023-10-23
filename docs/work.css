@@ -257,16 +257,15 @@ section.credentials {
   justify-content: space-around;
 }
 
-.creds {
-  margin: 3em;
-}
-
 a.credlink {
   color: white;
   text-decoration: none;
   display: inline-block;
   line-height: 2.5em;
-  overflow: hidden;
+  font-family: MyFont2;
+  background-color: lightgray;
+  border-radius: 40%;
+  width: 100%;
 }
 
 .title {
