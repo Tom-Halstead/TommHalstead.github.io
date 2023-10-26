@@ -258,14 +258,11 @@ section.credentials {
 }
 
 a.credlink {
-  color: white;
+  color: #e48f7c;
   text-decoration: none;
   display: inline-block;
   line-height: 2.5em;
   font-family: MyFont2;
-  background-color: lightgray;
-  border-radius: 40%;
-  width: 100%;
 }
 
 .title {
@@ -276,7 +273,7 @@ a.credlink {
   letter-spacing: 0.05em;
   text-align: center;
   margin: 2em;
-  color: #aea8a8;
+  color: #e48f7c;
   font-size: 2em;
   font-family: MyFont2;
 }
