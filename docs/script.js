@@ -10,7 +10,7 @@ const navHighlights = function () {
 
 const insertHTML = function () {
   if (
-    window.location.pathname !== "/" ||
+    window.location.pathname !== "/" &&
     window.location.pathname !== "/index.html"
   ) {
     const headerMarkup = `
