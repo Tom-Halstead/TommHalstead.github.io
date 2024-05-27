@@ -2,8 +2,7 @@
 
 const navHighlights = function () {
   document.querySelectorAll(".nav-btn").forEach((link) => {
-    console.log(link);
-    if (link.pathname === window.location.pathname) {
+    if (link.pathname === window.location.pathname || link.pathname === "/") {
       link.setAttribute("aria-current", "page");
     }
   });
@@ -15,7 +14,6 @@ const insertHTML = function () {
     window.location.pathname !== "/index.html"
   ) {
     const headerMarkup = `
-    
       <nav class="nav">
         <a href="#" class="logo">
           Logo
@@ -100,6 +98,7 @@ const insertHTML = function () {
       </p>
   </div>
 </div >`;
+
     document
       .querySelector("header")
       .insertAdjacentHTML("afterbegin", headerMarkup);
