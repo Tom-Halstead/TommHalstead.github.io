@@ -10,8 +10,9 @@ const navHighlights = function () {
 
 const insertHTML = function () {
   if (
-    window.location.pathname !== "/" &&
-    window.location.pathname !== "/index.html"
+    window.location.pathname === "/story.html" ||
+    window.location.pathname === "/work.html" ||
+    window.location.pathname === "/contact.html"
   ) {
     const headerMarkup = `
       <nav class="nav">
