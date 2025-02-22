@@ -220,14 +220,12 @@ section.hexagon-gallery {
 
 h3 {
   align-self: center;
-  border-bottom: 5px solid #e48f7c;
+  border-bottom: 5px solid #a0857f;
   font-weight: 500;
   animation: pulsate 3s ease-out;
   animation-iteration-count: infinite;
   -webkit-animation: pulsate 3s ease-out;
   -webkit-animation-iteration-count: infinite;
-  opacity: 0.5;
-  z-index: 1;
 }
 
 @keyframes pulsate {
@@ -246,15 +244,12 @@ h3 > span {
   -moz-user-select: none;
   -webkit-user-select: none;
   user-select: none;
-  letter-spacing: 0.015em;
   font-size: 4em;
   font-family: StoryFont;
-  color: #e48f7c;
+  color: #fcc7c7;
 }
 h3 > span:hover {
   filter: blur(5px);
-  animation: alternate;
-  transform: rotate(90deg);
 }
 
 p {
@@ -268,11 +263,11 @@ p {
   padding: 0.5em;
 }
 
-#lab_social_icon_footer #social-gh:hover {
+#social-gh:hover {
   color: #333;
 }
 
-#lab_social_icon_footer #social-li:hover {
+#social-li:hover {
   color: #0077b5;
 }
 
