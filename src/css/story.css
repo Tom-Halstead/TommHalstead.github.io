@@ -3,19 +3,19 @@
   font-family: "MavenPro";
   font-weight: normal;
   font-style: normal;
-  src: url("MavenPro-Regular.ttf");
+  src: url("../fonts/MavenPro-Regular.ttf");
 }
 @font-face {
   font-family: "MyFont";
   font-weight: 700;
   font-style: normal;
-  src: url("RobotoMono-Bold.ttf");
+  src: url("../fonts/RobotoMono-Bold.ttf");
 }
 @font-face {
   font-family: "StoryFont";
   font-style: normal;
   font-weight: normal;
-  src: url("ChakraPetch-Medium.ttf");
+  src: url("../fonts/ChakraPetch-Medium.ttf");
 }
 * {
   margin: 0;
@@ -28,7 +28,7 @@ body {
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
-  background-image: url("806443.jpg");
+  background-image: url("../images/806443.jpg");
   background-size: cover;
   background-position: center center;
   background-attachment: fixed;
@@ -65,7 +65,7 @@ section.hexagon-gallery {
   -moz-user-select: none;
   -webkit-user-drag: none;
   -webkit-user-select: none;
-          user-select: none;
+  user-select: none;
   position: relative;
   place-items: center;
   margin: 1em;
@@ -78,7 +78,7 @@ section.hexagon-gallery {
   -moz-user-select: none;
   -webkit-user-drag: none;
   -webkit-user-select: none;
-          user-select: none;
+  user-select: none;
   position: absolute;
   display: flex;
   justify-content: center;
@@ -92,7 +92,7 @@ img.collage {
   -moz-user-select: none;
   -webkit-user-drag: none;
   -webkit-user-select: none;
-          user-select: none;
+  user-select: none;
   filter: grayscale(1);
 }
 img.collage:hover {
@@ -103,7 +103,7 @@ img {
   -moz-user-select: none;
   -webkit-user-drag: none;
   -webkit-user-select: none;
-          user-select: none;
+  user-select: none;
 }
 
 .hexagon-gallery .hexagon .hex {
@@ -111,13 +111,20 @@ img {
   -moz-user-select: none;
   -webkit-user-drag: none;
   -webkit-user-select: none;
-          user-select: none;
+  user-select: none;
   width: 12.34em;
   height: 13.5em;
   display: flex;
   background: rgba(93, 88, 88, 0.6);
-  -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-          clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  -webkit-clip-path: polygon(
+    50% 0%,
+    100% 25%,
+    100% 75%,
+    50% 100%,
+    0% 75%,
+    0% 25%
+  );
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
 }
 .hexagon-gallery .hexagon .hex:hover {
   cursor: pointer;
@@ -354,7 +361,7 @@ header ul li a:hover {
   height: 21rem;
   display: block;
   -webkit-backdrop-filter: blur(30px);
-          backdrop-filter: blur(30px);
+  backdrop-filter: blur(30px);
   border: 2px solid #716e6e;
 }
 .dropdown-menu.open:hover {
@@ -374,14 +381,6 @@ a.nav-menu:hover {
 
 a.nav-btn {
   padding: 0.5em;
-}
-
-#lab_social_icon_footer #social-fb:hover {
-  color: #3b5998;
-}
-
-#lab_social_icon_footer #social-tw:hover {
-  color: #4099ff;
 }
 
 #lab_social_icon_footer #social-gh:hover {
@@ -443,7 +442,7 @@ span.seperator {
   right: 10em;
 }
 
-.nav-btn[aria-current=page] {
+.nav-btn[aria-current="page"] {
   color: #ffffff;
   font-size: 0.9em;
 }
@@ -655,4 +654,4 @@ div a.social-link:hover {
     bottom: 0.2em;
     font-size: 1.4em;
   }
-}/*# sourceMappingURL=story.css.map */
+} /*# sourceMappingURL=story.css.map */

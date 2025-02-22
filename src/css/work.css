@@ -2,13 +2,13 @@
   font-family: "MyFont";
   font-weight: 700;
   font-style: normal;
-  src: url("RobotoMono-Bold.ttf");
+  src: url("../fonts/RobotoMono-Bold.ttf");
 }
 @font-face {
   font-family: "MyFont2";
   font-style: normal;
   font-weight: normal;
-  src: url("Stellar-light.woff");
+  src: url("../fonts/Stellar-light.woff");
 }
 * {
   margin: 0;
@@ -19,7 +19,7 @@
 body {
   margin: 0;
   padding: 0;
-  background-image: url("806443.jpg");
+  background-image: url("../images/806443.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -117,7 +117,7 @@ header ul li a:hover {
   overflow: hidden;
   transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   -webkit-backdrop-filter: blur(20px);
-          backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
   background: rgba(0, 0, 0, 0.7);
   z-index: 100;
 }
@@ -139,7 +139,7 @@ header ul li a:hover {
   height: 21rem;
   display: block;
   -webkit-backdrop-filter: blur(30px);
-          backdrop-filter: blur(30px);
+  backdrop-filter: blur(30px);
   border: 2px solid #716e6e;
 }
 .dropdown-menu.open:hover {
@@ -159,14 +159,6 @@ a.nav-menu:hover {
 
 a.nav-btn {
   padding: 0.5em;
-}
-
-#lab_social_icon_footer #social-fb:hover {
-  color: #3b5998;
-}
-
-#lab_social_icon_footer #social-tw:hover {
-  color: #4099ff;
 }
 
 #lab_social_icon_footer #social-gh:hover {
@@ -194,8 +186,8 @@ a.nav-btn {
 
 .forkify-img {
   -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
+  -moz-user-select: none;
+  user-select: none;
 }
 .forkify-img:hover {
   cursor: pointer;
@@ -205,8 +197,8 @@ a.nav-btn {
 .forkify {
   border: 2px solid rgb(122, 118, 118);
   -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
+  -moz-user-select: none;
+  user-select: none;
   border-radius: 20%;
 }
 
@@ -355,7 +347,7 @@ span.seperator {
   right: 10em;
 }
 
-.nav-btn[aria-current=page] {
+.nav-btn[aria-current="page"] {
   color: #ffffff;
   font-size: 0.9em;
 }
@@ -471,4 +463,4 @@ div a.social-link:hover {
     bottom: -0.05em;
     font-size: 1.3em;
   }
-}/*# sourceMappingURL=work.css.map */
+} /*# sourceMappingURL=work.css.map */

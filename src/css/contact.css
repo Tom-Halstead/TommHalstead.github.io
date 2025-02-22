@@ -1,22 +1,15 @@
-$bold-weight: 700;
-$base-black: rgb(0, 0, 0);
-$base-gray: rgb(42, 41, 41);
-$base-text: #989595;
-$base-white: #ffffff;
 @font-face {
   font-family: "MyFont";
-  font-weight: $bold-weight;
+  font-weight: 700;
   font-style: normal;
-  src: url("RobotoMono-Bold.ttf");
+  src: url("../fonts/RobotoMono-Bold.ttf");
 }
-
 @font-face {
   font-family: "MyFont2";
   font-style: normal;
   font-weight: normal;
-  src: url("Stellar-light.woff");
+  src: url("../fonts/Stellar-light.woff");
 }
-
 * {
   margin: 0;
   padding: 0;
@@ -27,23 +20,14 @@ $base-white: #ffffff;
 body {
   margin: 0;
   padding: 0;
-  background-image: url("806443.jpg");
+  background-image: url("../images/806443.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
 }
 
-// header {
-// width: 100vw;
-// display: flex;
-// }
-
 header {
-  // position: relative;
-  // position: fixed;
   top: 0;
-  // width: 100vw;
-  // display: flex;
   height: 4.3em;
 }
 
@@ -51,12 +35,8 @@ nav {
   width: 100vw;
   justify-content: space-between;
   display: flex;
-  background-image: -o-linear-gradient($base-gray, $base-black);
-  background-image: -moz-linear-gradient($base-gray, $base-black);
-  background-image: linear-gradient($base-gray, $base-black);
+  background-image: linear-gradient(rgb(42, 41, 41), rgb(0, 0, 0));
   opacity: 85%;
-  -moz-transition: 0.6s;
-  -webkit-transition: 0.6s;
   transition: 0.6s;
   padding: 1em 1em 1em 1em;
   height: 2.3em;
@@ -69,15 +49,14 @@ nav {
   -moz-user-select: none;
   -webkit-user-select: none;
   user-select: none;
-  color: $base-white;
+  color: #ffffff;
   font-size: 2em;
   text-transform: uppercase;
   text-decoration: none;
   letter-spacing: 0.06em;
-  -moz-transition: 0.6s;
-  -webkit-transition: 0.6s;
   transition: 0.6s;
 }
+
 nav ul {
   display: flex;
   gap: 12rem;
@@ -101,37 +80,38 @@ nav > div > i {
 }
 
 #bars.fa-solid {
-  color: $base-white;
+  color: #ffffff;
   font-size: 1.8rem;
   cursor: pointer;
 }
 
 header ul li a {
+  width: -moz-fit-content;
   width: fit-content;
   font-family: MyFont;
   font-size: 0.8em;
   text-decoration: none;
-  color: $base-text;
+  color: #989595;
   letter-spacing: 1px;
   font-weight: 500;
-  -moz-transition: 0.25s ease;
-  -webkit-transition: 0.25s ease;
   transition: 0.25s ease;
-  &:hover {
-    color: $base-white;
-  }
 }
+header ul li a:hover {
+  color: #ffffff;
+}
+
 .dropdown-menu {
   display: none;
   border-radius: 1em 1em 1em 1em;
   opacity: 90%;
-  background: rgb(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.1);
   position: absolute;
   top: 5rem;
   right: 1rem;
   width: 15rem;
   overflow: hidden;
   transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  -webkit-backdrop-filter: blur(20px);
   backdrop-filter: blur(20px);
   background: rgba(0, 0, 0, 0.7);
   z-index: 100;
@@ -153,40 +133,27 @@ header ul li a {
 .dropdown-menu.open {
   height: 21rem;
   display: block;
+  -webkit-backdrop-filter: blur(30px);
   backdrop-filter: blur(30px);
   border: 2px solid #716e6e;
-  &:hover {
-    color: $base-white;
-  }
+}
+.dropdown-menu.open:hover {
+  color: #ffffff;
 }
 
 a.nav-menu {
   font-family: MyFont;
-  color: $base-text;
+  color: #989595;
   list-style: none;
   font-size: 1.7rem;
   text-decoration: none;
-  &:hover {
-    color: $base-white;
-  }
+}
+a.nav-menu:hover {
+  color: #ffffff;
 }
 
 a.nav-btn {
   padding: 0.5em;
-}
-
-// #particles-js {
-//   overflow-x: hidden;
-//   overflow: hidden;
-//   z-index: 0;
-// }
-
-#lab_social_icon_footer #social-fb:hover {
-  color: #3b5998;
-}
-
-#lab_social_icon_footer #social-tw:hover {
-  color: #4099ff;
 }
 
 #lab_social_icon_footer #social-gh:hover {
@@ -214,10 +181,11 @@ footer#lab_social_icon_footer {
 
 #lab_social_icon_footer a {
   font-size: 0.9em;
-  color: $base-text;
+  color: #989595;
   padding: 1em;
   opacity: 85%;
 }
+
 div.text-center.center-block {
   position: relative;
   bottom: 0.4em;
@@ -261,31 +229,22 @@ div a.social-link {
   -webkit-transform: scale(0.8);
   -moz-transform: scale(0.8);
   -o-transform: scale(0.8);
-  -webkit-transition-duration: 0.5s;
-  -moz-transition-duration: 0.5s;
-  -o-transition-duration: 0.5s;
   transition-duration: 0.5s;
   transform: scale(0.8);
   opacity: 85%;
-
-  &:hover {
-    -webkit-transform: scale(0.9);
-    -moz-transform: scale(0.9);
-    -o-transform: scale(0.9);
-    transform: scale(0.9);
-    opacity: 85%;
-  }
+}
+div a.social-link:hover {
+  transform: scale(0.9);
+  opacity: 85%;
 }
 
 @media only screen and (max-width: 1050px) {
   nav ul {
     gap: 6rem;
   }
-
   .nav-link {
     font-size: 1.5em;
   }
-
   .copyright {
     font-size: 0.8em;
     position: absolute;
@@ -305,13 +264,10 @@ div a.social-link {
     font-size: 2.5em;
   }
   span.seperator {
-    // bottom: 0.03em;
-    // font-size: 1.8em;
     bottom: 0.25em;
     font-size: 1.7em;
   }
 }
-
 @media only screen and (max-width: 768px) {
   nav ul {
     margin-left: 3em;
@@ -320,11 +276,9 @@ div a.social-link {
   .nav-link {
     font-size: 0.9em;
   }
-
   a.logo {
     font-size: 1.4em;
   }
-
   #social-fb {
     font-size: 2em;
   }
@@ -337,7 +291,6 @@ div a.social-link {
   #social-li {
     font-size: 2em;
   }
-
   .copyright {
     font-size: 0.5em;
     top: 3em;
@@ -347,10 +300,9 @@ div a.social-link {
     font-size: 1.4em;
   }
 }
-
 @media only screen and (max-width: 576px) {
   #bars.fa-solid {
-    color: $base-white;
+    color: #ffffff;
     position: absolute;
     right: 0.8em;
     font-size: 1.8rem;
@@ -371,7 +323,6 @@ div a.social-link {
     align-items: center;
     display: none;
   }
-
   .copyright {
     top: 9em;
     font-size: 0.6em;

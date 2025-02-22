@@ -2,13 +2,13 @@
   font-family: "MyFont";
   font-weight: 700;
   font-style: normal;
-  src: url("RobotoMono-Bold.ttf");
+  src: url("../fonts/RobotoMono-Bold.ttf");
 }
 @font-face {
   font-family: "MyFont2";
   font-style: normal;
   font-weight: normal;
-  src: url("Stellar-light.woff");
+  src: url("../fonts/Stellar-light.woff");
 }
 * {
   margin: 0;
@@ -24,7 +24,7 @@ html {
 body {
   margin: 0;
   padding: 0;
-  background-image: url("806443.jpg");
+  background-image: url("../images/806443.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
