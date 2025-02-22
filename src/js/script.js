@@ -74,14 +74,14 @@ const setupDropdown = () => {
   toggleBtn._clickHandler = () => {
     dropDown.classList.toggle("open");
     bars.className = dropDown.classList.contains("open")
-      ? "fa-solid fa-xmark"
+      ? "fa-solid fa-beat fa-xmark"
       : "fa-bars fa-beat fa-solid";
   };
   toggleBtn.addEventListener("click", toggleBtn._clickHandler);
 };
 
 /**
- * Handles modal window functionality.
+ * Handles modal window functionality (uses display instead of visibility).
  */
 const modalWindow = (e) => {
   const img = e.target.closest("img");
@@ -89,20 +89,20 @@ const modalWindow = (e) => {
   const modalImage = document.getElementById("modal-image");
 
   if (img && modal && modalImage) {
-    modal.style.display = "inline-block";
+    modal.style.display = "flex"; // Show modal using flex
     modalImage.src = img.src;
   }
 };
 
 /**
- * Closes the modal window.
+ * Closes the modal window (uses display instead of visibility).
  */
 const closeModal = (e) => {
   const modal = document.getElementById("modalBox");
   const exitButton = document.querySelector(".close");
 
   if (modal && (e.target === modal || e.target === exitButton)) {
-    modal.style.visibility = "hidden";
+    modal.style.display = "none"; // Hide modal
   }
 };
 
