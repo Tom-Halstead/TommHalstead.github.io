@@ -56,7 +56,6 @@ nav ul {
   display: flex;
   justify-content: space-evenly; /* Responsive and evenly spaced items */
   width: 100%;
-  padding: 0;
   list-style: none;
 }
 
@@ -120,21 +119,17 @@ section.hexagon-gallery {
   user-select: none;
   display: flex;
   justify-content: center;
-  gap: 1.3em;
-  margin: -1em 0;
+  gap: 1em;
+  margin: -1.2em 0;
   filter: drop-shadow(20px 20px 40px);
 }
 
 .hexagon-gallery .hexagon .hex {
   justify-content: center;
-  -moz-user-select: none;
-  -webkit-user-drag: none;
-  -webkit-user-select: none;
   user-select: none;
-  width: 12.34em;
-  height: 13.5em;
+  height: 14em;
+  width: 14em;
   display: flex;
-  background: rgba(93, 88, 88, 0.6);
   -webkit-clip-path: polygon(
     50% 0%,
     100% 25%,
@@ -352,6 +347,14 @@ a.nav-menu:hover {
   color: #0077b5;
 }
 
+#social-gh:hover {
+  color: #333;
+}
+
+#social-li:hover {
+  color: #0077b5;
+}
+
 footer {
   position: fixed;
   bottom: 0;
@@ -370,16 +373,16 @@ a.social-link {
 }
 
 .footer-container {
-  position: relative;
+  position: relative; /* Relative to position absolute children */
   display: flex;
-  align-items: center;
+  align-items: center; /* Vertically center items */
   height: 100%;
 }
 
 .social-box {
   display: flex;
   align-items: center;
-  padding-left: 1em;
+  padding-left: 1em; /* Space from left edge */
 }
 
 .social-link {
@@ -394,29 +397,17 @@ a.social-link {
   opacity: 100%;
 }
 
-.copyright {
-  -webkit-user-select: none;
-  -moz-user-select: none;
+p.copyright {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%); /* Perfect horizontal centering */
   user-select: none;
-  font-family: MyFont;
+  font-family: MyFont, sans-serif;
   color: #7d7d7d;
-  font-size: 1rem;
+  font-size: 1em;
   opacity: 85%;
-  margin: auto;
-  position: relative;
-  right: 10em;
-}
-
-.social-link {
-  font-size: 1.3em;
-  margin-right: 0.5em;
-  color: #989595;
-  transition: transform 0.3s ease;
-}
-
-.social-link:hover {
-  transform: scale(1.1);
-  opacity: 100%;
+  text-align: center;
+  white-space: nowrap; /* Prevent text wrapping */
 }
 
 .nav-btn[aria-current="page"] {

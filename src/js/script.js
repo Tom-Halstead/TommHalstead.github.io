@@ -24,7 +24,7 @@ const loadHTML = async (url, selector, callback) => {
       callback?.(); // ✅ Attach events after content is inserted
     }
   } catch (error) {
-    console.error(`❌ Error loading ${url}:`, error);
+    console.error(`❌ Error fetching dynamic header/footer ${url}:`, error);
   }
 };
 
@@ -34,6 +34,13 @@ const loadHTML = async (url, selector, callback) => {
 const navHighlights = () => {
   const page = getPageName().toLowerCase();
 
+  // Remove previous active states
+  document.querySelectorAll(".nav-btn").forEach((link) => {
+    link.removeAttribute("aria-current");
+    link.classList.remove("active");
+  });
+
+  // Highlight current page
   document.querySelectorAll(".nav-btn").forEach((link) => {
     const href = link
       .getAttribute("href")
@@ -41,8 +48,9 @@ const navHighlights = () => {
       .toLowerCase();
     const isHomePage =
       (page === "" || page === "index.html") && href.includes("index.html");
+    const isMatchingPage = page === href;
 
-    if (href === page || isHomePage) {
+    if (isHomePage || isMatchingPage) {
       link.setAttribute("aria-current", "page");
       link.classList.add("active");
     }

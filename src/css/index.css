@@ -54,7 +54,6 @@ nav ul {
   display: flex;
   justify-content: space-evenly; /* Responsive and evenly spaced items */
   width: 100%;
-  padding: 0;
   list-style: none;
 }
 
