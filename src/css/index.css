@@ -39,68 +39,61 @@ header {
 }
 
 nav {
-  /* width: 100%; */
-  justify-content: center;
   display: flex;
+  justify-content: center;
+  align-items: center;
   background-image: linear-gradient(rgb(42, 41, 41), rgb(0, 0, 0));
   opacity: 85%;
   transition: 0.6s;
-  padding: 1em 1em 1em 1em;
-  min-height: 4em;
+  padding: 1em;
+  min-height: 64px;
+  z-index: 2000;
 }
 
 nav ul {
   display: flex;
-  gap: 12rem;
+  justify-content: space-evenly; /* Responsive and evenly spaced items */
+  width: 100%;
+  padding: 0;
+  list-style: none;
 }
 
 .nav-link {
   font-size: 1.4em;
-  -moz-user-select: none;
-  -webkit-user-select: none;
   user-select: none;
   text-decoration: none;
-  overflow-y: hidden;
 }
 
-.nav-drop {
-  border-bottom: 1px ridge rgb(67, 63, 63);
-}
-
-nav > div > i {
-  visibility: hidden;
-}
-
-#bars.fa-solid {
-  color: #ffffff;
-  font-size: 1.8rem;
-  cursor: pointer;
-}
-
-header ul li a {
+nav ul li a {
   font-family: MyFont;
   font-size: 0.8em;
   text-decoration: none;
   color: #989595;
   transition: 0.25s ease;
 }
-header ul li a:hover {
+
+nav ul li a:hover {
   color: #ffffff;
+}
+
+#bars.fa-solid {
+  color: #ffffff;
+  font-size: 1.8rem;
+  cursor: pointer;
+  visibility: hidden;
+  z-index: 300;
 }
 
 .dropdown-menu {
   display: none;
   border-radius: 1em 1em 1em 1em;
   opacity: 90%;
-  background: rgba(255, 255, 255, 0.1);
   position: absolute;
   top: 5rem;
   right: 1rem;
   width: 15rem;
   overflow: hidden;
   transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  -webkit-backdrop-filter: blur(20px);
-  backdrop-filter: blur(20px);
   background: rgba(0, 0, 0, 0.7);
   z-index: 100;
 }
@@ -255,6 +248,7 @@ p.copyright {
 .nav-btn[aria-current="page"] {
   color: #ffffff;
   font-size: 0.9em;
+  font-weight: bold;
 }
 
 @media only screen and (max-width: 1050px) {

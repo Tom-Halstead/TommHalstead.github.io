@@ -14,6 +14,7 @@
   margin: 0;
   padding: 0;
   font-family: "Poppins", "sans-serif";
+  box-sizing: border-box;
 }
 
 body {
@@ -23,57 +24,50 @@ body {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
 }
 
 header {
-  position: relative;
+  position: fixed;
   top: 0;
   width: 100%;
-  display: flex;
-  height: 4.3em;
+  height: 4em;
 }
 
 nav {
-  width: 100%;
-  justify-content: space-between;
   display: flex;
+  justify-content: center;
+  align-items: center;
   background-image: linear-gradient(rgb(42, 41, 41), rgb(0, 0, 0));
   opacity: 85%;
   transition: 0.6s;
-  padding: 1em 1em 1em 1em;
-  height: 2.3em;
-}
-
-.logo {
-  position: relative;
-  left: 0.1em;
-  bottom: 0.08em;
-  -moz-user-select: none;
-  -webkit-user-select: none;
-  user-select: none;
-  color: #ffffff;
-  font-size: 2em;
-  text-transform: uppercase;
-  text-decoration: none;
-  letter-spacing: 0.06em;
-  transition: 0.6s;
+  padding: 1em;
+  min-height: 64px;
 }
 
 nav ul {
   display: flex;
-  gap: 12rem;
+  justify-content: space-evenly; /* Responsive and evenly spaced items */
+  width: 100%;
+  padding: 0;
+  list-style: none;
 }
 
 .nav-link {
   font-size: 1.4em;
-  -moz-user-select: none;
-  -webkit-user-select: none;
   user-select: none;
   text-decoration: none;
-  overflow-y: hidden;
+}
+
+nav ul li a {
+  font-family: MyFont;
+  font-size: 0.8em;
+  text-decoration: none;
+  color: #989595;
+  transition: 0.25s ease;
+}
+
+nav ul li a:hover {
+  color: #ffffff;
 }
 
 .nav-drop {
@@ -97,7 +91,6 @@ header ul li a {
   font-size: 0.8em;
   text-decoration: none;
   color: #989595;
-  letter-spacing: 1px;
   font-weight: 500;
   transition: 0.25s ease;
 }
@@ -295,45 +288,47 @@ section > ul > li {
   user-select: none;
 }
 
-footer#lab_social_icon_footer {
-  position: relative;
-  margin-top: auto;
-  z-index: 100;
-  display: flex;
-  justify-content: space-between;
-  padding-top: 0.4em;
-  height: 3.3em;
-  background-image: linear-gradient(rgb(0, 0, 0), rgb(42, 41, 41));
+footer {
+  position: fixed;
+  bottom: 0;
   width: 100%;
+  height: 4em;
+  background-image: linear-gradient(rgb(0, 0, 0), rgb(42, 41, 41));
+  color: #ffffff;
+  box-sizing: border-box;
 }
 
-#lab_social_icon_footer a {
+a.social-link {
   font-size: 0.9em;
   color: #989595;
-  padding-left: 1em;
-  padding-right: 1em;
+  padding: 1em;
   opacity: 85%;
 }
 
-div.text-center.center-block {
-  align-self: center;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  user-select: none;
-  opacity: 85%;
+.footer-container {
+  position: relative; /* Relative to position absolute children */
+  display: flex;
+  align-items: center; /* Vertically center items */
+  height: 100%;
 }
 
-span.seperator {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  user-select: none;
-  color: gray;
-  font-size: 2.2em;
-  bottom: 0.17em;
-  position: relative;
-  opacity: 85%;
+.social-box {
+  display: flex;
+  align-items: center;
+  padding-left: 1em; /* Space from left edge */
 }
 
+.social-link {
+  font-size: 1.3em;
+  margin-right: 0.5em;
+  color: #989595;
+  transition: transform 0.3s ease;
+}
+
+.social-link:hover {
+  transform: scale(1.1);
+  opacity: 100%;
+}
 .copyright {
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -347,23 +342,22 @@ span.seperator {
   right: 10em;
 }
 
+.social-link {
+  font-size: 1.3em;
+  margin-right: 0.5em;
+  color: #989595;
+  transition: transform 0.3s ease;
+}
+
+.social-link:hover {
+  transform: scale(1.1);
+  opacity: 100%;
+}
+
 .nav-btn[aria-current="page"] {
   color: #ffffff;
   font-size: 0.9em;
-}
-
-div a.social-link {
-  display: inline-block;
-  -webkit-transform: scale(0.8);
-  -moz-transform: scale(0.8);
-  -o-transform: scale(0.8);
-  transition-duration: 0.5s;
-  transform: scale(0.8);
-  opacity: 85%;
-}
-div a.social-link:hover {
-  transform: scale(0.9);
-  opacity: 85%;
+  font-weight: bold;
 }
 
 @media only screen and (max-width: 1050px) {
@@ -377,23 +371,15 @@ div a.social-link:hover {
     font-size: 0.7em;
     right: 5.5em;
   }
-  #social-fb {
-    font-size: 2.5em;
-  }
-  #social-tw {
-    font-size: 2.5em;
-  }
+
   #social-gh {
     font-size: 2.5em;
   }
   #social-li {
     font-size: 2.5em;
   }
-  span.seperator {
-    bottom: 0.03em;
-    font-size: 1.8em;
-  }
 }
+
 @media only screen and (max-width: 768px) {
   nav ul {
     margin-left: 3em;
@@ -402,15 +388,7 @@ div a.social-link:hover {
   .nav-link {
     font-size: 0.9em;
   }
-  a.logo {
-    font-size: 1.4em;
-  }
-  #social-fb {
-    font-size: 2em;
-  }
-  #social-tw {
-    font-size: 2em;
-  }
+
   #social-gh {
     font-size: 2em;
   }
@@ -421,19 +399,6 @@ div a.social-link:hover {
     font-size: 0.3em;
     bottom: 0.2em;
     left: 25em;
-  }
-  span.seperator {
-    font-size: 1.4em;
-  }
-  div.text-center.center-block {
-    height: 2.7em;
-  }
-  footer#lab_social_icon_footer {
-    height: -moz-fit-content;
-    height: fit-content;
-    justify-content: center;
-    flex-direction: column;
-    flex-wrap: wrap;
   }
 }
 @media only screen and (max-width: 576px) {
@@ -459,8 +424,4 @@ div a.social-link:hover {
     font-size: 0.6em;
     position: sticky;
   }
-  span.seperator {
-    bottom: -0.05em;
-    font-size: 1.3em;
-  }
-} /*# sourceMappingURL=work.css.map */
+}
