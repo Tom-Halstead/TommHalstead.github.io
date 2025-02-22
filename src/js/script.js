@@ -19,6 +19,7 @@ const loadHTML = async (url, selector, callback) => {
 
     const html = await response.text();
     const element = document.querySelector(selector);
+    console.log(`Loading ${url} into ${selector}`);
     if (element) {
       element.innerHTML = html;
       callback?.(); // ✅ Attach events after content is inserted
