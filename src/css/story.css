@@ -62,6 +62,7 @@ nav {
 }
 
 #bars.fa-solid {
+  display: none;
   color: #ffffff;
   font-size: 1.8rem;
   cursor: pointer;
@@ -104,7 +105,7 @@ nav ul li a:hover {
   display: flex;
   justify-content: flex-end; /* Pushes dropdown to the right */
   position: absolute;
-  top: 4.5rem; /* Positions it below the header */
+  top: 4.5rem;
   width: 100%; /* Ensures the flex container spans the full width */
   z-index: 1000; /* Keeps it above other content */
 }
@@ -113,8 +114,8 @@ nav ul li a:hover {
   display: none;
   width: 15em;
   position: relative;
-  top: 1em;
-  right: 1.5em;
+  top: -1em;
+  right: em;
   border-radius: 1em 0 0 1em; /* Rounded corners on the left */
   opacity: 90%;
   background: rgba(0, 0, 0, 0.7);
@@ -123,6 +124,9 @@ nav ul li a:hover {
 }
 
 .dropdown-menu.open {
+  user-select: none;
+  display: flex;
+  flex-direction: column;
   height: auto;
   -webkit-backdrop-filter: blur(30px);
   backdrop-filter: blur(30px);
@@ -130,6 +134,17 @@ nav ul li a:hover {
 }
 
 .dropdown-menu.open:hover {
+  color: #ffffff;
+}
+
+a.nav-menu {
+  font-family: MyFont;
+  color: #989595;
+  list-style: none;
+  font-size: 1.7rem;
+  text-decoration: none;
+}
+a.nav-menu:hover {
   color: #ffffff;
 }
 
@@ -227,47 +242,6 @@ h3 {
   }
 }
 
-.modal {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  visibility: hidden;
-  position: fixed;
-  z-index: 1;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
-  background-color: rgb(0, 0, 0);
-  background-color: rgba(0, 0, 0, 0.8);
-}
-
-.modal-content {
-  margin: auto;
-  text-align: center;
-}
-
-#modal-image {
-  display: inline-block;
-  height: 65vh;
-  width: 35vw;
-  border-radius: 15%;
-}
-
-span.close {
-  cursor: pointer;
-  -webkit-user-drag: none;
-  -moz-user-select: none;
-  -webkit-user-select: none;
-  user-select: none;
-  color: white;
-  position: fixed;
-  font-size: 3em;
-  top: 0.5em;
-  right: 1em;
-}
-
 h3 > span {
   -moz-user-select: none;
   -webkit-user-select: none;
@@ -283,31 +257,7 @@ h3 > span:hover {
   transform: rotate(90deg);
 }
 
-p#p1 {
-  text-indent: 7%;
-  letter-spacing: 0.02em;
-  line-height: 1em;
-  margin-top: 0.5em;
-  align-self: center;
-  font-size: 1.3em;
-  font-family: MavenPro;
-  color: #aea8a8;
-  padding: 0.5em;
-}
-
-p#p2 {
-  text-indent: 7%;
-  letter-spacing: 0.02em;
-  line-height: 1em;
-  margin-top: 0.5em;
-  align-self: center;
-  font-size: 1.3em;
-  font-family: MavenPro;
-  color: #aea8a8;
-  padding: 0.5em;
-}
-
-p#p3 {
+p {
   text-indent: 7%;
   letter-spacing: 0.02em;
   line-height: 1em;
@@ -316,76 +266,6 @@ p#p3 {
   font-family: MavenPro;
   color: #aea8a8;
   padding: 0.5em;
-}
-
-.nav-drop {
-  border-bottom: 1px ridge rgb(67, 63, 63);
-}
-
-nav > div > i {
-  visibility: hidden;
-}
-
-header ul li a {
-  width: -moz-fit-content;
-  width: fit-content;
-  font-family: MyFont;
-  font-size: 0.8em;
-  text-decoration: none;
-  color: #989595;
-  font-weight: 500;
-  transition: 0.25s ease;
-}
-header ul li a:hover {
-  color: #ffffff;
-}
-
-.dropdown-menu {
-  display: none;
-  border-radius: 1em 1em 1em 1em;
-  opacity: 90%;
-  position: absolute;
-  top: 5rem;
-  right: 1rem;
-  width: 15rem;
-  overflow: hidden;
-  transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  background: rgba(0, 0, 0, 0.7);
-}
-
-.toggle-btn {
-  display: none;
-  width: 0.5em;
-  margin-right: 4.2em;
-}
-
-.dropdown-menu li {
-  display: flex;
-  align-items: center;
-  padding: 1.5em;
-  justify-content: center;
-}
-
-.dropdown-menu.open {
-  height: 21rem;
-  display: block;
-  -webkit-backdrop-filter: blur(30px);
-  backdrop-filter: blur(30px);
-  border: 2px solid #716e6e;
-}
-.dropdown-menu.open:hover {
-  color: #ffffff;
-}
-
-a.nav-menu {
-  font-family: MyFont;
-  color: #989595;
-  list-style: none;
-  font-size: 1.7rem;
-  text-decoration: none;
-}
-a.nav-menu:hover {
-  color: #ffffff;
 }
 
 #lab_social_icon_footer #social-gh:hover {
@@ -501,66 +381,60 @@ p.copyright {
     font-size: 0.7em;
     left: 15em;
   }
-
-  #social-gh {
-    font-size: 2.5em;
-  }
-  #social-li {
-    font-size: 2.5em;
-  }
 }
 @media only screen and (max-width: 768px) {
   section.hexagon-gallery {
     align-self: center;
-    height: 375px;
-    width: 400px;
+    height: 350px;
+    width: 350px;
   }
   .hexagon-gallery .hexagon .hex {
     justify-content: center;
     width: 8em;
-    height: 9.1em;
+    height: 8em;
   }
   div.max-width {
     width: 450px;
   }
-  h3 {
-    overflow: hidden;
-    font-size: 0.8em;
-  }
-  p#p1 {
-    overflow: hidden;
-    font-size: 1em;
-  }
-  p#p2 {
-    overflow: hidden;
-    font-size: 1em;
-  }
-  p#p3 {
-    overflow: hidden;
-    font-size: 1em;
-  }
-  nav ul {
-    margin-left: 3em;
-    gap: 4em;
-  }
-  .nav-link {
-    font-size: 0.9em;
+
+  footer {
+    height: auto;
+    padding: 0.5em;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 
-  #social-gh {
-    font-size: 2em;
+  .footer-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
-  #social-li {
-    font-size: 2em;
+
+  .social-box {
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0.2em;
   }
-  .copyright {
-    font-size: 0.3em;
-    bottom: 0.2em;
-    left: 25em;
+
+  a.social-link {
+    padding: 5px;
+  }
+
+  p.copyright {
+    position: static;
+    transform: none;
+    font-size: 0.8em;
+    text-align: center;
+  }
+  div.footer-container {
+    min-height: fit-content;
   }
 }
 @media only screen and (max-width: 576px) {
   .container {
+    margin-top: 1em;
     display: flex;
     flex-direction: column;
   }
@@ -580,13 +454,7 @@ p.copyright {
     margin-left: 1em;
     margin-right: 1em;
   }
-  #modal-image {
-    height: 20em;
-    width: 20em;
-  }
-  #problem {
-    width: 129px;
-  }
+
   div.max-width {
     width: -moz-fit-content;
     width: fit-content;
@@ -602,20 +470,15 @@ p.copyright {
     right: 0.8em;
     font-size: 1.8rem;
     cursor: pointer;
-    visibility: visible;
+    display: flex;
   }
   .nav-link {
     display: none;
   }
   .dropdown-menu {
-    left: 1.2rem;
-    width: unset;
+    right: 2em;
+    width: 90vw;
     align-items: center;
     display: none;
-  }
-  .copyright {
-    left: 0;
-    font-size: 0.6em;
-    position: sticky;
   }
 }
