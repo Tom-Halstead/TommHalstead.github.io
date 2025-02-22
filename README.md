@@ -1,3 +1,4 @@
+```markdown
 # 🚀 Thomas Halstead | Personal Portfolio
 
 Welcome to my **personal portfolio**, built from scratch using **HTML, CSS, and JavaScript**. Although my primary focus is on **back-end development**, this front-end portfolio showcases some of my work and projects.
@@ -12,58 +13,78 @@ While this portfolio highlights my front-end work, my primary interest lies in *
 
 ---
 
-## 🚀 **Projects**
+## 🛠️ **Technologies Used in This Portfolio**
 
-Here are a few of my featured projects that demonstrate my skills beyond the front-end:
+This portfolio was built with a focus on responsive design and modern front-end development techniques:
 
-### 📊 [Expense Tracker](https://github.com/Tom-Halstead/ExpenseTracker)
+### 🌐 **Front-End:**
 
-An application designed to help users track their expenses and manage their budgets.  
-✅ **Features:**
+- **HTML5** – Semantic and accessible markup
+- **CSS3** – Responsive and modern design techniques
+- **JavaScript (ES6+)** – Interactive front-end features
+- **Parcel** – Efficient web application bundler
+- **Animate.css** – Subtle animations and transitions
+- **Font Awesome** – Icon library for visual enhancement
 
-- User authentication and role-based access
-- Expense categorization and budget setting
-- RESTful API with secure endpoints
-- Persistent data storage with a relational database
+### ☁️ **Deployment & Hosting:**
 
-🔗 **GitHub Repository:** [Expense Tracker](https://github.com/Tom-Halstead/ExpenseTracker)
+- **GitHub Pages** – For front-end deployment
 
 ---
 
+## 🚀 **Projects**
+
+Here are a few of my featured projects that demonstrate my back-end expertise:
+
 ### 📰 [Content Aggregator](https://github.com/Tom-Halstead/ContentAggregator)
 
-A platform that aggregates content from multiple sources, allowing users to customize their news feed.  
+A platform that aggregates content from multiple sources, allowing users to customize their news feed.
+
 ✅ **Features:**
 
-- Integration with external news APIs
-- User preference management for custom feeds
-- Scalable back-end architecture
-- Dynamic content rendering with efficient API calls
+- Integration with external APIs (e.g., news sources, Reddit) for dynamic content fetching
+- User preference management for personalized feeds
+- Scalable architecture to handle multiple content sources simultaneously
+- Secure authentication using OAuth2 and AWS Cognito
+- Robust error handling and secure data processing
+
+🔧 **Tech Stack:**
+
+- **Back-End:** Spring Boot, OAuth2, AWS Cognito, PostgreSQL
+- **API Handling:** External APIs for content aggregation
+- **Data manipulation:** Internal APIs for back-end / front-end communication and UI display
+- **Testing:** JUnit, Mockito
+- **Deployment:** AWS (for future back-end deployment plans)
+- **Build Tool:** Maven
 
 🔗 **GitHub Repository:** [Content Aggregator](https://github.com/Tom-Halstead/ContentAggregator)
 
 ---
 
-## 🛠️ **Built With**
+### 📊 [Expense Tracker](https://github.com/Tom-Halstead/ExpenseTracker)
 
-- **HTML5** – Semantic and accessible markup
-- **CSS3** – Responsive and modern design techniques
-- **JavaScript (ES6+)** – For interactive front-end features
-- **Parcel** – Efficient web application bundler
-- **Animate.css** – For subtle animations and transitions
-- **Font Awesome** – Icon library for visual enhancement
+An application designed to help users track their expenses and manage their budgets.
+
+✅ **Features:**
+
+- User authentication and role-based access with secure login flows
+- Expense categorization and budget management capabilities
+- RESTful API endpoints to handle CRUD operations for expenses
+- Persistent data storage ensuring user data integrity
+
+🔧 **Tech Stack:**
+
+- **Back-End:** Spring Boot, OAuth2, AWS Cognito, PostgreSQL
+- **Testing:** JUnit, Mockito
+- **Build Tool:** Maven
+
+🔗 **GitHub Repository:** [Expense Tracker](https://github.com/Tom-Halstead/ExpenseTracker)
 
 ---
 
 ## 🌎 **Live Demo**
 
-🚀 **Check out my portfolio live:** [My Portfolio Website](https://tommhalstead.github.io/)
-
----
-
-## 🛡️ **License**
-
-This project is licensed under the **ISC License**.
+🚀 **Check out my portfolio live:** [My Portfolio Website](https://thomashalstead.io//)
 
 ---
 
@@ -76,3 +97,4 @@ This project is licensed under the **ISC License**.
 
 💻 **Thank you for visiting my portfolio!**  
 ✨ I’m always learning, improving, and open to exciting opportunities in back-end development.
+```
