@@ -115,7 +115,7 @@ header ul li a:hover {
 }
 
 .toggle-btn {
-  visibility: hidden;
+  display: none;
   width: 0.5em;
   margin-right: 4.2em;
 }
@@ -311,8 +311,8 @@ footer {
     color: #989595;
     padding: 1em;
     opacity: 85%;
+    transition: transform 0.3s ease;
   }
-
   .footer-container {
     position: relative; /* Relative to position absolute children */
     display: flex;
@@ -324,13 +324,6 @@ footer {
     display: flex;
     align-items: center;
     padding-left: 1em; /* Space from left edge */
-  }
-
-  .social-link {
-    font-size: 1.3em;
-    margin-right: 0.5em;
-    color: #989595;
-    transition: transform 0.3s ease;
   }
 
   .social-link:hover {

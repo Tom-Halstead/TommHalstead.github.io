@@ -89,7 +89,7 @@ const modalWindow = (e) => {
   const modalImage = document.getElementById("modal-image");
 
   if (img && modal && modalImage) {
-    modal.style.visibility = "visible";
+    modal.style.display = "inline-block";
     modalImage.src = img.src;
   }
 };

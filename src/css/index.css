@@ -36,6 +36,7 @@ header {
   top: 0;
   width: 100%;
   height: 4em;
+  z-index: 10000;
 }
 
 nav {
@@ -98,7 +99,7 @@ nav ul li a:hover {
 }
 
 .toggle-btn {
-  visibility: hidden;
+  display: none;
   width: 0.5em;
   margin-right: 4.2em;
 }
@@ -137,6 +138,7 @@ a.nav-menu:hover {
   height: 100vh;
   justify-content: center;
   align-items: center;
+  transform: translateY(-10%);
 }
 
 div.text {
@@ -149,26 +151,28 @@ div.text {
 }
 
 h1 {
+  text-align: center;
+  font-size: clamp(2rem, 5vw + 1rem, 5.5rem);
   min-height: fit-content;
-  font-size: 5.5em;
   font-family: MyFont2;
   color: #aea8a8;
-  margin: auto;
+  height: 1.2em;
 }
 
 h2 {
+  text-align: center;
+  font-size: clamp(1.5rem, 4vw + 0.5rem, 3rem);
   margin-top: 0.8em;
   min-height: fit-content;
-  font-size: 3em;
-  height: 2em;
+  height: 1.5em;
   font-family: MyFont2;
   color: #aea8a8;
 }
 
 h3 {
+  text-align: center;
+  font-size: clamp(1.2rem, 3vw + 0.5rem, 2.5rem);
   height: 2em;
-  margin-top: 0.8em;
-  font-size: 2.5em;
   font-family: MyFont2;
   color: #aea8a8;
 }
@@ -204,6 +208,7 @@ a.social-link {
   color: #989595;
   padding: 1em;
   opacity: 85%;
+  transition: transform 0.3s ease;
 }
 
 .footer-container {
@@ -217,13 +222,6 @@ a.social-link {
   display: flex;
   align-items: center;
   padding-left: 1em; /* Space from left edge */
-}
-
-.social-link {
-  font-size: 1.3em;
-  margin-right: 0.5em;
-  color: #989595;
-  transition: transform 0.3s ease;
 }
 
 .social-link:hover {
@@ -250,46 +248,26 @@ p.copyright {
   font-weight: bold;
 }
 
-@media only screen and (max-width: 1050px) {
-  nav ul {
-    gap: 6rem;
-  }
-  .nav-link {
-    font-size: 1.5em;
-  }
-  .copyright {
-    font-size: 0.8em;
-    margin-bottom: 0.5em;
-  }
-  #social-gh {
-    font-size: 2.5em;
-  }
-  #social-li {
-    font-size: 2.5em;
-  }
-}
-
 @media only screen and (max-width: 768px) {
   footer {
     height: auto;
     padding: 0.5em;
-    flex-direction: column; /* Stack items vertically */
-    align-items: center; /* Center align items */
-    justify-content: center; /* Center content vertically */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 
   .footer-container {
     width: 100%;
     display: flex;
-    flex-direction: column; /* Ensure vertical stacking */
-    align-items: center; /* Center horizontally */
+    flex-direction: column;
+    align-items: center;
   }
 
   .social-box {
-    justify-content: center; /* Center social icons */
+    justify-content: center;
     align-items: center;
-    padding-left: 0;
-    margin-bottom: 0.5em; /* Space between icons and copyright */
+    margin-bottom: 0.2em;
   }
 
   a.social-link {
@@ -297,11 +275,10 @@ p.copyright {
   }
 
   p.copyright {
-    position: static; /* Remove absolute positioning */
-    transform: none; /* Remove centering transform */
-    margin-top: 0.2em;
-    font-size: 0.8em; /* Adjust font size for smaller screens */
-    text-align: center; /* Center the text */
+    position: static;
+    transform: none;
+    font-size: 0.8em;
+    text-align: center;
   }
   div.footer-container {
     min-height: fit-content;
@@ -309,25 +286,11 @@ p.copyright {
   div.text {
     min-height: fit-content;
   }
-}
-
-@media (max-width: 600px) {
-  .footer-container {
-    flex-direction: column;
-  }
-
-  p.copyright {
-    position: static; /* Remove absolute positioning */
-    transform: none;
-    margin-top: 0.5em;
-  }
-
-  .social-box {
-    justify-content: center;
-    padding-left: 0;
-    margin-bottom: 0.5em;
+  h3 {
+    height: 3.5em;
   }
 }
+
 @media only screen and (max-width: 576px) {
   #bars.fa-solid {
     color: #ffffff;
@@ -335,6 +298,7 @@ p.copyright {
     right: 0.8em;
     font-size: 1.8rem;
     cursor: pointer;
+    display: flex;
     visibility: visible;
   }
   .nav-link {
