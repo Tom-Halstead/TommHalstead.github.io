@@ -15,7 +15,7 @@ const getPageName = () =>
 const loadHTML = async (url, selector, callback) => {
   try {
     const response = await fetch(url);
-    if (!response.ok) throw new Error(`Failed to load ${url}`);
+    if (!response.ok) throw new Error(`Failed to fetch specified url @ ${url}`);
 
     const html = await response.text();
     const element = document.querySelector(selector);
@@ -121,7 +121,7 @@ window.addEventListener("DOMContentLoaded", async () => {
       setupDropdown(); // ✅ Setup dropdown after header insertion
     });
 
-    await loadHTML("./footer.html", "footer");
+    // await loadHTML("./footer.html", "footer");
   } else {
     // For static header pages (like index.html), initialize directly
     navHighlights();

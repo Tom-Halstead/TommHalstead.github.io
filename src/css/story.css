@@ -244,7 +244,7 @@ h3 > span {
   -moz-user-select: none;
   -webkit-user-select: none;
   user-select: none;
-  font-size: 4em;
+  font-size: 2.5em;
   font-family: StoryFont;
   color: #fcc7c7;
 }
