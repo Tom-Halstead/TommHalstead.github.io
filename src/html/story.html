@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../css/story.css" />
-    <script defer src="../js/script.js"></script>
+    <!-- <script defer src="../js/script.js"></script> -->
     <script
       defer
       src="https://kit.fontawesome.com/c845919294.js"
@@ -14,7 +14,46 @@
     <title>Story</title>
   </head>
   <body>
-    <header class="header"></header>
+    <!-- <header class="header"></header> -->
+
+    <header class="header">
+      <nav class="nav">
+        <ul>
+          <li class="nav-link">
+            <a href="./index.html" class="nav-btn">Home</a>
+          </li>
+          <li class="nav-link">
+            <a href="./story.html" class="nav-btn">Story</a>
+          </li>
+          <li class="nav-link">
+            <a href="./work.html" class="nav-btn">Work</a>
+          </li>
+          <li class="nav-link">
+            <a href="./contact.html" class="nav-btn">Contact</a>
+          </li>
+        </ul>
+        <div class="toggle-btn">
+          <i id="bars" class="fa-bars fa-beat fa-solid"></i>
+        </div>
+      </nav>
+
+      <div class="dropdown-container">
+        <div class="dropdown-menu">
+          <li class="nav-drop">
+            <a href="./index.html" class="nav-menu">Home</a>
+          </li>
+          <li class="nav-drop">
+            <a href="./story.html" class="nav-menu">Story</a>
+          </li>
+          <li class="nav-drop">
+            <a href="./work.html" class="nav-menu">Work</a>
+          </li>
+          <li class="nav-drop">
+            <a href="./contact.html" class="nav-menu">Contact</a>
+          </li>
+        </div>
+      </div>
+    </header>
     <div class="container">
       <div class="max-width">
         <h3 class="story">
@@ -22,11 +61,11 @@
           ><span>r</span><span>n</span><span>e</span><span>y</span>
         </h3>
         <p id="p1">
-          Hi, I'm Thomas Halstead—though most people call me Tom or Tommy. I’m a
-          junior software developer based in Austin, Texas, with a passion for
+          Hi, I'm Thomas Halstead—though though I typically just go by Tom. I’m
+          a junior software developer based in Austin, Texas, with a passion for
           back-end development and building efficient, scalable applications. I
           transitioned into software development from a leadership role in the
-          construction industry, where I managed teams of 8+ technicians to
+          construction industry, where I managed teams of technicians to
           complete complex conveyance systems for companies like Amazon and UPS.
           That experience sharpened my problem-solving skills, attention to
           detail, and ability to perform under pressure—qualities I bring to
@@ -119,6 +158,24 @@
         <span class="close fa fa-beat">&times;</span>
       </div>
     </div>
-    <footer></footer>
+    <footer>
+      <div class="footer-container">
+        <div class="social-box">
+          <a class="social-link" href="https://github.com/Tom-halstead">
+            <i id="social-gh" class="fa fa-3x fa-github-square social"></i>
+          </a>
+          <a
+            class="social-link"
+            href="https://www.linkedin.com/in/tomhalsteadeveloper/"
+          >
+            <i id="social-li" class="fa fa-3x fa-linkedin-square social"></i>
+          </a>
+        </div>
+        <p class="copyright">
+          <span class="copy">&copy;</span> 2023 All rights reserved | Designed
+          By: Thomas Halstead
+        </p>
+      </div>
+    </footer>
   </body>
 </html>

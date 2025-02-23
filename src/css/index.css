@@ -317,4 +317,8 @@ p.copyright {
     align-items: center;
     display: none;
   }
+
+  p.copyright {
+    font-size: 0.6em;
+  }
 }

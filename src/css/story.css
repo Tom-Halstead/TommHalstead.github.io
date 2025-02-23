@@ -218,6 +218,38 @@ section.hexagon-gallery {
   bottom: 0;
 }
 
+/* Modal overlay styling */
+#modalBox {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.9); /* Light, semi-transparent background */
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Ensures it's on top */
+}
+
+/* Style the modal image */
+#modal-image {
+  max-width: 90%;
+  max-height: 90%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Optional: Style the close button */
+#modalBox .close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
 h3 {
   align-self: center;
   border-bottom: 5px solid #a0857f;
