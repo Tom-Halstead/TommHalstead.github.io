@@ -162,54 +162,49 @@ a.nav-btn {
 }
 
 .project-section {
-  position: relative;
-  width: 70%;
-  margin: 0 auto;
-  min-height: -moz-fit-content;
-  min-height: fit-content;
   display: flex;
-  flex-wrap: wrap;
-  gap: 3em;
-  align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-around;
   border-radius: 20%;
   background-color: rgba(0, 0, 0, 0.35);
-}
-
-.forkify-img {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  user-select: none;
-}
-.forkify-img:hover {
-  cursor: pointer;
-  transform: scale(1.1);
-}
-
-.forkify {
-  border: 2px solid rgb(122, 118, 118);
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  user-select: none;
-  border-radius: 20%;
+  min-height: fit-content;
+  min-width: fit-content;
+  margin-bottom: 7em;
 }
 
 .box {
   display: flex;
-  flex-direction: column;
-  gap: 3em;
-  margin-top: 2em;
+  flex-direction: column; /* Stack the content vertically */
+  justify-content: center; /* Center align the content */
+  align-items: center; /* Horizontally center content */
+  text-align: center; /* Ensure text is centered */
+  gap: 1em; /* Add space between the title and image */
+}
+
+.forkify {
+  border: 2px solid rgb(122, 118, 118);
+  border-radius: 20%;
+  max-width: 100%; /* Ensure the image doesn't exceed the box width */
+  height: 200px; /* Set a fixed height for the images */
+  object-fit: cover; /* Ensure the image scales properly without stretching */
+}
+
+img.forkify {
+  height: 13em;
+  width: 22em;
+}
+
+img.forkify:hover {
+  cursor: pointer;
+  transform: scale(1.1);
 }
 
 .box-h3 {
   font-family: MyFont;
-  font-size: 1em;
+  font-size: 1.2em; /* Slightly increase the font size */
   color: #aea8a8;
   text-align: center;
-  -moz-user-select: none;
-  -moz-user-select: none;
-  -webkit-user-select: none;
   user-select: none;
+  margin: 1em; /* Remove margin to keep the title close to the image */
 }
 
 .tools {
@@ -219,7 +214,6 @@ a.nav-btn {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: auto;
-  width: 70%;
 }
 
 img.stack {
@@ -238,23 +232,30 @@ section.codeStack {
 
 section.credentials {
   display: flex;
-  justify-content: space-around;
+  /* flex-direction: column; */
+  justify-content: center;
+  gap: 8em;
 }
 
-a.credlink {
+h3 {
   color: #e48f7c;
-  text-decoration: none;
-  display: inline-block;
-  line-height: 2.5em;
-  font-family: MyFont2;
+  font-size: 2em;
+}
+
+article.extras {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  width: 40em;
+}
+
+.article-image {
+  height: 15em;
+  width: 15em;
 }
 
 .title {
-  -moz-user-select: none;
-  -moz-user-select: none;
-  -webkit-user-select: none;
   user-select: none;
-  letter-spacing: 0.05em;
   text-align: center;
   margin: 2em;
   color: #e48f7c;
