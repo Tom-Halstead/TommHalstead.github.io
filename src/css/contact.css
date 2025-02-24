@@ -41,7 +41,26 @@ nav {
   opacity: 85%;
   transition: 0.6s;
   padding: 1em;
-  min-height: 64px;
+  height: 64px;
+}
+
+.toggle-btn {
+  margin: 1em;
+  display: flex;
+  align-items: center;
+}
+
+#bars.fa-solid {
+  display: none;
+  color: #ffffff;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+.nav-link {
+  font-size: 1.4em;
+  user-select: none;
+  text-decoration: none;
 }
 
 nav ul {
@@ -69,61 +88,6 @@ nav ul li a:hover {
   color: #ffffff;
 }
 
-#bars.fa-solid {
-  color: #ffffff;
-  font-size: 1.8rem;
-  cursor: pointer;
-  visibility: hidden;
-}
-
-.nav-drop {
-  border-bottom: 1px ridge rgb(67, 63, 63);
-}
-
-nav > div > i {
-  visibility: hidden;
-}
-
-#bars.fa-solid {
-  color: #ffffff;
-  font-size: 1.8rem;
-  cursor: pointer;
-}
-
-header ul li a {
-  width: -moz-fit-content;
-  width: fit-content;
-  font-family: MyFont;
-  font-size: 0.8em;
-  text-decoration: none;
-  color: #989595;
-  font-weight: 500;
-  transition: 0.25s ease;
-}
-header ul li a:hover {
-  color: #ffffff;
-}
-
-.dropdown-menu {
-  display: none;
-  border-radius: 1em 1em 1em 1em;
-  opacity: 90%;
-  position: absolute;
-  top: 5rem;
-  right: 1rem;
-  width: 15rem;
-  overflow: hidden;
-  transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  background: rgba(0, 0, 0, 0.7);
-  z-index: 100;
-}
-
-.toggle-btn {
-  display: none;
-  width: 0.5em;
-  margin-right: 4.2em;
-}
-
 .dropdown-menu li {
   display: flex;
   align-items: center;
@@ -131,13 +95,37 @@ header ul li a:hover {
   justify-content: center;
 }
 
+.dropdown-container {
+  display: flex;
+  justify-content: flex-end; /* Pushes dropdown to the right */
+  position: absolute;
+  top: 4.5rem;
+  width: 100%; /* Ensures the flex container spans the full width */
+}
+
+.dropdown-menu {
+  display: none;
+  width: 15em;
+  position: relative;
+  top: -1em;
+  right: em;
+  border-radius: 1em 0 0 1em; /* Rounded corners on the left */
+  opacity: 90%;
+  background: rgba(0, 0, 0, 0.7);
+  overflow: hidden;
+  transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
 .dropdown-menu.open {
-  height: 21rem;
-  display: block;
+  user-select: none;
+  display: flex;
+  flex-direction: column;
+  height: auto;
   -webkit-backdrop-filter: blur(30px);
   backdrop-filter: blur(30px);
   border: 2px solid #716e6e;
 }
+
 .dropdown-menu.open:hover {
   color: #ffffff;
 }
@@ -229,97 +217,67 @@ p.copyright {
   border-bottom: 2px solid #bc8787;
 }
 @media only screen and (max-width: 1050px) {
-  nav ul {
-    gap: 6rem;
-  }
-  .nav-link {
-    font-size: 1.5em;
-  }
-  .copyright {
-    font-size: 0.8em;
-    position: absolute;
-    right: 5.5em;
-    top: 2.4em;
-  }
-  #social-fb {
-    font-size: 2.5em;
-  }
-  #social-tw {
-    font-size: 2.5em;
-  }
-  #social-gh {
-    font-size: 2.5em;
-  }
-  #social-li {
-    font-size: 2.5em;
-  }
-  span.seperator {
-    bottom: 0.25em;
-    font-size: 1.7em;
-  }
 }
 @media only screen and (max-width: 768px) {
-  nav ul {
-    margin-left: 3em;
-    gap: 4em;
+  footer {
+    height: auto;
+    padding: 0.5em;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
-  .nav-link {
-    font-size: 0.9em;
+
+  .footer-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
-  a.logo {
-    font-size: 1.4em;
+
+  .social-box {
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0.2em;
   }
-  #social-fb {
-    font-size: 2em;
+
+  a.social-link {
+    padding: 5px;
   }
-  #social-tw {
-    font-size: 2em;
+
+  p.copyright {
+    position: static;
+    transform: none;
+    font-size: 0.8em;
+    text-align: center;
   }
-  #social-gh {
-    font-size: 2em;
-  }
-  #social-li {
-    font-size: 2em;
-  }
-  .copyright {
-    font-size: 0.5em;
-    top: 3em;
-    right: 3em;
-  }
-  span.seperator {
-    font-size: 1.4em;
+  div.footer-container {
+    min-height: fit-content;
   }
 }
 @media only screen and (max-width: 576px) {
+  .credentials {
+    flex-direction: column;
+  }
+
   #bars.fa-solid {
     color: #ffffff;
     position: absolute;
     right: 0.8em;
     font-size: 1.8rem;
     cursor: pointer;
-    visibility: visible;
+    display: flex;
   }
   .nav-link {
     display: none;
   }
-  footer#lab_social_icon_footer {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
   .dropdown-menu {
-    left: 1.2rem;
-    width: unset;
+    right: 2em;
+    width: 90vw;
     align-items: center;
     display: none;
   }
-  .copyright {
-    top: 9em;
+
+  p.copyright {
     font-size: 0.6em;
-    position: sticky;
-  }
-  span.seperator {
-    bottom: 0.2em;
-    font-size: 1.3em;
   }
 }
