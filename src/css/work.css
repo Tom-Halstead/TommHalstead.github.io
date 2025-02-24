@@ -17,6 +17,9 @@
   box-sizing: border-box;
 }
 
+html {
+  height: 100%;
+}
 body {
   margin: 0;
   padding: 0;
@@ -24,6 +27,8 @@ body {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+  height: 100%;
+  width: 100vw;
 }
 
 header {
@@ -161,6 +166,11 @@ a.nav-btn {
   color: #0077b5;
 }
 
+.title {
+  height: 1.5em;
+  font-size: clamp(1.5rem, 2vw + 1rem, 3rem);
+}
+
 .project-section {
   display: flex;
   justify-content: space-around;
@@ -169,28 +179,25 @@ a.nav-btn {
   min-height: fit-content;
   min-width: fit-content;
   margin-bottom: 7em;
+  flex-wrap: wrap;
 }
 
 .box {
   display: flex;
-  flex-direction: column; /* Stack the content vertically */
-  justify-content: center; /* Center align the content */
-  align-items: center; /* Horizontally center content */
-  text-align: center; /* Ensure text is centered */
-  gap: 1em; /* Add space between the title and image */
-}
-
-.forkify {
-  border: 2px solid rgb(122, 118, 118);
-  border-radius: 20%;
-  max-width: 100%; /* Ensure the image doesn't exceed the box width */
-  height: 200px; /* Set a fixed height for the images */
-  object-fit: cover; /* Ensure the image scales properly without stretching */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 1em;
+  width: 25em;
+  height: auto;
 }
 
 img.forkify {
-  height: 13em;
-  width: 22em;
+  border: 2px solid rgb(122, 118, 118);
+  border-radius: 20%;
+  height: 13rem;
+  width: 22rem;
 }
 
 img.forkify:hover {
@@ -200,11 +207,11 @@ img.forkify:hover {
 
 .box-h3 {
   font-family: MyFont;
-  font-size: 1.2em; /* Slightly increase the font size */
-  color: #aea8a8;
+  font-size: 1.2em;
+  color: white;
   text-align: center;
   user-select: none;
-  margin: 1em; /* Remove margin to keep the title close to the image */
+  margin: 1em;
 }
 
 .tools {
@@ -214,8 +221,8 @@ img.forkify:hover {
 }
 
 img.stack {
-  height: 45px;
-  width: 45px;
+  width: 3em;
+  height: auto;
 }
 img.stack:hover {
   transform: scale(1.15);
@@ -226,29 +233,34 @@ section.codeStack {
   display: flex;
 }
 
-section.credentials {
+.credentials {
+  justify-self: center;
   display: flex;
-  /* flex-direction: column; */
   justify-content: center;
-  gap: 8em;
   margin-bottom: 5em;
+  height: 100%;
 }
 
 h3 {
   color: #e48f7c;
   font-size: 2em;
 }
-
-article.extras {
+.extras {
+  width: 100%;
   text-align: center;
   display: flex;
   flex-direction: column;
-  width: 40em;
 }
 
 .article-image {
-  height: 15em;
-  width: 15em;
+  object-fit: contain;
+  width: 35rem;
+  max-width: 100%;
+  margin-bottom: 3em;
+  border: 2px rgb(145, 43, 147) solid;
+}
+.article-image:hover {
+  transform: scale(1.05);
 }
 
 .title {
@@ -273,15 +285,13 @@ section > ul > li {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 1.5em;
-  min-height: 100px;
-  min-width: 100px;
+  gap: 0.8em;
+  height: 5em;
+  margin: 1em;
+  width: 5em;
   font-family: MyFont;
   color: white;
   list-style: none;
-  -moz-user-select: none;
-  -moz-user-select: none;
-  -webkit-user-select: none;
   user-select: none;
 }
 
@@ -311,6 +321,7 @@ a.social-link {
   display: flex;
   align-items: center; /* Vertically center items */
   height: 100%;
+  width: 100%;
 }
 
 .social-box {

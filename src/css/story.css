@@ -149,19 +149,20 @@ a.nav-menu:hover {
 }
 
 .container {
+  width: 100%;
   margin-top: 7em;
   margin-bottom: 7em;
   margin-left: auto;
   margin-right: auto;
   display: flex;
   justify-content: center;
-  gap: 5em;
+  gap: 4em;
 }
 
 div.max-width {
   display: flex;
   flex-direction: column;
-  width: 700px;
+  width: 50em;
 }
 
 ::-moz-selection {
@@ -173,26 +174,30 @@ div.max-width {
 }
 
 section.hexagon-gallery {
+  height: 100vh;
   display: flex;
   flex-direction: column;
   user-select: none;
   justify-content: center;
+  width: auto;
 }
 
-.hexagon-gallery .hexagon {
+.hexagon {
   user-select: none;
   display: flex;
   justify-content: center;
   gap: 1em;
-  margin: -1.2em 0;
-  filter: drop-shadow(20px 20px 40px);
+  margin: -1.4em 0;
+  filter: drop-shadow(20px 20px 20px);
 }
 
-.hexagon-gallery .hexagon .hex {
+.hex {
+  padding: 0;
+  margin: 0;
   justify-content: center;
   user-select: none;
-  height: 14em;
-  width: 14em;
+  height: auto;
+  width: 14rem;
   display: flex;
   -webkit-clip-path: polygon(
     50% 0%,
@@ -204,18 +209,26 @@ section.hexagon-gallery {
   );
   clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
 }
-.hexagon-gallery .hexagon .hex:hover {
+
+.hex:hover {
   cursor: pointer;
   transform: scale(1.1);
   z-index: 101;
 }
 
-.hexagon-gallery .hexagon:nth-child(1) {
-  top: 0;
+.collage {
+  display: block;
+  height: auto;
+  /* width: 15rem; */
+  height: 100%;
+  width: 100%;
 }
 
-.hexagon-gallery .hexagon:nth-child(3) {
-  bottom: 0;
+#selfie {
+  height: auto;
+  /* width: 14rem; */
+  height: 100%;
+  width: 100%;
 }
 
 /* Modal overlay styling */
@@ -303,14 +316,6 @@ p {
   color: #0077b5;
 }
 
-#social-gh:hover {
-  color: #333;
-}
-
-#social-li:hover {
-  color: #0077b5;
-}
-
 footer {
   position: fixed;
   bottom: 0;
@@ -367,63 +372,19 @@ p.copyright {
 }
 
 @media only screen and (max-width: 1050px) {
-  section.hexagon-gallery {
-    align-self: center;
-    height: 425px;
-    width: 475px;
+  .container {
+    margin-top: 1em;
+    display: flex;
+    flex-direction: column;
   }
-  .hexagon-gallery .hexagon .hex {
-    justify-content: center;
-    width: 9.34em;
-    height: 10.4em;
-    margin: -0.17em;
-  }
+
   div.max-width {
     align-self: center;
-    width: 550px;
-  }
-  h3 {
-    overflow: hidden;
-    font-size: 1.1em;
-  }
-  p#p1 {
-    overflow: hidden;
-    font-size: 1.1em;
-  }
-  p#p2 {
-    overflow: hidden;
-    font-size: 1.1em;
-  }
-  p#p3 {
-    overflow: hidden;
-    font-size: 1.1em;
-  }
-  nav ul {
-    gap: 6rem;
-  }
-  .nav-link {
-    font-size: 1.5em;
-  }
-  .copyright {
-    font-size: 0.7em;
-    left: 15em;
+    /* flex-direction: row; */
+    width: 100%;
   }
 }
 @media only screen and (max-width: 768px) {
-  section.hexagon-gallery {
-    align-self: center;
-    height: 350px;
-    width: 350px;
-  }
-  .hexagon-gallery .hexagon .hex {
-    justify-content: center;
-    width: 8em;
-    height: 8em;
-  }
-  div.max-width {
-    width: 450px;
-  }
-
   footer {
     height: auto;
     padding: 0.5em;
@@ -464,22 +425,6 @@ p.copyright {
     margin-top: 1em;
     display: flex;
     flex-direction: column;
-  }
-  .hexagon-gallery .hexagon .hex {
-    width: 7em;
-    height: 8.6em;
-    align-self: center;
-    justify-content: center;
-  }
-  section.hexagon-gallery {
-    align-self: center;
-    margin-bottom: 6em;
-    width: -moz-fit-content;
-    width: fit-content;
-    padding-left: 1em;
-    padding-right: 1em;
-    margin-left: 1em;
-    margin-right: 1em;
   }
 
   div.max-width {
