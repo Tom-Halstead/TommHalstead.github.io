@@ -208,16 +208,12 @@ img.forkify:hover {
 }
 
 .tools {
-  border-radius: 20%;
+  border-radius: 15%;
   background-color: rgba(0, 0, 0, 0.36);
-  margin-top: 3rem;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: auto;
+  margin-top: 3em;
 }
 
 img.stack {
-  filter: invert(1);
   height: 45px;
   width: 45px;
 }
@@ -235,6 +231,7 @@ section.credentials {
   /* flex-direction: column; */
   justify-content: center;
   gap: 8em;
+  margin-bottom: 5em;
 }
 
 h3 {
@@ -267,7 +264,7 @@ section > ul {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 4em;
+  gap: 3em;
   margin-bottom: 4em;
 }
 
