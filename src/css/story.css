@@ -355,14 +355,14 @@ a.social-link {
 p.copyright {
   position: absolute;
   left: 50%;
-  transform: translateX(-50%); /* Perfect horizontal centering */
+  transform: translateX(-50%);
   user-select: none;
   font-family: MyFont, sans-serif;
   color: #7d7d7d;
-  font-size: 1em;
+  font-size: clamp(0.55em, 1.2vw, 1em);
   opacity: 85%;
   text-align: center;
-  white-space: nowrap; /* Prevent text wrapping */
+  white-space: nowrap;
 }
 
 .nav-btn[aria-current="page"] {
@@ -413,7 +413,6 @@ p.copyright {
   p.copyright {
     position: static;
     transform: none;
-    font-size: 0.8em;
     text-align: center;
   }
   div.footer-container {

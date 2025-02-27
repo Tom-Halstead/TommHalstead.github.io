@@ -65,7 +65,7 @@ nav {
 
 nav ul {
   display: flex;
-  justify-content: space-evenly; /* Responsive and evenly spaced items */
+  justify-content: space-evenly;
   width: 100%;
   list-style: none;
 }
@@ -97,10 +97,10 @@ nav ul li a:hover {
 
 .dropdown-container {
   display: flex;
-  justify-content: flex-end; /* Pushes dropdown to the right */
+  justify-content: flex-end;
   position: absolute;
   top: 4.5rem;
-  width: 100%; /* Ensures the flex container spans the full width */
+  width: 100%;
 }
 
 .dropdown-menu {
@@ -109,7 +109,7 @@ nav ul li a:hover {
   position: relative;
   top: -1em;
   right: em;
-  border-radius: 1em 0 0 1em; /* Rounded corners on the left */
+  border-radius: 1em 0 0 1em;
   opacity: 90%;
   background: rgba(0, 0, 0, 0.7);
   overflow: hidden;
@@ -220,16 +220,16 @@ a.social-link {
 }
 
 .footer-container {
-  position: relative; /* Relative to position absolute children */
+  position: relative;
   display: flex;
-  align-items: center; /* Vertically center items */
+  align-items: center;
   height: 100%;
 }
 
 .social-box {
   display: flex;
   align-items: center;
-  padding-left: 1em; /* Space from left edge */
+  padding-left: 1em;
 }
 
 .social-link:hover {
@@ -240,14 +240,14 @@ a.social-link {
 p.copyright {
   position: absolute;
   left: 50%;
-  transform: translateX(-50%); /* Perfect horizontal centering */
+  transform: translateX(-50%);
   user-select: none;
   font-family: MyFont, sans-serif;
   color: #7d7d7d;
-  font-size: 1em;
+  font-size: clamp(0.55em, 1.2vw, 1em);
   opacity: 85%;
   text-align: center;
-  white-space: nowrap; /* Prevent text wrapping */
+  white-space: nowrap;
 }
 
 .nav-btn[aria-current="page"] {
@@ -285,7 +285,6 @@ p.copyright {
   p.copyright {
     position: static;
     transform: none;
-    font-size: 0.8em;
     text-align: center;
   }
   div.footer-container {
@@ -316,9 +315,5 @@ p.copyright {
     width: 90vw;
     align-items: center;
     display: none;
-  }
-
-  p.copyright {
-    font-size: 0.6em;
   }
 }

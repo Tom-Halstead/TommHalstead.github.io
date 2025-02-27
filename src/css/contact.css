@@ -204,7 +204,7 @@ p.copyright {
   user-select: none;
   font-family: MyFont, sans-serif;
   color: #7d7d7d;
-  font-size: 1em;
+  font-size: clamp(0.55em, 1.2vw, 1em);
   opacity: 85%;
   text-align: center;
   white-space: nowrap; /* Prevent text wrapping */
@@ -247,7 +247,6 @@ p.copyright {
   p.copyright {
     position: static;
     transform: none;
-    font-size: 0.8em;
     text-align: center;
   }
   div.footer-container {
@@ -275,9 +274,5 @@ p.copyright {
     width: 90vw;
     align-items: center;
     display: none;
-  }
-
-  p.copyright {
-    font-size: 0.6em;
   }
 }
