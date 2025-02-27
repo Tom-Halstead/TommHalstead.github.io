@@ -18,7 +18,7 @@
 }
 
 html {
-  height: 100%;
+  min-height: 100vh;
   width: 100%;
 }
 body {
@@ -28,7 +28,7 @@ body {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  height: 100%;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -36,7 +36,8 @@ body {
 
 main {
   flex-grow: 1;
-  min-height: 100%;
+  min-height: 100vh;
+  width: 100vw;
 }
 
 header {
@@ -55,6 +56,7 @@ nav {
   transition: 0.6s;
   padding: 1em;
   height: 64px;
+  width: 100%;
 }
 
 .toggle-btn {
@@ -78,7 +80,7 @@ nav {
 
 nav ul {
   display: flex;
-  justify-content: space-evenly; /* Responsive and evenly spaced items */
+  justify-content: space-evenly;
   width: 100%;
   list-style: none;
 }
@@ -91,7 +93,7 @@ nav ul {
 
 nav ul li a {
   font-family: MyFont;
-  font-size: 0.8em;
+  font-size: clamp(0.7em, 1vw + 0.3em, 0.8em);
   text-decoration: none;
   color: #989595;
   transition: 0.25s ease;
@@ -110,10 +112,10 @@ nav ul li a:hover {
 
 .dropdown-container {
   display: flex;
-  justify-content: flex-end; /* Pushes dropdown to the right */
+  justify-content: flex-end;
   position: absolute;
   top: 4.5rem;
-  width: 100%; /* Ensures the flex container spans the full width */
+  width: 100%;
 }
 
 .dropdown-menu {
@@ -122,7 +124,7 @@ nav ul li a:hover {
   position: relative;
   top: -1em;
   right: em;
-  border-radius: 1em 0 0 1em; /* Rounded corners on the left */
+  border-radius: 1em 0 0 1em;
   opacity: 90%;
   background: rgba(0, 0, 0, 0.7);
   overflow: hidden;
@@ -178,9 +180,7 @@ a.nav-btn {
   justify-content: space-around;
   border-radius: 20%;
   background-color: rgba(0, 0, 0, 0.35);
-  min-height: fit-content;
   min-width: fit-content;
-  margin-bottom: 7em;
 }
 
 .box {
@@ -195,22 +195,22 @@ a.nav-btn {
 }
 
 img.forkify {
-  width: 25em; /* Makes the image fill the parent container */
-  height: 15em; /* Keeps the aspect ratio intact */
+  width: 25em;
+  height: 15em;
   border: 2px solid rgb(122, 118, 118);
   border-radius: 20%;
-  object-fit: cover; /* Adjusts how the image fits within its container */
+  object-fit: cover;
   max-width: 100%;
 }
 
 img.forkify:hover {
   cursor: pointer;
-  transform: scale(1.05);
+  transform: scale(1.02);
 }
 
 .box-h3 {
   font-family: MyFont;
-  font-size: clamp(1rem, 1vw + 0.8rem, 1.6rem); /* Responsive font size */
+  font-size: clamp(1rem, 1vw + 0.8rem, 1.6rem);
   color: white;
   text-align: center;
   user-select: none;
@@ -233,32 +233,41 @@ section.codeStack {
   display: flex;
 }
 
+h3 {
+  margin: 1em 0 0.5em 0;
+  color: #e48f7c;
+  font-size: clamp(1.5rem, 2vw + 0.5rem, 2em);
+}
+
 .credentials {
-  justify-self: center;
   display: flex;
   justify-content: center;
-  height: fit-content;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 10em;
+  width: 90%;
+  margin: auto;
+  text-align: center;
 }
 
-h3 {
-  color: #e48f7c;
-  font-size: 2em;
-}
-.extras {
-  width: 100%;
-  text-align: center;
+#certs {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  width: 45%;
+  max-width: 500px;
 }
 
-.article-image {
-  object-fit: contain;
-  width: 35rem;
-  max-width: 100%;
+.certs-image {
+  display: block;
   border: 2px rgb(145, 43, 147) solid;
+  max-width: 100%;
+  height: auto;
+  margin-top: 0.5em;
 }
-.article-image:hover {
-  transform: scale(1.05);
+
+.certs-image:hover {
+  transform: scale(1.01);
 }
 
 .title {
@@ -298,13 +307,14 @@ section > ul > li {
 }
 
 footer {
-  position: fixed;
+  position: relative;
   bottom: 0;
   width: 100%;
   height: 4em;
   background-image: linear-gradient(rgb(0, 0, 0), rgb(42, 41, 41));
   color: #ffffff;
   box-sizing: border-box;
+  margin-top: 1em;
 }
 
 a.social-link {
@@ -315,9 +325,9 @@ a.social-link {
   transition: transform 0.3s ease;
 }
 .footer-container {
-  position: relative; /* Relative to position absolute children */
+  position: relative;
   display: flex;
-  align-items: center; /* Vertically center items */
+  align-items: center;
   height: 100%;
   width: 100%;
 }
@@ -325,7 +335,7 @@ a.social-link {
 .social-box {
   display: flex;
   align-items: center;
-  padding-left: 1em; /* Space from left edge */
+  padding-left: 1em;
 }
 
 .social-link:hover {
@@ -336,14 +346,14 @@ a.social-link {
 p.copyright {
   position: absolute;
   left: 50%;
-  transform: translateX(-50%); /* Perfect horizontal centering */
+  transform: translateX(-50%);
   user-select: none;
   font-family: MyFont, sans-serif;
   color: #7d7d7d;
   font-size: 1em;
   opacity: 85%;
   text-align: center;
-  white-space: nowrap; /* Prevent text wrapping */
+  white-space: nowrap;
 }
 
 .nav-btn[aria-current="page"] {
@@ -373,7 +383,20 @@ p.copyright {
 }
 
 @media only screen and (max-width: 768px) {
+  #resume {
+    /* justify-self: center; */
+    max-width: 90%;
+  }
+  #resume-image {
+    max-width: 70%;
+  }
+
+  .certs-image {
+    width: auto;
+  }
+
   footer {
+    margin-top: 7em;
     height: auto;
     padding: 0.5em;
     flex-direction: column;
@@ -414,10 +437,6 @@ p.copyright {
   }
 }
 @media only screen and (max-width: 576px) {
-  .credentials {
-    flex-direction: column;
-  }
-
   #bars.fa-solid {
     color: #ffffff;
     position: absolute;
