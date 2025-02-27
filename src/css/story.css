@@ -71,7 +71,7 @@ nav {
 
 nav ul {
   display: flex;
-  justify-content: space-evenly; /* Responsive and evenly spaced items */
+  justify-content: space-evenly;
   width: 100%;
   list-style: none;
 }
@@ -103,11 +103,11 @@ nav ul li a:hover {
 
 .dropdown-container {
   display: flex;
-  justify-content: flex-end; /* Pushes dropdown to the right */
+  justify-content: flex-end;
   position: absolute;
   top: 4.5rem;
-  width: 100%; /* Ensures the flex container spans the full width */
-  z-index: 1000; /* Keeps it above other content */
+  width: 100%;
+  z-index: 1000;
 }
 
 .dropdown-menu {
@@ -116,7 +116,7 @@ nav ul li a:hover {
   position: relative;
   top: -1em;
   right: em;
-  border-radius: 1em 0 0 1em; /* Rounded corners on the left */
+  border-radius: 1em 0 0 1em;
   opacity: 90%;
   background: rgba(0, 0, 0, 0.7);
   overflow: hidden;
@@ -173,94 +173,43 @@ div.max-width {
   background: #7c7474;
 }
 
-section.hexagon-gallery {
-  height: 100vh;
+.hexagon-gallery {
   display: flex;
   flex-direction: column;
-  user-select: none;
+  align-items: center;
   justify-content: center;
-  width: auto;
+  padding: 2em 0;
 }
 
 .hexagon {
-  user-select: none;
   display: flex;
   justify-content: center;
-  gap: 1em;
-  margin: -1.4em 0;
-  filter: drop-shadow(20px 20px 20px);
+  align-items: center;
+  gap: 0.6em; /* Reduce spacing between hexagons */
+  margin-top: -2.2em; /* Pull rows closer */
 }
 
 .hex {
-  padding: 0;
-  margin: 0;
-  justify-content: center;
-  user-select: none;
-  height: auto;
-  width: 14rem;
+  width: clamp(6rem, 12vw, 12rem); /* Responsive hex size */
+  aspect-ratio: 1; /* Keeps it square */
   display: flex;
-  -webkit-clip-path: polygon(
-    50% 0%,
-    100% 25%,
-    100% 75%,
-    50% 100%,
-    0% 75%,
-    0% 25%
-  );
+  justify-content: center;
+  align-items: center;
   clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  background: rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.hex img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  clip-path: inherit;
 }
 
 .hex:hover {
-  cursor: pointer;
-  transform: scale(1.1);
-  z-index: 101;
-}
-
-.collage {
-  display: block;
-  height: auto;
-  /* width: 15rem; */
-  height: 100%;
-  width: 100%;
-}
-
-#selfie {
-  height: auto;
-  /* width: 14rem; */
-  height: 100%;
-  width: 100%;
-}
-
-/* Modal overlay styling */
-#modalBox {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(255, 255, 255, 0.9); /* Light, semi-transparent background */
-  justify-content: center;
-  align-items: center;
-  z-index: 1000; /* Ensures it's on top */
-}
-
-/* Style the modal image */
-#modal-image {
-  max-width: 90%;
-  max-height: 90%;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-/* Optional: Style the close button */
-#modalBox .close {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  background: none;
-  border: none;
-  font-size: 2rem;
-  cursor: pointer;
+  transform: scale(1.05);
+  z-index: 10;
 }
 
 h3 {
@@ -317,7 +266,7 @@ p {
 }
 
 footer {
-  position: fixed;
+  position: relative;
   bottom: 0;
   width: 100%;
   height: 4em;
@@ -327,7 +276,7 @@ footer {
 }
 
 a.social-link {
-  font-size: 0.9em;
+  font-size: clamp(0.6em, 1vw, 0.83em);
   color: #989595;
   padding: 1em;
   opacity: 85%;
@@ -335,16 +284,16 @@ a.social-link {
 }
 
 .footer-container {
-  position: relative; /* Relative to position absolute children */
+  position: relative;
   display: flex;
-  align-items: center; /* Vertically center items */
+  align-items: center;
   height: 100%;
 }
 
 .social-box {
   display: flex;
   align-items: center;
-  padding-left: 1em; /* Space from left edge */
+  padding-left: 1em;
 }
 
 .social-link:hover {
@@ -380,8 +329,12 @@ p.copyright {
 
   div.max-width {
     align-self: center;
-    /* flex-direction: row; */
     width: 100%;
+  }
+
+  .hexagon {
+    gap: 0.6em;
+    margin-top: -1.5em;
   }
 }
 @media only screen and (max-width: 768px) {
@@ -418,6 +371,11 @@ p.copyright {
   div.footer-container {
     min-height: fit-content;
   }
+
+  .hexagon {
+    gap: 0.4em;
+    margin-top: -1.2em;
+  }
 }
 @media only screen and (max-width: 576px) {
   .container {
@@ -427,13 +385,10 @@ p.copyright {
   }
 
   div.max-width {
-    width: -moz-fit-content;
-    width: fit-content;
+    width: 100%;
     align-self: center;
-    padding-left: 1em;
-    padding-right: 1em;
-    margin-left: 1em;
-    margin-right: 1em;
+    margin-left: 2em;
+    margin-right: 2em;
   }
   #bars.fa-solid {
     color: #ffffff;
@@ -451,5 +406,15 @@ p.copyright {
     width: 90vw;
     align-items: center;
     display: none;
+  }
+
+  p {
+    line-height: 1.15em;
+    word-spacing: 0.1em;
+  }
+
+  .hexagon {
+    gap: 0.5em;
+    margin-top: -1em;
   }
 }

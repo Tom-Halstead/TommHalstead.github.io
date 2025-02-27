@@ -26,11 +26,13 @@ body {
   background-position: center;
   background-attachment: fixed;
 }
+
 header {
   position: relative;
   top: 0;
   width: 100%;
   height: 4em;
+  z-index: 100;
 }
 
 nav {
@@ -57,15 +59,9 @@ nav {
   cursor: pointer;
 }
 
-.nav-link {
-  font-size: 1.4em;
-  user-select: none;
-  text-decoration: none;
-}
-
 nav ul {
   display: flex;
-  justify-content: space-evenly; /* Responsive and evenly spaced items */
+  justify-content: space-evenly;
   width: 100%;
   list-style: none;
 }
@@ -97,10 +93,11 @@ nav ul li a:hover {
 
 .dropdown-container {
   display: flex;
-  justify-content: flex-end; /* Pushes dropdown to the right */
+  justify-content: flex-end;
   position: absolute;
   top: 4.5rem;
-  width: 100%; /* Ensures the flex container spans the full width */
+  width: 100%;
+  height: 10em;
 }
 
 .dropdown-menu {
@@ -109,7 +106,7 @@ nav ul li a:hover {
   position: relative;
   top: -1em;
   right: em;
-  border-radius: 1em 0 0 1em; /* Rounded corners on the left */
+  border-radius: 1em 0 0 1em;
   opacity: 90%;
   background: rgba(0, 0, 0, 0.7);
   overflow: hidden;
@@ -141,18 +138,6 @@ a.nav-menu:hover {
   color: #ffffff;
 }
 
-a.nav-btn {
-  padding: 0.5em;
-}
-
-#lab_social_icon_footer #social-gh:hover {
-  color: #333;
-}
-
-#lab_social_icon_footer #social-li:hover {
-  color: #0077b5;
-}
-
 #social-gh:hover {
   color: #333;
 }
@@ -172,7 +157,7 @@ footer {
 }
 
 a.social-link {
-  font-size: 0.9em;
+  font-size: clamp(0.6em, 1vw, 0.83em);
   color: #989595;
   padding: 1em;
   opacity: 85%;
@@ -216,8 +201,7 @@ p.copyright {
   font-weight: bold;
   border-bottom: 2px solid #bc8787;
 }
-@media only screen and (max-width: 1050px) {
-}
+
 @media only screen and (max-width: 768px) {
   footer {
     height: auto;
@@ -254,10 +238,6 @@ p.copyright {
   }
 }
 @media only screen and (max-width: 576px) {
-  .credentials {
-    flex-direction: column;
-  }
-
   #bars.fa-solid {
     color: #ffffff;
     position: absolute;

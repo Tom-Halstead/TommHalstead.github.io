@@ -323,7 +323,7 @@ footer {
 }
 
 a.social-link {
-  font-size: 0.9em;
+  font-size: clamp(0.6em, 1vw, 0.83em);
   color: #989595;
   padding: 1em;
   opacity: 85%;
@@ -420,5 +420,9 @@ p.copyright {
     width: 90vw;
     align-items: center;
     display: none;
+  }
+
+  .credentials {
+    gap: 2em;
   }
 }
