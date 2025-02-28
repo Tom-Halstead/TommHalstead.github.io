@@ -98,6 +98,5 @@ window.addEventListener("DOMContentLoaded", () => {
   if (page === "story.html") {
     document.querySelector("section")?.addEventListener("click", modalWindow);
   }
-
   document.addEventListener("click", closeModal);
 });

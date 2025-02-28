@@ -68,6 +68,7 @@ nav {
 }
 
 #bars.fa-solid {
+  user-select: none;
   display: none;
   color: #ffffff;
   font-size: 1.8rem;
@@ -75,7 +76,7 @@ nav {
 }
 
 .nav-link {
-  font-size: 1.4em;
+  font-size: clamp(1em, 1.5vw, 1.4em);
   user-select: none;
   text-decoration: none;
 }
@@ -88,7 +89,7 @@ nav ul {
 }
 
 .nav-link {
-  font-size: 1.4em;
+  font-size: clamp(1em, 1.5vw, 1.4em);
   user-select: none;
   text-decoration: none;
 }
@@ -125,7 +126,6 @@ nav ul li a:hover {
   width: 15em;
   position: relative;
   top: -1em;
-  right: em;
   border-radius: 1em 0 0 1em;
   opacity: 90%;
   background: rgba(0, 0, 0, 0.7);
@@ -151,7 +151,7 @@ a.nav-menu {
   font-family: MyFont;
   color: #989595;
   list-style: none;
-  font-size: 1.7rem;
+  font-size: clamp(1.2rem, 1.5vw, 1.7rem);
   text-decoration: none;
 }
 a.nav-menu:hover {
@@ -162,17 +162,12 @@ a.nav-btn {
   padding: 0.5em;
 }
 
-#lab_social_icon_footer #social-gh:hover {
+#social-gh:hover {
   color: #333;
 }
 
-#lab_social_icon_footer #social-li:hover {
+#social-li:hover {
   color: #0077b5;
-}
-
-.title {
-  height: 1.5em;
-  font-size: clamp(1.5rem, 2vw + 1rem, 3rem);
 }
 
 .project-section {
@@ -241,6 +236,7 @@ h3 {
   margin: 1em 0 0.5em 0;
   color: #e48f7c;
   font-size: clamp(1.5rem, 2vw + 0.5rem, 2em);
+  font-family: MyFont2;
 }
 
 .credentials {
@@ -279,7 +275,7 @@ h3 {
   text-align: center;
   margin: 2em;
   color: #e48f7c;
-  font-size: 2em;
+  font-size: clamp(1.5em, 2vw, 2.5em);
   font-family: MyFont2;
 }
 
@@ -297,9 +293,7 @@ section > ul > li {
   align-items: center;
   justify-content: center;
   gap: 0.8em;
-  height: 5em;
   margin: 1em;
-  width: 5em;
   font-family: MyFont;
   color: white;
   list-style: none;
@@ -363,7 +357,7 @@ p.copyright {
 
 .nav-btn[aria-current="page"] {
   color: #ffffff;
-  font-size: 0.9em;
+  font-size: clamp(0.8em, 1vw, 0.9em);
   font-weight: bold;
 }
 
