@@ -441,4 +441,8 @@ p.copyright {
     gap: 0.5em;
     margin-top: -1em;
   }
+  div.social-box {
+    padding: 0;
+    margin: 0;
+  }
 }

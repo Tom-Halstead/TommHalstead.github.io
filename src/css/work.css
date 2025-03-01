@@ -441,4 +441,8 @@ p.copyright {
   .credentials {
     gap: 2em;
   }
+  div.social-box {
+    padding: 0;
+    margin: 0;
+  }
 }

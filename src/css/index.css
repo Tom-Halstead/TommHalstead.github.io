@@ -323,4 +323,9 @@ p.copyright {
     align-items: center;
     display: none;
   }
+
+  div.social-box {
+    padding: 0;
+    margin: 0;
+  }
 }
