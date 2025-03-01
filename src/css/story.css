@@ -319,7 +319,7 @@ h3 > span:hover {
   filter: blur(2px);
 }
 
-p {
+div.max-width > p {
   text-indent: 7%;
   letter-spacing: 0.015em;
   line-height: 1.3em;
@@ -481,7 +481,7 @@ p.copyright {
     display: none;
   }
 
-  p {
+  div.max-width > p {
     line-height: 1.15em;
     word-spacing: 0.1em;
   }
