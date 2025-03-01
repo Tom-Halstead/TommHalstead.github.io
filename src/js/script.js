@@ -1,5 +1,7 @@
 "use strict";
 
+import "animate.css";
+
 /**
  * Utility function to get the current page name.
  */
