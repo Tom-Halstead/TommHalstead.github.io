@@ -1,4 +1,3 @@
-```markdown
 # 🚀 Thomas Halstead | Personal Portfolio
 
 Welcome to my **personal portfolio**, built from scratch using **HTML, CSS, and JavaScript**. Although my primary focus is on **back-end development**, this front-end portfolio showcases some of my work and projects.
@@ -97,4 +96,7 @@ An application designed to help users track their expenses and manage their budg
 
 💻 **Thank you for visiting my portfolio!**  
 ✨ I’m always learning, improving, and open to exciting opportunities in back-end development.
+
+```
+
 ```
