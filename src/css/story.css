@@ -211,13 +211,13 @@ div.max-width {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 0.6em; /* Reduce spacing between hexagons */
-  margin-top: -2.2em; /* Pull rows closer */
+  gap: 0.6em;
+  margin-top: -2.2em;
 }
 
 .hex {
-  width: clamp(6rem, 12vw, 12rem); /* Responsive hex size */
-  aspect-ratio: 1; /* Keeps it square */
+  width: clamp(6rem, 12vw, 12rem);
+  aspect-ratio: 1;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -256,13 +256,11 @@ div.max-width {
   transition: opacity 0.3s ease-in-out;
 }
 
-/* When active, make it visible */
 .modal.show {
   display: flex;
   opacity: 1;
 }
 
-/* Fullsize image inside modal */
 .modal-content {
   width: auto;
   height: 55vh;
@@ -271,7 +269,6 @@ div.max-width {
   object-fit: contain;
 }
 
-/* Close button */
 .close {
   position: absolute;
   top: 3em;

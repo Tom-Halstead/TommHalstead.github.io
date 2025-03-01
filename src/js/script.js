@@ -81,19 +81,17 @@ window.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll(".collage").forEach((img) => {
       img.addEventListener("click", function () {
         console.log("clicked");
-        modalImg.src = this.src; // Corrected to use 'this' instead of 'img'
-        modal.style.display = "flex"; // Ensure modal is shown
-        setTimeout(() => modal.classList.add("show"), 10); // Smooth fade-in effect
+        modalImg.src = this.src;
+        modal.style.display = "flex";
+        setTimeout(() => modal.classList.add("show"), 10);
       });
     });
 
-    // Close modal when clicking the close button
     closeBtn.addEventListener("click", () => {
       modal.classList.remove("show");
-      setTimeout(() => (modal.style.display = "none"), 300); // Delay hiding for fade-out
+      setTimeout(() => (modal.style.display = "none"), 300);
     });
 
-    // Close modal when clicking outside the image
     modal.addEventListener("click", (e) => {
       if (e.target === modal) {
         modal.classList.remove("show");
