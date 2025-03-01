@@ -184,6 +184,7 @@ a.nav-btn {
   justify-content: space-around;
   border-radius: 20%;
   background-color: rgba(0, 0, 0, 0.35);
+
   min-width: fit-content;
   gap: 1em;
   margin: 1em;
@@ -227,6 +228,11 @@ img.forkify:hover {
 .tools {
   border-radius: 15%;
   background-color: rgba(0, 0, 0, 0.36);
+  mask-image: radial-gradient(
+    circle,
+    rgba(0, 0, 0, 1) 50%,
+    rgba(0, 0, 0, 0) 180%
+  );
   margin-top: 3em;
 }
 
@@ -257,6 +263,12 @@ h3 {
   width: 90%;
   margin: auto;
   text-align: center;
+  background-color: rgba(0, 0, 0, 0.36);
+  mask-image: radial-gradient(
+    circle,
+    rgba(0, 0, 0, 1) 50%,
+    rgba(0, 0, 0, 0) 180%
+  );
 }
 
 #certs {

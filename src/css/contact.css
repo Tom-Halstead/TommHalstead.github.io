@@ -156,6 +156,11 @@ a.nav-menu:hover {
     rgba(255, 255, 255, 0.09) 50%,
     rgba(0, 0, 0, 0) 100%
   );
+  mask-image: radial-gradient(
+    circle,
+    rgba(0, 0, 0, 1) 50%,
+    rgba(0, 0, 0, 0) 120%
+  );
   border-radius: 10%;
   color: rgb(220, 220, 220);
   margin: 3em auto;
