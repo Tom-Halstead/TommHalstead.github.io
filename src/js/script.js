@@ -101,4 +101,17 @@ window.addEventListener("DOMContentLoaded", () => {
       }
     });
   }
+  if (page === "work.html") {
+    const header = document.getElementById("header");
+    const headerHeight = header.offsetHeight;
+    const triggerPoint = headerHeight * 5;
+
+    window.addEventListener("scroll", () => {
+      if (window.scrollY >= triggerPoint) {
+        header.classList.add("header-fixed");
+      } else {
+        header.classList.remove("header-fixed");
+      }
+    });
+  }
 });
