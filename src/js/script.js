@@ -64,7 +64,39 @@ const setupDropdown = () => {
  * Initialize everything after the DOM loads.
  */
 window.addEventListener("DOMContentLoaded", () => {
+  const page = getPageName();
+
   // Initialize navigation highlights and dropdown functionality
   navHighlights();
   setupDropdown();
+
+  if (page === "story.html") {
+    const modal = document.getElementById("image-modal");
+    const modalImg = document.getElementById("modal-img");
+    const closeBtn = document.querySelector(".close");
+
+    // Attach event listeners to images with class "collage"
+    document.querySelectorAll(".collage").forEach((img) => {
+      img.addEventListener("click", function () {
+        console.log("clicked");
+        modalImg.src = this.src; // Corrected to use 'this' instead of 'img'
+        modal.style.display = "flex"; // Ensure modal is shown
+        setTimeout(() => modal.classList.add("show"), 10); // Smooth fade-in effect
+      });
+    });
+
+    // Close modal when clicking the close button
+    closeBtn.addEventListener("click", () => {
+      modal.classList.remove("show");
+      setTimeout(() => (modal.style.display = "none"), 300); // Delay hiding for fade-out
+    });
+
+    // Close modal when clicking outside the image
+    modal.addEventListener("click", (e) => {
+      if (e.target === modal) {
+        modal.classList.remove("show");
+        setTimeout(() => (modal.style.display = "none"), 300);
+      }
+    });
+  }
 });

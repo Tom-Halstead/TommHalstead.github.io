@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../css/story.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
     <script defer src="../js/script.js" type="module"></script>
     <script
       defer
@@ -96,10 +100,17 @@
           data-driven impacts through technology.
         </p>
       </div>
+
+      <div id="image-modal" class="modal">
+        <span class="close"><i class="fa-solid fa-x fa-beat"></i></span>
+        <img class="modal-content" id="modal-img" draggable="false" />
+      </div>
+
       <section class="hexagon-gallery">
         <div class="hexagon">
           <div class="hex">
             <img
+              draggable="false"
               src="../images/Construction pic.jpg"
               class="collage"
               loading="lazy"
@@ -108,6 +119,7 @@
           </div>
           <div class="hex">
             <img
+              draggable="false"
               src="../images/Baby pic.jpg"
               class="collage"
               loading="lazy"
@@ -119,6 +131,7 @@
         <div class="hexagon">
           <div class="hex">
             <img
+              draggable="false"
               src="../images/Snowmobile Hunting.jpg"
               class="collage"
               loading="lazy"
@@ -127,14 +140,17 @@
           </div>
           <div class="hex">
             <img
-              src="../images/selfie.png"
+              draggable="false"
+              src="../images/2025-selfie.png"
               id="selfie"
+              class="collage"
               loading="lazy"
               alt="Current day"
             />
           </div>
           <div class="hex">
             <img
+              draggable="false"
               src="../images/Baseball-pic.jpg"
               class="collage"
               loading="lazy"
@@ -146,6 +162,7 @@
         <div class="hexagon">
           <div class="hex">
             <img
+              draggable="false"
               src="../images/Skiing.jpg"
               class="collage"
               loading="lazy"
@@ -154,6 +171,7 @@
           </div>
           <div class="hex">
             <img
+              draggable="false"
               src="../images/Fishing pic.png"
               class="collage"
               loading="lazy"
