@@ -148,6 +148,7 @@ nav ul li a:hover {
   -webkit-backdrop-filter: blur(30px);
   backdrop-filter: blur(30px);
   border: 2px solid #716e6e;
+  z-index: 1000;
 }
 
 .dropdown-menu.open:hover {
