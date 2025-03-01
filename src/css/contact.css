@@ -10,6 +10,13 @@
   font-weight: normal;
   src: url("../fonts/Stellar-light.woff");
 }
+
+@font-face {
+  font-family: "StoryFont";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/ChakraPetch-Medium.ttf");
+}
 * {
   margin: 0;
   padding: 0;
@@ -143,28 +150,103 @@ a.nav-menu:hover {
 }
 
 #contact {
-  margin: 3em auto 0em auto;
-  justify-self: center;
-  align-items: center;
-  display: flex;
-  flex-direction: column;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.1) 0%,
+    rgba(255, 255, 255, 0.09) 50%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  border-radius: 10%;
+  color: rgb(220, 220, 220);
+  margin: 3em auto;
+  padding: 3em;
+  max-width: 60%;
   text-align: center;
-  width: 90%;
-  gap: 1em;
-  height: auto;
 }
 
 h2 {
-  font-size: 3em;
-  color: white;
+  font-family: MyFont;
+  margin: 0.5em;
+  color: rgb(220, 220, 220);
+  font-size: clamp(2rem, 5vw, 3.25rem);
+  font-weight: bold;
 }
 
 p {
-  color: white;
+  font-family: MyFont2;
+  justify-self: center;
+  margin: 1em;
+  color: rgb(220, 220, 220);
+  font-size: clamp(1rem, 2vw, 1.5rem);
+  line-height: 1.8;
+  max-width: 700px;
 }
 
-#emailText {
+.email-box {
+  justify-self: center;
+  padding: clamp(0.8em, 2vw, 1.2em) clamp(1.5em, 3vw, 2em);
+  border-radius: 8px;
+  font-size: clamp(1rem, 2vw, 1.3rem);
+  display: flex;
+  margin: 1.2em;
+  align-items: center;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+#contact-link {
+  font-size: 1.5rem;
+  font-family: MyFont2;
+  text-decoration: none;
+  color: rgb(220, 220, 220);
+  align-items: center;
+  text-align: center;
+}
+
+#contact-link:hover {
+  text-decoration: underline;
+}
+
+.contact-icon {
+  border-radius: 5px;
+  padding: 2px;
+  width: 1em;
+  margin-right: 0.3em;
+}
+
+.socials {
+  display: flex;
+  justify-content: center;
+  gap: clamp(1em, 2vw, 1.5em);
+  margin-top: 2em;
+}
+
+.socials a {
+  font-family: StoryFont;
+  align-self: center;
+  font-size: clamp(1.2rem, 3vw, 1.5rem);
+  text-decoration: none;
   color: white;
+  transition: transform 0.2s ease-in-out;
+}
+
+p {
+  font-style: italic;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#contact {
+  animation: fadeIn 1s ease-in-out;
 }
 
 #social-gh:hover {
@@ -282,5 +364,9 @@ p.copyright {
     width: 90vw;
     align-items: center;
     display: none;
+  }
+
+  #contact {
+    min-height: fit-content;
   }
 }

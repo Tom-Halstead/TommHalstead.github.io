@@ -59,44 +59,10 @@ const setupDropdown = () => {
 };
 
 /**
- * Handles modal window functionality (uses display instead of visibility).
- */
-const modalWindow = (e) => {
-  const img = e.target.closest("img");
-  const modal = document.getElementById("modalBox");
-  const modalImage = document.getElementById("modal-image");
-
-  if (img && modal && modalImage) {
-    modal.style.display = "flex"; // Show modal using flex
-    modalImage.src = img.src;
-  }
-};
-
-/**
- * Closes the modal window (uses display instead of visibility).
- */
-const closeModal = (e) => {
-  const modal = document.getElementById("modalBox");
-  const exitButton = document.querySelector(".close");
-
-  if (modal && (e.target === modal || e.target === exitButton)) {
-    modal.style.display = "none"; // Hide modal
-  }
-};
-
-/**
  * Initialize everything after the DOM loads.
  */
 window.addEventListener("DOMContentLoaded", () => {
   // Initialize navigation highlights and dropdown functionality
   navHighlights();
   setupDropdown();
-
-  const page = getPageName();
-
-  // For story.html, attach the modal event listener to the section
-  if (page === "story.html") {
-    document.querySelector("section")?.addEventListener("click", modalWindow);
-  }
-  document.addEventListener("click", closeModal);
 });

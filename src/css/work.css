@@ -10,6 +10,13 @@
   font-weight: normal;
   src: url("../fonts/Stellar-light.woff");
 }
+
+@font-face {
+  font-family: "StoryFont";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/ChakraPetch-Medium.ttf");
+}
 * {
   margin: 0;
   padding: 0;
@@ -208,9 +215,10 @@ img.forkify:hover {
 }
 
 .box-h3 {
-  font-family: MyFont;
+  height: auto;
+  font-family: StoryFont;
   font-size: clamp(1rem, 1vw + 0.8rem, 1.6rem);
-  color: white;
+  color: rgb(255, 255, 255);
   text-align: center;
   user-select: none;
   margin: 1em;
@@ -233,10 +241,11 @@ section.codeStack {
 }
 
 h3 {
+  height: 1.5em;
   margin: 1em 0 0.5em 0;
-  color: #e48f7c;
+  color: rgb(220, 220, 220);
   font-size: clamp(1.5rem, 2vw + 0.5rem, 2em);
-  font-family: MyFont2;
+  font-family: MyFont;
 }
 
 .credentials {
@@ -274,9 +283,9 @@ h3 {
   user-select: none;
   text-align: center;
   margin: 2em;
-  color: #e48f7c;
+  color: rgb(220, 220, 220);
   font-size: clamp(1.5em, 2vw, 2.5em);
-  font-family: MyFont2;
+  font-family: MyFont;
 }
 
 section > ul {
@@ -294,7 +303,7 @@ section > ul > li {
   justify-content: center;
   gap: 0.8em;
   margin: 1em;
-  font-family: MyFont;
+  font-family: StoryFont;
   color: white;
   list-style: none;
   user-select: none;
