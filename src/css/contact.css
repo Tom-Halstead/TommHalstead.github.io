@@ -235,7 +235,7 @@ p {
   transition: transform 0.2s ease-in-out;
 }
 
-p {
+#contact > p {
   font-style: italic;
 }
 
