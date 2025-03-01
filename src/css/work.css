@@ -202,18 +202,19 @@ a.nav-btn {
   height: auto;
 }
 
-img.forkify {
+img.projects {
   width: 25em;
   height: 15em;
   border: 2px solid rgb(122, 118, 118);
-  border-radius: 20%;
+  border-radius: 25px;
   object-fit: cover;
   max-width: 100%;
 }
 
-img.forkify:hover {
+img.projects:hover {
   cursor: pointer;
   transform: scale(1.02);
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
 }
 
 .box-h3 {
@@ -286,6 +287,7 @@ h3 {
   max-width: 100%;
   height: auto;
   margin-top: 0.5em;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
 }
 
 .certs-image:hover {

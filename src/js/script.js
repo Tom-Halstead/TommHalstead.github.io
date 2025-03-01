@@ -75,6 +75,8 @@ window.addEventListener("DOMContentLoaded", () => {
     const modalImg = document.getElementById("modal-img");
     const closeBtn = document.querySelector(".close");
 
+    modal.style.display = "none";
+
     // Attach event listeners to images with class "collage"
     document.querySelectorAll(".collage").forEach((img) => {
       img.addEventListener("click", function () {

@@ -240,7 +240,6 @@ div.max-width {
   cursor: pointer;
 }
 
-/* Modal is hidden by default */
 .modal {
   display: none;
   position: fixed;
