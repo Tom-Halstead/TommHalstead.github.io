@@ -257,6 +257,15 @@ p.copyright {
   white-space: nowrap;
 }
 
+#date {
+  font-family: MyFont;
+}
+
+.copy {
+  font-family: MyFont;
+  font-size: 1.5em;
+}
+
 .nav-btn[aria-current="page"] {
   color: #ffffff;
   font-size: clamp(0.8em, 1vw, 0.9em);

@@ -163,17 +163,17 @@ a.nav-menu:hover {
   );
   border-radius: 10%;
   color: rgb(220, 220, 220);
-  margin: 5em auto;
+  margin: 8em auto;
   padding: 3em;
   text-align: center;
-  width: 75%;
+  width: 85%;
 }
 
 h2 {
   font-family: MyFont;
   margin: 0.5em;
   color: rgb(220, 220, 220);
-  font-size: clamp(2rem, 5vw, 3.25rem);
+  font-size: clamp(2rem, 5.5vw, 4rem);
   font-weight: bold;
 }
 
@@ -182,16 +182,16 @@ p {
   justify-self: center;
   margin: 1em;
   color: rgb(220, 220, 220);
-  font-size: clamp(1rem, 2vw, 1.5rem);
+  font-size: clamp(1rem, 3vw, 2rem);
   line-height: 1.8;
-  max-width: 700px;
+  max-width: 65%;
 }
 
 .email-box {
   justify-self: center;
   padding: clamp(0.8em, 2vw, 1.2em) clamp(1.5em, 3vw, 2em);
   border-radius: 8px;
-  font-size: clamp(1rem, 2vw, 1.3rem);
+  font-size: clamp(1rem, 2.5vw, 2rem);
   display: flex;
   margin: 1.2em;
   align-items: center;
@@ -200,7 +200,7 @@ p {
 }
 
 #contact-link {
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-family: MyFont2;
   text-decoration: none;
   color: rgb(220, 220, 220);
@@ -213,9 +213,9 @@ p {
 }
 
 .contact-icon {
-  border-radius: 5px;
+  border-radius: 8px;
   padding: 2px;
-  width: 1em;
+  width: 1.5em;
   margin-right: 0.3em;
 }
 
@@ -229,7 +229,7 @@ p {
 .socials a {
   font-family: StoryFont;
   align-self: center;
-  font-size: clamp(1.2rem, 3vw, 1.5rem);
+  font-size: clamp(1.2rem, 2.5vw, 2rem);
   text-decoration: none;
   color: white;
   transition: transform 0.2s ease-in-out;
@@ -309,6 +309,14 @@ p.copyright {
   opacity: 85%;
   text-align: center;
   white-space: nowrap;
+}
+#date {
+  font-family: MyFont;
+}
+
+.copy {
+  font-family: MyFont;
+  font-size: 1.5em;
 }
 
 .nav-btn[aria-current="page"] {

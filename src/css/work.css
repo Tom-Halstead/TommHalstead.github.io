@@ -248,7 +248,7 @@ img.projects:hover {
 }
 
 img.stack {
-  width: 3em;
+  width: 3.75em;
   height: auto;
 }
 
@@ -328,6 +328,7 @@ section > ul > li {
   gap: 0.8em;
   margin: 1em;
   font-family: StoryFont;
+  font-size: clamp(0.9rem, 0.8vw, 2rem);
   color: white;
   list-style: none;
   user-select: none;
@@ -387,6 +388,15 @@ p.copyright {
   opacity: 85%;
   text-align: center;
   white-space: nowrap;
+}
+
+#date {
+  font-family: MyFont;
+}
+
+.copy {
+  font-family: MyFont;
+  font-size: 1.5em;
 }
 
 .nav-btn[aria-current="page"] {
