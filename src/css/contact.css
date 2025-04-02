@@ -380,6 +380,7 @@ p.copyright {
   }
 
   #contact {
+    height: 100%;
     margin-top: 0em;
     width: unset;
   }
