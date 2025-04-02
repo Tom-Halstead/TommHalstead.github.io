@@ -102,7 +102,8 @@ window.addEventListener("DOMContentLoaded", () => {
   if (page === "work.html" || page === "story.html") {
     const header = document.getElementById("header");
     const headerHeight = header.offsetHeight;
-    const triggerPoint = headerHeight * 5;
+    console.log(headerHeight);
+    const triggerPoint = headerHeight * 4;
 
     window.addEventListener("scroll", () => {
       if (window.scrollY >= triggerPoint) {
@@ -112,7 +113,8 @@ window.addEventListener("DOMContentLoaded", () => {
       }
     });
   }
-
   let copyrightDate = document.getElementById("date");
-  copyrightDate.innerText = new Date().getFullYear();
+  if (copyrightDate) {
+    copyrightDate.innerText = new Date().getFullYear();
+  }
 });
