@@ -399,9 +399,10 @@ p.copyright {
   font-size: 1.5em;
 }
 
-.nav-btn[aria-current="page"] {
+.nav-btn[aria-current="page"],
+.nav-menu[aria-current="page"] {
   color: #ffffff;
-  font-size: clamp(0.8em, 1vw, 0.9em);
+  font-size: 1.3em;
   font-weight: bold;
 }
 

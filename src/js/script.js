@@ -14,14 +14,16 @@ const getPageName = () =>
 const navHighlights = () => {
   const page = getPageName().toLowerCase();
 
+  const navLinks = document.querySelectorAll(".nav-btn, .nav-menu");
+
   // Remove previous active states
-  document.querySelectorAll(".nav-btn").forEach((link) => {
+  navLinks.forEach((link) => {
     link.removeAttribute("aria-current");
     link.classList.remove("active");
   });
 
   // Highlight current page
-  document.querySelectorAll(".nav-btn").forEach((link) => {
+  navLinks.forEach((link) => {
     const href = link
       .getAttribute("href")
       .replace(/^\.?\//, "")
@@ -80,7 +82,6 @@ window.addEventListener("DOMContentLoaded", () => {
     // Attach event listeners to images with class "collage"
     document.querySelectorAll(".collage").forEach((img) => {
       img.addEventListener("click", function () {
-        console.log("clicked");
         modalImg.src = this.src;
         modal.style.display = "flex";
         setTimeout(() => modal.classList.add("show"), 10);
@@ -102,7 +103,6 @@ window.addEventListener("DOMContentLoaded", () => {
   if (page === "work.html" || page === "story.html") {
     const header = document.getElementById("header");
     const headerHeight = header.offsetHeight;
-    console.log(headerHeight);
     const triggerPoint = headerHeight * 4;
 
     window.addEventListener("scroll", () => {
