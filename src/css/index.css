@@ -266,10 +266,15 @@ p.copyright {
   font-size: 1.5em;
 }
 
-.nav-btn[aria-current="page"],
+.nav-btn[aria-current="page"] {
+  color: #ffffff;
+  font-size: 1.025em;
+  font-weight: bold;
+}
+
 .nav-menu[aria-current="page"] {
   color: #ffffff;
-  font-size: 1.3em;
+  font-size: 1.5em;
   font-weight: bold;
 }
 

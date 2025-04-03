@@ -411,13 +411,17 @@ p.copyright {
   font-size: 1.5em;
 }
 
-.nav-btn[aria-current="page"],
-.nav-menu[aria-current="page"] {
+.nav-btn[aria-current="page"] {
   color: #ffffff;
-  font-size: 1.3em;
+  font-size: 1.025em;
   font-weight: bold;
 }
 
+.nav-menu[aria-current="page"] {
+  color: #ffffff;
+  font-size: 1.5em;
+  font-weight: bold;
+}
 @media only screen and (max-width: 1050px) {
   .container {
     margin-top: 1em;
