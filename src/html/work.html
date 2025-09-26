@@ -55,38 +55,45 @@
 
     <main class="wrapper">
       <h2 class="title">Personal projects:</h2>
-      <section class="project-section card-stack">
+      <section class="project-section">
         <div
           class="box animate__animated animate__fadeInTopLeft animate__delay-1s"
         >
-          <h3 class="box-h3">Javascript dominant recipe website</h3>
+          <h3 class="box-h3">Javascript recipe website</h3>
           <a
             href="https://forkify-thomashalstead.netlify.app/"
             class="projects-img"
             target="_blank"
-            ><img
+            data-default="Hover for more info"
+            data-info="Forkify: Vanilla JS app for searching recipes via API, bookmarking, adding your own, and step-by-step cooking view."
+          >
+            <img
               src="../images/optimized/Forkify thumbnail-320.avif"
               alt="Forkify website created through my javscript course"
               class="projects"
-          /></a>
+            />
+          </a>
         </div>
+
         <div
           class="box animate__animated animate__fadeInDownBig animate__delay-2s"
         >
-          <h3 class="box-h3">
-            Vita Nova - A health, fitness and goals web app. Built with Java,
-            Springboot, React and AWS cloud services.
-          </h3>
+          <h3 class="box-h3">Vita Nova</h3>
           <a
             href="https://www.vitanova-app.com"
             class="projects-img"
             target="_blank"
-            ><img
+            data-default="Hover for more info"
+            data-info="Vita Nova: Java + Spring Boot backend, React UI, AWS (Cognito/S3/RDS/ECR/AppRunner). Track workouts, nutrition, and goals."
+          >
+            <img
               src="../images/optimized/VitaNova-thumbnail2-320.avif"
               alt="Health and fitness web app"
               class="projects"
-          /></a>
+            />
+          </a>
         </div>
+
         <div
           class="box animate__animated animate__fadeInTopRight animate__delay-1s"
         >
@@ -95,6 +102,8 @@
             href="https://github.com/Tom-Halstead/ExpenseTracker"
             class="projects-img"
             target="_blank"
+            data-default="Hover for more info"
+            data-info="Expense Tracker CLI: Java + Spring; categorize expenses, summaries, CSV import/export."
           >
             <img
               src="../images/optimized/sized-expense-tracker-image-320.avif"
@@ -104,6 +113,7 @@
           </a>
         </div>
       </section>
+
       <div class="tools">
         <h2 class="stack-title title">My toolkit and know-hows:</h2>
         <section class="codeStack">
@@ -169,35 +179,49 @@
         </section>
       </div>
       <section class="credentials">
+        <!-- Left column: Resume -->
         <article class="certs">
-          <h3>Resume</h3>
           <a
             href="https://drive.google.com/file/d/1cdEcCbUqj8QDj6d7BP9snZuMWEGY1IEi/view?usp=drive_link"
             class="credlink title"
             target="_blank"
-            ><img class="certs-image" src="../images/sized-resume.png" alt=""
-          /></a>
+            data-label="Resume"
+          >
+            <img
+              class="certs-image"
+              src="../images/sized-resume.png"
+              alt="Resume preview"
+            />
+          </a>
         </article>
+
+        <!-- Right column: Certifications (stacked vertically) -->
         <article class="certs">
-          <h3>Certifications</h3>
           <a
             href="https://drive.google.com/file/d/1iMf6s0s_TY4dxLWxAJ5GQ_NRUBMWh_za/view?usp=drive_link"
             class="credlink title"
             target="_blank"
-            ><img
+            data-label="Certifications"
+          >
+            <img
               class="certs-image"
               src="../images/Sized Tech Elevator Cert.png"
-              alt=""
-          /></a>
+              alt="Tech Elevator certificate"
+            />
+          </a>
+
           <a
             href="https://drive.google.com/file/d/1zhqVb5Qc5QYYPutLydAeZ4Tp92rK2kUW/view?usp=sharing"
             class="credlink title"
             target="_blank"
-            ><img
+            data-label="Certifications"
+          >
+            <img
               class="certs-image"
               src="../images/sized-udemy-cert.png"
-              alt=""
-          /></a>
+              alt="Udemy certificate"
+            />
+          </a>
         </article>
       </section>
     </main>

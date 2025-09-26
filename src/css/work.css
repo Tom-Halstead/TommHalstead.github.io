@@ -207,6 +207,62 @@ a.nav-btn {
   height: auto;
 }
 
+/* === Project image overlay + text swap === */
+.projects-img {
+  position: relative;
+  display: inline-block;
+  border-radius: 25px; /* match img radius */
+  overflow: hidden; /* clip overlay to rounded corners */
+  outline: none;
+}
+
+/* base overlay: slight black so "Hover for more info" is readable */
+.projects-img::before {
+  content: ""; /* overlay only (no text) */
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35); /* slight black by default */
+  border-radius: 25px;
+  transition: background 0.3s ease;
+  pointer-events: none;
+  z-index: 1; /* under text */
+}
+
+/* default overlay text (from data-default) */
+.projects-img::after {
+  content: attr(data-default);
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: 0.75em 1em;
+  font-family: StoryFont;
+  font-size: clamp(0.9rem, 1vw + 0.5rem, 1.2rem);
+  line-height: 1.35;
+  color: #e7e7e7;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+  opacity: 1;
+  transition: opacity 0.2s ease, transform 0.2s ease, color 0.2s ease,
+    content 0s;
+  pointer-events: none;
+  z-index: 2; /* above overlay */
+}
+
+/* on hover/focus: much darker overlay + swap to info text */
+.projects-img:hover::before,
+.projects-img:focus-visible::before {
+  background: rgba(0, 0, 0, 0.8); /* darker for readability */
+}
+
+.projects-img:hover::after,
+.projects-img:focus-visible::after {
+  content: attr(data-info);
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+
+/* keep the existing image sizing */
 img.projects {
   width: 25em;
   height: 15em;
@@ -214,12 +270,18 @@ img.projects {
   border-radius: 25px;
   object-fit: cover;
   max-width: 100%;
+  display: block; /* prevent inline-gap */
 }
 
 img.projects:hover {
   cursor: pointer;
   transform: scale(1.02);
   transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+/* keyboard focus ring on the card */
+.projects-img:focus-visible {
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.35);
 }
 
 .box-h3 {
@@ -261,12 +323,13 @@ h3 {
   font-family: MyFont;
 }
 
+/* ===== Credentials layout (Resume | Certifications) ===== */
 .credentials {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  flex-wrap: wrap;
-  gap: 10em;
+  gap: 4rem; /* space between the two columns */
+  flex-wrap: wrap; /* stack on small screens */
   width: 90%;
   margin: auto;
   text-align: center;
@@ -278,25 +341,84 @@ h3 {
   );
 }
 
-#certs {
+/* Each column */
+.certs {
   display: flex;
-  flex-direction: column;
+  flex-direction: column; /* certifications stack vertically */
   align-items: center;
-  width: 45%;
-  max-width: 500px;
+  gap: 1.25rem; /* spacing between cert images */
+  width: min(520px, 44vw); /* responsive column width */
 }
 
+/* credential link acts as overlay container */
+.credlink {
+  position: relative;
+  display: block;
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  outline: none;
+}
+
+/* remove large margin when title class is on links */
+.credlink.title {
+  margin: 0;
+}
+
+/* image inside credential card */
 .certs-image {
   display: block;
-  border: 2px rgb(145, 43, 147) solid;
-  max-width: 100%;
+  width: 100%;
   height: auto;
+  border-radius: 12px; /* match overlay rounding */
+  border: 2px rgb(145, 43, 147) solid;
   margin-top: 0.5em;
-  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
 
 .certs-image:hover {
   transform: scale(1.01);
+}
+
+/* DARKER base overlay for label readability */
+.credlink::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6); /* darker overlay */
+  transition: opacity 0.25s ease, background 0.25s ease;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* label text from data-label ("Resume", "Certifications") */
+.credlink::after {
+  content: attr(data-label);
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: 0.75rem 1rem;
+  font-family: StoryFont;
+  font-size: clamp(1rem, 1vw + 0.6rem, 1.4rem);
+  line-height: 1.35;
+  color: #f2f2f2;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.55);
+  transition: opacity 0.2s ease, transform 0.2s ease, color 0.2s ease;
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* on hover/focus: remove overlay + text to show pure image */
+.credlink:hover::before,
+.credlink:focus-visible::before {
+  opacity: 0;
+}
+.credlink:hover::after,
+.credlink:focus-visible::after {
+  opacity: 0;
+  transform: translateY(-2px);
 }
 
 .title {
@@ -406,6 +528,8 @@ p.copyright {
   font-size: 1.5em;
   font-weight: bold;
 }
+
+/* Responsive tweaks */
 @media only screen and (max-width: 768px) {
   footer {
     margin-top: 7em;
@@ -441,7 +565,13 @@ p.copyright {
   div.footer-container {
     min-height: fit-content;
   }
+
+  /* stack columns on smaller screens */
+  .certs {
+    width: 100%;
+  }
 }
+
 @media only screen and (max-width: 576px) {
   #bars.fa-solid {
     color: #ffffff;
