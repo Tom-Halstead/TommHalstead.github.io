@@ -32,6 +32,27 @@ const navHighlights = (page) => {
   }
 };
 
+/* -------------------- RANDOM NAV TEXT HIGHLIGHTS -------------------- */
+const randomizeNavHighlights = () => {
+  // Helper: very light pastel text color
+  const pastel = () => {
+    const h = Math.floor(Math.random() * 360); // hue 0–360
+    const s = Math.floor(80 + Math.random() * 20); // 50–70% saturation (a little less washed out)
+    const l = Math.floor(60 + Math.random() * 20); // 50–70% lightness (darker than before)
+    return `hsl(${h} ${s}% ${l}%)`;
+  };
+
+  const links = document.querySelectorAll(".nav-btn, .nav-menu");
+  links.forEach((link) => {
+    // Skip the "current page" link so it keeps its normal highlight
+    if (link.getAttribute("aria-current") === "page") return;
+
+    const color = pastel();
+    link.classList.add("nav-highlighted"); // adds smooth transition
+    link.style.color = color;
+  });
+};
+
 /* -------------------- DROPDOWN -------------------- */
 const setupDropdown = () => {
   const toggleBtn = document.querySelector(".toggle-btn");
@@ -69,7 +90,6 @@ const setupStoryModal = () => {
       if (!img) return;
       modalImg.src = img.src;
       modal.style.display = "flex";
-      // next frame to allow transition
       requestAnimationFrame(() => modal.classList.add("show"));
     },
     { passive: true }
@@ -94,7 +114,7 @@ const setupStoryModal = () => {
 const setupHeaderPin = () => {
   const header = document.getElementById("header");
   if (!header) return;
-  const triggerPoint = header.offsetHeight * 4; // single layout read
+  const triggerPoint = header.offsetHeight * 4;
 
   window.addEventListener(
     "scroll",
@@ -115,21 +135,21 @@ const setCopyright = () => {
 /* -------------------- CUSTOM CURSOR (no trail) -------------------- */
 (function customCursor() {
   const CSS = `
-:root{ --cursor-size:18px; --cursor-link-color: darkred; } /* tweak here */
+:root{ --cursor-size:18px; --cursor-link-color: darkred; }
 .has-custom-cursor{ cursor:none; }
-/* Hide native cursor on interactive elements while active */
 .has-custom-cursor a,
 .has-custom-cursor button,
 .has-custom-cursor input,
 .has-custom-cursor textarea,
 .has-custom-cursor select,
 .has-custom-cursor label,
-.has-custom-cursor img { cursor:none !important; }
+.has-custom-cursor img,
+.has-custom-cursor span { cursor:none !important; }
 .cursor{
   position:fixed; top:0; left:0;
   width:var(--cursor-size); height:var(--cursor-size);
   border-radius:50%;
-  background:#fff;
+  background:#39FF00;
   pointer-events:none;
   will-change:transform, background-color;
   z-index:2147483647;
@@ -139,9 +159,9 @@ const setCopyright = () => {
 @media (prefers-reduced-motion: reduce){
   .has-custom-cursor{ cursor:auto; }
   .cursor{ display:none; }
-}`.replace(/\s+/g, " "); // compact
+}`.replace(/\s+/g, " ");
 
-  if (matchMedia("(pointer: coarse)").matches) return; // skip on touch
+  if (matchMedia("(pointer: coarse)").matches) return;
 
   function injectCSS() {
     if (document.getElementById("custom-cursor-style")) return;
@@ -156,13 +176,11 @@ const setCopyright = () => {
 
     injectCSS();
 
-    // Create once
     const cursor = document.createElement("div");
     cursor.className = "cursor";
     document.body.appendChild(cursor);
     document.documentElement.classList.add("has-custom-cursor");
 
-    // Cache size; recompute on resize (avoid CSS reads per frame)
     let cs =
       parseFloat(
         getComputedStyle(document.documentElement).getPropertyValue(
@@ -181,7 +199,6 @@ const setCopyright = () => {
 
     const lerp = (a, b, n) => a + (b - a) * n;
 
-    // Input
     addEventListener(
       "pointermove",
       (e) => {
@@ -189,12 +206,11 @@ const setCopyright = () => {
         targetY = e.clientY;
         cursor.style.backgroundColor = e.target.closest("a")
           ? linkColor
-          : "#fff";
+          : "#39FF00";
       },
       { passive: true }
     );
 
-    // Animation
     (function loop() {
       lastX = lerp(lastX, targetX, 0.7);
       lastY = lerp(lastY, targetY, 0.7);
@@ -204,7 +220,6 @@ const setCopyright = () => {
       requestAnimationFrame(loop);
     })();
 
-    // Recompute size/color on resize or when CSS var changes (manual hook)
     addEventListener("resize", () => {
       targetX = Math.min(targetX, innerWidth);
       targetY = Math.min(targetY, innerHeight);
@@ -228,6 +243,53 @@ const setCopyright = () => {
   }
 })();
 
+/* -------------------- ONE-PIECE SCROLL UNROLL -------------------- */
+const setupWholeBlockUnroll = () => {
+  const block = document.querySelector("div.max-width");
+  if (!block) return;
+
+  // mark as scroll-roll container
+  block.classList.add("scroll-roll");
+
+  // add visible toggle
+  const btn = document.createElement("button");
+  btn.type = "button";
+  btn.className = "scroll-toggle";
+  btn.setAttribute("aria-expanded", "false");
+  btn.innerHTML = `<span class="label">Unroll</span> <span class="chev">▾</span>`;
+  block.appendChild(btn);
+
+  const setState = (open) => {
+    block.classList.toggle("is-open", open);
+    btn.setAttribute("aria-expanded", String(open));
+    btn.querySelector(".label").textContent = open ? "Collapse" : "Unroll";
+    btn.querySelector(".chev").textContent = open ? "▴" : "▾";
+  };
+
+  // clicking the toggle always toggles state
+  btn.addEventListener("click", (e) => {
+    e.stopPropagation();
+    setState(!block.classList.contains("is-open"));
+  });
+
+  // clicking inside the block toggles too, unless on a link or the toggle
+  block.addEventListener("click", (e) => {
+    if (e.target.closest("a, .scroll-toggle")) return;
+    setState(!block.classList.contains("is-open"));
+  });
+
+  // keyboard accessibility
+  block.tabIndex = 0;
+  block.setAttribute("role", "button");
+  block.setAttribute("aria-expanded", "false");
+  block.addEventListener("keydown", (e) => {
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      setState(!block.classList.contains("is-open"));
+    }
+  });
+};
+
 /* -------------------- BOOT -------------------- */
 window.addEventListener(
   "DOMContentLoaded",
@@ -235,10 +297,13 @@ window.addEventListener(
     const page = getPageName();
 
     navHighlights(page);
-    setupDropdown();
+    randomizeNavHighlights(); // random pastel text colors
 
+    setupDropdown();
     if (page === "story.html") setupStoryModal();
     if (page === "work.html" || page === "story.html") setupHeaderPin();
+
+    setupWholeBlockUnroll();
 
     document.getElementById("date") && setCopyright();
   },

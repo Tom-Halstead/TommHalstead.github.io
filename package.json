@@ -5,7 +5,7 @@
   "scripts": {
     "start": "parcel src/html/index.html",
     "build": "parcel build src/html/index.html --dist-dir ./docs --public-url ./",
-    "deploy": "npm run build && git reset && git add -A docs && git commit -m \"Deploy: update docs\" || echo \"No docs changes\" && git push"
+    "deploy": "npm run build && git add . && git commit -m \"Deploy updated site\" && git push"
   },
   "repository": {
     "type": "git",

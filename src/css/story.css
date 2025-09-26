@@ -57,7 +57,6 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 nav {
@@ -65,7 +64,6 @@ nav {
   justify-content: center;
   align-items: center;
   background-color: black;
-  opacity: 85%;
   transition: 0.6s;
   padding: 1em;
   height: 64px;
@@ -95,9 +93,13 @@ nav ul {
 }
 
 .nav-link {
-  font-size: clamp(1em, 1.5vw, 1.4em);
+  font-size: clamp(0.9em, 1.3vw, 1.2em);
   user-select: none;
   text-decoration: none;
+}
+
+.nav-highlighted {
+  transition: color 0.4s ease;
 }
 
 nav ul li a {
@@ -422,6 +424,93 @@ p.copyright {
   font-size: 1.5em;
   font-weight: bold;
 }
+
+/* ===== Scroll roll (entire block: heading + text) ===== */
+.max-width.scroll-roll {
+  --dur: 700ms;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+
+  /* collapsed preview */
+  max-height: 4lh; /* only show ~2 lines max, hiding "My Journey" too */
+  transition: max-height var(--dur) cubic-bezier(0.2, 0.7, 0.2, 1),
+    filter 0.25s ease;
+
+  /* fade at bottom to suggest more */
+  -webkit-mask-image: linear-gradient(to bottom, #000 70%, rgba(0, 0, 0, 0));
+  mask-image: linear-gradient(to bottom, #000 70%, rgba(0, 0, 0, 0));
+}
+
+/* “rolled ends” */
+.max-width.scroll-roll::before,
+.max-width.scroll-roll::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  translate: 0 -50%;
+  width: 20px;
+  height: calc(100% - 1.25rem);
+  border-radius: 12px;
+  background: radial-gradient(
+      closest-side,
+      rgba(255, 255, 255, 0.14),
+      rgba(255, 255, 255, 0.03) 70%,
+      transparent 72%
+    ),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.02));
+  box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.6),
+    0 0 12px rgba(255, 255, 255, 0.04);
+  opacity: 0.95;
+  transform-origin: center;
+  transform: scaleX(1.4);
+  transition: transform var(--dur) cubic-bezier(0.2, 0.7, 0.2, 1),
+    height var(--dur) cubic-bezier(0.2, 0.7, 0.2, 1), opacity 0.3s ease;
+  pointer-events: none;
+}
+.max-width.scroll-roll::before {
+  left: -10px;
+}
+.max-width.scroll-roll::after {
+  right: -10px;
+}
+
+/* Toggle pill */
+.scroll-roll .scroll-toggle {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  padding: 0.35rem 0.6rem;
+  border-radius: 999px;
+  font: 600 0.85rem/1 system-ui, sans-serif;
+  color: #111;
+  background: hsl(52 100% 72% / 0.95);
+  border: 1px solid hsl(52 80% 45% / 0.5);
+  cursor: pointer;
+  z-index: 3;
+  transition: transform 0.2s ease, filter 0.2s ease, opacity 0.3s ease;
+}
+.scroll-roll .scroll-toggle:hover {
+  filter: brightness(1.05);
+  transform: translateY(-1px);
+}
+
+/* OPEN state */
+.max-width.scroll-roll.is-open {
+  max-height: 200vh;
+  -webkit-mask-image: none;
+  mask-image: none;
+}
+.max-width.scroll-roll.is-open::before,
+.max-width.scroll-roll.is-open::after {
+  transform: scaleX(1);
+  height: calc(100% - 0.75rem);
+}
+.scroll-roll.is-open .scroll-toggle {
+  background: hsl(210 100% 72% / 0.95);
+  border-color: hsl(210 80% 45% / 0.5);
+}
+
 @media only screen and (max-width: 1050px) {
   .container {
     margin-top: 1em;

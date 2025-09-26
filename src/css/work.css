@@ -62,7 +62,6 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 nav {
@@ -70,7 +69,6 @@ nav {
   justify-content: center;
   align-items: center;
   background-color: black;
-  opacity: 85%;
   transition: 0.6s;
   padding: 1em;
   height: 64px;
@@ -91,12 +89,6 @@ nav {
   cursor: pointer;
 }
 
-.nav-link {
-  font-size: clamp(1em, 1.5vw, 1.4em);
-  user-select: none;
-  text-decoration: none;
-}
-
 nav ul {
   display: flex;
   justify-content: space-evenly;
@@ -105,9 +97,13 @@ nav ul {
 }
 
 .nav-link {
-  font-size: clamp(1em, 1.5vw, 1.4em);
+  font-size: clamp(0.9em, 1.3vw, 1.2em);
   user-select: none;
   text-decoration: none;
+}
+
+.nav-highlighted {
+  transition: color 0.4s ease;
 }
 
 nav ul li a {

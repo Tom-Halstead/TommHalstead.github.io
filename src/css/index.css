@@ -76,9 +76,13 @@ nav ul {
 }
 
 .nav-link {
-  font-size: clamp(1em, 1.5vw, 1.4em);
+  font-size: clamp(0.9em, 1.3vw, 1.2em);
   user-select: none;
   text-decoration: none;
+}
+
+.nav-highlighted {
+  transition: color 0.4s ease;
 }
 
 nav ul li a {
@@ -191,12 +195,35 @@ h3 {
   color: #aea8a8;
   width: 100%;
 }
-
-.highlight {
+span.name {
   font-family: StoryFont;
-  color: #bc8787;
-  text-shadow: 0 0 3px #717171, 0 0 3px #717171, 0 0 0px #717171,
-    0 0 3px #717171, 0 0 3px #717171, 0 0 0px #717171, 0 0 0px #717171,
+  color: #90f0ff;
+  text-shadow: 0 0 5px #717171, 0 0 5px #717171, 0 0 0px #717171,
+    0 0 5px #717171, 0 0 5px #717171, 0 0 0px #717171, 0 0 0px #717171,
+    0 0 0px #717171;
+}
+
+span.greeting {
+  font-family: StoryFont;
+  color: #f1befe;
+  text-shadow: 0 0 5px #717171, 0 0 5px #717171, 0 0 0px #717171,
+    0 0 5px #717171, 0 0 5px #717171, 0 0 0px #717171, 0 0 0px #717171,
+    0 0 0px #717171;
+}
+
+span.detail {
+  font-family: StoryFont;
+  color: #a2fca2;
+  text-shadow: 0 0 5px #717171, 0 0 5px #717171, 0 0 0px #717171,
+    0 0 5px #717171, 0 0 5px #717171, 0 0 0px #717171, 0 0 0px #717171,
+    0 0 0px #717171;
+}
+
+span.developer {
+  font-family: StoryFont;
+  color: #fbfb8a;
+  text-shadow: 0 0 5px #717171, 0 0 5px #717171, 0 0 0px #717171,
+    0 0 5px #717171, 0 0 5px #717171, 0 0 0px #717171, 0 0 0px #717171,
     0 0 0px #717171;
 }
 

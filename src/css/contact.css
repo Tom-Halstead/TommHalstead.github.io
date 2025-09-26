@@ -78,9 +78,13 @@ nav ul {
 }
 
 .nav-link {
-  font-size: clamp(1em, 1.5vw, 1.4em);
+  font-size: clamp(0.9em, 1.3vw, 1.2em);
   user-select: none;
   text-decoration: none;
+}
+
+.nav-highlighted {
+  transition: color 0.4s ease;
 }
 
 nav ul li a {
@@ -152,7 +156,7 @@ a.nav-menu:hover {
 #contact {
   border-radius: 10%;
   color: rgb(220, 220, 220);
-  margin: 8em auto;
+  margin: 6em auto;
   padding: 3em;
   text-align: center;
   width: 85%;
@@ -160,18 +164,19 @@ a.nav-menu:hover {
 
 h2 {
   font-family: MyFont;
-  margin: 0.5em;
+  margin: 0em 0.5em 1em 0.5em;
   color: rgb(220, 220, 220);
-  font-size: clamp(2rem, 5.5vw, 4rem);
+  font-size: clamp(1.8rem, 5vw, 3.4rem);
   font-weight: bold;
 }
 
 p {
   font-family: MyFont2;
   justify-self: center;
-  margin: 1em;
+  margin: 0.5em 1em 3em 1em;
   color: rgb(220, 220, 220);
-  font-size: clamp(1rem, 3vw, 2rem);
+  /* was clamp(1rem, 3vw, 2rem) */
+  font-size: clamp(0.9rem, 2.4vw, 1.7rem);
   line-height: 1.8;
   max-width: 65%;
 }
@@ -180,19 +185,21 @@ p {
   justify-self: center;
   padding: clamp(0.8em, 2vw, 1.2em) clamp(1.5em, 3vw, 2em);
   border-radius: 8px;
-  font-size: clamp(1rem, 2.5vw, 2rem);
+  /* was clamp(1rem, 2.5vw, 2rem) */
+  font-size: clamp(0.9rem, 2vw, 1.6rem);
   display: flex;
-  margin: 1.2em;
+  /* margin: 1.2em; */
   align-items: center;
   cursor: pointer;
   transition: background 0.3s ease-in-out;
 }
 
 #contact-link {
-  justify-self: center;
-  align-self: center;
-  font-size: 2rem;
-  font-family: MyFont2;
+  /* justify-self: center; */
+  /* align-self: center; */
+  /* was 2rem */
+  font-size: 1.6rem;
+  font-family: StoryFont;
   text-decoration: none;
   color: rgb(220, 220, 220);
 }
@@ -209,18 +216,20 @@ p {
   justify-content: center;
   align-content: center;
   gap: clamp(1em, 2vw, 1.5em);
-  margin-top: 2em;
+  margin-top: 1.5em;
 }
 
 .socials a {
   font-family: StoryFont;
-  font-size: clamp(1.2rem, 2.5vw, 2rem);
+  /* was clamp(1.2rem, 2.5vw, 2rem) */
+  font-size: clamp(1rem, 2vw, 1.6rem);
   text-decoration: none;
   color: white;
   transition: transform 0.2s ease-in-out;
 }
 
 #contact > p {
+  margin-top: 3em;
   font-style: italic;
 }
 
