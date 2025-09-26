@@ -5,7 +5,7 @@
   "scripts": {
     "start": "parcel src/html/index.html",
     "build": "parcel build src/html/index.html --dist-dir ./docs --public-url ./",
-    "deploy": "npm run build && git add . && git commit -m \"Deploy updated site\" && git push"
+    "deploy": "npm run build && git reset && git add -A docs && git commit -m \"Deploy: update docs\" || echo \"No docs changes\" && git push"
   },
   "repository": {
     "type": "git",
@@ -16,6 +16,7 @@
   "devDependencies": {
     "@parcel/transformer-sass": "^2.8.3",
     "parcel": "^2.12.0",
+    "sharp": "^0.34.4",
     "svgo": "^3.3.2"
   },
   "dependencies": {
