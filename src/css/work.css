@@ -190,10 +190,8 @@ a.nav-btn {
   justify-content: space-around;
   border-radius: 20%;
   background-color: rgba(0, 0, 0, 0.35);
-
+  margin-bottom: 10em;
   min-width: fit-content;
-  gap: 1em;
-  margin: 1em;
 }
 
 .box {
@@ -327,10 +325,10 @@ h3 {
 /* ===== Credentials layout (Resume | Certifications) ===== */
 .credentials {
   display: flex;
+  flex-direction: column; /* stack vertically */
+  align-items: center;
   justify-content: center;
-  align-items: flex-start;
-  gap: 4rem; /* space between the two columns */
-  flex-wrap: wrap; /* stack on small screens */
+  gap: 2.5rem; /* space between the two blocks */
   width: 90%;
   margin: auto;
   text-align: center;
@@ -342,13 +340,48 @@ h3 {
   );
 }
 
-/* Each column */
+/* Reorder without HTML edit: make Certifications block appear first */
+.credentials > .certs:first-of-type {
+  /* Resume block in HTML */
+  order: 2;
+}
+.credentials > .certs:last-of-type {
+  /* Certifications block in HTML */
+  order: 1;
+}
+
+/* Each column base */
 .certs {
   display: flex;
-  flex-direction: column; /* certifications stack vertically */
+  flex-direction: column; /* default vertical stack */
   align-items: center;
-  gap: 1.25rem; /* spacing between cert images */
-  width: min(520px, 44vw); /* responsive column width */
+  gap: 1.25rem;
+  width: min(520px, 44vw);
+}
+
+/* Certifications block: keep its two items horizontal side-by-side */
+.credentials > .certs:last-of-type {
+  flex-direction: row; /* horizontal row */
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 1100px; /* center nicely on wide screens */
+  flex-wrap: nowrap; /* remain horizontal */
+}
+
+/* Size each cert card in the horizontal row */
+.credentials > .certs:last-of-type .credlink {
+  width: clamp(16rem, 40vw, 32rem);
+}
+.credentials > .certs:last-of-type .certs-image {
+  width: 100%;
+}
+
+/* Resume block width */
+.credentials > .certs:first-of-type {
+  width: 100%;
+  max-width: clamp(16rem, 60vw, 36rem);
 }
 
 /* credential link acts as overlay container */
@@ -392,7 +425,7 @@ h3 {
   z-index: 1;
 }
 
-/* label text from data-label ("Resume", "Certifications") */
+/* label text from data-label ("Resume", "Certification") */
 .credlink::after {
   content: attr(data-label);
   position: absolute;
@@ -425,7 +458,7 @@ h3 {
 .title {
   user-select: none;
   text-align: center;
-  margin: 2em;
+  margin: 3em 0 3em 0;
   color: rgb(220, 220, 220);
   font-size: clamp(1.5em, 2vw, 2.5em);
   font-family: MyFont;
@@ -533,7 +566,7 @@ p.copyright {
 /* --- reveal tech stack below each project on hover --- */
 .stack-reveal {
   width: 100%;
-  max-width: clamp(15em, 25vw, 25em);
+  max-width: clamp(20em, 30vw, 30em);
   margin-top: 0.4rem;
 
   /* animation */
@@ -575,15 +608,15 @@ p.copyright {
 .stack-item {
   display: inline-flex;
   align-items: center;
-  gap: 0.45rem;
+  gap: 0.75rem;
   color: #e8e8e8;
   font-family: MyFont2, sans-serif;
-  font-size: clamp(0.85rem, 0.8vw, 1rem);
+  font-size: clamp(1.1rem, 0.8vw, 1rem);
   user-select: none;
 }
 
 .stack-ico {
-  width: 1.4rem;
+  width: 2rem;
   height: auto;
   display: inline-block;
   border-radius: 4px;
@@ -630,6 +663,11 @@ p.copyright {
   /* stack columns on smaller screens */
   .certs {
     width: 100%;
+  }
+
+  /* allow the certifications row to wrap on very narrow viewports */
+  .credentials > .certs:last-of-type {
+    flex-wrap: wrap;
   }
 }
 

@@ -427,7 +427,7 @@ p.copyright {
 
 /* ===== Scroll roll (entire block: heading + text) ===== */
 .max-width.scroll-roll {
-  --dur: 700ms;
+  --dur: 2000ms;
   position: relative;
   overflow: hidden;
   cursor: pointer;

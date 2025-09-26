@@ -212,8 +212,8 @@ const setCopyright = () => {
     );
 
     (function loop() {
-      lastX = lerp(lastX, targetX, 0.7);
-      lastY = lerp(lastY, targetY, 0.7);
+      lastX = lerp(lastX, targetX, 0.9);
+      lastY = lerp(lastY, targetY, 0.9);
       cursor.style.transform = `translate3d(${lastX - cs / 2}px, ${
         lastY - cs / 2
       }px, 0)`;
