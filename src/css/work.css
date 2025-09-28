@@ -1,28 +1,4 @@
-@font-face {
-  font-family: "MyFont";
-  font-weight: 700;
-  font-style: normal;
-  src: url("../fonts/RobotoMono-Bold.ttf");
-}
-@font-face {
-  font-family: "MyFont2";
-  font-style: normal;
-  font-weight: normal;
-  src: url("../fonts/Stellar-light.woff");
-}
-
-@font-face {
-  font-family: "StoryFont";
-  font-style: normal;
-  font-weight: normal;
-  src: url("../fonts/ChakraPetch-Medium.ttf");
-}
-* {
-  margin: 0;
-  padding: 0;
-  font-family: "Poppins", "sans-serif";
-  box-sizing: border-box;
-}
+@import url("./common-styles.css");
 
 html {
   min-height: 100vh;
@@ -42,147 +18,21 @@ body {
   width: 100%;
   overflow-x: hidden;
 }
-
 main {
   flex-grow: 1;
   min-height: 100vh;
   width: 100vw;
 }
 
-header {
-  position: relative;
-  top: 0;
-  width: 100%;
-  height: 4em;
-}
-
+/* Sticky header helper retained */
 .header-fixed {
-  z-index: 100000;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
 }
 
-nav {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: black;
-  transition: 0.6s;
-  padding: 1em;
-  height: 64px;
-  width: 100%;
-}
-
-.toggle-btn {
-  margin: 1em;
-  display: flex;
-  align-items: center;
-}
-
-#bars.fa-solid {
-  user-select: none;
-  display: none;
-  color: #ffffff;
-  font-size: 1.8rem;
-  cursor: pointer;
-}
-
-nav ul {
-  display: flex;
-  justify-content: space-evenly;
-  width: 100%;
-  list-style: none;
-}
-
-.nav-link {
-  font-size: clamp(0.9em, 1.3vw, 1.2em);
-  user-select: none;
-  text-decoration: none;
-}
-
-.nav-highlighted {
-  transition: color 0.4s ease;
-}
-
-nav ul li a {
-  font-family: MyFont;
-  font-size: clamp(0.7em, 1vw + 0.3em, 0.8em);
-  text-decoration: none;
-  color: #989595;
-  transition: 0.25s ease;
-}
-
-nav ul li a:hover {
-  color: #ffffff;
-}
-
-.dropdown-menu li {
-  display: flex;
-  align-items: center;
-  padding: 1.5em;
-  justify-content: center;
-}
-
-.dropdown-container {
-  display: flex;
-  justify-content: flex-end;
-  position: absolute;
-  top: 4.5rem;
-  width: 100%;
-}
-
-.dropdown-menu {
-  display: none;
-  width: 15em;
-  position: relative;
-  top: -1em;
-  border-radius: 1em 0 0 1em;
-  opacity: 90%;
-  background: rgba(0, 0, 0, 0.7);
-  overflow: hidden;
-  transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-.dropdown-menu.open {
-  user-select: none;
-  display: flex;
-  flex-direction: column;
-  height: auto;
-  -webkit-backdrop-filter: blur(30px);
-  backdrop-filter: blur(30px);
-  border: 2px solid #716e6e;
-  z-index: 1000;
-}
-
-.dropdown-menu.open:hover {
-  color: #ffffff;
-}
-
-a.nav-menu {
-  font-family: MyFont;
-  color: #989595;
-  list-style: none;
-  font-size: clamp(1.2rem, 1.5vw, 1.7rem);
-  text-decoration: none;
-}
-a.nav-menu:hover {
-  color: #ffffff;
-}
-
-a.nav-btn {
-  padding: 0.5em;
-}
-
-#social-gh:hover {
-  color: #333;
-}
-
-#social-li:hover {
-  color: #0077b5;
-}
-
+/* Projects grid/cards */
 .project-section {
   max-width: 100vw;
   display: flex;
@@ -193,7 +43,6 @@ a.nav-btn {
   margin-bottom: 10em;
   min-width: fit-content;
 }
-
 .box {
   display: flex;
   flex-direction: column;
@@ -205,28 +54,24 @@ a.nav-btn {
   height: auto;
 }
 
-/* === Project image overlay + text swap === */
+/* Overlay + text swap */
 .projects-img {
   position: relative;
   display: inline-block;
-  border-radius: 25px; /* match img radius */
-  overflow: hidden; /* clip overlay to rounded corners */
+  border-radius: 25px;
+  overflow: hidden;
   outline: none;
 }
-
-/* base overlay: slight black so "Hover for more info" is readable */
 .projects-img::before {
-  content: ""; /* overlay only (no text) */
+  content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.35); /* slight black by default */
+  background: rgba(0, 0, 0, 0.35);
   border-radius: 25px;
   transition: background 0.3s ease;
   pointer-events: none;
-  z-index: 1; /* under text */
+  z-index: 1;
 }
-
-/* default overlay text (from data-default) */
 .projects-img::after {
   content: attr(data-default);
   position: absolute;
@@ -244,15 +89,12 @@ a.nav-btn {
   transition: opacity 0.2s ease, transform 0.2s ease, color 0.2s ease,
     content 0s;
   pointer-events: none;
-  z-index: 2; /* above overlay */
+  z-index: 2;
 }
-
-/* on hover/focus: much darker overlay + swap to info text */
 .projects-img:hover::before,
 .projects-img:focus-visible::before {
-  background: rgba(0, 0, 0, 0.8); /* darker for readability */
+  background: rgba(0, 0, 0, 0.8);
 }
-
 .projects-img:hover::after,
 .projects-img:focus-visible::after {
   content: attr(data-info);
@@ -260,7 +102,6 @@ a.nav-btn {
   transform: translateY(-1px);
 }
 
-/* keep the existing image sizing */
 img.projects {
   width: 25em;
   height: 15em;
@@ -268,16 +109,13 @@ img.projects {
   border-radius: 25px;
   object-fit: cover;
   max-width: 100%;
-  display: block; /* prevent inline-gap */
+  display: block;
 }
-
 img.projects:hover {
   cursor: pointer;
   transform: scale(1.02);
   transition: transform 0.5s ease, box-shadow 0.5s ease;
 }
-
-/* keyboard focus ring on the card */
 .projects-img:focus-visible {
   box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.35);
 }
@@ -292,7 +130,7 @@ img.projects:hover {
   margin: 1em;
 }
 
-/* (legacy) container styling kept for compatibility */
+/* Tools band */
 .tools {
   border-radius: 15%;
   background-color: rgba(0, 0, 0, 0.36);
@@ -303,17 +141,14 @@ img.projects:hover {
   );
   margin-top: 3em;
 }
-
 img.stack {
   width: 3.75em;
   height: auto;
 }
-
 section.codeStack {
   justify-content: center;
   display: flex;
 }
-
 h3 {
   height: 1.5em;
   margin: 1em 0 0.5em 0;
@@ -322,15 +157,15 @@ h3 {
   font-family: MyFont;
 }
 
-/* ===== Credentials layout (Resume | Certifications) ===== */
+/* Credentials layout */
 .credentials {
   display: flex;
-  flex-direction: column; /* stack vertically */
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 2.5rem; /* space between the two blocks */
+  gap: 2.5rem;
   width: 90%;
-  margin: auto;
+  margin: auto auto 4em auto;
   text-align: center;
   background-color: rgba(0, 0, 0, 0.36);
   mask-image: radial-gradient(
@@ -339,52 +174,36 @@ h3 {
     rgba(0, 0, 0, 0) 180%
   );
 }
-
-/* Reorder without HTML edit: make Certifications block appear first */
 .credentials > .certs:first-of-type {
-  /* Resume block in HTML */
   order: 2;
 }
 .credentials > .certs:last-of-type {
-  /* Certifications block in HTML */
   order: 1;
-}
-
-/* Each column base */
-.certs {
-  display: flex;
-  flex-direction: column; /* default vertical stack */
-  align-items: center;
-  gap: 1.25rem;
-  width: min(520px, 44vw);
-}
-
-/* Certifications block: keep its two items horizontal side-by-side */
-.credentials > .certs:last-of-type {
-  flex-direction: row; /* horizontal row */
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   gap: 1.5rem;
   width: 100%;
-  max-width: 1100px; /* center nicely on wide screens */
-  flex-wrap: nowrap; /* remain horizontal */
+  max-width: 1100px;
+  flex-wrap: nowrap;
 }
-
-/* Size each cert card in the horizontal row */
+.certs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+  width: min(520px, 44vw);
+}
 .credentials > .certs:last-of-type .credlink {
   width: clamp(16rem, 40vw, 32rem);
 }
 .credentials > .certs:last-of-type .certs-image {
   width: 100%;
 }
-
-/* Resume block width */
 .credentials > .certs:first-of-type {
   width: 100%;
   max-width: clamp(16rem, 60vw, 36rem);
 }
-
-/* credential link acts as overlay container */
 .credlink {
   position: relative;
   display: block;
@@ -393,39 +212,30 @@ h3 {
   overflow: hidden;
   outline: none;
 }
-
-/* remove large margin when title class is on links */
 .credlink.title {
   margin: 0;
 }
-
-/* image inside credential card */
 .certs-image {
   display: block;
   width: 100%;
   height: auto;
-  border-radius: 12px; /* match overlay rounding */
+  border-radius: 12px;
   border: 2px rgb(145, 43, 147) solid;
   margin-top: 0.5em;
   transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
-
 .certs-image:hover {
   transform: scale(1.01);
 }
-
-/* DARKER base overlay for label readability */
 .credlink::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.6); /* darker overlay */
+  background: rgba(0, 0, 0, 0.6);
   transition: opacity 0.25s ease, background 0.25s ease;
   pointer-events: none;
   z-index: 1;
 }
-
-/* label text from data-label ("Resume", "Certification") */
 .credlink::after {
   content: attr(data-label);
   position: absolute;
@@ -437,14 +247,76 @@ h3 {
   font-family: StoryFont;
   font-size: clamp(1rem, 1vw + 0.6rem, 1.4rem);
   line-height: 1.35;
-  color: #f2f2f2;
+  color: #f2f2f2; /* <-- removed the stray ) */
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.55);
   transition: opacity 0.2s ease, transform 0.2s ease, color 0.2s ease;
   pointer-events: none;
   z-index: 2;
 }
 
-/* on hover/focus: remove overlay + text to show pure image */
+.stack-reveal {
+  opacity: 0;
+  transform: translateY(6px);
+  max-height: 0;
+  overflow: hidden;
+  padding: 0;
+  transition: opacity 0.2s ease, transform 0.2s ease, max-height 0.25s ease,
+    padding 0.2s ease;
+}
+
+/* Horizontal list layout for the tech stack */
+.stack-reveal .stack-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 0.9rem 1rem; /* row x column spacing */
+  margin: 0; /* reset UL defaults */
+  padding: 0;
+  list-style: none;
+}
+
+/* Each tech: icon on top, label underneath */
+.stack-reveal .stack-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.4rem;
+  min-width: 5.25rem; /* keeps labels from wrapping too soon */
+}
+
+/* Icon sizing (covers either .stack-ico or img.stack you use elsewhere) */
+.stack-reveal .stack-ico,
+.stack-reveal img.stack {
+  width: 3rem;
+  height: 3rem;
+  object-fit: contain;
+  display: block;
+}
+
+/* Label beneath the icon */
+.stack-reveal .stack-item > span {
+  font-family: StoryFont;
+  font-size: 0.9rem;
+  line-height: 1.2;
+  color: #e7e7e7;
+  user-select: none;
+  white-space: nowrap; /* remove if you prefer wrapping on small widths */
+  opacity: 0.95;
+}
+
+/* Reveal stack only when the project image (overlay) is active */
+.projects-img:hover + .stack-reveal,
+.projects-img:focus-visible + .stack-reveal,
+.stack-reveal:hover,
+.stack-reveal:focus-within {
+  opacity: 1;
+  transform: translateY(0);
+  max-height: 180px; /* adjust as needed for your content */
+  padding: 0.6rem 0.75rem;
+}
+
 .credlink:hover::before,
 .credlink:focus-visible::before {
   opacity: 0;
@@ -471,7 +343,6 @@ section > ul {
   gap: 3em;
   margin-bottom: 4em;
 }
-
 section > ul > li {
   display: flex;
   flex-direction: column;
@@ -486,10 +357,7 @@ section > ul > li {
   user-select: none;
 }
 
-#social-li:hover {
-  color: #0077b5;
-}
-
+/* Footer (keep page-specific positioning differences) */
 footer {
   position: relative;
   bottom: 0;
@@ -499,145 +367,22 @@ footer {
   color: #ffffff;
   box-sizing: border-box;
   margin-top: 1em;
-  overflow-x: hidden;
 }
-
-a.social-link {
-  font-size: clamp(0.6em, 1vw, 0.83em);
-  color: #989595;
-  padding: 1em;
-  opacity: 85%;
-  transition: transform 0.3s ease;
-}
+/* standardized to match others */
 .footer-container {
   position: relative;
   display: flex;
   align-items: center;
   height: 100%;
-  width: 100%;
-  overflow-y: hidden;
 }
-
 .social-box {
   display: flex;
   align-items: center;
   padding-left: 1em;
 }
 
-.social-link:hover {
-  transform: scale(1.1);
-  opacity: 100%;
-}
-
-p.copyright {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  user-select: none;
-  font-family: MyFont, sans-serif;
-  color: #7d7d7d;
-  font-size: clamp(0.55em, 1.2vw, 1em);
-  opacity: 85%;
-  text-align: center;
-  white-space: nowrap;
-}
-
-#date {
-  font-family: MyFont;
-}
-
-.copy {
-  font-family: MyFont;
-  font-size: 1.5em;
-}
-
-.nav-btn[aria-current="page"] {
-  color: #ffffff;
-  font-size: 1.025em;
-  font-weight: bold;
-}
-
-.nav-menu[aria-current="page"] {
-  color: #ffffff;
-  font-size: 1.5em;
-  font-weight: bold;
-}
-
-/* --- reveal tech stack below each project on hover --- */
-.stack-reveal {
-  width: 100%;
-  max-width: clamp(20em, 30vw, 30em);
-  margin-top: 0.4rem;
-
-  /* animation */
-  opacity: 0;
-  transform: translateY(-6px);
-  max-height: 0;
-  overflow: hidden;
-  padding: 0 0; /* expands on hover */
-  transition: opacity 0.35s ease, transform 0.35s ease, max-height 0.35s ease,
-    padding 0.35s ease;
-
-  /* styling */
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: 14px;
-  background: rgba(0, 0, 0, 0.35);
-  backdrop-filter: blur(4px);
-}
-
-/* optional small heading if present inside stack-reveal */
-.stack-title {
-  display: block;
-  margin: 0 0 0.4rem 0;
-  font-family: MyFont;
-  font-size: clamp(1rem, 1.2vw + 0.4rem, 1.25rem);
-  color: #f7f7f7;
-  letter-spacing: 0.3px;
-  opacity: 0.95;
-}
-
-/* show on hover of project card (or keyboard focus inside) */
-.box:hover .stack-reveal,
-.box:focus-within .stack-reveal {
-  opacity: 1;
-  transform: translateY(0);
-  max-height: 180px; /* enough room for icons; adjust if needed */
-  padding: 0.6rem 0.75rem; /* smooth “unfold” feel */
-}
-
-/* inner layout */
-.stack-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 0.6rem 1rem;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.stack-item {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.75rem;
-  color: #e8e8e8;
-  font-family: MyFont2, sans-serif;
-  font-size: clamp(1.1rem, 0.8vw, 1rem);
-  user-select: none;
-}
-
-.stack-ico {
-  width: 2rem;
-  height: auto;
-  display: inline-block;
-  border-radius: 4px;
-  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.35));
-}
-
-/* ===== Mobile: always show extended details & tech stack ===== */
-/* Prefer capability queries; also include a width fallback */
+/* Mobile: always show stack */
 @media (hover: none), (pointer: coarse), (max-width: 768px) {
-  /* Always show the detailed project info text (no "Hover for more info") */
   .projects-img::before {
     background: rgba(0, 0, 0, 0.8);
   }
@@ -647,97 +392,21 @@ p.copyright {
     transform: none;
     opacity: 1;
   }
-
-  /* Keep the tech stack panel open by default */
-  .stack-reveal {
-    opacity: 1;
-    transform: none;
-    max-height: none;
-    padding: 0.75rem 0.9rem;
+  .stack-reveal .stack-ico,
+  .stack-reveal img.stack {
+    width: 2.75rem;
+    height: 2.75rem;
   }
-
-  /* Slightly larger icons/text for readability on mobile */
-  .stack-item {
-    gap: 0.85rem;
-    font-size: 1.05rem;
-  }
-  .stack-ico {
-    width: 2.25rem;
+  .stack-reveal .stack-item > span {
+    font-size: 1rem;
   }
 }
 
-/* Responsive tweaks */
 @media only screen and (max-width: 768px) {
-  footer {
-    margin-top: 7em;
-    height: auto;
-    padding: 0.5em;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .footer-container {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .social-box {
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 0.2em;
-  }
-
-  a.social-link {
-    padding: 5px;
-  }
-
-  p.copyright {
-    position: static;
-    transform: none;
-    text-align: center;
-  }
-  div.footer-container {
-    min-height: fit-content;
-  }
-
-  /* stack columns on smaller screens */
   .certs {
     width: 100%;
   }
-
-  /* allow the certifications row to wrap on very narrow viewports */
   .credentials > .certs:last-of-type {
     flex-wrap: wrap;
-  }
-}
-
-@media only screen and (max-width: 576px) {
-  #bars.fa-solid {
-    color: #ffffff;
-    position: absolute;
-    right: 0.8em;
-    font-size: 1.8rem;
-    cursor: pointer;
-    display: flex;
-  }
-  .nav-link {
-    display: none;
-  }
-  .dropdown-menu {
-    right: 2em;
-    width: 90vw;
-    align-items: center;
-    display: none;
-  }
-
-  .credentials {
-    gap: 2em;
-  }
-  div.social-box {
-    padding: 0;
-    margin: 0;
   }
 }

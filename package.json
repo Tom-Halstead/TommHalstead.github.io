@@ -5,7 +5,7 @@
   "scripts": {
     "start": "parcel src/html/index.html",
     "build": "parcel build src/html/index.html --dist-dir ./docs --public-url ./",
-    "deploy": "npm run build && git add . && git commit -m \"Deploy updated site\" && git push"
+    "deploy": "npm run build && git add . && git commit -m \"Major changes to all static css files, created a combined, shared css file and reduced a lot of code\" && git push"
   },
   "repository": {
     "type": "git",
