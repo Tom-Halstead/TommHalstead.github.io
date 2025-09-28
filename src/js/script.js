@@ -206,14 +206,14 @@ const setCopyright = () => {
         targetY = e.clientY;
         cursor.style.backgroundColor = e.target.closest("a")
           ? linkColor
-          : "#39FF00";
+          : "#ffffffff";
       },
       { passive: true }
     );
 
     (function loop() {
-      lastX = lerp(lastX, targetX, 0.9);
-      lastY = lerp(lastY, targetY, 0.9);
+      lastX = lerp(lastX, targetX, 1);
+      lastY = lerp(lastY, targetY, 1);
       cursor.style.transform = `translate3d(${lastX - cs / 2}px, ${
         lastY - cs / 2
       }px, 0)`;

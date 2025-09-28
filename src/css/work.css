@@ -42,6 +42,7 @@ main {
   background-color: rgba(0, 0, 0, 0.35);
   margin-bottom: 10em;
   min-width: fit-content;
+  animation: fadeIn 2s ease-in-out;
 }
 .box {
   display: flex;
@@ -173,6 +174,8 @@ h3 {
     rgba(0, 0, 0, 1) 50%,
     rgba(0, 0, 0, 0) 180%
   );
+  animation-delay: 2s;
+  animation: fadeIn 2s ease-in-out;
 }
 .credentials > .certs:first-of-type {
   order: 2;

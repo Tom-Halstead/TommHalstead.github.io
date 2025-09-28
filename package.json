@@ -5,7 +5,7 @@
   "scripts": {
     "start": "parcel src/html/index.html",
     "build": "parcel build src/html/index.html --dist-dir ./docs --public-url ./",
-    "deploy": "npm run build && git add . && git commit -m \"Major changes to all static css files, created a combined, shared css file and reduced a lot of code\" && git push"
+    "deploy": "npm run build && git add . && git commit -m \"Updated portfolio changes - automated deploy\" && git push"
   },
   "repository": {
     "type": "git",
@@ -22,7 +22,6 @@
   "dependencies": {
     "animate.css": "^4.1.1",
     "font-awesome": "^4.7.0",
-    "htmlincludejs": "^1.0.0",
-    "particles.js": "^2.0.0"
+    "htmlincludejs": "^1.0.0"
   }
 }

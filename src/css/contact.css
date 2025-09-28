@@ -22,7 +22,7 @@ body {
   padding: 3em;
   text-align: center;
   width: 85%;
-  animation: fadeIn 1s ease-in-out;
+  animation: fadeIn 2s ease-in-out;
 }
 h2 {
   font-family: MyFont;
