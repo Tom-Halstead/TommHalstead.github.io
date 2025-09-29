@@ -45,6 +45,7 @@ nav {
   padding: 1em;
   height: 64px;
   width: 100%;
+  border-bottom: 1px dashed rgb(51, 51, 51);
 }
 
 .toggle-btn {
