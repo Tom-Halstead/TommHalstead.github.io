@@ -4,7 +4,7 @@
   "description": "This is my self taught, created from scratch portfolio with HTML, CSS and Javascript. I will continuously be updating as I see fit and needed. Thank you for checking out my portfolio!",
   "scripts": {
     "start": "parcel src/html/index.html",
-    "build": "parcel build src/html/index.html --dist-dir ./docs --public-url ./",
+    "build": "parcel build src/html/*.html --dist-dir ./docs --public-url ./",
     "deploy": "npm run build && git add . && git commit -m \"Updated portfolio changes - automated deploy!\" && git push"
   },
   "repository": {
@@ -23,14 +23,5 @@
   "dependencies": {
     "animate.css": "^4.1.1",
     "font-awesome": "^4.7.0"
-  },
-  "targets": {
-    "site": {
-      "distDir": "docs",
-      "publicUrl": "./",
-      "sourceMap": false,
-      "context": "browser",
-      "isLibrary": false
-    }
   }
 }
