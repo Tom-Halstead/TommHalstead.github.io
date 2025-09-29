@@ -1,3 +1,243 @@
+/* @font-face {
+  font-family: "MyFont";
+  font-weight: 700;
+  font-style: normal;
+  src: url("../fonts/RobotoMono-Bold.ttf");
+}
+@font-face {
+  font-family: "MyFont2";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/Stellar-light.woff");
+}
+@font-face {
+  font-family: "StoryFont";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/ChakraPetch-Medium.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", "sans-serif";
+  box-sizing: border-box;
+}
+
+header {
+  position: relative;
+  top: 0;
+  width: 100%;
+  height: 4em;
+  z-index: 10000;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  transition: 0.6s;
+  padding: 1em;
+  height: 64px;
+  width: 100%;
+  border-bottom: 1px dashed rgb(51, 51, 51);
+}
+
+.toggle-btn {
+  margin: 1em;
+  display: flex;
+  align-items: center;
+}
+
+#bars.fa-solid {
+  user-select: none;
+  display: none;
+  color: #ffffff;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  list-style: none;
+}
+.nav-link {
+  font-size: clamp(0.9em, 1.3vw, 1.2em);
+  user-select: none;
+  text-decoration: none;
+}
+.nav-highlighted {
+  transition: color 0.4s ease;
+}
+nav ul li a {
+  font-family: MyFont;
+  font-size: clamp(0.7em, 1vw + 0.3em, 0.8em);
+  text-decoration: none;
+  color: #989595;
+  transition: 0.25s ease;
+}
+nav ul li a:hover {
+  color: #ffffff;
+}
+a.nav-menu {
+  font-family: MyFont;
+  color: #989595;
+  list-style: none;
+  font-size: clamp(1.2rem, 1.5vw, 1.7rem);
+  text-decoration: none;
+}
+a.nav-menu:hover {
+  color: #ffffff;
+}
+
+.dropdown-container {
+  display: flex;
+  justify-content: flex-end;
+  position: absolute;
+  top: 4.5rem;
+  width: 100%;
+  z-index: 10001;
+}
+
+.dropdown-menu {
+  display: none;
+  width: 15em;
+  position: relative;
+  top: -1em;
+  border-radius: 1em 0 0 1em;
+  opacity: 90%;
+  background: rgba(0, 0, 0, 0.7);
+  transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.dropdown-menu li {
+  display: flex;
+  align-items: center;
+  padding: 1.5em;
+  justify-content: center;
+}
+.dropdown-menu.open {
+  user-select: none;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  -webkit-backdrop-filter: blur(30px);
+  backdrop-filter: blur(30px);
+  border: 2px solid #716e6e;
+  z-index: 10001;
+}
+.dropdown-menu.open:hover {
+  color: #ffffff;
+}
+
+#social-gh:hover {
+  color: #333;
+}
+#social-li:hover {
+  color: #0077b5;
+}
+
+a.social-link {
+  font-size: clamp(0.6em, 1vw, 0.83em);
+  color: #989595;
+  padding: 1em;
+  opacity: 85%;
+  transition: transform 0.3s ease;
+}
+.social-link:hover {
+  transform: scale(1.1);
+  opacity: 100%;
+}
+
+p.copyright {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  user-select: none;
+  font-family: MyFont, sans-serif;
+  color: #7d7d7d;
+  font-size: clamp(0.55em, 1.2vw, 1em);
+  opacity: 85%;
+  text-align: center;
+  white-space: nowrap;
+}
+#date {
+  font-family: MyFont;
+}
+.copy {
+  font-family: MyFont;
+  font-size: 1.5em;
+}
+
+.nav-btn[aria-current="page"] {
+  color: #ffffff;
+  font-size: 1.025em;
+  font-weight: bold;
+}
+.nav-menu[aria-current="page"] {
+  color: #ffffff;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+@media only screen and (max-width: 768px) {
+  footer {
+    height: auto;
+    padding: 0.5em;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .footer-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .social-box {
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0.2em;
+  }
+  a.social-link {
+    padding: 5px;
+  }
+  p.copyright {
+    position: static;
+    transform: none;
+    text-align: center;
+  }
+  div.footer-container {
+    min-height: fit-content;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  #bars.fa-solid {
+    color: #ffffff;
+    position: absolute;
+    right: 0.8em;
+    font-size: 1.8rem;
+    cursor: pointer;
+    display: flex;
+  }
+  .nav-link {
+    display: none;
+  }
+  .dropdown-menu {
+    right: 2em;
+    width: 90vw;
+    align-items: center;
+    display: none;
+  }
+  div.social-box {
+    padding: 0;
+    margin: 0;
+  }
+} */
+
 /* === Shared fonts === */
 @font-face {
   font-family: "MyFont";
@@ -24,6 +264,28 @@
   padding: 0;
   font-family: "Poppins", "sans-serif";
   box-sizing: border-box;
+}
+
+/* === Page base for sticky-bottom footer === */
+html,
+body {
+  min-height: 100%;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+  /* shared background baseline (pages can override specifics) */
+  background-color: black;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/* If a page uses <main>, it will naturally take the remaining height */
+main {
+  flex: 1 0 auto;
 }
 
 /* === Header (above all) === */
@@ -99,7 +361,7 @@ a.nav-menu:hover {
   color: #ffffff;
 }
 
-/* === Dropdown (unified structure + high stacking) === */
+/* === Dropdown (unified + high stacking) === */
 .dropdown-container {
   display: flex;
   justify-content: flex-end;
@@ -108,7 +370,6 @@ a.nav-menu:hover {
   width: 100%;
   z-index: 10001; /* above header */
 }
-
 .dropdown-menu {
   display: none;
   width: 15em;
@@ -117,6 +378,7 @@ a.nav-menu:hover {
   border-radius: 1em 0 0 1em;
   opacity: 90%;
   background: rgba(0, 0, 0, 0.7);
+  overflow: hidden;
   transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 .dropdown-menu li {
@@ -139,14 +401,28 @@ a.nav-menu:hover {
   color: #ffffff;
 }
 
-/* === Social/footer shared micro rules === */
-#social-gh:hover {
-  color: #333;
+/* === Footer (normalized across all pages) === */
+footer {
+  position: relative; /* not fixed */
+  width: 100%;
+  height: 4em;
+  background-color: black;
+  color: #ffffff;
+  box-sizing: border-box;
+  margin-top: auto; /* push to bottom when content is short */
+  border-top: 1px dashed rgb(51, 51, 51);
 }
-#social-li:hover {
-  color: #0077b5;
+.footer-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 100%;
 }
-
+.social-box {
+  display: flex;
+  align-items: center;
+  padding-left: 1em;
+}
 a.social-link {
   font-size: clamp(0.6em, 1vw, 0.83em);
   color: #989595;
@@ -179,6 +455,15 @@ p.copyright {
   font-size: 1.5em;
 }
 
+/* Social icon hover colors */
+#social-gh:hover {
+  color: #333;
+}
+#social-li:hover {
+  color: #0077b5;
+}
+
+/* Current page nav states */
 .nav-btn[aria-current="page"] {
   color: #ffffff;
   font-size: 1.025em;
@@ -190,7 +475,6 @@ p.copyright {
   font-weight: bold;
 }
 
-/* === Shared responsive: 768px footer tweaks === */
 @media only screen and (max-width: 768px) {
   footer {
     height: auto;
@@ -209,6 +493,7 @@ p.copyright {
     justify-content: center;
     align-items: center;
     margin-bottom: 0.2em;
+    padding-left: 0;
   }
   a.social-link {
     padding: 5px;
@@ -217,6 +502,9 @@ p.copyright {
     position: static;
     transform: none;
     text-align: center;
+    white-space: normal;
+    max-width: 100%;
+    padding: 0 0.75rem;
   }
   div.footer-container {
     min-height: fit-content;

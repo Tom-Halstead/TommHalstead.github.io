@@ -4,14 +4,13 @@ html {
   height: 100vh;
 }
 
+/* Page globals */
 body {
-  margin: 0;
-  padding: 0;
+  /* visual look; layout from common-styles */
   background-color: black;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  height: 100vh;
 }
 
 /* Contact section */
@@ -34,7 +33,6 @@ h2 {
 p {
   font-family: MyFont2;
   justify-self: center;
-  /* margin: 0.5em 1em 3em 1em; */
   color: rgb(220, 220, 220);
   font-size: clamp(0.9rem, 2.4vw, 1.7rem);
   line-height: 1.8;
@@ -92,28 +90,6 @@ p {
     opacity: 1;
     transform: translateY(0);
   }
-}
-
-/* Footer (kept fixed only on this page) */
-footer {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  height: 4em;
-  background-color: black;
-  color: #ffffff;
-  box-sizing: border-box;
-}
-
-.footer-container {
-  position: relative;
-  display: flex;
-  align-items: center;
-  height: 100%;
-}
-.social-box {
-  display: flex;
-  padding-left: 1em;
 }
 
 /* Media */

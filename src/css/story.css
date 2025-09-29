@@ -19,7 +19,6 @@ body {
   background-size: cover;
   background-position: center center;
   background-attachment: fixed;
-  min-height: 100vh;
 }
 
 /* Extra layering for sticky header (structure retained) */
@@ -198,35 +197,24 @@ h3 > span:hover {
   filter: blur(2px);
 }
 
-/* Footer */
-footer {
-  position: relative;
-  bottom: 0;
-  width: 100%;
-  height: 4em;
-  background-color: black;
-  color: #ffffff;
-  box-sizing: border-box;
-}
-.footer-container {
-  position: relative;
-  display: flex;
-  align-items: center;
-  height: 100%;
-}
-
 /* Scroll-roll */
 .max-width.scroll-roll {
   --dur: 1000ms;
   position: relative;
   overflow: hidden;
   cursor: pointer;
-  max-height: 4lh;
+
+  /* collapsed preview */
+  max-height: 4lh; /* only show ~2 lines max */
   transition: max-height var(--dur) cubic-bezier(0.2, 0.7, 0.2, 1),
     filter 0.5s ease;
+
+  /* fade at bottom to suggest more */
   -webkit-mask-image: linear-gradient(to bottom, #000 70%, rgba(0, 0, 0, 0));
   mask-image: linear-gradient(to bottom, #000 70%, rgba(0, 0, 0, 0));
 }
+
+/* “rolled ends” */
 .max-width.scroll-roll::before,
 .max-width.scroll-roll::after {
   content: "";
@@ -258,6 +246,8 @@ footer {
 .max-width.scroll-roll::after {
   right: -10px;
 }
+
+/* Toggle pill */
 .scroll-roll .scroll-toggle {
   position: absolute;
   top: 0.5rem;
@@ -276,6 +266,8 @@ footer {
   filter: brightness(1.05);
   transform: translateY(-1px);
 }
+
+/* OPEN state */
 .max-width.scroll-roll.is-open {
   max-height: 200vh;
   -webkit-mask-image: none;
@@ -290,6 +282,8 @@ footer {
   background: hsl(210 100% 72% / 0.95);
   border-color: hsl(210 80% 45% / 0.5);
 }
+
+/* Footer (inherited from common-styles) */
 
 /* Media */
 @media only screen and (max-width: 1050px) {
