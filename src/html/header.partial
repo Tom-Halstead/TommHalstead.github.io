@@ -1,0 +1,38 @@
+<header class="header">
+  <nav class="nav">
+    <ul>
+      <li class="nav-link">
+        <a href="./index.html" class="nav-btn">Home</a>
+      </li>
+      <li class="nav-link">
+        <a href="./about.html" class="nav-btn">About</a>
+      </li>
+      <li class="nav-link">
+        <a href="./projects.html" class="nav-btn">Projects</a>
+      </li>
+      <li class="nav-link">
+        <a href="./contact.html" class="nav-btn">Contact</a>
+      </li>
+    </ul>
+    <div class="toggle-btn">
+      <i id="bars" class="fa-bars fa-beat fa-solid"></i>
+    </div>
+  </nav>
+
+  <div class="dropdown-container">
+    <div class="dropdown-menu">
+      <li class="nav-drop">
+        <a href="./index.html" class="nav-menu">Home</a>
+      </li>
+      <li class="nav-drop">
+        <a href="./about.html" class="nav-menu">About</a>
+      </li>
+      <li class="nav-drop">
+        <a href="./projects.html" class="nav-menu">Projects</a>
+      </li>
+      <li class="nav-drop">
+        <a href="./contact.html" class="nav-menu">Contact</a>
+      </li>
+    </div>
+  </div>
+</header>

@@ -114,7 +114,7 @@ const setupStoryModal = () => {
 const setupHeaderPin = () => {
   const header = document.getElementById("header");
   if (!header) return;
-  const triggerPoint = header.offsetHeight * 4;
+  const triggerPoint = header.offsetHeight;
 
   window.addEventListener(
     "scroll",
@@ -136,20 +136,13 @@ const setCopyright = () => {
 (function customCursor() {
   const CSS = `
 :root{ --cursor-size:18px; --cursor-link-color: darkred; }
-.has-custom-cursor{ cursor:none; }
-.has-custom-cursor a,
-.has-custom-cursor button,
-.has-custom-cursor input,
-.has-custom-cursor textarea,
-.has-custom-cursor select,
-.has-custom-cursor label,
-.has-custom-cursor img,
-.has-custom-cursor span { cursor:none !important; }
+.has-custom-cursor,
+.has-custom-cursor * { cursor:none !important; }
 .cursor{
   position:fixed; top:0; left:0;
   width:var(--cursor-size); height:var(--cursor-size);
   border-radius:50%;
-  background:#39FF00;
+  background:#FFFFFF;
   pointer-events:none;
   will-change:transform, background-color;
   z-index:2147483647;
@@ -300,12 +293,16 @@ window.addEventListener(
     randomizeNavHighlights(); // random pastel text colors
 
     setupDropdown();
-    if (page === "story.html") setupStoryModal();
-    if (page === "work.html" || page === "story.html") setupHeaderPin();
+    if (page === "story.html") {
+      setupStoryModal();
+      setupWholeBlockUnroll();
+    }
 
-    setupWholeBlockUnroll();
+    if (page === "projects.html" || page === "story.html") setupHeaderPin();
 
     document.getElementById("date") && setCopyright();
   },
   { once: true }
 );
+
+console.log("Hi");

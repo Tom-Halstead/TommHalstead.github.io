@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../css/story.css" />
+    <link rel="stylesheet" href="../css/about.css" />
     <link
       rel="preload"
       as="font"
@@ -37,26 +37,27 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
+    <script defer src="../js/components.js" type="module"></script>
     <script defer src="../js/script.js" type="module"></script>
     <script
       defer
       src="https://kit.fontawesome.com/c845919294.js"
       crossorigin
     ></script>
-    <title>Tom Halstead | Story</title>
+    <title>Tom Halstead | About Me</title>
   </head>
   <body>
-    <header class="header" id="header">
+    <!-- <header class="header" id="header">
       <nav class="nav">
         <ul>
           <li class="nav-link">
             <a href="./index.html" class="nav-btn">Home</a>
           </li>
           <li class="nav-link">
-            <a href="./story.html" class="nav-btn">Story</a>
+            <a href="./about.html" class="nav-btn">About</a>
           </li>
           <li class="nav-link">
-            <a href="./work.html" class="nav-btn">Work</a>
+            <a href="./projects.html" class="nav-btn">Projects</a>
           </li>
           <li class="nav-link">
             <a href="./contact.html" class="nav-btn">Contact</a>
@@ -73,17 +74,18 @@
             <a href="./index.html" class="nav-menu">Home</a>
           </li>
           <li class="nav-drop">
-            <a href="./story.html" class="nav-menu">Story</a>
+            <a href="./about.html" class="nav-menu">About</a>
           </li>
           <li class="nav-drop">
-            <a href="./work.html" class="nav-menu">Work</a>
+            <a href="./projects.html" class="nav-menu">Projects</a>
           </li>
           <li class="nav-drop">
             <a href="./contact.html" class="nav-menu">Contact</a>
           </li>
         </div>
       </div>
-    </header>
+    </header> -->
+    <site-header></site-header>
     <div class="container">
       <div class="max-width">
         <h3 class="story">
@@ -91,18 +93,17 @@
           ><span>r</span><span>n</span><span>e</span><span>y</span>
         </h3>
         <p>
-          Hi, I'm Thomas Halstead— though I typically just go by Tom. I’m a
-          software developer based out of Austin, Texas. I have a passion for
-          back-end development and building efficient, scalable applications. I
-          transitioned into software development from a leadership role in the
-          construction industry, where I managed teams of technicians to
-          complete complex conveyance systems for companies like Amazon and UPS.
-          That experience sharpened my problem solving skills, attention to
-          detail, and ability to perform under pressure—qualities I bring to
-          every software project I work on.
+          Hi, I’m Tom. a software developer based out of Austin, Texas. I have a
+          passion for back-end development and building efficient, scalable
+          applications. I transitioned into software development from a
+          leadership role in the construction industry, where I managed teams of
+          technicians to complete complex conveyance systems for companies like
+          Amazon and UPS. That experience sharpened my problem solving skills,
+          attention to detail, and ability to perform under pressure—qualities I
+          bring to every software project I work on.
         </p>
 
-        <p>
+        <!-- <p>
           My journey into tech started from a lifelong fascination with
           computers. Some of my earliest memories involve playing classic games
           like Motocross Madness, Minesweeper, Chess Titans, Runescape and
@@ -113,20 +114,16 @@
           a 70+ hour front-end development course on Udemy. Through these
           experiences, I’ve developed and deployed full-stack applications that
           prioritize clean architecture, scalability, and user-focused design.
-        </p>
+        </p> -->
 
         <p>
-          Today, I focus on server-side development, API integrations, and
-          performance optimization. Some of my recent projects include an
-          expense tracking CLI application leveraging Java, Spring Boot, and AWS
-          Cognito for secure user authentication, and a content aggregation web
-          app that delivers personalized news feeds through efficient data
-          retrieval mechanisms. I’m committed to continuous learning and am
-          eager to contribute to innovative teams where I can expand my
-          technical expertise while solving challenging problems. Whether it’s
-          building robust back-end systems or collaborating on end-to-end
-          solutions, I’m driven by the opportunity to make meaningful,
-          data-driven impacts through technology.
+          Today, I find the most enjoyment out of server-side devlopment, API
+          integration, AWS cloud services and learning all there is to know
+          about computer science as a whole. My latest project,
+          <a href="https://www.vitanova-app.com" class="vitanova">Vita Nova</a>
+          is a project dedicated to tracking workouts and goals alike in a
+          journal entry format. I’m committed to continuous learning as the tech
+          field evolves, currently thinking of my next project.
         </p>
       </div>
 
@@ -210,7 +207,7 @@
         </div>
       </section>
     </div>
-    <footer>
+    <!-- <footer>
       <div class="footer-container">
         <div class="social-box">
           <a class="social-link" href="https://github.com/Tom-halstead">
@@ -228,6 +225,8 @@
           reserved | Designed By: Thomas Halstead
         </p>
       </div>
-    </footer>
+    </footer> -->
+
+    <site-footer></site-footer>
   </body>
 </html>

@@ -26,6 +26,7 @@
       href="../fonts/ChakraPetch-Medium.ttf"
       crossorigin
     />
+    <script defer src="../js/components.js" type="module"></script>
     <script defer src="../js/script.js" type="module"></script>
     <script
       defer
@@ -36,17 +37,17 @@
   </head>
 
   <body>
-    <header class="header">
+    <!-- <header class="header">
       <nav class="nav">
         <ul>
           <li class="nav-link">
             <a href="./index.html" class="nav-btn">Home</a>
           </li>
           <li class="nav-link">
-            <a href="./story.html" class="nav-btn">Story</a>
+            <a href="./about.html" class="nav-btn">About</a>
           </li>
           <li class="nav-link">
-            <a href="./work.html" class="nav-btn">Work</a>
+            <a href="./projects.html" class="nav-btn">Projects</a>
           </li>
           <li class="nav-link">
             <a href="./contact.html" class="nav-btn">Contact</a>
@@ -63,17 +64,18 @@
             <a href="./index.html" class="nav-menu">Home</a>
           </li>
           <li class="nav-drop">
-            <a href="./story.html" class="nav-menu">Story</a>
+            <a href="./about.html" class="nav-menu">About</a>
           </li>
           <li class="nav-drop">
-            <a href="./work.html" class="nav-menu">Work</a>
+            <a href="./projects.html" class="nav-menu">Projects</a>
           </li>
           <li class="nav-drop">
             <a href="./contact.html" class="nav-menu">Contact</a>
           </li>
         </div>
       </div>
-    </header>
+    </header> -->
+    <site-header></site-header>
 
     <div class="container">
       <div class="text">
@@ -87,14 +89,12 @@
           A <span class="detail">detail-oriented,</span> full-stack
           <span class="developer">developer.</span>
         </h2>
-        <!-- <h3 class="animate__animated animate__fadeInDown animate__delay-2s">
-          Creating <span class="highlight">functional</span> and
-          <span class="highlight">artistic</span> web applications.
-        </h3> -->
       </div>
     </div>
 
-    <footer>
+    <site-footer></site-footer>
+
+    <!-- <footer>
       <div class="footer-container">
         <div class="social-box">
           <a class="social-link" href="https://github.com/Tom-halstead">
@@ -112,6 +112,6 @@
           reserved | Designed By: Thomas Halstead
         </p>
       </div>
-    </footer>
+    </footer> -->
   </body>
 </html>

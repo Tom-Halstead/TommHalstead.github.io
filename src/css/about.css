@@ -76,6 +76,16 @@ div.max-width > p {
   color: rgb(220, 220, 220);
   padding: 0.5em;
 }
+
+.vitanova {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: MyFont2;
+  color: #6cfff8;
+  font-style: italic;
+  font-weight: 600;
+  font-size: 18px;
+}
 ::-moz-selection {
   background: #7c7474;
 }
@@ -205,7 +215,7 @@ h3 > span:hover {
   cursor: pointer;
 
   /* collapsed preview */
-  max-height: 4lh; /* only show ~2 lines max */
+  max-height: 11lh; /* only show ~2 lines max */
   transition: max-height var(--dur) cubic-bezier(0.2, 0.7, 0.2, 1),
     filter 0.5s ease;
 

@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../css/work.css" />
+    <link rel="stylesheet" href="../css/projects.css" />
     <link
       rel="preload"
       as="font"
@@ -26,26 +26,27 @@
       href="../fonts/ChakraPetch-Medium.ttf"
       crossorigin
     />
+    <script defer src="../js/components.js" type="module"></script>
     <script defer src="../js/script.js" type="module"></script>
     <script
       defer
       src="https://kit.fontawesome.com/c845919294.js"
       crossorigin
     ></script>
-    <title>Tom Halstead | Work</title>
+    <title>Tom Halstead | Projects</title>
   </head>
   <body>
-    <header class="header" id="header">
+    <!-- <header class="header" id="header">
       <nav class="nav">
         <ul>
           <li class="nav-link">
             <a href="./index.html" class="nav-btn">Home</a>
           </li>
           <li class="nav-link">
-            <a href="./story.html" class="nav-btn">Story</a>
+            <a href="./about.html" class="nav-btn">About</a>
           </li>
           <li class="nav-link">
-            <a href="./work.html" class="nav-btn">Work</a>
+            <a href="./projects.html" class="nav-btn">Projects</a>
           </li>
           <li class="nav-link">
             <a href="./contact.html" class="nav-btn">Contact</a>
@@ -62,17 +63,19 @@
             <a href="./index.html" class="nav-menu">Home</a>
           </li>
           <li class="nav-drop">
-            <a href="./story.html" class="nav-menu">Story</a>
+            <a href="./about.html" class="nav-menu">About</a>
           </li>
           <li class="nav-drop">
-            <a href="./work.html" class="nav-menu">Work</a>
+            <a href="./projects.html" class="nav-menu">Projects</a>
           </li>
           <li class="nav-drop">
             <a href="./contact.html" class="nav-menu">Contact</a>
           </li>
         </div>
       </div>
-    </header>
+    </header> -->
+
+    <site-header></site-header>
 
     <main class="wrapper">
       <h2 class="title">Personal projects:</h2>
@@ -134,7 +137,7 @@
             class="projects-img"
             target="_blank"
             data-default="Hover for more info"
-            data-info="Vita Nova: Java + Spring Boot backend, React UI, AWS (Cognito/S3/RDS/ECR/AppRunner). Track workouts, nutrition, and goals."
+            data-info="Vita Nova: Java, Springboot, PostgreSQL, React UI, AWS (Cognito/S3/RDS/ECR). Track workouts, nutrition, and goals."
           >
             <img
               src="../images/optimized/VitaNova-thumbnail2-320.avif"
@@ -271,7 +274,9 @@
       </section>
     </main>
 
-    <footer>
+    <site-footer></site-footer>
+
+    <!-- <footer>
       <div class="footer-container">
         <div class="social-box">
           <a class="social-link" href="https://github.com/Tom-halstead">
@@ -289,6 +294,6 @@
           reserved | Designed By: Thomas Halstead
         </p>
       </div>
-    </footer>
+    </footer> -->
   </body>
 </html>

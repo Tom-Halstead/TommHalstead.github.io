@@ -14,14 +14,23 @@
   "author": "Thomas Halstead",
   "license": "ISC",
   "devDependencies": {
-    "@parcel/transformer-sass": "^2.8.3",
-    "parcel": "^2.12.0",
+    "@parcel/transformer-sass": "^2.13.3",
+    "parcel": "^2.13.3",
+    "rimraf": "^6.0.1",
     "sharp": "^0.34.4",
     "svgo": "^3.3.2"
   },
   "dependencies": {
     "animate.css": "^4.1.1",
-    "font-awesome": "^4.7.0",
-    "htmlincludejs": "^1.0.0"
+    "font-awesome": "^4.7.0"
+  },
+  "targets": {
+    "site": {
+      "distDir": "docs",
+      "publicUrl": "./",
+      "sourceMap": false,
+      "context": "browser",
+      "isLibrary": false
+    }
   }
 }
