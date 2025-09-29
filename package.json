@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "This is my self taught, created from scratch portfolio with HTML, CSS and Javascript. I will continuously be updating as I see fit and needed. Thank you for checking out my portfolio!",
   "scripts": {
-    "start": "parcel src/html/index.html",
-    "build": "parcel build src/html/*.html --dist-dir ./docs --public-url ./",
+    "start": "parcel src/html/index.html src/html/about.html src/html/projects.html src/html/contact.html",
+    "build": "parcel build src/html/index.html src/html/about.html src/html/projects.html src/html/contact.html --dist-dir ./docs --public-url ./",
     "deploy": "npm run build && git add . && git commit -m \"Updated portfolio changes - automated deploy!\" && git push"
   },
   "repository": {
