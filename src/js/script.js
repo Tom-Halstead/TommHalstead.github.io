@@ -289,7 +289,7 @@ function wrapChars(node) {
   }
 }
 
-function typewriter(el, speedMs = 35, startDelayMs = 3000) {
+function typewriter(el, speedMs = 35, startDelayMs = 1000) {
   if (!el) return;
 
   // Wrap all text nodes into .t-char spans (opacity: 0 via CSS)
@@ -339,7 +339,7 @@ window.addEventListener(
     // Typewriter only on home page
     if (page === "index.html") {
       const h2 = document.querySelector(".text h2");
-      typewriter(h2, /* speed */ 45, /* startDelay */ 600);
+      typewriter(h2, /* speed */ 45, /* startDelay */ 1000);
     }
 
     if (document.getElementById("date")) setCopyright();

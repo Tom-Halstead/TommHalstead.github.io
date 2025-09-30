@@ -108,6 +108,9 @@ span.developer {
     0 0 0px #717171;
 }
 
+.typewriter {
+}
+
 /* Media */
 @media only screen and (max-width: 768px) {
   div.text {
