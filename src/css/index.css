@@ -58,12 +58,12 @@ h2 {
 /* Caret visible immediately */
 .type-caret {
   display: inline-block;
-  width: 2px;
+  width: 4px;
   height: 1em;
-  vertical-align: -0.1em;
-  background: #fbfb8a;
-  margin-left: 2px;
-  animation: caret-blink 0.8s step-end infinite;
+  vertical-align: -0.12em;
+  background: #ffffff;
+  margin-left: -3px;
+  animation: caret-blink 0.82s step-end infinite;
 }
 
 @keyframes caret-blink {
