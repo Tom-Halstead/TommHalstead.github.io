@@ -36,11 +36,13 @@ main {
 .project-section {
   max-width: 100vw;
   display: flex;
+  flex-direction: row;
+  margin: auto 7em auto 7em;
   flex-wrap: wrap;
   justify-content: space-around;
   border-radius: 20%;
   background-color: rgba(0, 0, 0, 0.35);
-  margin-bottom: 10em;
+  margin-bottom: 2.5em;
   min-width: fit-content;
   animation: fadeIn 2s ease-in-out;
 }
@@ -60,16 +62,14 @@ main {
   justify-content: center;
   align-items: center;
   text-align: center;
-  gap: 1em;
-  /* width: clamp(30em, 25vw, 10em); */
   height: auto;
-  padding-bottom: 8em;
+  padding-bottom: 5em;
 }
 
 img.projects {
   width: 25em;
   height: 15em;
-  border: 2px solid rgb(122, 118, 118);
+  border: 2px solid rgb(124, 43, 120);
   border-radius: 25px;
   object-fit: cover;
   max-width: 100%;
@@ -84,6 +84,7 @@ img.projects {
   overflow: hidden;
   outline: none;
 }
+
 .projects-img::before {
   content: "";
   position: absolute;
@@ -207,8 +208,9 @@ h3 {
   flex-direction: column;
   align-items: center;
   gap: 1.25rem;
-  width: min(520px, 44vw);
+  height: auto;
 }
+
 .credentials > .certs:last-of-type .credlink {
   width: clamp(16rem, 40vw, 32rem);
 }
@@ -233,13 +235,20 @@ h3 {
 .certs-image {
   display: block;
   width: 100%;
-  height: auto;
+  height: 12em;
+  /* height: auto; */
   border-radius: 12px;
-  border: 2px rgb(145, 43, 147) solid;
+  border: 3px rgb(124, 43, 120) solid;
   margin-top: 0.5em;
-  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  transition: transform 0.5s ease, box-shadow 0.35s ease;
 }
-.certs-image:hover {
+
+.resume-image {
+  height: 20em;
+}
+
+.certs-image:hover,
+.resume-image:hover {
   transform: scale(1.01);
 }
 .credlink::before {
