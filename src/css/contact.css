@@ -1,12 +1,12 @@
 @import url("./common-styles.css");
 
 html {
-  height: 100vh;
+  min-height: 100vh;
 }
-
-/* Page globals */
 body {
-  /* visual look; layout from common-styles */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
   background-color: black;
   background-size: cover;
   background-position: center;
@@ -15,10 +15,15 @@ body {
 
 /* Contact section */
 #contact {
+  flex-direction: column;
+  display: flex;
+  flex: 1;
   border-radius: 10%;
   color: rgb(220, 220, 220);
   margin: 6em auto;
   padding: 3em;
+  justify-content: center;
+  align-items: center;
   text-align: center;
   width: 85%;
   animation: fadeIn 2s ease-in-out;

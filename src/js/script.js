@@ -293,12 +293,12 @@ window.addEventListener(
     randomizeNavHighlights(); // random pastel text colors
 
     setupDropdown();
-    if (page === "story.html") {
+    if (page === "about.html") {
       setupStoryModal();
       setupWholeBlockUnroll();
     }
 
-    if (page === "projects.html" || page === "story.html") setupHeaderPin();
+    if (page === "projects.html" || page === "about.html") setupHeaderPin();
 
     document.getElementById("date") && setCopyright();
   },

@@ -2,16 +2,16 @@
   <nav class="nav">
     <ul>
       <li class="nav-link">
-        <a href="./index.html" class="nav-btn">Home</a>
+        <a href="index.html" class="nav-btn">Home</a>
       </li>
       <li class="nav-link">
-        <a href="./about.html" class="nav-btn">About</a>
+        <a href="about.html" class="nav-btn">About</a>
       </li>
       <li class="nav-link">
-        <a href="./projects.html" class="nav-btn">Projects</a>
+        <a href="projects.html" class="nav-btn">Projects</a>
       </li>
       <li class="nav-link">
-        <a href="./contact.html" class="nav-btn">Contact</a>
+        <a href="contact.html" class="nav-btn">Contact</a>
       </li>
     </ul>
     <div class="toggle-btn">
@@ -22,16 +22,16 @@
   <div class="dropdown-container">
     <div class="dropdown-menu">
       <li class="nav-drop">
-        <a href="./index.html" class="nav-menu">Home</a>
+        <a href="index.html" class="nav-menu">Home</a>
       </li>
       <li class="nav-drop">
-        <a href="./about.html" class="nav-menu">About</a>
+        <a href="about.html" class="nav-menu">About</a>
       </li>
       <li class="nav-drop">
-        <a href="./projects.html" class="nav-menu">Projects</a>
+        <a href="projects.html" class="nav-menu">Projects</a>
       </li>
       <li class="nav-drop">
-        <a href="./contact.html" class="nav-menu">Contact</a>
+        <a href="contact.html" class="nav-menu">Contact</a>
       </li>
     </div>
   </div>
