@@ -6,6 +6,7 @@ html {
   overflow-x: hidden;
 }
 body {
+  overflow-y: hidden;
   margin: 0;
   padding: 0;
   background-color: black;
@@ -21,7 +22,6 @@ body {
 main {
   flex-grow: 1;
   min-height: 100vh;
-  width: 100vw;
 }
 
 /* Sticky header helper retained */
@@ -67,8 +67,8 @@ main {
 }
 
 img.projects {
-  width: 30em;
-  height: 20em;
+  width: 25em;
+  height: 15em;
   border: 2px solid rgb(122, 118, 118);
   border-radius: 25px;
   object-fit: cover;
@@ -336,9 +336,9 @@ h3 {
 .title {
   user-select: none;
   text-align: center;
-  margin: 3em 0 3em 0;
+  margin: 2.5em 0 2.5em 0;
   color: rgb(220, 220, 220);
-  font-size: clamp(1.5em, 2vw, 2.5em);
+  font-size: clamp(1.35em, 1.8vw, 2.25em);
   font-family: MyFont;
 }
 
