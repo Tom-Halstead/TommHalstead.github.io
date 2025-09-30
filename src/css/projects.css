@@ -61,8 +61,19 @@ main {
   align-items: center;
   text-align: center;
   gap: 1em;
-  width: clamp(15em, 25vw, 25em);
+  /* width: clamp(30em, 25vw, 10em); */
   height: auto;
+  padding-bottom: 8em;
+}
+
+img.projects {
+  width: 30em;
+  height: 20em;
+  border: 2px solid rgb(122, 118, 118);
+  border-radius: 25px;
+  object-fit: cover;
+  max-width: 100%;
+  display: block;
 }
 
 /* Overlay + text swap */
@@ -113,18 +124,9 @@ main {
   transform: translateY(-1px);
 }
 
-img.projects {
-  width: 25em;
-  height: 15em;
-  border: 2px solid rgb(122, 118, 118);
-  border-radius: 25px;
-  object-fit: cover;
-  max-width: 100%;
-  display: block;
-}
 img.projects:hover {
   cursor: pointer;
-  transform: scale(1.02);
+  transform: scale(1.05);
   transition: transform 0.5s ease, box-shadow 0.5s ease;
 }
 .projects-img:focus-visible {
