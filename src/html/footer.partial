@@ -1,10 +1,10 @@
 <footer>
   <div class="footer-container">
     <div class="social-box">
-      <a class="social-link" href="https://github.com/Tom-halstead">
+      <a target="_blank" class="social-link" href="https://github.com/Tom-halstead">
         <i id="social-gh" class="fa fa-3x fa-github-square social"></i>
       </a>
-      <a
+      <a target="_blank"
         class="social-link"
         href="https://www.linkedin.com/in/tomhalsteadeveloper/"
       >
